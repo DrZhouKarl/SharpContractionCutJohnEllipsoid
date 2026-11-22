@@ -1,0 +1,19 @@
+\section{Conclusion}\label{sec:11}
+
+The sharp central-cut factor is $R_n$ in every positive dimension, and equality is attained. An explicit certificate links the original John contacts to an upper bound on the new ellipsoid volume. The exact deficit identity then separates contact geometry, cone complementarity, and shape matching, yielding the complete equality family and quantitative stability.
+
+The certificate construction is uniform in dimension, while its determinant proof still treats dimensions two, three, and at least four separately. A unified proof and sharper stability constants remain natural questions. Further directions include bounds for offset cuts, quantitative contraction over successive cuts, and certified cuts through approximate centers. Exact offset profiles, sharp simultaneous-cut bounds, and quantitative correction costs for computed centers remain open; whole-body stability requires hypotheses compatible with the nonunique equality family.
+
+The results also clarify the role of inscribed ellipsoids in localization: contraction controls the potential, rounding controls a coordinate normalization, and a feasible primal--dual gap certifies the quality of an ellipsoid computation. These statements keep geometric progress separate from the cost and precision of centering. The analytical proofs are accompanied by a completed Lean 4 formalization.
+
+\paragraph{Formal verification and reproducibility.}
+The formalization uses Lean \texttt{v4.35.0-rc2} and mathlib at commit
+\texttt{0a6c8e0355da0405d616f80b9f8232c4fab2cc5b} \cite{deMouraUllrich2021,Mathlib2020}.
+It covers all 28 named results and their supporting mathematical statements,
+with explicit correspondences for all 198 numbered equations. Independent
+source builds and transitive axiom audits accept only \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The accompanying source
+distribution, \texttt{SharpContractionCutJohnEllipsoid}, provides pinned
+dependencies, statement maps, and reproducible verification scripts. The three
+cited background assertions concerning centroid cuts and algorithmic complexity
+in Section~\ref{sec:1.1} are outside the agreed formalization scope.

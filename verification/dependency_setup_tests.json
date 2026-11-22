@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "tests_run": 10,
+  "skipped": 0,
+  "failures": [],
+  "errors": [],
+  "actual_archive_sha256": "5231a5628f98c6b5b5bd6f7677a28591306d337349a2d82554b4e9fe8407b689",
+  "installer_sha256": "06ec181e31383695d0bac0e0b298775ace15ad9cfcd97aa8e6be60e7e6b4c224",
+  "scope": "Archive extraction and resume regression; not Lean proof certification."
+}

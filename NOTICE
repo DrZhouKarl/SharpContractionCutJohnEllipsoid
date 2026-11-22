@@ -1,0 +1,10 @@
+SharpContractionCutJohnEllipsoid
+Copyright (c) 2026 Zhou Longfei
+
+The new SharpCut sources and the reused Khachiyan library are distributed
+under the MIT License. The Khachiyan source commit and file hashes are
+recorded in vendor/khachiyan/PROVENANCE.json.
+
+Lean, mathlib and their dependencies retain their own authorship and licenses.
+Their source code is obtained separately at the exact revisions recorded in
+environment/baseline.json and checked against the committed source receipts.

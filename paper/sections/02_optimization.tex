@@ -1,0 +1,312 @@
+\section{Ellipsoid optimization and upper-bound certificates}\label{sec:2}
+
+The same optimization problem appears twice: first when choosing a center, and again when recomputing the largest inscribed ellipsoid after a cut. We begin with its variables and constraints, then derive the short inequality used throughout the paper.
+
+\subsection{From containment to a convex problem}\label{sec:2.1}
+
+Throughout, the dimension is a positive integer. Let $B_2^n=\{z:\|z\|_2\le1\}$ be the closed Euclidean unit ball. Write
+\begin{equation}\label{eq:2.1}
+\mathcal E(c,A)=c+AB_2^n,\qquad A\in\mathbb S_{++}^n,
+\qquad \operatorname{vol}\mathcal E(c,A)=\kappa_n\det A,
+\quad \kappa_n=\operatorname{vol}(B_2^n).
+\end{equation}
+
+The matrix $A$ is the linear map applied to the ball. Its eigenvalues are the semiaxis lengths. For a single inequality $g^Tx\le\beta$, containment is equivalent to
+\begin{equation}\label{eq:2.2}
+\max_{\|z\|\le1}g^T(c+Az)=g^Tc+\|Ag\|\le\beta.
+\end{equation}
+
+Thus, for a bounded full-dimensional polytope
+$\mathcal P=\{x:g_r^Tx\le\beta_r,\ r=1,\ldots,N\}$, the ellipsoid problem is
+\begin{equation}\label{eq:2.3}
+\begin{aligned}
+\text{maximize}_{c,\ A\succ0}\quad&\log\det A\\
+\text{subject to}\quad&g_r^Tc+\|Ag_r\|\le\beta_r,
+\qquad r=1,\ldots,N.
+\end{aligned}
+\end{equation}
+
+The objective is concave and the constraints are convex \cite[Section 8.4.2]{BV2004}. Each support constraint is also a second-order-cone constraint:
+$(\beta_r-g_r^Tc,Ag_r)\in\mathcal L_{n+1}$, where
+$\mathcal L_{n+1}=\{(\tau,z):\tau\ge\|z\|\}$.
+We remove redundant inequalities with $g_r=0$.
+
+\subsection{A certificate cancels the unknown center}\label{sec:2.2}
+
+To bound the volume of every feasible ellipsoid, assign a scalar $\alpha_r$ and
+a vector $q_r$ to each supporting inequality. With
+$\operatorname{sym}X=(X+X^T)/2$, the complete certificate conditions are
+\begin{equation}\label{eq:2.4}
+\begin{gathered}
+\sum_r\alpha_rg_r=0,\qquad \sum_r\alpha_r\beta_r=n,\\
+\|q_r\|\le\alpha_r\quad\text{for every }r,\\
+M=\sum_r\operatorname{sym}(q_rg_r^T)\succ0.
+\end{gathered}
+\end{equation}
+
+Balance cancels the unknown center, and the second equality fixes the scale.
+The norm inequality is the second-order-cone constraint
+$(\alpha_r,q_r)\in\mathcal L_{n+1}$; it also implies $\alpha_r\ge0$.
+The final condition collects the directional information into a positive-definite
+matrix. Thus \eqref{eq:2.4} includes every constraint used by the dual problem below.
+
+\begin{lemma}[{volume certificate}]\label{lem-certificate}
+If \eqref{eq:2.4} holds, every feasible ellipsoid in \eqref{eq:2.3} satisfies
+\begin{equation}\label{eq:2.5}
+\operatorname{tr}(AM)\le n,\qquad
+\det A\le\frac1{\det M}.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+The two conclusions require two steps: first turn the support
+constraints into a trace bound, then apply scalar AM--GM to obtain a determinant
+bound. Aggregate the support inequalities; balance cancels the center:
+\begin{equation}\label{eq:2.6}
+\begin{aligned}
+\operatorname{tr}(AM)
+&=\sum_r q_r^TAg_r
+\le\sum_r\alpha_r\|Ag_r\|\\
+&\le\sum_r\alpha_r(\beta_r-g_r^Tc)
+=n-c^T\sum_r\alpha_rg_r=n.
+\end{aligned}
+\end{equation}
+
+To pass from trace to determinant, use the symmetric positive-definite matrix
+$Y=M^{1/2}AM^{1/2}$. Its trace and determinant are the quantities we need.
+For its eigenvalues $\rho_1,\ldots,\rho_n>0$, scalar AM--GM gives
+\begin{equation}\label{eq:2.7}
+\det A\det M=\det Y=\prod_{j=1}^n\rho_j
+\le\left(\frac1n\sum_{j=1}^n\rho_j\right)^n
+=\left(\frac{\operatorname{tr}(AM)}n\right)^n\le1.
+\end{equation}
+
+Dividing by $\det M>0$ proves \eqref{eq:2.5}. 
+\end{proof}
+
+The matrix $M$ is a certificate: checking its finite constraints is enough to bound the optimum. A larger determinant gives a stronger bound. Optimizing the certificate leads to the normalized dual problem
+\begin{equation}\label{eq:2.8}
+\text{maximize }\log\det M
+\quad\text{over }(\alpha_r,q_r)\text{ satisfying \eqref{eq:2.4}}.
+\end{equation}
+
+\subsection{Exact certificates and optimal contacts}\label{sec:2.3}
+
+Optimizing the certificate recovers the ellipsoid optimum exactly. We prove
+this by constructing multipliers from the contacts of the optimal ellipsoid.
+The only geometric ingredient is the following classical characterization.
+
+\begin{lemma}[{John's contact characterization \cite{John1948} and \cite[Theorems 3.1 and 3.3]{GG2007}}]\label{lem-john}
+Let $K\subset\mathbb R^n$ be a convex body containing $B_2^n$.
+Then $J(K)=B_2^n$ if and only if there are finitely many unit vectors
+$u_i\in\partial K\cap S^{n-1}$ and positive weights $\lambda_i$ such that
+\begin{equation}\label{eq:2.9}
+u_i^Tx\le1\ (x\in K),\qquad
+\sum_i\lambda_i u_i=0,\qquad
+\sum_i\lambda_i u_i u_i^T=I,
+\qquad \sum_i\lambda_i=n.
+\end{equation}
+
+\end{lemma}
+
+We use this standard result without proof. The last identity follows by taking
+traces in the second-moment identity. We call finite unit vectors and positive
+weights with the two moment identities a \emph{John frame}; the inequalities in
+\eqref{eq:2.9} say that the frame supports $K$. The same vector $u_i$ specifies both
+the point of tangency with the unit ball and the outward normal of its
+supporting plane.
+
+\textbf{Construct an optimal certificate.} Return to the bounded full-dimensional
+polytope $\mathcal P$ of \eqref{eq:2.3}. The next proposition proves attainment and
+equality of the primal and normalized dual values.
+
+\begin{proposition}[{optimal multipliers from John contacts}]\label{prop-exact-duality}
+Problems \eqref{eq:2.3} and \eqref{eq:2.8} attain their optima. If $\mathcal E(c,A)=J(\mathcal P)$, there are normalized dual multipliers with aggregate $M=A^{-1}$ and zero cone pairings. Hence the optimal values of \eqref{eq:2.3} and \eqref{eq:2.8} sum to zero.
+
+\end{proposition}
+
+\begin{proof}
+Construct the dual variables from the contacts of the actual
+optimal ellipsoid. We first identify the active facet normal for each contact,
+then rescale the John weights so that their moments become the dual constraints.
+
+\textbf{Identify the active facets.} Let $\mathcal E(c,A)=J(\mathcal P)$,
+whose existence is classical, and apply John's characterization to
+$A^{-1}(\mathcal P-c)$. A unit contact $p$ lies on some defining plane.
+For its index $r$,
+\begin{equation}\label{eq:2.10}
+\|Ag_r\|\le\beta_r-g_r^Tc=(Ag_r)^Tp
+\le\|Ag_r\|\|p\|=\|Ag_r\|.
+\end{equation}
+
+Hence $p=Ag_r/\|Ag_r\|$ and the plane is active. Assign contacts to such indices and combine their weights. Writing $\ell_r=\|Ag_r\|>0$, this gives
+\begin{equation}\label{eq:2.11}
+p_r=\frac{Ag_r}{\ell_r},\qquad
+\sum_r\mu_rp_r=0,\qquad
+\sum_r\mu_rp_rp_r^T=I,\qquad \sum_r\mu_r=n.
+\end{equation}
+
+\textbf{Turn contact weights into multipliers.} The weights satisfy $\mu_r\ge0$ and
+$\mu_r(\beta_r-g_r^Tc-\ell_r)=0$. Dividing by the active support length
+$\ell_r$ makes the zero first moment become dual balance.
+Define $\alpha_r=\mu_r/\ell_r$ and $q_r=\alpha_rp_r$. Then
+\begin{equation}\label{eq:2.12}
+\begin{aligned}
+\sum_r\alpha_rg_r&=A^{-1}\sum_r\mu_rp_r=0,\\
+\sum_r\alpha_r\beta_r
+&=c^T\sum_r\alpha_rg_r+\sum_r\mu_r=n,\\
+\|q_r\|&=\alpha_r,\\
+\alpha_r(\beta_r-g_r^Tc)-q_r^TAg_r
+&=\alpha_r(\beta_r-g_r^Tc-\ell_r)=0.
+\end{aligned}
+\end{equation}
+
+\textbf{Use isotropy to match the inverse shape.} The second moment supplies the
+remaining dual matrix equation. Since $g_r=\ell_rA^{-1}p_r$, the aggregate is
+\begin{equation}\label{eq:2.13}
+\sum_rq_rg_r^T=\sum_r\mu_rp_rp_r^TA^{-1}=A^{-1}.
+\end{equation}
+
+The cone constraints and zero pairings follow immediately. Lemma~\ref{lem-certificate} now proves that this normalized certificate is dual optimal and that the gap is zero. 
+\end{proof}
+
+\textbf{Recover contacts from an optimal pair.} The converse identifies the active
+supports and shows that the normalized directions recover a John frame.
+
+\begin{proposition}[{optimality and contact recovery}]\label{prop-kkt}
+A feasible pair for \eqref{eq:2.3} and \eqref{eq:2.8} is optimal if and only if
+\begin{equation}\label{eq:2.14}
+M=A^{-1},\qquad
+\alpha_r(\beta_r-g_r^Tc)-q_r^TAg_r=0\quad\text{for every }r.
+\end{equation}
+
+For each $\alpha_r>0$,
+\begin{equation}\label{eq:2.15}
+\beta_r-g_r^Tc=\|Ag_r\|,\qquad
+q_r=\alpha_r\frac{Ag_r}{\|Ag_r\|}.
+\end{equation}
+
+With $p_r=Ag_r/\|Ag_r\|$ and $\mu_r=\alpha_r\|Ag_r\|$, the vectors and weights satisfy \eqref{eq:2.11}.
+
+\end{proposition}
+
+\begin{proof}
+At a primal--dual optimum, Proposition~\ref{prop-exact-duality} gives
+$\det A\det M=1$. Equality throughout the trace--AM--GM chain \eqref{eq:2.7} then forces
+$Y=M^{1/2}AM^{1/2}=I$ and $\operatorname{tr}(AM)=n$.
+The cone pairings are nonnegative and, by balance and normalization, their
+sum is $n-\operatorname{tr}(AM)=0$. Thus every pairing vanishes.
+Conversely, $M=A^{-1}$ gives equality in the certificate bound, proving
+optimality of the feasible pair. For $\alpha_r>0$, equality in the support
+and Cauchy--Schwarz inequalities gives \eqref{eq:2.15}.
+
+The remaining point is to recover the full second moment from the symmetrized
+aggregate. To recover isotropy, set $T=\sum_r\alpha_rg_rg_r^T/\|Ag_r\|$.
+The aggregate equation is a Sylvester equation for $T$:
+$AT+TA=2A^{-1}$. For $H=T-A^{-2}$, therefore,
+\begin{equation}\label{eq:2.16}
+AH+HA=0,
+\qquad
+0=\operatorname{tr}\bigl(H(AH+HA)\bigr)
+=2\operatorname{tr}(AH^2)
+\ge2\lambda_{\min}(A)\|H\|_F^2.
+\end{equation}
+
+Thus $H=0$ and $T=A^{-2}$. Positive definiteness has determined the
+unsymmetrized moment matrix without a commutativity assumption.
+The contact moments follow:
+\begin{equation}\label{eq:2.17}
+\sum_r\mu_rp_r=A\sum_r\alpha_rg_r=0,
+\qquad
+\sum_r\mu_rp_rp_r^T=ATA=I,
+\qquad
+\sum_r\mu_r=\operatorname{tr}I=n.
+\end{equation}
+
+This proves \eqref{eq:2.11}. 
+\end{proof}
+
+These results explain the exact optimization meaning of the certificate.
+The universal contraction proof in Section~\ref{sec:3} uses Lemma~\ref{lem-certificate} and one explicit
+feasible certificate; it does not require solving the normalized dual.
+Section~\ref{sec:10.1} gives the usual unnormalized dual and its scale reduction.
+
+\subsection{Finite contact reduction}\label{sec:2.4}
+
+An invertible affine change of coordinates preserves ratios of ellipsoid
+volumes. Send $J(K)$ to the unit ball and apply Lemma~\ref{lem-john}.
+The resulting supporting frame converts the geometric problem into a finite
+polytope problem while preserving the sharp supremum.
+
+The frame does not need to describe the whole boundary of $K$. Retaining only
+these supporting planes produces a polytope containing $K$, while John's
+characterization certifies that its original maximal ellipsoid is unchanged.
+
+\begin{lemma}[{finite contact reduction}]\label{lem-reduction}
+Let $K$ be a convex body with
+$J(K)=B_2^n$, and let $\mathcal U$ be a supporting John frame from Lemma~\ref{lem-john}.
+Then the contact polytope defined below is a convex body satisfying
+\begin{equation}\label{eq:2.18}
+P_{\mathcal U}=\{x:u_i^Tx\le1\text{ for all }i\},\qquad
+K\subseteq P_{\mathcal U},\qquad J(P_{\mathcal U})=B_2^n.
+\end{equation}
+
+In particular, $w(P_{\mathcal U})=w(K)=\kappa_n$. For every central halfspace
+$H_v=\{x:v^Tx\le0\}$ with $\|v\|=1$, each ellipsoid in $K\cap H_v$ is also
+feasible in $P_{\mathcal U}\cap H_v$, so
+$w(K\cap H_v)\le w(P_{\mathcal U}\cap H_v)$.
+Both cut sets have nonempty interior because they contain the corresponding
+half of the unit ball.
+
+\end{lemma}
+
+\begin{proof}
+The main point is boundedness: the supporting halfspaces could
+otherwise define an unbounded set. We obtain a radius bound directly from
+the two John moments. Since $\|u_i\|=1$, the polyhedron contains $B_2^n$.
+For $x\in P_{\mathcal U}$, put $r=\|x\|$ and $s_i=u_i^Tx$. Then
+$-r\le s_i\le1$, $\sum_i\lambda_i s_i=0$, and $\sum_i\lambda_i s_i^2=r^2$.
+The product $(1-s_i)(r+s_i)$ is nonnegative and quadratic in $s_i$, so its
+weighted sum can be evaluated using exactly these moments:
+\begin{equation}\label{eq:2.19}
+\begin{aligned}
+0\le\sum_i\lambda_i(1-s_i)(r+s_i)
+&=r\sum_i\lambda_i+(1-r)\sum_i\lambda_i s_i-\sum_i\lambda_i s_i^2\\
+&=nr-r^2.
+\end{aligned}
+\end{equation}
+
+Thus $r(r-n)\le0$ and $r\ge0$ imply $r\le n$. The finite intersection is closed and convex, so $B_2^n\subseteq P_{\mathcal U}\subseteq nB_2^n$ makes it a convex body. John's characterization gives $J(P_{\mathcal U})=B_2^n$, and the supporting inequalities give $K\subseteq P_{\mathcal U}$. 
+\end{proof}
+
+\textbf{Why the reduction preserves the sharp constant.} The enlargement can increase
+the post-cut ellipsoid volume, but it leaves the pre-cut volume unchanged.
+Consequently,
+\begin{equation}\label{eq:2.20}
+\frac{w(K\cap H_v)}{w(K)}
+\le\frac{w(P_{\mathcal U}\cap H_v)}{w(K)}
+=\frac{w(P_{\mathcal U}\cap H_v)}{w(P_{\mathcal U})}.
+\end{equation}
+
+For a particular $K$ the inequality can be strict. For the extremal problem,
+however, the two classes have the same supremum. Every normalized convex body
+admits such an enlargement. Conversely, any John frame defines a convex body
+$P_{\mathcal U}$ with John ellipsoid $B_2^n$: the boundedness argument above
+uses only the frame identities, and Lemma~\ref{lem-john} identifies its ellipsoid.
+Thus contact polytopes themselves belong to the original class, and
+\begin{equation}\label{eq:2.21}
+C_n
+=\sup_{\substack{\mathcal U\ \text{a John frame}\\\|v\|=1}}
+\frac{w(P_{\mathcal U}\cap H_v)}{w(P_{\mathcal U})}
+=\sup_{\substack{\mathcal U\ \text{a John frame}\\\|v\|=1}}
+\frac{w(P_{\mathcal U}\cap H_v)}{\kappa_n}.
+\end{equation}
+
+The first direction gives an upper bound for every convex body; the converse
+shows that no sharpness is lost. For each fixed frame and cut,
+$w(P_{\mathcal U}\cap H_v)/\kappa_n$ is the maximum feasible determinant
+in the finite ellipsoid problem \eqref{eq:2.3}, with supporting
+inequalities $(g_i,\beta_i)=(u_i,1)$ and the one added cut $(g_0,\beta_0)=(v,0)$.
+The geometric problem has therefore become a universal inequality for finite
+contact data. It is this finite problem that the next section certifies.

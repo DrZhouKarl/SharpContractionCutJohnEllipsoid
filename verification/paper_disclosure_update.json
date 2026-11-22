@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-09",
+  "scope": "Author-confirmed AI-assistance disclosure only; no mathematical or Lean proof change.",
+  "new_statement": "The author used large language models to assist with the discovery of the results, the development of the mathematical proofs, and the formal verification in Lean 4.",
+  "changed_inputs": {
+    "paper_inventory.json": {
+      "before": "3469f99567eb3ce60a7095146ab1545584e702a080b37069b79a9fad31314ba7",
+      "after": "32161af9bd400ea4f86b1b6d5519d09e1accc8791a56bb5721a112e8d1132174"
+    },
+    "paper/main.pdf": {
+      "before": "29008fe3379b350ced89825d7d389bcec60b5ea2c9c6e463f3131dcb04e436a4",
+      "after": "20fdd70ca129b9d30aec42411f80e2b8dc4d02b1921c8e0e15f8e818650ed585"
+    },
+    "paper/main.tex": {
+      "before": "5df95df4a74b5c653f8c74f9f1284df83f78320707d46023816e5bc53a4d4015",
+      "after": "33a1ad60b6befbd6854c8823d2936c5baf90a65f276d058b516f94f75b0243aa"
+    }
+  },
+  "named_statements_and_equations_unchanged": true,
+  "all_lean_and_audit_sources_unchanged": true,
+  "validation": "PDF rebuilt and checked; only page 37 text changed. No new Lean build or axiom audit was needed or run."
+}

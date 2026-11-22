@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "status": "paper-results-certified",
+  "namespace": "SharpCut",
+  "nodes": [
+    {
+      "id": "P00",
+      "title": "Environment and reuse baseline",
+      "dependencies": [],
+      "phase": 0,
+      "status": "verified",
+      "progress_note": "Nine fixed source packages integrated; real Euclidean/Loewner/CFC/Frobenius/sign interfaces built; source and axiom records retained."
+    },
+    {
+      "id": "F01",
+      "title": "Legacy geometry and volume",
+      "dependencies": [
+        "P00"
+      ],
+      "phase": 1,
+      "status": "verified",
+      "progress_note": "Actual reused geometry, volume, existence, uniqueness and normalization import closure rebuilt; cone branches not yet integrated as new sharpness proofs."
+    },
+    {
+      "id": "F02",
+      "title": "Matrix, Frobenius, spectral and isometry tools",
+      "dependencies": [
+        "F01"
+      ],
+      "phase": 1,
+      "status": "verified",
+      "progress_note": "CFC conjugate and explicit Frobenius/operator wrappers checked; mixed estimates and isometric blocks remain."
+    },
+    {
+      "id": "J00",
+      "title": "Finite John frames and supporting frames",
+      "dependencies": [
+        "F01",
+        "F02"
+      ],
+      "phase": 1,
+      "status": "verified",
+      "progress_note": "Defining frame, derived total weight/reconstruction/scalar moments and supporting polytope checked."
+    },
+    {
+      "id": "J01",
+      "title": "John contact necessity",
+      "dependencies": [
+        "J00"
+      ],
+      "phase": 2,
+      "status": "verified"
+    },
+    {
+      "id": "J02",
+      "title": "Finite reduction and rounding",
+      "dependencies": [
+        "J01",
+        "J00"
+      ],
+      "phase": 2,
+      "status": "verified"
+    },
+    {
+      "id": "O01",
+      "title": "Weak certificate and cone algebra",
+      "dependencies": [
+        "F01",
+        "F02"
+      ],
+      "phase": 3,
+      "status": "verified",
+      "progress_note": "Complete Lemma 2.1 verified with full normalized feasibility contract and symmetric positive-definite conjugate."
+    },
+    {
+      "id": "O02",
+      "title": "Constructive exact duality",
+      "dependencies": [
+        "O01",
+        "J01"
+      ],
+      "phase": 3,
+      "status": "verified"
+    },
+    {
+      "id": "O03",
+      "title": "Optimality and contact recovery",
+      "dependencies": [
+        "O02",
+        "F02"
+      ],
+      "phase": 3,
+      "status": "verified"
+    },
+    {
+      "id": "C01",
+      "title": "Lorentz directions and balanced weights",
+      "dependencies": [
+        "J00",
+        "F02"
+      ],
+      "phase": 4,
+      "status": "verified",
+      "progress_note": "Actual Lorentz unit vectors, balanced weights, defect nonnegativity/zero set and reweighted moments verified."
+    },
+    {
+      "id": "C02",
+      "title": "Symmetric factorization and left polar certificate",
+      "dependencies": [
+        "C01",
+        "F02"
+      ],
+      "phase": 4,
+      "status": "verified",
+      "progress_note": "B and F strict positivity and exact axial defect identity checked; Q=FD, D/F0 and polar assembly remain."
+    },
+    {
+      "id": "D01",
+      "title": "Lifted frame determinant bound",
+      "dependencies": [
+        "C02",
+        "F02"
+      ],
+      "phase": 5,
+      "status": "verified"
+    },
+    {
+      "id": "D02",
+      "title": "Hermite remainder and scalar integral certificate",
+      "dependencies": [
+        "C01"
+      ],
+      "phase": 5,
+      "status": "verified",
+      "progress_note": "Complete real-interval Lemma 8.4 checked, including original-integral substitution and endpoint evaluation; Lemma 8.3 integral Hermite loss remains."
+    },
+    {
+      "id": "D03",
+      "title": "Higher-dimensional lower bound",
+      "dependencies": [
+        "D01",
+        "D02"
+      ],
+      "phase": 5,
+      "status": "verified"
+    },
+    {
+      "id": "D04",
+      "title": "Transverse blocks, moments and strict domains",
+      "dependencies": [
+        "C02"
+      ],
+      "phase": 6,
+      "status": "verified"
+    },
+    {
+      "id": "D05",
+      "title": "Direct variational coupling",
+      "dependencies": [
+        "D04",
+        "F02"
+      ],
+      "phase": 6,
+      "status": "verified"
+    },
+    {
+      "id": "D06",
+      "title": "Dimensions two and three",
+      "dependencies": [
+        "D04",
+        "D05"
+      ],
+      "phase": 6,
+      "status": "verified",
+      "progress_note": "Dimension-three scalar polynomial and elimination checked; arbitrary-frame bridge and n=2 branch remain planned."
+    },
+    {
+      "id": "D07",
+      "title": "All-dimensional determinant bounds and equality",
+      "dependencies": [
+        "D03",
+        "D06",
+        "C02"
+      ],
+      "phase": 6,
+      "status": "verified"
+    },
+    {
+      "id": "G01",
+      "title": "Actual geometric sharp upper bound",
+      "dependencies": [
+        "J02",
+        "O01",
+        "D07",
+        "C02",
+        "F01"
+      ],
+      "phase": 7,
+      "status": "verified"
+    },
+    {
+      "id": "G02",
+      "title": "Fixed-dimensional sharpness and explicit models",
+      "dependencies": [
+        "G01",
+        "F01",
+        "C01"
+      ],
+      "phase": 7,
+      "status": "verified",
+      "progress_note": "Actual n=1 equality and witness checked; fixed n>=2 sharp attainment still requires the new upper bound."
+    },
+    {
+      "id": "E01",
+      "title": "Exact gaps, zero sets and spectral matching",
+      "dependencies": [
+        "O01",
+        "D07",
+        "C02",
+        "F02"
+      ],
+      "phase": 8,
+      "status": "verified"
+    },
+    {
+      "id": "E02",
+      "title": "General-body and contact-polytope equality",
+      "dependencies": [
+        "E01",
+        "G02",
+        "J02"
+      ],
+      "phase": 8,
+      "status": "verified"
+    },
+    {
+      "id": "S01",
+      "title": "Residuals and weighted contact distance",
+      "dependencies": [
+        "C02",
+        "J00",
+        "F02"
+      ],
+      "phase": 9,
+      "status": "verified"
+    },
+    {
+      "id": "S02",
+      "title": "Local logdet coercivity",
+      "dependencies": [
+        "D05",
+        "S01",
+        "F02"
+      ],
+      "phase": 9,
+      "status": "verified"
+    },
+    {
+      "id": "S03",
+      "title": "Explicit shape, center and contact stability",
+      "dependencies": [
+        "S02",
+        "E01",
+        "S01",
+        "F02"
+      ],
+      "phase": 9,
+      "status": "verified"
+    },
+    {
+      "id": "A01",
+      "title": "Iterations, rounding, asymptotics and instance bounds",
+      "dependencies": [
+        "G02",
+        "O02",
+        "F01"
+      ],
+      "phase": 10,
+      "status": "verified"
+    },
+    {
+      "id": "A02",
+      "title": "Unnormalized dual and common contractions",
+      "dependencies": [
+        "O02",
+        "O03",
+        "C02",
+        "F02"
+      ],
+      "phase": 10,
+      "status": "verified"
+    },
+    {
+      "id": "A03",
+      "title": "General/complementary coupling and inverse trace",
+      "dependencies": [
+        "D04",
+        "D05",
+        "F02"
+      ],
+      "phase": 10,
+      "status": "verified"
+    },
+    {
+      "id": "A04",
+      "title": "Nuclear-norm gap decomposition",
+      "dependencies": [
+        "E01",
+        "C02",
+        "F02"
+      ],
+      "phase": 10,
+      "status": "verified"
+    },
+    {
+      "id": "X01",
+      "title": "External survey mathematics and algorithm models",
+      "dependencies": [
+        "F01",
+        "F02"
+      ],
+      "phase": 12,
+      "status": "excluded_background"
+    },
+    {
+      "id": "AUD",
+      "title": "Root imports, coverage, signatures and independent reproduction",
+      "dependencies": [
+        "J02",
+        "O03",
+        "D07",
+        "G02",
+        "E02",
+        "S03",
+        "A01",
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "phase": 11,
+      "status": "verified"
+    }
+  ],
+  "acceptance_profiles": {
+    "paper": "All 28 named and 28 supplementary contracts and all 198 equation correspondences; EXT-04 inherited and audited.",
+    "excluded_background": [
+      "EXT-01",
+      "EXT-02",
+      "EXT-03"
+    ]
+  }
+}

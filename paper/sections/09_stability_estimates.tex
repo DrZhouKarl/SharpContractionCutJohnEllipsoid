@@ -1,0 +1,352 @@
+\section{Proof of Lemma~\ref{lem-geometric-control} and supporting estimates for Theorem~\ref{thm-stability}}\label{sec:9}
+
+We now supply the proof of Lemma~\ref{lem-geometric-control} deferred in Section~\ref{sec:6.1}, and the
+auxiliary shape and center estimates deferred in the proof of Theorem~\ref{thm-stability}.
+Sections~\ref{sec:9.2}--\ref{sec:9.3} prove the global and local parts of Lemma~\ref{lem-geometric-control}, respectively;
+Section~\ref{sec:9.4} supplies the remaining inputs to Theorem~\ref{thm-stability}. The quantities have
+three distinct roles: $\epsilon$ measures the total logarithmic volume deficit,
+$\chi$ measures departure of the contacts from the equality set, and
+$\sigma=2\chi/[d(2+b)]$ is the same contact defect in the block normalization.
+We first turn $\chi$ into matrix and contact-distance bounds. We then improve
+the determinant lower bound near equality and transfer the resulting matrix
+control to the ellipsoid's shape and center.
+
+The constants record successive sufficient estimates in this chain.
+The threshold in Lemma~\ref{lem-local} ensures that a quadratic logarithm bound applies;
+Section~\ref{sec:9.4} uses fixed spectral bounds to control inversion. The final
+coefficients $30$ and $50$ collect those estimates and are not asserted to
+be optimal stability constants.
+
+\subsection{Complementarity and matrix matching}\label{sec:9.1}
+
+Use the primal and dual quantities from \eqref{eq:4.1}--\eqref{eq:4.2}. The following identities
+also give the weighted multiplier estimate mentioned in Section~\ref{sec:4.3}.
+Here $(\tau,x)$ denotes a generic scalar--vector cone pair; the indexed
+$(\tau_r,x_r)$ are the support slack and vector from \eqref{eq:4.1}.
+
+\begin{proposition}[{quantitative complementarity and matrix matching}]\label{prop-gap-control}
+For cone-feasible $(\alpha,q)$ and $(\tau,x)$,
+\begin{equation}\label{eq:9.1}
+2\alpha\tau(\alpha\tau-q^Tx)
+=\|\alpha x-\tau q\|^2
++\alpha^2(\tau^2-\|x\|^2)+\tau^2(\alpha^2-\|q\|^2).
+\end{equation}
+
+If $G\le\epsilon\le1/4$, then
+\begin{equation}\label{eq:9.2}
+\|Y-I\|_F\le2\sqrt\epsilon,\qquad
+\sum_{\alpha_r>0}\alpha_r\tau_r
+\left\|\frac{x_r}{\tau_r}-\frac{q_r}{\alpha_r}\right\|^2
+\le2\epsilon.
+\end{equation}
+
+Here zero-normal redundant inequalities are removed. The first estimate also holds with $Y$ replaced by $A^{1/2}MA^{1/2}$.
+
+\end{proposition}
+
+\begin{proof}
+The sum-of-squares identity converts a small cone pairing into
+closeness of the normalized cone directions. Expanding the squares proves
+\eqref{eq:9.1}, and cone feasibility makes every term on its right nonnegative.
+For a nonzero normal, $A\succ0$ and primal feasibility imply
+$\tau_r\ge\|Ag_r\|>0$. Divide \eqref{eq:9.1} by $\alpha_r\tau_r$ when $\alpha_r>0$
+and sum. The total cone gap is at most $\epsilon$, giving the second bound.
+
+The matrix estimate is Lemma~\ref{lem-matching}:
+$\|Y-I\|_F\le2\sqrt G\le2\sqrt\epsilon$.
+The symmetric positive-definite matrices $M^{1/2}AM^{1/2}$ and
+$A^{1/2}MA^{1/2}$ have the same eigenvalues, so their Frobenius distances
+from the identity agree. This proves the final assertion. 
+\end{proof}
+
+\subsection{Global part of Lemma~\ref{lem-geometric-control}: geometric residuals}\label{sec:9.2}
+
+We return to the block and contact notation of Section~\ref{sec:8}. The aim is to make
+the scalar defect $\chi$ useful in two ways: as a bound on the certificate's
+matrix error, and as a bound on the distance of the contacts from the equality
+set. For the matrix bound, we seek a residual for each contact whose squared
+norm is proportional to that contact's summand in $\chi$. Isotropy will then
+combine these residuals without a dimension factor.
+
+\begin{lemma}[{geometric residual}]\label{lem-residual}
+For the explicit certificate,
+\begin{equation}\label{eq:9.3}
+\|Q-M_0\|_F^2\le\frac{1-b}{d}\chi,\qquad
+\|\widehat F-I\|_F^2\le\frac\chi d,
+\qquad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2
+\le\frac{32}{3}\chi.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+\textbf{Step 1: express the certificate error as contact residuals.} Subtract the model certificate from $Q$ and use the zero first moment to add
+a term that vanishes in the aggregate. This makes the individual residual
+vanish at both the pole and the model latitude.
+For $u=sv+y$ with $y\perp v$, the resulting residual is
+\begin{equation}\label{eq:9.4}
+\xi(u)=-\frac{s-b}{d(1-as)}
+\bigl[(1-b)(s+1)v+\sqrt{1-b}\,y\bigr].
+\end{equation}
+
+Expansion of $Q-M_0$, followed by the first and second John moments, gives
+\begin{equation}\label{eq:9.5}
+Q-M_0=\sum_i\lambda_i u_i\xi(u_i)^T,
+\qquad
+\|\xi(u)\|^2=\frac{1-b}{d}\frac{(1+s)(s-b)^2}{1-as}.
+\end{equation}
+
+For clarity, the axial coefficient before simplification is
+$f(s)(s-a)-(2-t)s+b$, and the transverse coefficient is
+$kf(s)-\sqrt{1-b}$. The added constant vector $bv$ contributes zero to the aggregate by balance. Their simplification gives \eqref{eq:9.4}, and orthogonality gives the norm identity.
+
+\textbf{Step 2: use isotropy to bound the total matrix error.} The matrix with
+columns $\sqrt{\lambda_i}u_i$ has orthonormal rows. Its Bessel inequality
+bounds the squared Frobenius norm of the aggregate by the sum of the
+weighted squared residuals. Applying this to \eqref{eq:9.5} proves the first estimate.
+To transfer it to the normalized matrix, use
+$Q-M_0=F_0^{1/2}(\widehat F-I)F_0^{1/2}D$.
+The product of the least singular values of the two outside factors is
+$\sqrt{1-b}$, giving the second estimate. The two matrix constants in \eqref{eq:9.3}
+thus come from the exact residual identity and the fixed normalization.
+
+\textbf{Step 3: compare the scalar residual with geometric distance.}
+The equality set consists of a pole and a latitude sphere. We choose an
+explicit comparison point in one of these two pieces. It suffices to show
+\begin{equation}\label{eq:9.6}
+\frac{(1+s)(s-b)^2}{1-as}
+\ge\frac3{32}\operatorname{dist}(u,\mathcal Z_b)^2.
+\end{equation}
+
+The split at $s=-1/2$ gives simple uniform bounds in both regions.
+If $s\le-1/2$, use the pole, whose squared distance is $2(1+s)$;
+then $(s-b)^2\ge1/4$ and $1-as\le4/3$.
+If $s\ge-1/2$, choose the point on the latitude with the same transverse
+direction, choosing any unit transverse vector if $y=0$. Its squared distance is
+\begin{equation}\label{eq:9.7}
+(s-b)^2+\bigl(\sqrt{1-s^2}-\sqrt{1-b^2}\bigr)^2\le4(s-b)^2.
+\end{equation}
+
+Indeed, rationalization bounds the squared root difference by
+$(s-b)^2(s+b)^2/(1-b^2)\le3(s-b)^2$.
+Also $(1+s)/(1-as)\ge3/8$. These two comparisons give the same coefficient
+$3/32$ in \eqref{eq:9.6}; its reciprocal is the contact-distance constant in \eqref{eq:9.3}.
+Summing with the John weights finishes the proof. 
+\end{proof}
+
+\textbf{Global part of Lemma~\ref{lem-geometric-control} proved.} The first and third inequalities in
+\eqref{eq:9.3} are exactly the two estimates in \eqref{eq:6.1}, since $d=2-b$.
+The local implication in Lemma~\ref{lem-geometric-control} remains to be proved in Section~\ref{sec:9.3}.
+
+\textbf{What the global estimates provide.} Combining Theorem~\ref{thm-determinant}, Proposition~\ref{prop-gap},
+and Lemma~\ref{lem-residual} gives
+\begin{equation}\label{eq:9.8}
+\chi\le1500\epsilon,\qquad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2\le16000\epsilon,
+\qquad
+\log\det\widehat F\ge\frac1{1000}\|\widehat F-I\|_F^2.
+\end{equation}
+
+\subsection{Local part of Lemma~\ref{lem-geometric-control}: coercivity near equality}\label{sec:9.3}
+
+The global estimate is enough to place a nearly extremal ellipsoid in a small
+neighborhood of the model. Here we improve its coefficient within that
+neighborhood. The idea is that the positive linear term
+$\operatorname{tr}(\widehat F-I)=\sigma-x$ should exceed the quadratic remainder
+in $\log\det\widehat F$. We need to bound the whole perturbation, including
+$j$, tightly enough for this difference to remain positive.
+
+The threshold $10^{-3}$ below is a sufficient size condition for that
+comparison. The intermediate bounds $1/40$ and $1/30$ specify the small
+spectral intervals used in the proof; the useful conclusion is the final
+lower bound $\sigma/16$.
+
+\begin{lemma}[{local coercivity}]\label{lem-local}
+If $\sigma\le10^{-3}$, then
+\begin{equation}\label{eq:9.9}
+\log\det\widehat F\ge\frac\sigma{16}\ge\frac\chi{32}.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+If $\sigma=0$, the assertion follows from $\widehat F=I$.
+Suppose $\sigma>0$.
+
+\textbf{Step 1: confine the transverse eigenvalues.} We first use Lemma~\ref{lem-variational} to
+control $E$ and $j$ in the metric determined by $K_E$.
+Here $0\le L\le d(1-b)/(d+b^2)<1$ by its definition and
+$(d+b^2)-d(1-b)=2b>0$. Lemma~\ref{lem-variational} therefore gives
+\begin{equation}\label{eq:9.10}
+A_E+\|K_E^{-1}j\|^2\le\frac\sigma2.
+\end{equation}
+
+Every eigenvalue $e>-1/2$ of $E$ therefore satisfies
+$e^2/(1+2e)\le1/2000$. This scalar inequality implies $|e|\le1/40$:
+the quotient increases as $e$ moves away from zero on either side, and its
+values at $\pm1/40$ already exceed $1/2000$.
+The choice $1/40$ gives the simple interval $[19/20,21/20]$ for the eigenvalues
+of $K_E$. We can now compare the metric in \eqref{eq:9.10} with ordinary Frobenius
+and Euclidean norms:
+\begin{equation}\label{eq:9.11}
+\|E\|_F^2+\frac{20}{21}\|j\|^2\le\frac{21}{40}\sigma.
+\end{equation}
+
+\textbf{Step 2: control the full perturbation.} Its squared norm contains
+$2\|j\|^2$, so the estimate in \eqref{eq:9.11} needs one further bound on the coupling.
+The Gram constraint gives $\|j\|^2\le x(t+1/40)\le47\sigma/160$.
+The coefficient $47/160$ combines $xt\le9\sigma/32$ and
+$x/40\le\sigma/80$. Also $x^2\le\sigma/4000$.
+Combining these estimates leaves the convenient upper bound $5\sigma/6$:
+\begin{equation}\label{eq:9.12}
+\|\widehat F-I\|_F^2=x^2+2\|j\|^2+\|E\|_F^2\le\frac56\sigma,
+\qquad \|\widehat F-I\|_{\rm op}<\frac1{30}.
+\end{equation}
+
+\textbf{Step 3: let the trace gain dominate the logarithmic remainder.}
+The size assumption and \eqref{eq:9.12} put every eigenvalue perturbation in
+$[-1/30,1/30]$. On this interval, integration of the derivative gives
+$\log(1+z)\ge z-(15/29)z^2$; the coefficient is
+$15/29=1/[2(1-1/30)]$.
+The quadratic term is controlled by \eqref{eq:9.12}, while
+$\operatorname{tr}(\widehat F-I)=(1-d/4)\sigma\ge\sigma/2$.
+Their difference is
+\begin{equation}\label{eq:9.13}
+\log\det\widehat F\ge\frac\sigma2-\frac{15}{29}\frac{5\sigma}{6}
+=\frac{2\sigma}{29}\ge\frac\sigma{16}.
+\end{equation}
+
+The bound $2\sigma/29$ is rounded down to $\sigma/16$ for subsequent use.
+Finally, $\sigma=2\chi/(4-b^2)\ge\chi/2$. 
+\end{proof}
+
+\textbf{Completion of the deferred proof of Lemma~\ref{lem-geometric-control}.} The first two bounds in Lemma~\ref{lem-geometric-control}
+are part of Lemma~\ref{lem-residual}. Its hypothesis is expressed in $\chi$, while the local
+lemma uses $\sigma$, so we check the conversion explicitly. For the small-defect
+assertion, $\chi\le3/2000$ implies
+$\sigma=2\chi/(4-b^2)\le(8/15)\chi\le1/1250<10^{-3}$.
+Lemma~\ref{lem-local} and \eqref{eq:8.2} therefore give $\Delta_{\rm geom}\ge\chi/32$.
+This proves the remaining assertion and completes Lemma~\ref{lem-geometric-control}, as promised in Section~\ref{sec:6.1}.
+
+\subsection{Remaining estimates for Theorem~\ref{thm-stability}: shape and center}\label{sec:9.4}
+
+We now prove the polar-factor and support-mismatch estimates deferred in
+Section~\ref{sec:6.2}. We finish the passage from certificate error to ellipsoid error under the
+hypotheses of Theorem~\ref{thm-stability}, in particular $\epsilon\le10^{-6}$.
+The contact estimate \eqref{eq:6.3} already gives $\chi\le32\epsilon$ and hence
+$\|Q-M_0\|_F\le4\sqrt\epsilon$. What remains is to transfer this bound through
+the polar factor and matrix inversion, then recover the center from support
+values. The constants below are explicit bounds for these transfers.
+
+\textbf{Step 1: keep the polar factor uniformly invertible.} Set
+$\delta=\|Q-M_0\|_{\rm op}\le4\sqrt\epsilon\le0.004$. Since
+$M_0=2vv^T+\sqrt{1-b}P$, the triangle inequality gives, for every vector $x$,
+\begin{equation}\label{eq:9.14}
+\left(\frac1{\sqrt2}-\delta\right)\|x\|
+\le\|Q^Tx\|\le(2+\delta)\|x\|,
+\qquad
+\|Q^Tx\|^2=x^TM^2x.
+\end{equation}
+
+Apply these inequalities to unit eigenvectors of $M\succ0$. Every eigenvalue
+lies in $[1/\sqrt2-\delta,\,2+\delta]$.
+The rational bounds $7/10$ and $201/100$ lie outside this interval uniformly
+under the assumed bound on $\delta$:
+\begin{equation}\label{eq:9.15}
+\lambda_{\min}(M)>\frac7{10},\qquad
+\lambda_{\max}(M)<\frac{201}{100},\qquad
+\|Q\|_{\rm op}\le2+\delta<\frac{201}{100}.
+\end{equation}
+
+The lower bound prevents matrix inversion from magnifying small errors
+without control. The upper bound will control the product difference in the
+next step.
+
+\textbf{Step 2: transfer the error from $Q$ to its polar factor.} Since $M^2=QQ^T$,
+the difference $X=M-M_0$ satisfies a linear matrix equation. Taking its
+Frobenius inner product with $X$ uses the positive spectral lower bounds to
+control $\|X\|_F$. The identity $MX+XM_0=QQ^T-M_0^2$ gives
+\begin{equation}\label{eq:9.16}
+\begin{aligned}
+(\lambda_{\min}(M)+\lambda_{\min}(M_0))\|X\|_F^2
+&\le\operatorname{tr}(X^TMX)+\operatorname{tr}(X^TXM_0)\\
+&=\langle X,QQ^T-M_0^2\rangle_F\\
+&\le\|X\|_F\|QQ^T-M_0^2\|_F.
+\end{aligned}
+\end{equation}
+
+For $X=0$ the conclusion is immediate; otherwise cancel $\|X\|_F$. Since
+$QQ^T-M_0^2=(Q-M_0)Q^T+M_0(Q^T-M_0)$,
+\begin{equation}\label{eq:9.17}
+\begin{aligned}
+\|M-M_0\|_F
+&\le\frac{\|QQ^T-M_0^2\|_F}
+{\lambda_{\min}(M)+\lambda_{\min}(M_0)}\\
+&\le\frac{(\|Q\|_{\rm op}+\|M_0\|_{\rm op})\|Q-M_0\|_F}{7/5}
+\le\frac{401}{35}\sqrt\epsilon
+\le12\sqrt\epsilon.
+\end{aligned}
+\end{equation}
+
+Here $401/35$ is the coefficient obtained by inserting the spectral bounds;
+$12$ is a convenient upper bound for it.
+
+\textbf{Step 3: transfer the error to the ellipsoid shape.} Matrix matching
+controls $A-M^{-1}$, and Step 2 controls $M^{-1}-M_0^{-1}$ using the same
+positive lower bounds. The inverse-difference estimate in \eqref{eq:6.5} gives
+\begin{equation}\label{eq:9.18}
+\|A-A_*\|_F
+\le\left(\frac{20}{7}+\frac{1200}{49}\right)\sqrt\epsilon
+\le30\sqrt\epsilon.
+\end{equation}
+
+The two terms in the coefficient correspond to these two errors, and their
+sum is less than $30$. The non-strict conclusion includes $\epsilon=0$.
+
+\textbf{Step 4: express the model's support mismatch through the contact defect.}
+To recover the center, we need to compare the model support value with the
+original supporting plane at each contact. Squaring and subtracting exposes
+the pole and latitude factors directly. For a unit vector $u=sv+y$, $y\perp v$,
+compute
+\begin{equation}\label{eq:9.19}
+\|A_*u\|^2-\left(1+\frac s2\right)^2
+=\frac{s^2}{4}+\frac{1-s^2}{1-b}-\left(1+\frac s2\right)^2
+=\frac{(1+s)(b-s)}{1-b}.
+\end{equation}
+
+Rationalizing therefore gives
+\begin{equation}\label{eq:9.20}
+g_*(s):=\|A_*u\|-1-\frac s2
+=\frac{(1+s)(b-s)}{(1-b)(\|A_*u\|+1+s/2)}.
+\end{equation}
+
+The squared mismatch is therefore the contact-defect summand times a bounded
+factor. The bounds $\|A_*u\|+1+s/2\ge1$, $(1+s)(1-as)\le2$, and
+$(1-b)^2\ge1/4$ give the coefficient $8$:
+\begin{equation}\label{eq:9.21}
+g_*(s)^2
+\le8\,\frac{(1+s)(s-b)^2}{1-as},
+\qquad
+\sum_i\lambda_i g_*(s_i)^2\le8\chi.
+\end{equation}
+
+\textbf{Step 5: recover the center and collect the estimates.} Subtracting support
+values expresses each projection of $c-c_*$ as the sum of the slack, the
+model mismatch, and the shape error:
+\begin{equation}\label{eq:9.22}
+(c-c_*)^Tu_i=-r_i-g_*(s_i)+\|A_*u_i\|-\|Au_i\|.
+\end{equation}
+
+Multiplication by $\lambda_i u_i$ and summation uses isotropy to recover
+$c-c_*$ itself. The triangle and Bessel estimates in Section~\ref{sec:6} give
+\begin{equation}\label{eq:9.23}
+\|c-c_*\|\le4\epsilon+\sqrt{8\chi}+\|A-A_*\|_F
+\le50\sqrt\epsilon.
+\end{equation}
+
+In this last estimate, $\sqrt{8\chi}\le16\sqrt\epsilon$, the shape term is
+at most $30\sqrt\epsilon$, and $4\epsilon\le0.004\sqrt\epsilon$.
+The coefficient $50$ is a single convenient upper bound for their sum.
+Together with the completed proof of Lemma~\ref{lem-geometric-control}, these estimates justify
+all deferred inputs in the proof of Theorem~\ref{thm-stability}.

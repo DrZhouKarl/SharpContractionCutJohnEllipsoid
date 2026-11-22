@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-09",
+  "paper_displays": 198,
+  "mathematical_display_contents_preserved": true,
+  "source_markdown_sha256": "909057d4e7c87807769a9ac6d2339a3124277d6177ba78aa1a3c5bce7e8e6a7d",
+  "github_markdown_sha256": "49a0c9e853e8ae91735be279c73ab906c7044c6ad64e0bf0bb2aa24b92b5ac6a",
+  "format": "Inline dollar delimiters and fenced math displays; all mathematical content preserved."
+}

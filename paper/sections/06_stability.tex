@@ -1,0 +1,134 @@
+\section{Quantitative stability near equality}\label{sec:6}
+
+The deficit identity provides the qualitative equality argument almost immediately. Quantitative stability requires estimates that turn its three small terms into distances. We state the geometric estimates first, then combine them with matrix matching.
+
+\subsection{The geometric estimates needed by the proof}\label{sec:6.1}
+
+\begin{lemma}[{geometric control}]\label{lem-geometric-control}
+For the explicit certificate,
+\begin{equation}\label{eq:6.1}
+\|Q-M_0\|_F^2\le\frac{1-b}{2-b}\chi,\qquad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2
+\le\frac{32}{3}\chi.
+\end{equation}
+
+If $\chi\le3/2000$, then $\Delta_{\rm geom}\ge\chi/32$.
+
+\end{lemma}
+
+\textbf{Proof deferred to Sections~\ref{sec:9.2}--\ref{sec:9.3}.} Section~\ref{sec:9.2} proves the two global
+estimates through Lemma~\ref{lem-residual}. Section~\ref{sec:9.3} proves the local implication through
+Lemma~\ref{lem-local}, checks the conversion between the two smallness conditions, and
+completes Lemma~\ref{lem-geometric-control}.
+
+Even without the small-defect assumption, \eqref{eq:4.3} and Lemma~\ref{lem-geometric-control} give
+$\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2\le16000\epsilon$.
+Thus the contact geometry is controlled globally, with a better constant near equality.
+
+\subsection{Shape, center, and contact stability}\label{sec:6.2}
+
+\begin{theorem}[{dimension-independent stability}]\label{thm-stability}
+Let $\mathcal E(c,A)$ be any feasible cut ellipsoid in John coordinates, and assume
+$0\le\epsilon=\log(R_n/\det A)\le10^{-6}$. Then
+\begin{equation}\label{eq:6.2}
+\begin{aligned}
+\chi&\le32\epsilon,&
+\|Q-M_0\|_F&\le4\sqrt\epsilon,\\
+\|A-A_*\|_F&\le30\sqrt\epsilon,&
+\|c-c_*\|&\le50\sqrt\epsilon,
+\end{aligned}
+\qquad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2
+\le\frac{1024}{3}\epsilon.
+\end{equation}
+
+\end{theorem}
+
+The constants are independent of $n$. The threshold $10^{-6}$ is a sufficient
+condition for entering the local regime of Lemma~\ref{lem-geometric-control}; the proof below shows
+this implication explicitly. The numbers $30$ and $50$ are convenient upper
+bounds obtained when the shape and center estimates are combined.
+
+The proof below uses Lemma~\ref{lem-geometric-control}, whose proof is deferred as stated above.
+The polar-factor and support-mismatch estimates used in the shape and center
+steps are established in Section~\ref{sec:9.4}.
+
+\begin{proof}
+We pass from the contact defect to the certificate, then to the shape and center.
+
+\textbf{Contact geometry.} First use the global bound to enter the small-defect
+regime, then use the stronger local bound. This is the purpose of the
+threshold on $\epsilon$. By \eqref{eq:4.3} and Lemma~\ref{lem-geometric-control},
+\begin{equation}\label{eq:6.3}
+\chi\le1500\epsilon\le\frac3{2000}
+\quad\Longrightarrow\quad
+\chi\le32\Delta_{\rm geom}\le32\epsilon.
+\end{equation}
+
+Consequently,
+\begin{equation}\label{eq:6.4}
+\|Q-M_0\|_F^2\le\frac{1-b}{2-b}\chi\le\frac\chi2\le16\epsilon,
+\qquad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2
+\le\frac{32}{3}\chi\le\frac{1024}{3}\epsilon.
+\end{equation}
+
+\textbf{Shape.} There are two errors to combine: matrix matching controls $A$ relative
+to $M^{-1}$, and the geometric estimate controls $M^{-1}$ relative to
+$A_*=M_0^{-1}$. Set $Y=M^{1/2}AM^{1/2}$.
+Then $G\le\epsilon$ and Lemma~\ref{lem-matching} gives $\|Y-I\|_F\le2\sqrt\epsilon$. Section~\ref{sec:9.4} establishes
+$\lambda_{\min}(M),\lambda_{\min}(M_0)>7/10$ and
+$\|M-M_0\|_F\le12\sqrt\epsilon$. Using $A_*=M_0^{-1}$,
+\begin{equation}\label{eq:6.5}
+\begin{aligned}
+\|A-A_*\|_F
+&\le\|M^{-1/2}(Y-I)M^{-1/2}\|_F
++\|M^{-1}(M_0-M)M_0^{-1}\|_F\\
+&\le\frac{\|Y-I\|_F}{\lambda_{\min}(M)}
++\frac{\|M-M_0\|_F}{\lambda_{\min}(M)\lambda_{\min}(M_0)}\\
+&\le\left(\frac{20}{7}+\frac{1200}{49}\right)\sqrt\epsilon
+\le30\sqrt\epsilon.
+\end{aligned}
+\end{equation}
+
+The inverse-difference identity preserves the multiplication order and requires no commutativity.
+
+\textbf{Center.} Recover the displacement from its projections on the contact
+normals. Each projection has three contributions: support slack, mismatch
+between the contact height and the equality model, and the shape error already
+bounded above. Let $r_i=1-c^Tu_i-\|Au_i\|\ge0$. Since
+$\gamma_i\ge\alpha_i r_i$ and $\alpha_i\ge\lambda_i/4$,
+\begin{equation}\label{eq:6.6}
+\sum_i\lambda_i r_i\le4\sum_i\alpha_i r_i\le4\mathcal C\le4\epsilon.
+\end{equation}
+
+The function $g_*(s)=\|A_*u\|-1-s/2$, for $u^Tv=s$, measures the model's
+support mismatch at that contact height. It vanishes at the equality contacts.
+Section~\ref{sec:9.4} proves
+$\sum_i\lambda_i g_*(s_i)^2\le8\chi$. Subtracting support values and using isotropy gives
+\begin{equation}\label{eq:6.7}
+\begin{aligned}
+c-c_*={}&-\sum_i\lambda_i r_i u_i
+-\sum_i\lambda_i g_*(s_i)u_i\\
+&+\sum_i\lambda_i\bigl(\|A_*u_i\|-\|Au_i\|\bigr)u_i.
+\end{aligned}
+\end{equation}
+
+For any scalars $a_i$, the frame Bessel inequality is
+$\|\sum_i\lambda_i a_i u_i\|^2\le\sum_i\lambda_i a_i^2$.
+Moreover,
+\begin{equation}\label{eq:6.8}
+\sum_i\lambda_i\bigl|\|A_*u_i\|-\|Au_i\|\bigr|^2
+\le\sum_i\lambda_i\|(A_*-A)u_i\|^2=\|A_*-A\|_F^2.
+\end{equation}
+
+The triangle and Bessel inequalities now yield
+\begin{equation}\label{eq:6.9}
+\|c-c_*\|\le4\epsilon+\|A-A_*\|_F+\sqrt{8\chi}
+\le50\sqrt\epsilon.
+\end{equation}
+
+This proves all estimates in \eqref{eq:6.2}. 
+\end{proof}
+
+The conclusion applies to every nearly extremal feasible ellipsoid, including the optimizer. Its geometric interpretation is that a small logarithmic volume deficit forces a square-root scale error in the shape and center. The contact estimate is weighted, so it does not control a single contact whose John weight is arbitrarily small. All distances are measured after John normalization, and no whole-body distance to a unique extremizer is asserted.

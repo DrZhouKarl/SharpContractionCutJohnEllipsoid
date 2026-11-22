@@ -1,0 +1,30 @@
+{
+  "scope": "GitHub delimiter and common TeX checks; optional local MathJax parsing, not live GitHub rendering.",
+  "files": 13,
+  "expressions": 1234,
+  "display_expressions": 220,
+  "source_sha256": {
+    "AGENTS.md": "74fe483ea42c1ee365eb41c3387d3dc6d3c1d8963e22aedc05c96a625f111a75",
+    "README.md": "b4f08ea93ecd1a2cf5af03d7c18338a6324ca1275bcfe300b8ed9d214c2c542d",
+    "STATUS.md": "58fa3c58ca1ddb572f6557b40a721f73d0461868361e4438cbf769b1d487ddd9",
+    "formalization_plan.md": "b59d6070278b63280c6300d3ba8082a5466dc9e051e35ffd028d667c3fdd3884",
+    "lean_guide.md": "404307c90f50f7d4cd24a3404d874de0360d8c100c4b77b14bd9fd804663288a",
+    "markdown_math.md": "ca0d30e1ac2ae208960b6bd8ec658abb12ce1b56397841e103d42a374737104f",
+    "proof.md": "7c051fedb564625c8335d5899e3c0bb320cd60df8800c861f3ad11a780a37b59",
+    "reuse_inventory.md": "1e285c9cffcb29ec09bde5e88fc16f42a96d50045b3e351cf9b7e0261f3a1c00",
+    "theorem_map.md": "2c711b2c19cd54ef8c427bdefa71377d3f97ba79f261cba98dc424bcff61cd50",
+    "verification_plan.md": "2f1bbca9be934d969e1183a393bb1a7a48c53f1f305be48aaa36b195bb5cb1ad",
+    "paper/endpoint_log_bounds.md": "afe0eb1f53b623e0813d98333796a1ac2e47e0f4465284f7d3e6e4aa6935d457",
+    "paper/mathematical_review.md": "05c826cc110c0d6eaf8a022decde3ee6bedcf664175f54f50c06579dc659748a",
+    "paper/report.md": "49a0c9e853e8ae91735be279c73ab906c7044c6ad64e0bf0bb2aa24b92b5ac6a"
+  },
+  "network_requests": 0,
+  "success": true,
+  "local_mathjax": {
+    "version": "2.7.9",
+    "processed": 1234,
+    "errors": [],
+    "errorNodes": 0
+  },
+  "engine_sha256": "0d588838c61dc2533f6b1aa81833de5327f4bab2e81cc3784000812b2079f14c"
+}

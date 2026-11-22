@@ -1,0 +1,129 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Anstreicher(1997)]{Anstreicher1997}
+K.~M. Anstreicher.
+\newblock On {Vaidya}'s volumetric cutting plane method for convex programming.
+\newblock \emph{Mathematics of Operations Research}, 22:\penalty0 63--89, 1997.
+
+\bibitem[Anstreicher(2002)]{Anstreicher2002}
+K.~M. Anstreicher.
+\newblock Improved complexity for maximum volume inscribed ellipsoids.
+\newblock \emph{SIAM Journal on Optimization}, 13\penalty0 (2):\penalty0
+  309--320, 2002.
+
+\bibitem[Atkinson and Vaidya(1995)]{AV1995}
+D.~S. Atkinson and P.~M. Vaidya.
+\newblock A cutting plane algorithm for convex programming that uses analytic
+  centers.
+\newblock \emph{Mathematical Programming}, 69:\penalty0 1--43, 1995.
+
+\bibitem[Boyd and Vandenberghe(2004)]{BV2004}
+S.~Boyd and L.~Vandenberghe.
+\newblock \emph{Convex Optimization}.
+\newblock Cambridge University Press, 2004.
+
+\bibitem[de~Moura and Ullrich(2021)]{deMouraUllrich2021}
+L.~de~Moura and S.~Ullrich.
+\newblock The {Lean 4} theorem prover and programming language.
+\newblock In \emph{Automated Deduction -- CADE 28}, volume 12699 of
+  \emph{Lecture Notes in Computer Science}, pages 625--635. Springer, 2021.
+\newblock \doi{10.1007/978-3-030-79876-5_37}.
+
+\bibitem[Gr{\"o}tschel et~al.(1988)Gr{\"o}tschel, Lov{\'a}sz, and
+  Schrijver]{GLS1988}
+M.~Gr{\"o}tschel, L.~Lov{\'a}sz, and A.~Schrijver.
+\newblock \emph{Geometric Algorithms and Combinatorial Optimization}.
+\newblock Springer, Berlin, 1988.
+
+\bibitem[Gr{\"u}nbaum(1960)]{Grunbaum1960}
+B.~Gr{\"u}nbaum.
+\newblock Partitions of mass-distributions and of convex bodies by hyperplanes.
+\newblock \emph{Pacific Journal of Mathematics}, 10\penalty0 (4):\penalty0
+  1257--1261, 1960.
+\newblock \doi{10.2140/pjm.1960.10.1257}.
+
+\bibitem[G{\"u}ler and G{\"u}rtuna(2007)]{GG2007}
+O.~G{\"u}ler and F.~G{\"u}rtuna.
+\newblock The extremal volume ellipsoids of convex bodies, their symmetry
+  properties, and their determination in some special cases.
+\newblock arXiv:0709.0707, 2007.
+\newblock URL \url{https://arxiv.org/abs/0709.0707v1}.
+\newblock Version 1.
+
+\bibitem[Horn and Johnson(1985)]{HJ1985}
+R.~A. Horn and C.~R. Johnson.
+\newblock \emph{Matrix Analysis}.
+\newblock Cambridge University Press, 1985.
+
+\bibitem[John(1948)]{John1948}
+F.~John.
+\newblock Extremum problems with inequalities as subsidiary conditions.
+\newblock In \emph{Studies and Essays Presented to {R. Courant} on His 60th
+  Birthday}, pages 187--204. Interscience, New York, 1948.
+
+\bibitem[Khachiyan(1990)]{Khachiyan1990}
+L.~G. Khachiyan.
+\newblock An inequality for the volume of inscribed ellipsoids.
+\newblock \emph{Discrete \& Computational Geometry}, 5:\penalty0 219--222,
+  1990.
+\newblock \doi{10.1007/BF02187786}.
+
+\bibitem[Khachiyan and Todd(1993)]{KT1993}
+L.~G. Khachiyan and M.~J. Todd.
+\newblock On the complexity of approximating the maximal inscribed ellipsoid
+  for a polytope.
+\newblock \emph{Mathematical Programming}, 61:\penalty0 137--159, 1993.
+\newblock \doi{10.1007/BF01582144}.
+
+\bibitem[Nesterov and Nemirovskii(1994)]{NN1994}
+Y.~Nesterov and A.~Nemirovskii.
+\newblock \emph{Interior-Point Polynomial Algorithms in Convex Programming}.
+\newblock SIAM, Philadelphia, 1994.
+
+\bibitem[Tarasov et~al.(1988)Tarasov, Khachiyan, and Erlikh]{TKE1988}
+S.~P. Tarasov, L.~G. Khachiyan, and I.~I. Erlikh.
+\newblock The method of inscribed ellipsoids.
+\newblock \emph{Doklady Akademii Nauk SSSR}, 298\penalty0 (5):\penalty0
+  1081--1085, 1988.
+\newblock In Russian. English translation: Soviet Mathematics Doklady 37
+  (1988), 226--230.
+
+\bibitem[{The mathlib Community}(2020)]{Mathlib2020}
+{The mathlib Community}.
+\newblock The {Lean} mathematical library.
+\newblock In \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+  on Certified Programs and Proofs}, CPP 2020. ACM, 2020.
+\newblock \doi{10.1145/3372885.3373824}.
+
+\bibitem[Todd(2023)]{Todd2023}
+M.~J. Todd.
+\newblock The ellipsoid method redux.
+\newblock arXiv:2301.07632, 2023.
+\newblock URL \url{https://arxiv.org/abs/2301.07632v2}.
+\newblock Version 2.
+
+\bibitem[Vaidya(1996)]{Vaidya1996}
+P.~M. Vaidya.
+\newblock A new algorithm for minimizing convex functions over convex sets.
+\newblock \emph{Mathematical Programming}, 73:\penalty0 291--341, 1996.
+
+\bibitem[Zhang and Gao(2003)]{ZG2003}
+Y.~Zhang and L.~Gao.
+\newblock On numerical solution of the maximum volume ellipsoid problem.
+\newblock \emph{SIAM Journal on Optimization}, 14\penalty0 (1):\penalty0
+  53--76, 2003.
+\newblock \doi{10.1137/S1052623401397230}.
+
+\bibitem[Zhou et~al.(2026)Zhou, Zou, and Liu]{Zhou2026}
+L.~Zhou, H.~Zou, and T.~Liu.
+\newblock A spectral proof of {Khachiyan}'s ellipsoid conjecture.
+\newblock arXiv:2609.28447, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.28447v1}.
+\newblock Version 1, 23 September 2026.
+
+\end{thebibliography}

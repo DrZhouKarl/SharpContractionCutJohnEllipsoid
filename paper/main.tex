@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+% Portable arXiv preprint. This is not a publisher-supplied journal class.
+% Omit volatile PDF metadata so independent builds can be compared exactly.
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{newtxtext,newtxmath}
+\usepackage{microtype,graphicx,enumitem,needspace}
+\usepackage[section]{placeins}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage[unicode,bookmarksnumbered,bookmarksdepth=3,colorlinks=true,
+  linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\setlist{itemsep=5pt,topsep=6pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{4pt}
+\allowdisplaybreaks[1]
+\input{metadata}
+\title{Sharp Volume Contraction of a Centrally Cut John Ellipsoid}
+\author{\paperauthors}
+\date{November 9, 2026}
+\hypersetup{
+  pdftitle={Sharp Volume Contraction of a Centrally Cut John Ellipsoid},
+  pdfauthor={Zhou Longfei},
+  pdfsubject={Sharp central-cut contraction, equality, and quantitative stability},
+  pdfkeywords={John ellipsoid, convex geometry, convex optimization, cutting planes}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\noindent\textbf{Keywords:} maximum-volume inscribed ellipsoid;
+central cut; John decomposition; conic certificate; determinant inequality;
+equality and stability.
+
+\smallskip
+\noindent\textbf{Mathematics Subject Classification (2020):}
+Primary 52A20; Secondary 52A40, 90C25.
+
+\input{sections/01_introduction}
+\input{sections/02_optimization}
+\input{sections/03_sharp_bound}
+\input{sections/04_deficit}
+\input{sections/05_equality}
+\input{sections/06_stability}
+\input{sections/07_computation}
+\input{sections/08_determinant}
+\input{sections/09_stability_estimates}
+\input{sections/10_discussion}
+\input{sections/11_conclusion}
+
+\paragraph{Use of AI-assisted tools.}
+The author used large language models to assist with the discovery of the
+results, the development of the mathematical proofs, and the formal
+verification in Lean 4.
+
+\clearpage
+\bibliographystyle{abbrvnat}
+\bibliography{references}
+\end{document}

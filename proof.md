@@ -1,0 +1,384 @@
+# Sharp central cuts: mathematical specification for Lean 4
+
+Date: 9 November 2026. This is the specification and proof architecture for
+*Sharp Volume Contraction of a Centrally Cut John Ellipsoid*. It specifies the implemented contracts; current kernel and reproduction
+evidence is recorded in STATUS.md, separately from this specification. The baseline is the 38-page arXiv manuscript
+with 19 references, 28 numbered results, and 198 numbered equations.
+[paper_inventory.json](paper_inventory.json) records its exact source hashes,
+statement text, equations, and coverage assignments. The checked Markdown
+counterpart is [the V3 report](paper/report.md).
+
+The paper is the mathematical authority. This document makes implicit domains,
+geometric interfaces, and proof obligations explicit. Any actual discrepancy
+must be recorded and resolved in the Markdown and LaTeX texts as well as Lean;
+an implementer must not silently strengthen hypotheses or weaken conclusions.
+Theorem names in the current implementation ledger are actual loaded declarations;
+original architectural proposals in historical sections are not verification evidence.
+
+## 1. Geometry, volume, and the final contract
+
+Let $n\ge1$, $V_n=\mathbb R^n$ with its Euclidean inner product, and
+$B_n=\{x:\|x\|\le1\}$. A convex body is compact, convex, and has nonempty
+interior. For a symmetric positive-definite matrix $A$, set
+
+```math
+E(c,A)=c+AB_n,\qquad \operatorname{vol}E(c,A)=\kappa_n\det A,
+\qquad 0<\kappa_n=\operatorname{vol}(B_n)<\infty.
+```
+
+Use actual Lebesgue measure. The primary Lean volume functional is an
+`ENNReal` supremum over feasible positive-definite ellipsoids; existence,
+uniqueness, positivity, and finiteness for convex bodies identify it with
+$w(K)=\operatorname{vol}J(K)$. Its real-valued version is used only after the
+finite, nonzero volume facts have been established. The reusable
+`Khachiyan.IsMaxDet` expresses genuine maximality among all feasible shapes.
+
+Use the paper's halfspace convention
+
+```math
+H(c,v)=\{x:\langle v,x-c\rangle\le0\},\qquad v\ne0.
+```
+
+The legacy `Khachiyan.centralHalfspace c p` uses the opposite inequality;
+prove $H(c,v)=\texttt{centralHalfspace}(c,-v)$. For $J(K)=c+SB_n$, normalization
+is $x=c+Sy$, so the transformed normal is $S^Tv=Sv$, subsequently divided by
+its positive norm. The inverse or inverse transpose is not the normal in this
+direction of coordinate change. Use an actual isometry for any further rotation.
+
+Define
+
+```math
+R_1=\frac12,\qquad
+R_n=\frac12\left(\frac n{n-1}\right)^{(n-1)/2}\quad(n\ge2).
+```
+
+An implementation-friendly equivalent for $n=m+1$, $m\ge1$, is
+$R_{m+1}=\frac12\sqrt{((m+1)/m)^m}$. Prove equivalence to the real-power
+formula. An arbitrary total value at $n=0$ has no geometric meaning; all public
+geometric statements must retain $1\le n$ or an equivalent positive-dimension
+instance. Never evaluate a formula with $n-1$ in the denominator at $n=1$.
+
+Theorem `thm-sharp` has three separately audited exports:
+
+1. For every such $n,K,v$, the cut is a convex body and
+   $w(K\cap H(c(K),v))\le R_nw(K)$.
+2. For **each fixed** $n\ge1$, there are a convex body and a nonzero normal
+   attaining equality in that inequality, in actual volume.
+3. The supremum $C_n$ of the real volume ratios equals $R_n$, is attained,
+   and is unchanged if restricted to finite John contact polytopes.
+
+The final theorem may not assume a John frame, dual certificate, determinant
+estimate, or maximizing cut ellipsoid as additional unproved input. Intermediate
+theorems may take those objects as data when their hypotheses match the paper.
+For $n=1$, reuse the interval theorem with the sign adapter.
+
+## 2. Finite frames and John necessity
+
+A John frame is a finite family $(u_i,\lambda_i)$ with
+
+```math
+\|u_i\|=1,\qquad \lambda_i>0,\qquad
+\sum_i\lambda_i u_i=0,\qquad
+\sum_i\lambda_i u_iu_i^T=I.
+```
+
+Its total weight $\sum_i\lambda_i=n$ and spanning property are **derived**.
+Define separately that it supports $K$: $u_i^Tx\le1$ for every $x\in K$.
+This separation permits arbitrary frame theorems without inserting a convex
+body into every matrix lemma. A finite index `Fin N` avoids universe issues
+when taking suprema over all frames; reindex arbitrary finite families by
+a proved equivalence. Do not require distinct contact vectors unnecessarily.
+
+Lemma `lem-john` requires the full characterization. If $B_n\subseteq K$,
+then $J(K)=B_n$ iff a supporting positive-weight John frame exists. Include
+the boundary-contact interpretation $u_i\in\partial K\cap S^{n-1}$.
+The legacy theorem proves sufficiency; necessity is supplied by the new `SharpCut.John.Necessity` module.
+
+The implemented necessity argument uses separation in
+$V_n\times\operatorname{Sym}_n$, with Frobenius pairing on the symmetric
+component. Contact atoms are $(u,uu^T)$. Their second components have trace
+one, which permits proving closedness of the cone generated by the compact
+contact set. If $(0,I)$ is outside this cone, separation gives $(a,H)$ with
+$\operatorname{tr}H>0$ and $a^Tu+u^THu\le0$ at contacts. Replace $H$ by
+$H-\delta I$ for sufficiently small positive $\delta$, retaining positive
+trace and making the contact inequalities strict. Compactness of the sphere,
+continuity of support, and a uniform quadratic bound on
+$\|(I+\varepsilon H)u\|$ then make a sufficiently small affine perturbation
+feasible with determinant greater than one, a contradiction. This uniform
+feasibility step is a substantive lemma, not an appeal to finitely many contacts.
+Finite conic/convex representation and removal of zero coefficients produce
+the frame. No particular contact-cardinality bound is needed by the paper.
+
+For `lem-reduction`, put $P_{\mathcal U}=\{x:u_i^Tx\le1\ \forall i\}$.
+Prove $B_n\subseteq P_{\mathcal U}\subseteq nB_n$, compactness and nonempty
+interior, $J(P_{\mathcal U})=B_n$, and $K\subseteq P_{\mathcal U}$ when the
+frame supports $K$. The cut comparison is an inequality, not pointwise
+equality of the two cut optima. The converse inclusion of extremal classes
+supplies equality of their suprema.
+
+## 3. Primal and dual problems
+
+For finite nonzero normals $g_r$ and real offsets $\beta_r$, assume the
+polytope $\mathcal P=\{x:g_r^Tx\le\beta_r\}$ is a convex body. Primal
+feasibility means $A\succ0$ and $g_r^Tc+\|Ag_r\|\le\beta_r$ for every $r$.
+Prove its equivalence to ellipsoid containment. The objective is
+$\log\det A$; this is a log-determinant optimization problem with
+second-order-cone constraints.
+
+For dual data $(\alpha_r,q_r)$ define
+
+```math
+M=\sum_r\operatorname{sym}(q_rg_r^T),\qquad
+\sum_r\alpha_rg_r=0,\quad \sum_r\alpha_r\beta_r=n,\quad
+\|q_r\|\le\alpha_r,\quad M\succ0.
+```
+
+These are the entire normalized dual feasibility conditions. Their structure
+must not also store the determinant bound or optimality being proved.
+Lemma `lem-certificate` gives $\operatorname{tr}(AM)\le n$ and
+$\det A\det M\le1$ by applying scalar AM–GM or its logarithmic equivalent
+to $Y=M^{1/2}AM^{1/2}\succ0$. The generally nonsymmetric product $AM$ is
+not substituted for a positive-definite symmetric matrix.
+
+Proposition `prop-exact-duality` proves both attainments and constructs
+$M=A^{-1}$ at an actual primal optimum. Normalize the optimal ellipsoid;
+use John necessity; assign each contact to an active defining facet; combine
+weights, allowing zero combined weights on inactive facets. Since $g_r\ne0$,
+$\ell_r=\|Ag_r\|>0$. Set $p_r=Ag_r/\ell_r$, $\alpha_r=\mu_r/\ell_r$,
+and $q_r=\alpha_rp_r$. Prove every feasibility identity and zero cone pairing.
+
+Proposition `prop-kkt` proves both directions of optimality/contact recovery.
+Its isotropy argument requires the Sylvester implication
+$AH+HA=0\Rightarrow H=0$ for symmetric $H$ and $A\succ0$; do not assume
+the unknown moment matrix commutes with $A$.
+
+The unnormalized dual in Section 10.1 is also a target. Its Lagrangian
+supremum has an extended-real $+\infty$ branch when balance or positive
+definiteness fails. Prove that branch, as well as the finite conjugate formula,
+positive scale $s=\sum_r\alpha_r\beta_r$, and optimum scale $n/s$.
+Constructive exact duality is sufficient for the main proof; a general Slater
+theorem is not a substitute for the determinant estimate below.
+
+## 4. Explicit certificate and determinant theorem
+
+Here and through Section 7 assume $n\ge2$, a John frame, and a unit $v$.
+Set
+
+```math
+b=1/n,\quad d=2-b,\quad a=b/d,\quad t=(1+b)/2,
+\quad k=\sqrt{1-a^2}=2\sqrt{1-b}/d,
+\quad P=I-vv^T,\quad s_i=u_i^Tv,\quad y_i=Pu_i.
+```
+
+Prove $0<b\le1/2$, $|s_i|\le1$, $1-as_i\ge2/3$, and
+$\alpha_i=\lambda_i(1-ts_i)\ge\lambda_i/4>0$.
+Use a distinct cut index, such as `Option (Fin N)`, for
+$(g_0,\beta_0,\alpha_0)=(v,0,t)$, and set
+
+```math
+p_i=\frac{(s_i-a)v+ky_i}{1-as_i},\qquad
+\chi=\sum_i\lambda_i\frac{(1+s_i)(s_i-b)^2}{1-as_i},\qquad
+Q=\sum_i\alpha_i u_ip_i^T+t vv^T.
+```
+
+Prove unit norms, scalar balance, and normalization directly from the frame.
+Do not interchange $u_ip_i^T$ with $p_iu_i^T$.
+Define $f(s)=(1-ts)/(1-as)$ and
+
+```math
+B=\sum_i\lambda_i f(s_i)u_iu_i^T,\quad
+F=B+\frac{t}{1-a}vv^T,\quad D=kP+k^2vv^T,\quad Q=FD,
+```
+
+```math
+F_0=\frac{d^2}{2(1-b)}vv^T+\frac d2P,\qquad
+\widehat F=F_0^{-1/2}FF_0^{-1/2}.
+```
+
+Prove $B,F,D,F_0,\widehat F\succ0$ and $\det Q>0$ before using inverses
+or polar factors. The identity $\det\widehat F=R_n\det Q$ connects
+`thm-determinant` to `thm-frame-bound`. Both theorems include
+
+```math
+\frac{\chi}{1500}\le\log\det\widehat F\le\frac{\chi}{2d},
+\qquad \det F\ge\det F_0=\frac{d^{n+1}}{2^n(1-b)},
+```
+
+and equality iff every $s_i\in\{-1,b\}$; at equality,
+$F=F_0$, $\widehat F=I$, and $Q=M_0=2vv^T+\sqrt{1-b}P$.
+
+Preserve all dimension branches:
+
+- For $n\ge4$, `lem-lifted-bound`, `lem-hermite`, and `lem-rational`
+  give the gain/loss estimate. The lifted finite-frame log-determinant
+  inequality, its Cauchy–Binet marginal identity, and the exact pointwise
+  Hermite remainder (8.27) are separately tracked obligations.
+- The scalar coefficient satisfies $\mathcal R(b)<124/125$ and
+  $\delta_0(b)\ge1/12$ for $0<b\le1/4$. Formalize the substitution,
+  rational monotonicity identities, partial-fraction integral, and exact
+  logarithm comparison at $b=1/4$. The supporting finite logarithm bounds
+  are in [endpoint_log_bounds.md](paper/endpoint_log_bounds.md).
+- For $n=2$, prove (8.48): $\det\widehat F\ge1+11\chi/60$.
+- For $n=3$, prove `prop-dim3`: $\det\widehat F\ge1+36\chi/385$.
+  Keep $L=5/8-5\sigma/6$ and its zero endpoint. The two-by-two identities
+  and rational polynomial certificate are exact kernel proof obligations.
+- Convert both low-dimensional bounds to the same logarithmic margin using
+  $0\le\chi\le2$. Derive the upper bound from the trace, and both directions
+  of equality from positive weights and the block identities.
+
+The block data in `lem-moments` use an isometric decomposition
+$V_n=\mathbb Rv\oplus v^\perp$, with $m=n-1$:
+
+```math
+\widehat F=\begin{pmatrix}1-x&j^T\\j&I_m+E\end{pmatrix},\quad
+x=\frac{\chi}{2(2+b)}=\frac d4\sigma,\quad
+\sigma=\operatorname{tr}E=\frac{2\chi}{d(2+b)}.
+```
+
+The symmetric block $E$ need not be positive semidefinite. Prove its strict
+spectral bounds and the positive Gram block from the frame, rather than
+assuming them for the final theorem. With $K_E=I_m+2E$, the direct coupling
+result is
+
+```math
+A_E=\operatorname{tr}(E^2K_E^{-1})\le\sigma/2,\qquad
+\|K_E^{-1}j\|^2\le L(\sigma/2-A_E),\quad
+L=\frac{d(1-b)}{d+b^2}-\frac d2\sigma.
+```
+
+Separate $\sigma=0$, $L=0$, and positive cases before division.
+
+Finally set $M=(QQ^T)^{1/2}$, $U=M^{-1}Q$,
+$q_i=\alpha_iUp_i$, $q_0=tUv$. Prove
+$UU^T=I$, $UQ^T=M$, and $\det M=\det Q$.
+This **left** polar choice gives the required symmetric aggregate.
+Combining it with weak duality proves the normalized upper bound; affine
+transport and the actual volume bridge finish the general bound.
+
+## 5. Sharpness and equality, including general bodies
+
+The model is
+
+```math
+c_*=-v/2,\quad A_*=\tfrac12vv^T+(1-b)^{-1/2}P,
+\quad \det A_*=R_n,\quad
+\mathcal Z_b=\{-v\}\cup\{u:\|u\|=1,\ u^Tv=b\}.
+```
+
+For a regular simplex, prove existence of the contact configuration, the
+moments in (3.3), and all three model support equations. For a faster first
+proof of fixed-dimensional attainment, the legacy cone construction already
+provides a feasible candidate whose exact determinant equals $R_n$.
+Combine that lower bound with the **new** upper bound to prove its maximality.
+This does not discharge the paper's separate simplex and transverse examples.
+
+Theorem `thm-equality` has distinct conclusions:
+
+1. A normalized convex body attains the sharp ratio iff there exists a
+   supporting John frame on $\mathcal Z_b$ with
+   $\operatorname{conv}(B_n\cup E(c_*,A_*))\subseteq K\subseteq P_{\mathcal U}$.
+2. At equality the new John ellipsoid is precisely $E(c_*,A_*)$.
+3. At equality **every** supporting positive-weight John frame lies on
+   $\mathcal Z_b$.
+4. For a contact polytope with a specified defining John frame, equality is
+   equivalent to that frame's heights lying in $\{-1,b\}$.
+
+The existential sandwich and the universal necessary frame condition must
+not be conflated. Contact heights alone do not imply model containment for
+an arbitrary convex body. Zero deficit determines the shape; complementary
+support equations and isotropy determine the center.
+
+Proposition `prop-extremizers` lifts any transverse John frame by
+$u_i=bv+\sqrt{1-b^2}w_i$, $\lambda_i=\mu_i/(1-b^2)$ and adds pole weight
+$1/(1+b)$. Prove the explicit signed-coordinate examples and, in dimension
+three, the square-pyramid inequalities, vertices, candidate shape, and exact
+ratio $3/4$. These are not a uniqueness claim for simplices.
+
+## 6. Exact gaps and quantitative stability
+
+For a normalized feasible primal–dual pair, put
+
+```math
+\tau_r=\beta_r-g_r^Tc,\quad x_r=Ag_r,\quad
+\gamma_r=\alpha_r\tau_r-q_r^Tx_r,\quad Y=M^{1/2}AM^{1/2},
+```
+
+```math
+\mathcal C=\sum_r\gamma_r=n-\operatorname{tr}(AM),\quad
+\mathcal D=\operatorname{tr}Y-n-\log\det Y,\quad
+G=-\log\det M-\log\det A=\mathcal C+\mathcal D.
+```
+
+All terms are defined on their positive domains. For the explicit certificate,
+`prop-gap` adds $\Delta_{\rm geom}=\log(R_n\det Q)$ and proves
+
+```math
+\epsilon=\log(R_n/\det A)=\Delta_{\rm geom}+\mathcal C+\mathcal D.
+```
+
+Prove the zero sets (4.5) separately. `lem-matching` and `prop-gap-control`
+include the Frobenius bound $\|Y-I\|_F\le2\sqrt G$ for $G\le1/4$, the
+alternative symmetric conjugate, the exact cone sum-of-squares identity, and
+the weighted normalized direction estimate. Remove zero normals and restrict
+to $\alpha_r>0$ before dividing; primal feasibility and $A\succ0$ give
+$\tau_r\ge\|Ag_r\|>0$.
+
+`lem-residual` proves both matrix residuals and the weighted contact distance
+bound. `lem-local` gives $\log\det\widehat F\ge\sigma/16\ge\chi/32$ for
+$\sigma\le10^{-3}$. Their combination proves `lem-geometric-control`,
+including the conversion from $\chi\le3/2000$ to the local hypothesis.
+For `thm-stability`, every feasible cut ellipsoid with
+$0\le\epsilon\le10^{-6}$ must satisfy all five estimates
+
+```math
+\chi\le32\epsilon,\quad \|Q-M_0\|_F\le4\sqrt\epsilon,\quad
+\|A-A_*\|_F\le30\sqrt\epsilon,\quad
+\|c-c_*\|\le50\sqrt\epsilon,\quad
+\sum_i\lambda_i\operatorname{dist}(u_i,\mathcal Z_b)^2
+\le\frac{1024}{3}\epsilon.
+```
+
+Use genuine Frobenius norms, operator norms, and Euclidean set distance.
+Prove $\mathcal Z_b$ is nonempty (and compact) before using real infimum
+distance. Preserve $\epsilon=0$ and non-strict final inequalities.
+The proof chain includes weighted Bessel, the support mismatch bound $8\chi$,
+the spectral lower bound $7/10$, the polar-factor perturbation bound, and
+ordered inverse-difference identities. These constants cannot be replaced by
+unspecified existence constants in the final theorem.
+
+## 7. Remaining mathematical content
+
+The map includes all four named results of Section 10 and the following
+unnumbered mathematical assertions:
+
+- The retained-ball iteration bound; exact asymptotic series, monotonicity,
+  uniform limit, and the $O(n^{-4})$ remainder with a genuine eventual bound.
+- The post-cut initialization with radius ratio $8n+2$; the relative-volume
+  stopping criterion; attained instance-specific dual extrema and sharp infima.
+- The common-contraction determinant optimum; nuclear-norm triangle/rank-one
+  estimates and all terms of the alternative deficit decomposition, including
+  its polar correction. Commutativity is only a sufficient condition stated
+  for that correction to vanish.
+- General and complementary coupled inequalities with universal symmetric
+  matrix/vector tests; their inverse-trace equivalences, including deriving
+  strict positivity and handling a zero optimal test coefficient.
+- The affine simplex shape formula under affine independence; the exact
+  offset/multiple-cut dual formulations under the stated full-dimensional
+  feasibility assumptions. No new sharp offset or multiple-cut estimate is
+  asserted in the current paper.
+
+The cited centroid-volume bound, enclosing-ellipsoid arithmetic update and
+approximate inscribed-ellipsoid algorithm cost are outside the author-agreed
+formalization scope. They do not enter the proof chain as custom axioms.
+Open research directions and historical attribution are also outside kernel
+certification. All named and supplementary mathematical results developed
+in this paper are covered by the completed proof and audits.
+
+## 8. Faithfulness and completion
+
+Use the [theorem map](theorem_map.md), [implementation plan](formalization_plan.md),
+and [verification contract](verification_plan.md) together. A compiled algebra
+lemma is not the general geometric theorem. A bibliography entry is not a
+Lean premise. A source inspection is not a fresh kernel check. Report
+statement fidelity, build success, transitive axiom acceptance, and coverage
+as distinct evidence, with all remaining obligations visible.

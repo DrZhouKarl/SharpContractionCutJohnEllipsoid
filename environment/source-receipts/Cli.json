@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "name": "Cli",
+  "revision": "2842b9871b04862f944c032e34052cb9448ccb71",
+  "url": "https://codeload.github.com/leanprover/lean4-cli/tar.gz/2842b9871b04862f944c032e34052cb9448ccb71",
+  "archive_sha256": "a5cb6dcba66edc8cfeac1a24d772eefebecee7fc68a33b0c2ad4191edf8c2a28",
+  "config_file": "lakefile.toml",
+  "identity_basis": "HTTPS archive at exact revision; not a Git checkout",
+  "files": {
+    ".github/workflows/build.yml": "998b42cece17c4e57aa3252d784b584af2842ebbe5e4a6d74b6794d6740c753d",
+    ".gitignore": "402cd9adbd7d9cba72ad6335679b567edac021cb855d6cffb6e8bc0df9e8e532",
+    "Cli/Basic.lean": "e325b55b12eca6a94bd44d591c10f019b7ba130c33d0c3c6680ba392c26654d7",
+    "Cli/Extensions.lean": "1560fcd5ffe33ac7d0ac2e4470430d20f814fff53d516ea40596721ae5be5031",
+    "Cli.lean": "552ac95bbae12a1d54a0c582f171860f07eb9bbc2a4380e9cd873ec818d571b9",
+    "CliTest/Example.lean": "7f8d03f3aa0e63e74c34ae244799882bea020f4119fe00ac8f6099667e0797af",
+    "CliTest/Tests.lean": "0bfe19e6d3d7ce8794924b2f7d7743d09f14b05b54dfd75df00ec58d17012338",
+    "LICENSE": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac",
+    "README.md": "c35780b1fa9e6910d73633466d74c41ba7caa2a053971f64429b9b9768e92a8a",
+    "lake-manifest.json": "f608bac5ccb22b59292584eb7fb4497c327e780a17e7afb8d584ce5d79ad0b70",
+    "lakefile.toml": "188aaec6ddb57f411c11b95c3ece85ff26ab9ae8085371fee47e1dc855c4e186",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
+  },
+  "symlinks": {}
+}

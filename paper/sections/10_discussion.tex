@@ -1,0 +1,373 @@
+\section{Discussion}\label{sec:10}
+
+The preceding sections establish the sharp contraction, equality, and stability
+results. We now discuss extensions of the optimization and matrix viewpoints:
+the unnormalized dual, the scope of the common rotation's optimality, an
+alternative deficit identity, and the full family of coupled inequalities.
+These results elaborate the earlier arguments; the core proofs are complete
+without referring forward to this discussion.
+
+\subsection{The unnormalized dual and its scale}\label{sec:10.1}
+
+For the bounded full-dimensional polytope $\mathcal P$ of Section~\ref{sec:2}, retain
+the primal formulation \eqref{eq:2.3}. The normalized certificate problem \eqref{eq:2.8} was
+chosen for a direct trace bound. The usual Lagrangian dual explains this
+normalization and is useful when working with unnormalized multipliers.
+
+This standard convex formulation is discussed in \cite[Section 8.4]{BV2004} and in the maximum-volume ellipsoid literature \cite{ZG2003}. Self-duality of the Lorentz cone and the log-determinant conjugate give the dual
+\begin{equation}\label{eq:10.1}
+\begin{aligned}
+\text{minimize}_{\alpha,q}\quad&\sum_r\alpha_r\beta_r-n-\log\det M\\
+\text{subject to}\quad&\sum_r\alpha_rg_r=0,\quad
+\|q_r\|\le\alpha_r,\quad
+M=\sum_r\operatorname{sym}(q_rg_r^T)\succ0.
+\end{aligned}
+\end{equation}
+
+Indeed, with $s=\sum_r\alpha_r\beta_r$ the Lagrangian is
+\begin{equation}\label{eq:10.2}
+\begin{aligned}
+\mathcal L(A,c)&=\log\det A-\operatorname{tr}(AM)
+-c^T\sum_r\alpha_rg_r+s,\\
+\sup_{A\succ0,c}\mathcal L&=
+\begin{cases}
+s-n-\log\det M,&\sum_r\alpha_rg_r=0,\ M\succ0,\\
++\infty,&\text{otherwise}.
+\end{cases}
+\end{aligned}
+\end{equation}
+
+The finite supremum is attained at $A=M^{-1}$. This is the standard log-determinant conjugate calculation \cite[Chapters 3 and 5]{BV2004}.
+
+\textbf{Remove the redundant multiplier scale.} Balance and cone feasibility
+are preserved by positive scaling. We can therefore optimize that one scalar
+before considering the remaining dual variables. For a dual feasible point,
+primal feasibility implies $s\ge\operatorname{tr}(AM)>0$.
+Scaling all multipliers by $\rho>0$ gives
+$\Psi(\rho)=\rho s-n-n\log\rho-\log\det M$. With $u=\rho s/n$,
+\begin{equation}\label{eq:10.3}
+\Psi(\rho)-\Psi(n/s)=n(u-1-\log u)\ge0.
+\end{equation}
+
+Thus the optimal scale has $\sum_r\alpha_r\beta_r=n$, giving precisely
+the normalized certificate problem \eqref{eq:2.8}. Its optimal value is the negative
+of the primal optimal value, and both optima are attained, by Proposition~\ref{prop-exact-duality}.
+A strictly feasible small ellipsoid also allows the use of Slater's theorem.
+The construction in Section~\ref{sec:2.3} additionally identifies optimal multipliers
+from the contact geometry.
+
+\subsection{Optimality of the common rotation}\label{sec:10.2}
+
+\begin{proposition}[{optimality among common contractions}]\label{prop-polar}
+If $\|R\|_{\rm op}\le1$ and $N=\operatorname{sym}(RQ^T)\succ0$, then $\det N\le\det Q$. The rotation $R=U$ in \eqref{eq:3.13} attains equality.
+
+\end{proposition}
+
+\begin{proof}
+We compare the determinant with its positive symmetric part,
+then use the contraction bound on $R$. Write $RQ^T=N+K$ with $K^T=-K$,
+and normalize the skew part by $T=N^{-1/2}KN^{-1/2}$.
+The following Gram determinant identity provides the first comparison:
+\begin{equation}\label{eq:10.4}
+\det(I+T)^2=\det\bigl((I+T)^T(I+T)\bigr)
+=\det(I+T^TT)\ge1
+\end{equation}
+gives $|\det(N+K)|\ge\det N$. Moreover,
+\begin{equation}\label{eq:10.5}
+\|R\|_{\rm op}\le1
+\quad\Longrightarrow\quad 0\preceq R^TR\preceq I
+\quad\Longrightarrow\quad |\det R|^2=\det(R^TR)\le1.
+\end{equation}
+
+Consequently $\det N\le|\det(RQ^T)|=|\det R|\det Q\le\det Q$.
+At $R=U$, \eqref{eq:3.15} gives $N=M$ and equality. 
+\end{proof}
+
+This restricted optimality does not rule out improvements from changing the multiplier directions individually. The proof uses only real positive-semidefinite matrices, avoiding a separate argument with complex eigenvalues of a skew-symmetric matrix.
+
+\subsection{An alternative deficit decomposition}\label{sec:10.3}
+
+This decomposition follows the same gap through singular-value estimates.
+Its terms distinguish support slack, the triangle inequality for the nuclear
+norm, and the scalar logarithmic inequality. A fourth term records the
+difference between the resulting nuclear-norm bound and the trace used by
+the polar certificate.
+Let $\|\cdot\|_*$ denote the sum of singular values, and put
+\begin{equation}\label{eq:10.6}
+\begin{aligned}
+S&=\sum_i\alpha_i(1-c^Tu_i-\|Au_i\|)+t(-c^Tv-\|Av\|),\\
+T_{\rm nuc}&=\sum_i\alpha_i\|Au_i\|+t\|Av\|-\|AQ\|_*,\\
+H_{\rm nuc}&=\|AQ\|_*-n-\log\det(AQ),\\
+\mathcal R_{\rm pol}&=\|AQ\|_*-\operatorname{tr}(AM).
+\end{aligned}
+\end{equation}
+
+Primal feasibility gives $S\ge0$. For the other terms, use the standard rank-one and trace bounds for the nuclear norm \cite{HJ1985}. If $\rho_j>0$ are the singular values of $AQ$, then
+\begin{equation}\label{eq:10.7}
+\begin{aligned}
+\|AQ\|_*
+&\le\sum_i\alpha_i\|Au_i p_i^T\|_*+t\|Avv^T\|_*\\
+&=\sum_i\alpha_i\|Au_i\|+t\|Av\|,\\
+H_{\rm nuc}&=\sum_{j=1}^n(\rho_j-1-\log\rho_j)\ge0,\\
+\operatorname{tr}(AM)&=\operatorname{tr}(AQU^T)
+\le\|AQ\|_*\|U\|_{\rm op}=\|AQ\|_*.
+\end{aligned}
+\end{equation}
+
+Here $\det(AQ)>0$ ensures $\sum_j\log\rho_j=\log\det(AQ)$.
+All four terms are nonnegative. To relate them to the main deficit identity,
+keep the polar correction explicitly: it is added to the cone gap and
+subtracted from the matrix divergence, so it cancels in their sum.
+Direct calculation gives
+\begin{equation}\label{eq:10.8}
+\begin{aligned}
+\mathcal C&=S+T_{\rm nuc}+\mathcal R_{\rm pol},\\
+\mathcal D(A,M)&=H_{\rm nuc}-\mathcal R_{\rm pol},\\
+\epsilon&=\log\det\widehat F+S+T_{\rm nuc}+H_{\rm nuc}.
+\end{aligned}
+\end{equation}
+
+In general $\mathcal C\ne S+T_{\rm nuc}$, because multiplication by $A$ changes the polar factor. The correction vanishes when $A$ commutes with $M$. The cone-based identity \eqref{eq:4.3} is more directly suited to equality and stability, because its two optimization terms separately measure complementarity and matrix matching.
+
+\subsection{General and complementary coupled inequalities}\label{sec:10.4}
+
+Lemma~\ref{lem-variational} extracted the particular coupling estimate used in the main proofs.
+The same finite moment calculation gives an inequality for every symmetric
+test matrix and every vector. We record that full statement and its companion
+at the opposite endpoint of the trace range.
+
+For these extensions introduce
+\begin{equation}\label{eq:10.9}
+\begin{gathered}
+h=d+b^2,\qquad\sigma_*:=\frac{2(1-b)}h,\qquad\tau=\sigma_*-\sigma,\\
+e_*:=\frac{2b}h=\frac{\sigma_*}{m},\qquad
+\bar\chi=\sum_i\nu_i(1-s_i)(s_i+b)^2.
+\end{gathered}
+\end{equation}
+
+Here $\tau$ is the unused part of the allowed trace, $e_*=\sigma_*/m$,
+and $\bar\chi$ is the complementary nonnegative contact sum.
+The coefficient in Lemma~\ref{lem-variational} is $L=d\tau/2$.
+The scalar relation \eqref{eq:8.45} becomes
+$\chi+(1-b)(2+b)^2\bar\chi/h^2=d(2+b)(1-b)/h$.
+
+\begin{lemma}[{coupled Cauchy inequality}]\label{lem-cauchy}
+For every symmetric $Z\in\mathbb S^m$ and $q\in\mathbb R^m$,
+\begin{equation}\label{eq:10.10}
+(\operatorname{tr}(ZE)+q^Tj)^2
+\le\sigma\left[
+\operatorname{tr}\bigl(Z^2(E+\tfrac12I_m)\bigr)
++2q^TZj+\frac d4\tau\|q\|^2\right].
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+The aim is to represent the linear quantity on the left as one
+weighted contact sum, so that one application of Cauchy--Schwarz controls both
+parts. Choose $\gamma=\sqrt{d(1-b)}/h$; the moment identities then give
+\begin{equation}\label{eq:10.11}
+\operatorname{tr}(ZE)+q^Tj
+=-\frac1d\sum_i\nu_i(s_i-b)y_i^T\bigl(Zy_i+\gamma(s_i+b)q\bigr).
+\end{equation}
+
+The coefficient $\gamma$ is chosen so that the $q$ term is exactly $q^Tj$.
+Apply $|y_i^Tw|\le\|y_i\|\|w\|$ to each summand and use
+$\|y_i\|^2=(1-s_i)(1+s_i)$. In weighted Cauchy--Schwarz, the factors
+$\nu_i(1+s_i)(s_i-b)^2$ sum to $\chi$, leaving the bound
+\begin{equation}\label{eq:10.12}
+\frac{\chi}{d^2}\sum_i\nu_i(1-s_i)
+\|Zy_i+\gamma(s_i+b)q\|^2.
+\end{equation}
+
+Terms at the poles have $y_i=0$, so no division by $1\pm s_i$ is needed.
+Expanding the remaining squared norm produces a quadratic term in $Z$, a
+mixed term in $Z,q$, and a quadratic term in $q$. The following three identities
+evaluate them in that order:
+\begin{equation}\label{eq:10.13}
+\begin{aligned}
+\sum_i\nu_i(1-s_i)y_iy_i^T&=\frac{2d}{2+b}(E+\tfrac12I_m),\\
+\gamma\sum_i\nu_i(1-s_i)(s_i+b)y_i&=\frac{2d}{2+b}j,\\
+\gamma^2\bar\chi&=\frac{d^2}{2(2+b)}\tau.
+\end{aligned}
+\end{equation}
+
+The first two follow from \eqref{eq:8.44} and \eqref{eq:8.47}; the third uses the complementary
+defect relation \eqref{eq:8.45}. Thus $\tau$ enters as the coefficient of the pure
+$q$ term. Combining the three contributions gives
+\begin{equation}\label{eq:10.14}
+\begin{aligned}
+&\sum_i\nu_i(1-s_i)\|Zy_i+\gamma(s_i+b)q\|^2\\
+&\qquad=\frac{2d}{2+b}\left[
+\operatorname{tr}\bigl(Z^2(E+\tfrac12I_m)\bigr)
++2q^TZj+\frac d4\tau\|q\|^2\right].
+\end{aligned}
+\end{equation}
+
+Substitution and $\sigma=2\chi/[d(2+b)]$ prove \eqref{eq:10.10}. 
+\end{proof}
+
+\textbf{The complementary endpoint.} Replacing the transverse perturbation by
+$e_*I_m-E$ replaces its trace $\sigma$ by $\tau$. The corresponding estimate is
+
+\begin{lemma}[{complementary Cauchy inequality}]\label{lem-cauchy-minus}
+With the notation of Lemma~\ref{lem-moments}, for every symmetric $Z$ and every $q$,
+\begin{equation}\label{eq:10.15}
+\bigl(\operatorname{tr}(Z(e_*I_m-E))+q^Tj\bigr)^2
+\le\tau\left[\operatorname{tr}\bigl(Z^2(tI_m-E)\bigr)
++2q^TZj+\frac d4\sigma\|q\|^2\right].
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+Use the complementary defect $\bar\chi$ in the same weighted
+Cauchy--Schwarz argument as Lemma~\ref{lem-cauchy}. Choose
+$c_-=(1-ab)/h$ and $\gamma_-=\sqrt d/[\sqrt{1-b}(2+b)]$ so that the
+linear contact sum recovers both the shifted transverse block and the
+coupling with the required coefficients. The moment identities give
+\begin{equation}\label{eq:10.16}
+\operatorname{tr}(Z(e_*I_m-E))+q^Tj
+=c_-\sum_i\nu_i(s_i+b)y_i^T\bigl(Zy_i-\gamma_-(s_i-b)q\bigr).
+\end{equation}
+
+Weighted Cauchy--Schwarz bounds the square of \eqref{eq:10.16} by
+\begin{equation}\label{eq:10.17}
+c_-^2\bar\chi\sum_i\nu_i(1+s_i)
+\|Zy_i-\gamma_-(s_i-b)q\|^2.
+\end{equation}
+
+The complementary defect relation turns the first factor into a multiple of
+$\tau$. The expanded squared norm contains the opposite transverse moment
+$tI_m-E$. Using \eqref{eq:8.47} and the moment identities gives
+\begin{equation}\label{eq:10.18}
+\begin{aligned}
+&c_-^2\bar\chi=\frac{(1-b)(2+b)}{2d}\tau,\\
+&\sum_i\nu_i(1+s_i)\|Zy_i-\gamma_-(s_i-b)q\|^2\\
+&\qquad=\frac{2d}{(1-b)(2+b)}\left[
+\operatorname{tr}\bigl(Z^2(tI_m-E)\bigr)
++2q^TZj+\frac d4\sigma\|q\|^2\right].
+\end{aligned}
+\end{equation}
+
+The prefactors cancel to give \eqref{eq:10.15}. Contacts with $s_i=\pm1$ have $y_i=0$, so the argument covers the poles without division by zero. 
+\end{proof}
+
+Taking $Z=0$ in either \eqref{eq:10.10} or \eqref{eq:10.15} gives $\|j\|^2\le d\sigma\tau/4$.
+
+\subsection{Inverse-trace interpretation}\label{sec:10.5}
+
+\begin{lemma}[{inverse-trace interpretation}]\label{lem-inverse-trace}
+Suppose $0<\sigma<\sigma_*$. Set $\eta=d\tau/4$ and $x=d\sigma/4$. Then \eqref{eq:10.10}, for all $Z,q$, is equivalent to
+\begin{equation}\label{eq:10.19}
+R_+=E+\frac12I_m-\frac{jj^T}{\eta}\succ0,
+\qquad \operatorname{tr}(R_+^{-1})\le2m.
+\end{equation}
+
+Similarly, \eqref{eq:10.15} is equivalent to
+\begin{equation}\label{eq:10.20}
+R_-=tI_m-E-\frac{jj^T}{x}\succ0,
+\qquad \operatorname{tr}(R_-^{-1})\le\frac{m}{t-e_*}.
+\end{equation}
+
+\end{lemma}
+
+\begin{proof}
+First absorb the mixed term by completing the square. Then identify
+the best Cauchy--Schwarz coefficient and exhibit a test attaining it. This will
+prove necessity as well as sufficiency of the inverse-trace bound.
+
+\textbf{Step 1: separate the matrix and vector tests.} Complete the square in
+\eqref{eq:10.10} by setting $q=q'-Zj/\eta$. This shift removes the mixed quadratic term
+and leaves $R_+$ as the effective matrix coefficient. The two forms become
+\begin{equation}\label{eq:10.21}
+\begin{aligned}
+\operatorname{tr}(ZE)+q^Tj
+&=\operatorname{tr}\bigl(Z(R_+-\tfrac12I_m)\bigr)+q'^Tj,\\
+\operatorname{tr}\bigl(Z^2(E+\tfrac12I_m)\bigr)+2q^TZj+\eta\|q\|^2
+&=\operatorname{tr}(Z^2R_+)+\eta\|q'\|^2.
+\end{aligned}
+\end{equation}
+
+Before using its inverse, establish strict positivity from the inequality
+itself. If $w^TR_+w<0$, the choice $Z=ww^T$, $q'=0$ makes its right-hand side
+negative. If $R_+w=0$ for $w\ne0$, the same choice gives zero on the right and
+$(-\|w\|^2/2)^2>0$ on the left. Thus $R_+\succ0$.
+
+\textbf{Step 2: identify the coefficient required for every test.}
+Diagonalize $R_+$ and apply weighted Cauchy--Schwarz to the diagonal entries
+of $Z$ and to $q'$; off-diagonal entries contribute only nonnegative terms to
+$\operatorname{tr}(Z^2R_+)$. The resulting coefficient is
+\begin{equation}\label{eq:10.22}
+\begin{aligned}
+S_+
+&=\operatorname{tr}\bigl((R_+-\tfrac12I_m)^2R_+^{-1}\bigr)
++\frac{\|j\|^2}{\eta}\\
+&=\operatorname{tr}R_+-m+\frac14\operatorname{tr}(R_+^{-1})
++\frac{\|j\|^2}{\eta}\\
+&=\sigma-\frac m2+\frac14\operatorname{tr}(R_+^{-1}).
+\end{aligned}
+\end{equation}
+
+To show that no smaller coefficient suffices, use the test attaining equality
+in these scalar Cauchy--Schwarz inequalities:
+\begin{equation}\label{eq:10.23}
+Z_+=I_m-\frac12R_+^{-1},\qquad q'_+=j/\eta.
+\end{equation}
+
+At this test the linear form and the quadratic form both equal $S_+$.
+The cancellation in \eqref{eq:10.22} leaves only the inverse trace to be bounded.
+Consequently, the inequality for all $Z,q$ is equivalent to $S_+\le\sigma$, or
+$\operatorname{tr}(R_+^{-1})\le2m$. This proves both directions of \eqref{eq:10.19}, including the case $S_+=0$.
+
+\textbf{Step 3: apply the same argument at the complementary endpoint.}
+For \eqref{eq:10.15}, set $q=q'-Zj/x$ and put
+$\beta=t-e_*=(1-b)^2(2+b)/(2h)>0$. The completed forms have the same shape with
+$(R_+,\tfrac12,\eta)$ replaced by $(R_-,\beta,x)$. The rank-one tests again give $R_-\succ0$. Weighted Cauchy--Schwarz is attained at
+$Z_-=I_m-\beta R_-^{-1}$, $q'_-=j/x$, with coefficient
+\begin{equation}\label{eq:10.24}
+\begin{aligned}
+S_-
+&=\operatorname{tr}\bigl((R_--\beta I_m)^2R_-^{-1}\bigr)
++\frac{\|j\|^2}{x}\\
+&=(-t+2e_*)m-\sigma+(t-e_*)^2\operatorname{tr}(R_-^{-1}).
+\end{aligned}
+\end{equation}
+
+Since $\tau=me_*-\sigma$,
+\begin{equation}\label{eq:10.25}
+S_-\le\tau
+\iff (t-e_*)^2\operatorname{tr}(R_-^{-1})\le m(t-e_*)
+\iff \operatorname{tr}(R_-^{-1})\le\frac{m}{t-e_*}.
+\end{equation}
+
+This is \eqref{eq:10.20}, with both implications proved. 
+\end{proof}
+
+\subsection{Further models and extensions}\label{sec:10.6}
+
+For a simplex with vertices $x_0,\ldots,x_n$ and centroid $\bar x$, the standard
+affine-transport formula is $J(\Delta)=\bar x+H_\Delta^{1/2}B_2^n$, where
+$H_\Delta=[n(n+1)]^{-1}\sum_i(x_i-\bar x)(x_i-\bar x)^T$.
+It follows by transporting the regular-simplex inball. The main proof needs
+only its contact configuration and the support calculation in Section~\ref{sec:3.2}.
+
+For a full-dimensional offset-cut polytope, the same dual construction uses
+the changed normalization below. For several cuts, the balance condition
+contains all their normals:
+\begin{equation}\label{eq:10.26}
+\sum_i\alpha_i+\eta\alpha_0=n\quad(v^Tx\le\eta),\qquad
+\sum_i\alpha_iu_i+\sum_\ell\alpha_\ell v_\ell=0.
+\end{equation}
+
+These formulations identify how the certificate changes under additional constraints. Quantitative bounds for offset cuts and successive recentered cuts are natural directions for further research, alongside exact offset profiles and sharp bounds for prescribed simultaneous cuts.
+
+For completeness, the Lorentz transformation underlying \eqref{eq:3.7} is
+\begin{equation}\label{eq:10.27}
+\begin{pmatrix}1&-av^T\\-av&vv^T+kP\end{pmatrix}\binom1u
+=\binom{1-as}{(s-a)v+kPu},\qquad s=u^Tv.
+\end{equation}
+
+Dividing the second component by the positive first component gives the unit
+direction $p$ used in the certificate. This is the same construction in every
+dimension; the dimensional distinction lies in its determinant proof.

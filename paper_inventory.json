@@ -1,0 +1,3108 @@
+{
+  "baseline_date": "2026-11-09",
+  "scope": "Frozen publication mathematics and the completed author-agreed formalization scope.",
+  "paper_title": "Sharp Volume Contraction of a Centrally Cut John Ellipsoid",
+  "pdf_sha256": "20fdd70ca129b9d30aec42411f80e2b8dc4d02b1921c8e0e15f8e818650ed585",
+  "markdown_sha256": "49a0c9e853e8ae91735be279c73ab906c7044c6ad64e0bf0bb2aa24b92b5ac6a",
+  "paper_source_sha256": {
+    "main.tex": "33a1ad60b6befbd6854c8823d2936c5baf90a65f276d058b516f94f75b0243aa",
+    "metadata.tex": "1db68bb8a1b020eb44297c4b95ee6a7b707c6b17b20d900e47bf821f9b7f489a",
+    "abstract.tex": "6b195b56f5f3bd9d682ca1b7d9d22a45fcfb5c838cff53399475c15acdefa2a8",
+    "references.bib": "d93855625040434be639fcf2a6651ada477d52841bfff6b43c3f3660640a5fca",
+    "sections/01_introduction.tex": "11b5e29c1b8b465119a35da3607e3f93797e7f6f9de97d47e58e0ee0f6ad09dc",
+    "sections/02_optimization.tex": "bd38969f431673f31fec0a9170e9cbd34e0d5f2992aa4f6122df4f76b96d8de8",
+    "sections/03_sharp_bound.tex": "7f0303b747e1e326cef2e3514f08f7f597cc0eac82ac2f56c43edc784fce68e1",
+    "sections/04_deficit.tex": "e88d3fe9d195ccfa7aa955587e8f556b1fc7ec5feb4fa773513ae1b76d8bdb00",
+    "sections/05_equality.tex": "252712b91b1eb6987bc9936786ca5b4fe5bb2c3921bd075025cd9a566e38ae26",
+    "sections/06_stability.tex": "25564586415548c51e42afc0ec262129e0b7b212293e27d8dabdbdbe24dcc7c9",
+    "sections/07_computation.tex": "a0b45c729c55d0c1a76de21f34d7c383b206d1d34a24ebdac23afc9215c00904",
+    "sections/08_determinant.tex": "5bbdc1a9f11933a3343bc707f4c28694a5ac0776f0c5d5bf0bb60d276606df21",
+    "sections/09_stability_estimates.tex": "2e3abb89200bcb8af5cda9e07d75854c7452eecfa07b4bf740eb36f4da3a4eb9",
+    "sections/10_discussion.tex": "649cb8a7152b3b81c3a7d939fe969c07b43a6c2da2baebfe81c5f2942525cae0",
+    "sections/11_conclusion.tex": "768ca4f5eaf2536fd72c88340078d259e5b6a8d373569fb68a3dfb4c435f1afa"
+  },
+  "named_statements": [
+    {
+      "id": "lem-certificate",
+      "paper_name": "Lemma 2.1",
+      "source": "sections/02_optimization.tex",
+      "line": 53,
+      "statement_latex": "\\begin{lemma}[{volume certificate}]\\label{lem-certificate}\nIf \\eqref{eq:2.4} holds, every feasible ellipsoid in \\eqref{eq:2.3} satisfies\n\\begin{equation}\\label{eq:2.5}\n\\operatorname{tr}(AM)\\le n,\\qquad\n\\det A\\le\\frac1{\\det M}.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "5df835aa971ca2338aa3a5eaf508daf8f6c1da9072a9da7b5540af1acafd3fdc",
+      "ambient_contract": "n >= 1; finite normals; A and M positive definite; full primal and normalized dual feasibility.",
+      "node": "O01",
+      "lean_declarations": [
+        "SharpCut.Optimization.volume_certificate"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-john",
+      "paper_name": "Lemma 2.2",
+      "source": "sections/02_optimization.tex",
+      "line": 100,
+      "statement_latex": "\\begin{lemma}[{John's contact characterization \\cite{John1948} and \\cite[Theorems 3.1 and 3.3]{GG2007}}]\\label{lem-john}\nLet $K\\subset\\mathbb R^n$ be a convex body containing $B_2^n$.\nThen $J(K)=B_2^n$ if and only if there are finitely many unit vectors\n$u_i\\in\\partial K\\cap S^{n-1}$ and positive weights $\\lambda_i$ such that\n\\begin{equation}\\label{eq:2.9}\nu_i^Tx\\le1\\ (x\\in K),\\qquad\n\\sum_i\\lambda_i u_i=0,\\qquad\n\\sum_i\\lambda_i u_i u_i^T=I,\n\\qquad \\sum_i\\lambda_i=n.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "cf34fa389ff3b7b93ab9245fc9d21e685aeec5aa4880850341a31c8eba969e39",
+      "ambient_contract": "n >= 1; convex body containing the unit ball; finite supporting unit contacts and strictly positive weights.",
+      "node": "J01",
+      "lean_declarations": [
+        "SharpCut.Geometry.john_contact_iff"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-exact-duality",
+      "paper_name": "Proposition 2.3",
+      "source": "sections/02_optimization.tex",
+      "line": 124,
+      "statement_latex": "\\begin{proposition}[{optimal multipliers from John contacts}]\\label{prop-exact-duality}\nProblems \\eqref{eq:2.3} and \\eqref{eq:2.8} attain their optima. If $\\mathcal E(c,A)=J(\\mathcal P)$, there are normalized dual multipliers with aggregate $M=A^{-1}$ and zero cone pairings. Hence the optimal values of \\eqref{eq:2.3} and \\eqref{eq:2.8} sum to zero.\n\n\\end{proposition}",
+      "statement_sha256": "e03ec74f39f5819411b4f32860ee2d33df6c49755b1e9b9c311f9b793e262229",
+      "ambient_contract": "n >= 1; finite nonzero normals; bounded full-dimensional polytope; actual maximal ellipsoid.",
+      "node": "O02",
+      "lean_declarations": [
+        "SharpCut.Optimization.exact_duality"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-kkt",
+      "paper_name": "Proposition 2.4",
+      "source": "sections/02_optimization.tex",
+      "line": 177,
+      "statement_latex": "\\begin{proposition}[{optimality and contact recovery}]\\label{prop-kkt}\nA feasible pair for \\eqref{eq:2.3} and \\eqref{eq:2.8} is optimal if and only if\n\\begin{equation}\\label{eq:2.14}\nM=A^{-1},\\qquad\n\\alpha_r(\\beta_r-g_r^Tc)-q_r^TAg_r=0\\quad\\text{for every }r.\n\\end{equation}\n\nFor each $\\alpha_r>0$,\n\\begin{equation}\\label{eq:2.15}\n\\beta_r-g_r^Tc=\\|Ag_r\\|,\\qquad\nq_r=\\alpha_r\\frac{Ag_r}{\\|Ag_r\\|}.\n\\end{equation}\n\nWith $p_r=Ag_r/\\|Ag_r\\|$ and $\\mu_r=\\alpha_r\\|Ag_r\\|$, the vectors and weights satisfy \\eqref{eq:2.11}.\n\n\\end{proposition}",
+      "statement_sha256": "317230b20fba0afabb2378d01fc7f5f323a870cd2a06071b78f8b3c2bee1c02d",
+      "ambient_contract": "Both primal and normalized dual feasible; same polytope hypotheses as Proposition 2.3; positive-weight facets distinguished from zero-weight facets.",
+      "node": "O03",
+      "lean_declarations": [
+        "SharpCut.Optimization.kkt_optimality_and_contacts"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-reduction",
+      "paper_name": "Lemma 2.5",
+      "source": "sections/02_optimization.tex",
+      "line": 246,
+      "statement_latex": "\\begin{lemma}[{finite contact reduction}]\\label{lem-reduction}\nLet $K$ be a convex body with\n$J(K)=B_2^n$, and let $\\mathcal U$ be a supporting John frame from Lemma~\\ref{lem-john}.\nThen the contact polytope defined below is a convex body satisfying\n\\begin{equation}\\label{eq:2.18}\nP_{\\mathcal U}=\\{x:u_i^Tx\\le1\\text{ for all }i\\},\\qquad\nK\\subseteq P_{\\mathcal U},\\qquad J(P_{\\mathcal U})=B_2^n.\n\\end{equation}\n\nIn particular, $w(P_{\\mathcal U})=w(K)=\\kappa_n$. For every central halfspace\n$H_v=\\{x:v^Tx\\le0\\}$ with $\\|v\\|=1$, each ellipsoid in $K\\cap H_v$ is also\nfeasible in $P_{\\mathcal U}\\cap H_v$, so\n$w(K\\cap H_v)\\le w(P_{\\mathcal U}\\cap H_v)$.\nBoth cut sets have nonempty interior because they contain the corresponding\nhalf of the unit ball.\n\n\\end{lemma}",
+      "statement_sha256": "eaf99c8f31eb508995059712365dac91b441aec387959e8851ace0a1aaaee406",
+      "ambient_contract": "Normalized convex body; any supporting positive-weight John frame; unit cut normal.",
+      "node": "J02",
+      "lean_declarations": [
+        "SharpCut.Geometry.contact_reduction"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "thm-sharp",
+      "paper_name": "Theorem 3.1",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 7,
+      "statement_latex": "\\begin{theorem}[{sharp central-cut contraction}]\\label{thm-sharp}\nLet $K\\subset\\mathbb R^n$, $n\\ge1$, be a convex body, and let $H$ be a closed halfspace whose boundary passes through $c(K)$. Then\n\\begin{equation}\\label{eq:3.1}\nw(K\\cap H)\\le R_nw(K),\n\\end{equation}\nwhere $R_n$ is given by \\eqref{eq:1.3}. For every fixed dimension, there are bodies and central cuts attaining equality.\n\n\\end{theorem}",
+      "statement_sha256": "49ad288e997a7a2dfde906332db3d838f6bd7b0f48943ad70b65c30a6a1a6616",
+      "ambient_contract": "Every n >= 1, every convex body, every nonzero normal through the actual John center; fixed-dimensional attainment; no frame assumption.",
+      "node": "G02",
+      "lean_declarations": [
+        "SharpCut.Geometry.sharp_central_cut_contraction"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "thm-frame-bound",
+      "paper_name": "Theorem 3.2",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 169,
+      "statement_latex": "\\begin{theorem}[{John-frame certificate bound}]\\label{thm-frame-bound}\nThe matrix $Q$ is invertible with positive determinant. For $d=2-b$,\n\\begin{equation}\\label{eq:3.12}\n\\frac{\\chi}{1500}\\le\\log(R_n\\det Q)\\le\\frac{\\chi}{2d}.\n\\end{equation}\n\nIn particular, $\\det Q\\ge R_n^{-1}$. Equality in this determinant bound holds if and only if every contact has height $-1$ or $b$; then $Q=M_0$.\n\n\\end{theorem}",
+      "statement_sha256": "048cf9e0c2537c86cb820d14250c43b94ee61313bb4fc9a9b6af6070ddf96615",
+      "ambient_contract": "n >= 2; arbitrary finite John frame; unit v; Q and chi derived by Section 3 formulas.",
+      "node": "D07",
+      "lean_declarations": [
+        "SharpCut.Certificate.john_frame_certificate_bound"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-gap",
+      "paper_name": "Proposition 4.1",
+      "source": "sections/04_deficit.tex",
+      "line": 34,
+      "statement_latex": "\\begin{proposition}[{exact volume deficit}]\\label{prop-gap}\nIn John coordinates, every feasible cut ellipsoid satisfies\n\\begin{equation}\\label{eq:4.3}\n\\boxed{\\epsilon:=\\log\\frac{R_n}{\\det A}\n=\\Delta_{\\rm geom}+\\mathcal C+\\mathcal D.}\n\\end{equation}\n\nAll three terms are nonnegative. For the actual new John ellipsoid, the same deficit is $\\epsilon=\\log(R_nw(K)/w(K\\cap H))$ in the original coordinates.\n\n\\end{proposition}",
+      "statement_sha256": "c5d2aff6f478697fb06e9a277b5d22a8956efd22f34c368653312e5f456ffb08",
+      "ambient_contract": "n >= 2; normalized convex body and supporting frame; any feasible cut ellipsoid; explicit certificate.",
+      "node": "E01",
+      "lean_declarations": [
+        "SharpCut.Gap.exact_volume_deficit",
+        "SharpCut.Gap.affine_optimal_volume_deficit"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-matching",
+      "paper_name": "Lemma 4.2",
+      "source": "sections/04_deficit.tex",
+      "line": 74,
+      "statement_latex": "\\begin{lemma}[{matrix matching}]\\label{lem-matching}\nFor any normalized feasible pair, if $G\\le1/4$, then\n\\begin{equation}\\label{eq:4.6}\n\\|M^{1/2}AM^{1/2}-I\\|_F\\le2\\sqrt G.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "8710d0bdfb191603a1f28cf06ec609adc124392158e195da8e83c03cc461af13",
+      "ambient_contract": "Normalized feasible primal-dual pair; positive definite A,M; G <= 1/4 (G >= 0 is derived).",
+      "node": "E01",
+      "lean_declarations": [
+        "SharpCut.Gap.matrix_matching"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "thm-equality",
+      "paper_name": "Theorem 5.1",
+      "source": "sections/05_equality.tex",
+      "line": 12,
+      "statement_latex": "\\begin{theorem}[{equality classification}]\\label{thm-equality}\nA normalized body $K$ attains $w(K\\cap H_v)=R_nw(K)$ if and only if it admits a John frame supported on $\\mathcal Z_b$ such that\n\\begin{equation}\\label{eq:5.2}\n\\operatorname{conv}\\bigl(B_2^n\\cup\\mathcal E(c_*,A_*)\\bigr)\n\\subseteq K\\subseteq P_{\\mathcal U}.\n\\end{equation}\n\nThe new John ellipsoid is then exactly $\\mathcal E(c_*,A_*)$. If equality holds, every positive-weight John frame supporting $K$ lies in $\\mathcal Z_b$. For a contact polytope $P_{\\mathcal U}$, equality is equivalent simply to its defining John frame being supported on $\\mathcal Z_b$.\n\n\\end{theorem}",
+      "statement_sha256": "8aad9c6bb6ae064da16d8d6d4d20c9b84564e85d6b83ee452bda6e6ff5f031e5",
+      "ambient_contract": "n >= 2; normalized convex body; unit v; distinguish existential sufficient frame from universal necessary frame and verify model containment.",
+      "node": "E02",
+      "lean_declarations": [
+        "SharpCut.Equality.equality_classification"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-extremizers",
+      "paper_name": "Proposition 5.2",
+      "source": "sections/05_equality.tex",
+      "line": 73,
+      "statement_latex": "\\begin{proposition}[{transverse construction}]\\label{prop-extremizers}\nLet unit vectors $w_i\\in v^\\perp$ and positive weights $\\mu_i$ satisfy\n$\\sum_i\\mu_iw_i=0$ and $\\sum_i\\mu_iw_iw_i^T=P$. Then the contacts\n\\begin{equation}\\label{eq:5.7}\nu_i=bv+\\sqrt{1-b^2}\\,w_i,\\qquad\n\\lambda_i=\\frac{\\mu_i}{1-b^2},\\qquad\nu_{\\rm pole}=-v,\\qquad \\lambda_{\\rm pole}=\\frac1{1+b}\n\\end{equation}\nform a John frame supported on $\\mathcal Z_b$.\n\n\\end{proposition}",
+      "statement_sha256": "e4414961c38b3a812f7fb01d7f6e8cc131f326857005c4fd60ed556da6c9fd6f",
+      "ambient_contract": "n >= 2; unit v; unit transverse vectors and positive weights with zero first moment and second moment P.",
+      "node": "G02",
+      "lean_declarations": [
+        "SharpCut.Equality.transverse_extremal_construction"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-geometric-control",
+      "paper_name": "Lemma 6.1",
+      "source": "sections/06_stability.tex",
+      "line": 7,
+      "statement_latex": "\\begin{lemma}[{geometric control}]\\label{lem-geometric-control}\nFor the explicit certificate,\n\\begin{equation}\\label{eq:6.1}\n\\|Q-M_0\\|_F^2\\le\\frac{1-b}{2-b}\\chi,\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{32}{3}\\chi.\n\\end{equation}\n\nIf $\\chi\\le3/2000$, then $\\Delta_{\\rm geom}\\ge\\chi/32$.\n\n\\end{lemma}",
+      "statement_sha256": "cc78da50fb4cde5fd218166c01d3db12cc02845a00312b9efa59f79c15da1a9a",
+      "ambient_contract": "n >= 2; arbitrary John frame and explicit certificate; local implication has chi <= 3/2000.",
+      "node": "S02",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_control"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "thm-stability",
+      "paper_name": "Theorem 6.2",
+      "source": "sections/06_stability.tex",
+      "line": 30,
+      "statement_latex": "\\begin{theorem}[{dimension-independent stability}]\\label{thm-stability}\nLet $\\mathcal E(c,A)$ be any feasible cut ellipsoid in John coordinates, and assume\n$0\\le\\epsilon=\\log(R_n/\\det A)\\le10^{-6}$. Then\n\\begin{equation}\\label{eq:6.2}\n\\begin{aligned}\n\\chi&\\le32\\epsilon,&\n\\|Q-M_0\\|_F&\\le4\\sqrt\\epsilon,\\\\\n\\|A-A_*\\|_F&\\le30\\sqrt\\epsilon,&\n\\|c-c_*\\|&\\le50\\sqrt\\epsilon,\n\\end{aligned}\n\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{1024}{3}\\epsilon.\n\\end{equation}\n\n\\end{theorem}",
+      "statement_sha256": "1832dd87ede05486725dabfa911dba33a8aa300976ed69ca3ed63e766fd7e647",
+      "ambient_contract": "n >= 2; any feasible cut ellipsoid in John coordinates; 0 <= epsilon <= 1/1000000; all five estimates, any supporting frame.",
+      "node": "S03",
+      "lean_declarations": [
+        "SharpCut.Stability.dimension_independent_stability"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cor-iteration",
+      "paper_name": "Corollary 7.1",
+      "source": "sections/07_computation.tex",
+      "line": 7,
+      "statement_latex": "\\begin{corollary}[{successive exact central cuts}]\\label{cor-iteration}\nSuppose\n$K_{j+1}=K_j\\cap H_j$, where each cutting hyperplane passes through $c(K_j)$. Then\n\\begin{equation}\\label{eq:7.1}\nw(K_k)\\le R_n^k w(K_0).\n\\end{equation}\n\nIf $K_0$ is contained in a ball of radius $R$ and all retained regions contain a target ball of radius $r>0$, then\n\\begin{equation}\\label{eq:7.2}\nk\\le\\frac{n\\log(R/r)}{-\\log R_n}.\n\\end{equation}\n\n\\end{corollary}",
+      "statement_sha256": "d4e26ddbddcdfa57b04e4e5201d14f5ba1c03722777f2fcbf96605208050f60c",
+      "ambient_contract": "Every n >= 1; successive actual John-center cuts; radius bound additionally assumes retained target ball with r > 0 and an initial outer ball.",
+      "node": "A01",
+      "lean_declarations": [
+        "SharpCut.Applications.successive_exact_central_cuts"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "thm-determinant",
+      "paper_name": "Theorem 8.1",
+      "source": "sections/08_determinant.tex",
+      "line": 69,
+      "statement_latex": "\\begin{theorem}[{quantitative John-frame determinant inequality}]\\label{thm-determinant}\nEvery John frame in dimension $n\\ge2$ satisfies\n\\begin{equation}\\label{eq:8.4}\n\\frac{\\chi}{1500}\\le\\log\\det\\widehat F\\le\\frac{\\chi}{2d},\n\\qquad\n\\det F\\ge\\det F_0=\\frac{d^{n+1}}{2^n(1-b)}.\n\\end{equation}\n\nEquality in the determinant inequality holds if and only if $s_i\\in\\{-1,b\\}$ for every contact, in which case $F=F_0$ and $\\widehat F=I$.\n\n\\end{theorem}",
+      "statement_sha256": "8c8fc3bf10004fb39bb9f2979b6c691dec0f4c72b6b55bace5c1f53b38b7141e",
+      "ambient_contract": "n >= 2; all positive-weight John frames; F, F0 and Fhat are derived, not free matrices assumed to satisfy the conclusion.",
+      "node": "D07",
+      "lean_declarations": [
+        "SharpCut.Determinant.quantitative_frame_determinant"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-lifted-bound",
+      "paper_name": "Lemma 8.2",
+      "source": "sections/08_determinant.tex",
+      "line": 149,
+      "statement_latex": "\\begin{lemma}[{lifted determinant bound}]\\label{lem-lifted-bound}\nFor every John frame in dimension\n$n\\ge4$,\n\\begin{equation}\\label{eq:8.11}\n\\log\\det\\widehat F\n\\ge (1+b)(\\mathcal L-\\mathcal L_0)+\\delta_0(b)\\chi.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "ae4ace4e5ba8e0885b35b753838977e36fbdcfab08d9935765cbc4739ff35ace",
+      "ambient_contract": "n >= 4; lifted isotropic vectors and exact scalar parameters; positive log arguments and Schur complements proved.",
+      "node": "D01",
+      "lean_declarations": [
+        "SharpCut.Determinant.lifted_determinant_bound"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-hermite",
+      "paper_name": "Lemma 8.3",
+      "source": "sections/08_determinant.tex",
+      "line": 289,
+      "statement_latex": "\\begin{lemma}[{interpolation loss}]\\label{lem-hermite}\nWith these definitions, every John frame\nin dimension $n\\ge4$ satisfies\n\\begin{equation}\\label{eq:8.24}\n\\mathcal L-\\mathcal L_0\\ge-(1-a)I(b)\\chi.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "aa6a61c56b47e5b12d18e771ce6a5cfc18296ab6c33b21d95fca15dc6ad2b2f1",
+      "ambient_contract": "n >= 4; full definitions of L,L0,I(b),a,t; all heights in [-1,1].",
+      "node": "D02",
+      "lean_declarations": [
+        "SharpCut.Determinant.interpolation_loss"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-rational",
+      "paper_name": "Lemma 8.4",
+      "source": "sections/08_determinant.tex",
+      "line": 384,
+      "statement_latex": "\\begin{lemma}[{uniform scalar certificate}]\\label{lem-rational}\nFor $0<b\\le1/4$,\n$\\mathcal R(b)<124/125$ and $\\delta_0(b)\\ge1/12$.\n\n\\end{lemma}",
+      "statement_sha256": "516c653438bbf0834d610681348f436cc02b161e38941d0df0a33e5c8ea78063",
+      "ambient_contract": "Every real 0 < b <= 1/4, not only b = 1/n; exact integral and delta0.",
+      "node": "D02",
+      "lean_declarations": [
+        "SharpCut.Scalar.uniform_certificate"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-moments",
+      "paper_name": "Lemma 8.5",
+      "source": "sections/08_determinant.tex",
+      "line": 505,
+      "statement_latex": "\\begin{lemma}[{block identities and constraints}]\\label{lem-moments}\nThe normalized matrix satisfies\n\\begin{equation}\\label{eq:8.40}\n\\widehat F=\\begin{pmatrix}1-x&j^T\\\\j&I_m+E\\end{pmatrix},\n\\quad x=\\frac{\\chi}{2(2+b)},\\quad\n\\sigma:=\\operatorname{tr}E=\\frac{2\\chi}{d(2+b)},\\quad x=\\frac d4\\sigma,\n\\end{equation}\nwhere\n\\begin{equation}\\label{eq:8.41}\nE=-\\frac1d\\sum_i\\nu_i(s_i-b)y_i y_i^T,\n\\qquad\nj=-\\frac{\\sqrt{1-b}}{b\\sqrt d}\\sum_i\\nu_i(s_i-b)y_i.\n\\end{equation}\n\nThe scalar and matrix constraints are\n\\begin{equation}\\label{eq:8.42}\n0\\le\\sigma\\le\\frac{2(1-b)}{d+b^2},\\qquad 0\\le\\chi\\le2,\n\\end{equation}\n\\begin{equation}\\label{eq:8.43}\n\\begin{pmatrix}x&-j^T\\\\-j&tI_m-E\\end{pmatrix}\\succeq0,\n\\qquad -\\frac12I_m\\prec E\\prec tI_m.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "c45ac19dd189cc82478e71d0c456fee0b6500c7b01e61bf8adbd552b52222af9",
+      "ambient_contract": "n >= 2; isometric axial/transverse decomposition; actual reweighted moments; E symmetric but not assumed PSD.",
+      "node": "D04",
+      "lean_declarations": [
+        "SharpCut.Certificate.block_identities_and_constraints"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-variational",
+      "paper_name": "Lemma 8.6",
+      "source": "sections/08_determinant.tex",
+      "line": 610,
+      "statement_latex": "\\begin{lemma}[{direct coupling bound}]\\label{lem-variational}\nLet\n$K_E=I_m+2E$, $A_E=\\operatorname{tr}(E^2K_E^{-1})$, and\n$L=d(1-b)/(d+b^2)-d\\sigma/2\\ge0$.\nIf $\\sigma>0$, then\n\\begin{equation}\\label{eq:8.49}\nA_E\\le\\frac\\sigma2,\\qquad\n\\|K_E^{-1}j\\|^2\\le L\\left(\\frac\\sigma2-A_E\\right).\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "3192d575f5cca90bec4acf848c3557213018c8c358b7ca049031fbc8b14825e6",
+      "ambient_contract": "n >= 2; actual frame-derived blocks; sigma > 0 in statement; prove sigma = 0 and L = 0 extensions separately.",
+      "node": "D05",
+      "lean_declarations": [
+        "SharpCut.Certificate.direct_coupling_bound"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-dim3",
+      "paper_name": "Proposition 8.7",
+      "source": "sections/08_determinant.tex",
+      "line": 697,
+      "statement_latex": "\\begin{proposition}[{three-dimensional bound}]\\label{prop-dim3}\nIn dimension three,\n\\begin{equation}\\label{eq:8.55}\n\\det\\widehat F\\ge1+\\frac2{11}\\sigma\n=1+\\frac{36}{385}\\chi.\n\\end{equation}\n\n\\end{proposition}",
+      "statement_sha256": "74ac756b6d978a614bbd0af55fa5c15852c53c7f0fa49b4f3465f34beafc3b28",
+      "ambient_contract": "n = 3; arbitrary unit v and arbitrary frame; full admissible sigma,z intervals; L = 0 allowed.",
+      "node": "D06",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_three_determinant"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-gap-control",
+      "paper_name": "Proposition 9.1",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 27,
+      "statement_latex": "\\begin{proposition}[{quantitative complementarity and matrix matching}]\\label{prop-gap-control}\nFor cone-feasible $(\\alpha,q)$ and $(\\tau,x)$,\n\\begin{equation}\\label{eq:9.1}\n2\\alpha\\tau(\\alpha\\tau-q^Tx)\n=\\|\\alpha x-\\tau q\\|^2\n+\\alpha^2(\\tau^2-\\|x\\|^2)+\\tau^2(\\alpha^2-\\|q\\|^2).\n\\end{equation}\n\nIf $G\\le\\epsilon\\le1/4$, then\n\\begin{equation}\\label{eq:9.2}\n\\|Y-I\\|_F\\le2\\sqrt\\epsilon,\\qquad\n\\sum_{\\alpha_r>0}\\alpha_r\\tau_r\n\\left\\|\\frac{x_r}{\\tau_r}-\\frac{q_r}{\\alpha_r}\\right\\|^2\n\\le2\\epsilon.\n\\end{equation}\n\nHere zero-normal redundant inequalities are removed. The first estimate also holds with $Y$ replaced by $A^{1/2}MA^{1/2}$.\n\n\\end{proposition}",
+      "statement_sha256": "ea871bdf5c3bcd2ea43ac25d716baca0fe36f660ed5864366f7a7f8f52fbbee1",
+      "ambient_contract": "First identity: any two Lorentz-cone elements. Estimates: normalized feasible pair, nonzero facet normals, G <= epsilon <= 1/4, sum restricted to alpha > 0.",
+      "node": "E01",
+      "lean_declarations": [
+        "SharpCut.Gap.cone_sum_of_squares",
+        "SharpCut.Gap.quantitative_complementarity"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-residual",
+      "paper_name": "Lemma 9.2",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 71,
+      "statement_latex": "\\begin{lemma}[{geometric residual}]\\label{lem-residual}\nFor the explicit certificate,\n\\begin{equation}\\label{eq:9.3}\n\\|Q-M_0\\|_F^2\\le\\frac{1-b}{d}\\chi,\\qquad\n\\|\\widehat F-I\\|_F^2\\le\\frac\\chi d,\n\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{32}{3}\\chi.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "cde46bce3c90a93007ac1e52b79e496fc0b8df41d71680e94407393fb41a905f",
+      "ambient_contract": "n >= 2; explicit frame certificate; Frobenius norms and Euclidean distance to nonempty pole/latitude set.",
+      "node": "S01",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_residual"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-local",
+      "paper_name": "Lemma 9.3",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 165,
+      "statement_latex": "\\begin{lemma}[{local coercivity}]\\label{lem-local}\nIf $\\sigma\\le10^{-3}$, then\n\\begin{equation}\\label{eq:9.9}\n\\log\\det\\widehat F\\ge\\frac\\sigma{16}\\ge\\frac\\chi{32}.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "e1d3b5779b41683351b3c418ee2b7c34f2394e3ba8ba04beaea64bd09acc5485",
+      "ambient_contract": "n >= 2; actual blocks; sigma <= 1/1000; sigma >= 0 derived; zero included.",
+      "node": "S02",
+      "lean_declarations": [
+        "SharpCut.Stability.local_coercivity"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "prop-polar",
+      "paper_name": "Proposition 10.1",
+      "source": "sections/10_discussion.tex",
+      "line": 61,
+      "statement_latex": "\\begin{proposition}[{optimality among common contractions}]\\label{prop-polar}\nIf $\\|R\\|_{\\rm op}\\le1$ and $N=\\operatorname{sym}(RQ^T)\\succ0$, then $\\det N\\le\\det Q$. The rotation $R=U$ in \\eqref{eq:3.13} attains equality.\n\n\\end{proposition}",
+      "statement_sha256": "2a281abf9bc9b93cb51dc253df0ea39c84a64a7bce20fe5d45164d7d794113ad",
+      "ambient_contract": "n >= 2; explicit Q; any real contraction R; sym(R Q^T) positive definite; equality attained by the specified left polar U.",
+      "node": "A02",
+      "lean_declarations": [
+        "SharpCut.Optimization.common_contraction_optimal"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-cauchy",
+      "paper_name": "Lemma 10.2",
+      "source": "sections/10_discussion.tex",
+      "line": 154,
+      "statement_latex": "\\begin{lemma}[{coupled Cauchy inequality}]\\label{lem-cauchy}\nFor every symmetric $Z\\in\\mathbb S^m$ and $q\\in\\mathbb R^m$,\n\\begin{equation}\\label{eq:10.10}\n(\\operatorname{tr}(ZE)+q^Tj)^2\n\\le\\sigma\\left[\n\\operatorname{tr}\\bigl(Z^2(E+\\tfrac12I_m)\\bigr)\n+2q^TZj+\\frac d4\\tau\\|q\\|^2\\right].\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "cf2d898cabf02a471f76ac57d631b160a390dcb1d58e13712675996ed99f713b",
+      "ambient_contract": "n >= 2; actual frame blocks; every symmetric Z and every vector q; both trace endpoints included.",
+      "node": "A03",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_cauchy_transverse"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-cauchy-minus",
+      "paper_name": "Lemma 10.3",
+      "source": "sections/10_discussion.tex",
+      "line": 213,
+      "statement_latex": "\\begin{lemma}[{complementary Cauchy inequality}]\\label{lem-cauchy-minus}\nWith the notation of Lemma~\\ref{lem-moments}, for every symmetric $Z$ and every $q$,\n\\begin{equation}\\label{eq:10.15}\n\\bigl(\\operatorname{tr}(Z(e_*I_m-E))+q^Tj\\bigr)^2\n\\le\\tau\\left[\\operatorname{tr}\\bigl(Z^2(tI_m-E)\\bigr)\n+2q^TZj+\\frac d4\\sigma\\|q\\|^2\\right].\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "b90426e949d6eb5386f5cb2c6e76acde477603fb111851131775be71bb9a134d",
+      "ambient_contract": "n >= 2; same blocks and complementary parameters; every symmetric Z and q; poles handled without division.",
+      "node": "A03",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_cauchy_transverse"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "lem-inverse-trace",
+      "paper_name": "Lemma 10.4",
+      "source": "sections/10_discussion.tex",
+      "line": 260,
+      "statement_latex": "\\begin{lemma}[{inverse-trace interpretation}]\\label{lem-inverse-trace}\nSuppose $0<\\sigma<\\sigma_*$. Set $\\eta=d\\tau/4$ and $x=d\\sigma/4$. Then \\eqref{eq:10.10}, for all $Z,q$, is equivalent to\n\\begin{equation}\\label{eq:10.19}\nR_+=E+\\frac12I_m-\\frac{jj^T}{\\eta}\\succ0,\n\\qquad \\operatorname{tr}(R_+^{-1})\\le2m.\n\\end{equation}\n\nSimilarly, \\eqref{eq:10.15} is equivalent to\n\\begin{equation}\\label{eq:10.20}\nR_-=tI_m-E-\\frac{jj^T}{x}\\succ0,\n\\qquad \\operatorname{tr}(R_-^{-1})\\le\\frac{m}{t-e_*}.\n\\end{equation}\n\n\\end{lemma}",
+      "statement_sha256": "7162b96b8a11a2cc79667b03f64d5cb3b693956013519c0de0088bae6c6ec5f8",
+      "ambient_contract": "0 < sigma < sigma_star; universal test inequalities iff strict positivity and inverse-trace bounds; prove both directions and zero test coefficient.",
+      "node": "A03",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.inverse_trace_interpretation"
+      ],
+      "status": "verified"
+    }
+  ],
+  "supplementary_claims": [
+    {
+      "id": "SUP-01",
+      "node": "F01",
+      "claim": "Geometry, support, affine transport, existence/uniqueness and actual volume",
+      "paper_location": "Sections 1.1, 2.1, 3.1; (1.1), (2.1)",
+      "status": "verified",
+      "lean_declarations": [
+        "Khachiyan.existsUnique_isMaxDet",
+        "Khachiyan.ellipsoid_support_le",
+        "Khachiyan.ellipsoid_support_attained",
+        "Khachiyan.normalize_ellipsoid",
+        "Khachiyan.normalized_shape_posDef",
+        "Khachiyan.normalized_shape_det",
+        "Khachiyan.volume_ellipsoid_eq_det",
+        "Khachiyan.volume_ellipsoid_pos",
+        "Khachiyan.volume_ellipsoid_lt_top",
+        "Khachiyan.maxEllipsoidVolume_normalize_ratio"
+      ]
+    },
+    {
+      "id": "SUP-02",
+      "node": "F02",
+      "claim": "Concavity of logdet, convex feasibility and Lorentz self-duality",
+      "paper_location": "Section 2.1 and 10.1; (2.2)-(2.4)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Optimization.posDef_convex",
+        "SharpCut.Optimization.logdet_supporting_hyperplane",
+        "SharpCut.Optimization.logdet_concaveOn",
+        "SharpCut.Optimization.primal_feasible_convex",
+        "SharpCut.Optimization.lorentz_self_dual",
+        "SharpCut.Optimization.lorentz_self_dual_plus",
+        "SharpCut.Optimization.primalFeasible_iff_containment"
+      ]
+    },
+    {
+      "id": "SUP-03",
+      "node": "J02",
+      "claim": "General and symmetric John rounding; contact-polytope sharp supremum",
+      "paper_location": "(1.2), (2.19)-(2.21); Section 1.1 symmetric factor sqrt(n)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Applications.john_rounding_and_contact_supremum",
+        "SharpCut.Applications.symmetry_center_eq",
+        "SharpCut.Applications.normalized_body_symmetric",
+        "SharpCut.Applications.john_affine_rounding",
+        "SharpCut.Applications.symmetric_john_affine_rounding",
+        "SharpCut.Geometry.contact_reduction",
+        "SharpCut.Geometry.contactOptimalConstant_eq"
+      ]
+    },
+    {
+      "id": "SUP-04",
+      "node": "G02",
+      "claim": "Model determinant, regular-simplex existence, contacts and support values",
+      "paper_location": "(3.2)-(3.4); Figure 1 assertions",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Simplex.regularFrame",
+        "SharpCut.Simplex.regular_weights",
+        "SharpCut.Simplex.regular_gram",
+        "SharpCut.Simplex.normal_sum",
+        "SharpCut.Simplex.normal_outer_sum",
+        "SharpCut.Simplex.vertex_outer_sum",
+        "SharpCut.Simplex.vertices_affineIndependent",
+        "SharpCut.Simplex.body_eq_vertex_hull",
+        "SharpCut.Simplex.regular_simplex_geometry",
+        "SharpCut.Simplex.exists_regular_simplex",
+        "SharpCut.Simplex.regular_central_cut_geometry",
+        "SharpCut.Simplex.regular_sharp_attainment",
+        "SharpCut.Simplex.model_axis_support_values",
+        "SharpCut.Simplex.model_latitude_support_values",
+        "SharpCut.Simplex.model_latitude_square_root",
+        "SharpCut.Sharpness.modelShape_det",
+        "SharpCut.Geometry.central_plane_volume_zero",
+        "SharpCut.Geometry.unit_ball_half_volume",
+        "SharpCut.Simplex.modelShape_two",
+        "SharpCut.Simplex.sharpRatio_two",
+        "SharpCut.Simplex.model_outside_old_ball",
+        "SharpCut.Simplex.figure_one_geometry"
+      ]
+    },
+    {
+      "id": "SUP-05",
+      "node": "C01",
+      "claim": "Balanced weights, Lorentz unit directions, domain inequalities and zero chi",
+      "paper_location": "(3.5)-(3.11), (10.27)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Certificate.originalWeight_lower",
+        "SharpCut.Certificate.originalWeight_sum",
+        "SharpCut.Certificate.balanced_normals",
+        "SharpCut.certificate_denominator_lower",
+        "SharpCut.Certificate.lorentzDirection_unit",
+        "SharpCut.Certificate.transverse_norm_sq",
+        "SharpCut.Certificate.boostScale_bounds",
+        "SharpCut.Certificate.frameDefect_nonneg",
+        "SharpCut.Certificate.frameDefect_zero_iff",
+        "SharpCut.Certificate.unrotatedQ",
+        "SharpCut.Certificate.homogeneous_lorentz_action",
+        "SharpCut.Certificate.homogeneous_lorentz_contact",
+        "SharpCut.Certificate.lorentz_model_direction",
+        "SharpCut.Certificate.model_matching_parameters"
+      ]
+    },
+    {
+      "id": "SUP-06",
+      "node": "C02",
+      "claim": "Left polar construction, aggregate identity and determinant preservation",
+      "paper_location": "(3.13)-(3.16)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Certificate.polarMatrix_posDef",
+        "SharpCut.Certificate.polarRotation_left_orthogonal",
+        "SharpCut.Certificate.polarRotation_right_orthogonal",
+        "SharpCut.Certificate.polarRotation_aggregate",
+        "SharpCut.Certificate.polarMatrix_det",
+        "SharpCut.Certificate.rotated_aggregate_eq_polar",
+        "SharpCut.Certificate.explicit_dual_feasible",
+        "SharpCut.Certificate.frame_volume_certificate"
+      ]
+    },
+    {
+      "id": "SUP-07",
+      "node": "E01",
+      "claim": "Generic gap identity and all zero sets",
+      "paper_location": "(4.1)-(4.2), (4.5); scalar divergence estimates (4.7)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Optimization.normalized_pair_gap",
+        "SharpCut.Optimization.coneGap_zero_iff",
+        "SharpCut.Gap.matrixDivergence_zero_iff",
+        "SharpCut.Gap.pairDivergence_zero_iff",
+        "SharpCut.Gap.geometricGap_contacts_iff",
+        "SharpCut.Gap.volumeDeficit_zero_iff",
+        "SharpCut.Gap.scalarDivergence_coercive",
+        "SharpCut.Gap.scalarDivergence_two"
+      ]
+    },
+    {
+      "id": "SUP-08",
+      "node": "G02",
+      "claim": "Signed transverse examples and exact square pyramid",
+      "paper_location": "(5.10)-(5.11); vertices and all mathematical claims in Figure 2",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Sharpness.signed_transverse_unit",
+        "SharpCut.Sharpness.signed_transverse_perp",
+        "SharpCut.Sharpness.signed_contact_formula",
+        "SharpCut.Sharpness.signed_transverse_balance",
+        "SharpCut.Sharpness.signed_transverse_isotropy",
+        "SharpCut.Sharpness.signed_family_geometry",
+        "SharpCut.Examples.SquarePyramid.polytope_eq_body",
+        "SharpCut.Examples.SquarePyramid.contact_array",
+        "SharpCut.Examples.SquarePyramid.weight_function",
+        "SharpCut.Examples.SquarePyramid.body_isConvexBody",
+        "SharpCut.Examples.SquarePyramid.body_isJohnNormalized",
+        "SharpCut.Examples.SquarePyramid.cut_isConvexBody",
+        "SharpCut.Examples.SquarePyramid.model_attainment",
+        "SharpCut.Examples.SquarePyramid.center_explicit",
+        "SharpCut.Examples.SquarePyramid.shape_explicit",
+        "SharpCut.Examples.SquarePyramid.candidate_shape_det",
+        "SharpCut.Examples.SquarePyramid.original_john_ball",
+        "SharpCut.Examples.SquarePyramid.new_john_parameters",
+        "SharpCut.Examples.SquarePyramid.volume_ratio",
+        "SharpCut.Examples.SquarePyramid.original_facet_contacts",
+        "SharpCut.Examples.SquarePyramid.new_facet_contacts",
+        "SharpCut.Examples.SquarePyramid.body_eq_vertex_hull",
+        "SharpCut.Examples.SquarePyramid.cut_eq_vertex_hull",
+        "SharpCut.Examples.SquarePyramid.body_extremePoints",
+        "SharpCut.Examples.SquarePyramid.cut_extremePoints",
+        "SharpCut.Examples.SquarePyramid.five_extreme_points",
+        "SharpCut.Examples.SquarePyramid.latitude_contacts_and_weights",
+        "SharpCut.Examples.SquarePyramid.defining_facet_nonredundant",
+        "SharpCut.Examples.SquarePyramid.base_facet_hull",
+        "SharpCut.Examples.SquarePyramid.four_triangular_facets"
+      ]
+    },
+    {
+      "id": "SUP-09",
+      "node": "A01",
+      "claim": "Constants, strict monotonicity, uniform limit, full series and O(n^-4)",
+      "paper_location": "(7.5)-(7.6), all-positive-dimension bounds on R_n",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Scalar.constantSeries_hasSum",
+        "SharpCut.Scalar.constantSeries_fourth_tail",
+        "SharpCut.Applications.negative_log_sharpRatio_formula",
+        "SharpCut.Applications.sharpRatio_hasSum",
+        "SharpCut.Applications.sharpRatio_series_absolute",
+        "SharpCut.Applications.sharpRatio_full_series",
+        "SharpCut.Applications.sharpRatio_alternative_series",
+        "SharpCut.Applications.sharpRatio_strictMonoOn",
+        "SharpCut.Applications.sharpRatio_all_dimension_bounds",
+        "SharpCut.Applications.sharpRatio_limit",
+        "SharpCut.Applications.negativeLogRemainder_bounds",
+        "SharpCut.Applications.negativeLogRemainder_isBigO",
+        "SharpCut.Applications.sharpRatio_series_and_asymptotics"
+      ]
+    },
+    {
+      "id": "SUP-10",
+      "node": "A01",
+      "claim": "Post-cut inner ball and radius-ratio initialization",
+      "paper_location": "(7.7)-(7.8); 8n+2 and its O(n) consequence",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Applications.central_cut_initialization",
+        "SharpCut.Applications.initializationRatio_isBigO"
+      ]
+    },
+    {
+      "id": "SUP-11",
+      "node": "A01",
+      "claim": "Relative-volume stopping criterion",
+      "paper_location": "(7.9)-(7.10), primal-dual feasible gap",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Applications.relative_volume_gap",
+        "SharpCut.Applications.relative_accuracy_stop",
+        "SharpCut.Applications.optimumLogVolume_eq_shape"
+      ]
+    },
+    {
+      "id": "SUP-12",
+      "node": "A01",
+      "claim": "Instance-specific determinant optimization, exact supremum/infimum and attainment",
+      "paper_location": "(7.11) and Section 7.3; feasible restricted optimizations",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Optimization.dual_determinant_maximum_attained",
+        "SharpCut.Optimization.fixed_dual_determinant_attained",
+        "SharpCut.Optimization.fixed_dual_le_full",
+        "SharpCut.Optimization.dual_maximum_volume_identity",
+        "SharpCut.Applications.instance_dual_attained",
+        "SharpCut.Applications.instance_volume_identity",
+        "SharpCut.Applications.instance_fixed_weight_improvement",
+        "SharpCut.Applications.model_attains_dual_infimum",
+        "SharpCut.Applications.frameDualMaxima_isLeast",
+        "SharpCut.Applications.frameDualInfimum_eq",
+        "SharpCut.Applications.exact_instance_dual_characterization"
+      ]
+    },
+    {
+      "id": "SUP-13",
+      "node": "C02",
+      "claim": "Q=FD, strict positivity, F0 model and normalized determinant identity",
+      "paper_location": "(8.1)-(8.3); all noncommutative multiplication orders",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Certificate.ordered_factorization",
+        "SharpCut.Certificate.contactShape_posDef",
+        "SharpCut.Certificate.certificateF_posDef",
+        "SharpCut.Certificate.certificateD_posDef",
+        "SharpCut.Certificate.modelF0_posDef",
+        "SharpCut.Certificate.modelF0_mul_D",
+        "SharpCut.Certificate.normalizedCertificate_posDef",
+        "SharpCut.Certificate.normalizedCertificate_det",
+        "SharpCut.Certificate.frameDefect_nonneg"
+      ]
+    },
+    {
+      "id": "SUP-14",
+      "node": "C01",
+      "claim": "Reweighted scalar moments and axial defect formula",
+      "paper_location": "(8.5)-(8.7)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Certificate.reweighted_moments",
+        "SharpCut.Certificate.defect_expansion",
+        "SharpCut.Certificate.axial_defect_identity"
+      ]
+    },
+    {
+      "id": "SUP-15",
+      "node": "D01",
+      "claim": "Finite-frame logdet inequality, squared-minor weights and marginal identities",
+      "paper_location": "(8.12)-(8.15)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Determinant.minorWeight_square",
+        "SharpCut.Determinant.minor_weights_sum",
+        "SharpCut.Determinant.weighted_gram_expansion",
+        "SharpCut.Determinant.minor_column_marginal",
+        "SharpCut.Determinant.finite_frame_logdet",
+        "SharpCut.Determinant.lifted_logdet"
+      ]
+    },
+    {
+      "id": "SUP-16",
+      "node": "D02",
+      "claim": "Exact pointwise Hermite remainder and rational interpolation",
+      "paper_location": "(8.25)-(8.30), in particular (8.27)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Scalar.hermiteQuadratic",
+        "SharpCut.Determinant.john_hermite_average",
+        "SharpCut.Scalar.rational_hermite_exact",
+        "SharpCut.Scalar.logarithmic_hermite_remainder",
+        "SharpCut.Scalar.logarithmic_slope_integral",
+        "SharpCut.Scalar.logarithmic_slope_value",
+        "SharpCut.Scalar.hermite_integrand_comparison"
+      ]
+    },
+    {
+      "id": "SUP-17",
+      "node": "D02",
+      "claim": "Exact endpoint logarithms and rational certificates",
+      "paper_location": "(8.32)-(8.37); revised_v3/verification/endpoint_log_bounds.md",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Scalar.lossRatio_eq_transformedRatio",
+        "SharpCut.Scalar.prefactor_difference",
+        "SharpCut.Scalar.integrand_factor_difference",
+        "SharpCut.Scalar.interval_endpoint_difference",
+        "SharpCut.Scalar.largest_interval_endpoint",
+        "SharpCut.Scalar.transformedRatio_mono",
+        "SharpCut.Scalar.endpoint_partial_fractions",
+        "SharpCut.Scalar.endpointIntegral_eq",
+        "SharpCut.Scalar.transformedRatio_quarter",
+        "SharpCut.Scalar.log_thirteen_recombination",
+        "SharpCut.Scalar.endpoint_full_certificate",
+        "SharpCut.Scalar.endpoint_record_logarithms",
+        "SharpCut.Scalar.endpoint_finite_identity",
+        "SharpCut.Scalar.gain_polynomial_identity",
+        "SharpCut.Scalar.gain_polynomial_nonneg",
+        "SharpCut.Scalar.gain_coefficient_lower"
+      ]
+    },
+    {
+      "id": "SUP-18",
+      "node": "D02",
+      "claim": "Scalar remainder exceeds one in dimensions two and three",
+      "paper_location": "(8.38)-(8.39); exact polynomial integrals",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Scalar.reciprocal_polynomial_lower",
+        "SharpCut.Scalar.low_dimension_integration_domain",
+        "SharpCut.Scalar.polynomial_integrand_lower",
+        "SharpCut.Scalar.polynomialLowerPrimitive_hasDerivAt",
+        "SharpCut.Scalar.polynomial_lower_integral",
+        "SharpCut.Scalar.lossRatio_polynomial_lower",
+        "SharpCut.Scalar.low_dimension_scalar_remainder"
+      ]
+    },
+    {
+      "id": "SUP-19",
+      "node": "D06",
+      "claim": "Two-dimensional determinant bound for arbitrary frame and unit axis",
+      "paper_location": "(8.48), determinant excess 11 chi / 60",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_two_determinant",
+        "SharpCut.Determinant.dimension_two_logdet",
+        "SharpCut.Determinant.dimension_two_uniform_logdet"
+      ]
+    },
+    {
+      "id": "SUP-20",
+      "node": "D05",
+      "claim": "Zero endpoints and selected-test variational identities",
+      "paper_location": "(8.50)-(8.54); sigma=0 and L=0",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Certificate.coupling_linear_identity",
+        "SharpCut.Certificate.coupling_quadratic_identity",
+        "SharpCut.Certificate.coupling_test_variational_full",
+        "SharpCut.Certificate.selected_test_bound",
+        "SharpCut.Certificate.coupling_zero_of_L_zero",
+        "SharpCut.Certificate.zero_sigma_transverse_blocks",
+        "SharpCut.Certificate.variational_completed_square",
+        "SharpCut.Certificate.variational_scalar_chain"
+      ]
+    },
+    {
+      "id": "SUP-21",
+      "node": "S03",
+      "claim": "Weighted Bessel, norm transfers, polar perturbation and support mismatch",
+      "paper_location": "(6.5)-(6.9), (9.14)-(9.23)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.JohnFrame.weighted_bessel",
+        "SharpCut.JohnFrame.weighted_matrix_bessel",
+        "SharpCut.frobeniusNorm_mul_operator_left",
+        "SharpCut.frobeniusNorm_mul_operator_right",
+        "SharpCut.Stability.operator_frobenius_bound",
+        "SharpCut.Stability.polar_action_norm",
+        "SharpCut.Stability.perturbed_model_action_bounds",
+        "SharpCut.Stability.polar_gram_quadratic",
+        "SharpCut.Stability.polar_eigenvalue_bounds",
+        "SharpCut.Stability.model_eigenvalue_lower",
+        "SharpCut.Stability.sylvester_frobenius_bound",
+        "SharpCut.Stability.polar_sylvester_trace_identity",
+        "SharpCut.Stability.near_extremal_polar_coefficient",
+        "SharpCut.Stability.matching_error_reconstruction",
+        "SharpCut.Stability.inverse_difference_ordered",
+        "SharpCut.Stability.inverse_difference_frobenius",
+        "SharpCut.Stability.near_extremal_shape_coefficient",
+        "SharpCut.Stability.weighted_multiplier_slack_chain",
+        "SharpCut.Stability.center_vector_identity",
+        "SharpCut.Stability.frame_support_difference_square",
+        "SharpCut.Stability.frame_action_norm_sq",
+        "SharpCut.Stability.model_support_mismatch_identity",
+        "SharpCut.Stability.weighted_model_mismatch_bound",
+        "SharpCut.Stability.center_projection_identity",
+        "SharpCut.Stability.center_recovery_bound",
+        "SharpCut.Stability.near_extremal_center_bound"
+      ]
+    },
+    {
+      "id": "SUP-22",
+      "node": "A02",
+      "claim": "Unnormalized Lagrangian dual, infinite branch, scale and strict feasible seed",
+      "paper_location": "(10.1)-(10.3)",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Optimization.original_lagrangian_identity",
+        "SharpCut.Optimization.original_lagrangian_supremum",
+        "SharpCut.Optimization.lagrangian_finite_value",
+        "SharpCut.Optimization.unbalanced_lagrangian_unbounded",
+        "SharpCut.Optimization.nonpositive_lagrangian_unbounded",
+        "SharpCut.Optimization.lagrangian_conjugate",
+        "SharpCut.Optimization.unnormalized_mass_positive",
+        "SharpCut.Optimization.unnormalized_scale",
+        "SharpCut.Optimization.scaled_objective_identity",
+        "SharpCut.Optimization.optimal_scale",
+        "SharpCut.Optimization.normalize_unnormalized",
+        "SharpCut.Optimization.unnormalized_weak_duality",
+        "SharpCut.Optimization.unnormalized_dual_attainment",
+        "SharpCut.Optimization.strictly_feasible_ball_seed"
+      ]
+    },
+    {
+      "id": "SUP-23",
+      "node": "A04",
+      "claim": "Nuclear-norm gap, nonnegative terms and polar correction",
+      "paper_location": "(10.6)-(10.8), including sufficient commuting condition",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Nuclear.nuclearNorm_spectral",
+        "SharpCut.Nuclear.trace_le_nuclear_operator",
+        "SharpCut.Nuclear.nuclear_dual_attainment",
+        "SharpCut.Nuclear.nuclearNorm_triangle",
+        "SharpCut.Nuclear.nuclearNorm_sum",
+        "SharpCut.Nuclear.nuclearNorm_smul_nonneg",
+        "SharpCut.Nuclear.nuclearNorm_cross",
+        "SharpCut.Nuclear.nuclearNorm_eq_sum_singularValues",
+        "SharpCut.Nuclear.singularValue_pos",
+        "SharpCut.Nuclear.nuclear_logdet_spectral",
+        "SharpCut.Nuclear.frameNuclearTotal_bound",
+        "SharpCut.Nuclear.frameSupportSlack_nonneg",
+        "SharpCut.Nuclear.framePolarCorrection_nonneg",
+        "SharpCut.Nuclear.frameLogGap_spectral",
+        "SharpCut.Nuclear.frame_cone_nuclear_identity",
+        "SharpCut.Nuclear.frame_matrix_nuclear_identity",
+        "SharpCut.Nuclear.commuting_polar_correction",
+        "SharpCut.Nuclear.nuclear_frame_deficit"
+      ]
+    },
+    {
+      "id": "SUP-24",
+      "node": "A03",
+      "claim": "Complementary moments and coupling bound at endpoints",
+      "paper_location": "(10.9)-(10.18); ||j||^2 <= d sigma tau / 4",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Coupled.sigmaStar",
+        "SharpCut.Coupled.traceRemainder_nonneg",
+        "SharpCut.Coupled.couplingL_remainder",
+        "SharpCut.Coupled.endpointShift_dimension",
+        "SharpCut.Coupled.complementary_trace",
+        "SharpCut.Certificate.reverse_defect_identity",
+        "SharpCut.Coupled.complementaryScale_explicit",
+        "SharpCut.Coupled.complementary_gamma_relation",
+        "SharpCut.Coupled.complementary_matrix_moment",
+        "SharpCut.Coupled.complementary_mixed_moment",
+        "SharpCut.Coupled.complementary_sigma_coefficient",
+        "SharpCut.Coupled.complementary_reverse_coefficient",
+        "SharpCut.Coupled.complementary_linear_contact_identity",
+        "SharpCut.Coupled.weighted_complementary_cauchy",
+        "SharpCut.Coupled.complementary_quadratic_contact_identity",
+        "SharpCut.Coupled.complementary_cauchy_transverse",
+        "SharpCut.Coupled.coupling_endpoint_norm",
+        "SharpCut.Coupled.coupling_zero_endpoints"
+      ]
+    },
+    {
+      "id": "SUP-25",
+      "node": "G02",
+      "claim": "Affine simplex shape formula",
+      "paper_location": "Section 10.6; affinely independent vertices, centroid and squared shape matrix",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Simplex.interpolation_vertex",
+        "SharpCut.Simplex.interpolation_det_isUnit",
+        "SharpCut.Simplex.centered_covariance",
+        "SharpCut.Simplex.shapeRotation_orthogonal",
+        "SharpCut.Simplex.affine_image_body",
+        "SharpCut.Simplex.affine_simplex_feasible",
+        "SharpCut.Simplex.affine_simplex_isMaxDet",
+        "SharpCut.Simplex.affine_simplex_isConvexBody",
+        "SharpCut.Simplex.affine_simplex_shape_square",
+        "SharpCut.Simplex.affine_simplex_john_parameters",
+        "SharpCut.Simplex.affine_simplex_shape_formula"
+      ]
+    },
+    {
+      "id": "SUP-26",
+      "node": "A02",
+      "claim": "Exact offset-cut and simultaneous-cut dual formulations",
+      "paper_location": "(10.26); convex-body cut polytope hypotheses; no new sharp contraction theorem",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Optimization.offset_constraints",
+        "SharpCut.Optimization.offset_normalization",
+        "SharpCut.Optimization.offset_cut_duality",
+        "SharpCut.Optimization.multiple_constraints",
+        "SharpCut.Optimization.multiple_normalization",
+        "SharpCut.Optimization.multiple_cut_duality"
+      ]
+    },
+    {
+      "id": "SUP-27",
+      "node": "F01",
+      "claim": "Legacy cone witnesses and exact one-dimensional ratio",
+      "paper_location": "Theorem 3.1 attainment route; legacy ConeGeometry, ConeLimit and OneDimensional",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Sharpness.legacy_cone_constant",
+        "SharpCut.Sharpness.legacy_cone_cut",
+        "SharpCut.Sharpness.legacy_cone_attainment",
+        "SharpCut.Sharpness.legacy_cone_candidate_maximal",
+        "SharpCut.Sharpness.one_dimensional_reference",
+        "Khachiyan.Cone.isConvexBody_body",
+        "Khachiyan.Cone.isJohnNormalized_body",
+        "Khachiyan.Cone.candidate_feasible",
+        "Khachiyan.Cone.candidate_volume_ratio",
+        "Khachiyan.Cone.tendsto_volumeRatio",
+        "Khachiyan.OneDimensional.center_cut_volume_ratio_eq_half"
+      ]
+    },
+    {
+      "id": "SUP-28",
+      "node": "S01",
+      "claim": "Global weighted contact stability bound 16000 epsilon",
+      "paper_location": "Section 6.1 after Lemma 6.1; explicit defect decomposition",
+      "status": "verified",
+      "lean_declarations": [
+        "SharpCut.Stability.global_geometric_stability"
+      ]
+    },
+    {
+      "id": "EXT-01",
+      "node": "X01",
+      "claim": "Centroid ordinary-volume fraction and comparison with 1-exp(-1)",
+      "paper_location": "Section 1.1; Grunbaum1960; requires actual centroid geometry",
+      "status": "excluded_background",
+      "lean_declarations": [],
+      "scope_decision": "Excluded by the author on 9 November 2026; retained as cited background, not a theorem assumption."
+    },
+    {
+      "id": "EXT-02",
+      "node": "X01",
+      "claim": "O(n^2) enclosing-ellipsoid arithmetic update",
+      "paper_location": "Section 1.1; GLS1988/Todd2023; needs algorithm and operation-cost model",
+      "status": "excluded_background",
+      "lean_declarations": [],
+      "scope_decision": "Excluded by the author on 9 November 2026; retained as cited background, not a theorem assumption."
+    },
+    {
+      "id": "EXT-03",
+      "node": "X01",
+      "claim": "O(N^(7/2) log(N Lambda / delta)) approximation algorithm",
+      "paper_location": "Section 1.1; Anstreicher2002; needs algorithm, normalization and cost model",
+      "status": "excluded_background",
+      "lean_declarations": [],
+      "scope_decision": "Excluded by the author on 9 November 2026; retained as cited background, not a theorem assumption."
+    },
+    {
+      "id": "EXT-04",
+      "node": "F01",
+      "claim": "Prior dimension-independent constant and uniform optimality",
+      "paper_location": "Section 1.1; Zhou2026; existing Khachiyan.t01 and sharp_constant",
+      "status": "verified",
+      "lean_declarations": [
+        "Khachiyan.t01",
+        "Khachiyan.sharp_constant",
+        "Khachiyan.Scalar.rStar_eq_sqrt_exp_one"
+      ]
+    }
+  ],
+  "equations": [
+    {
+      "id": "1.1",
+      "source": "sections/01_introduction.tex",
+      "line": 6,
+      "latex": "\nw(K)=\\operatorname{vol}J(K)\n=\\max\\{\\operatorname{vol}E:E\\subseteq K,\\ E\\text{ is an ellipsoid}\\},\n",
+      "sha256": "5c3cffba7654d52d9c57936ba47a55c4aca7865d1b2ce3b9338222c1965420af",
+      "coverage_owner": "SUP-01",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "1.2",
+      "source": "sections/01_introduction.tex",
+      "line": 15,
+      "latex": "\nc+AB_2^n\\subseteq K\\subseteq c+nAB_2^n,\n\\qquad\nB_2^n\\subseteq A^{-1}(K-c)\\subseteq nB_2^n.\n",
+      "sha256": "e9e2ec09acfe8861d7060286f50f0b02ba78bd2cb0424cdbe6f511fbcb8594fd",
+      "coverage_owner": "SUP-03",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.john_affine_rounding",
+        "SharpCut.Applications.symmetric_john_affine_rounding"
+      ]
+    },
+    {
+      "id": "1.3",
+      "source": "sections/01_introduction.tex",
+      "line": 34,
+      "latex": "\nC_n=R_n,\\qquad R_1=\\frac12,\\qquad\nR_n=\\frac12\\left(\\frac n{n-1}\\right)^{(n-1)/2}\\quad(n\\ge2),\n",
+      "sha256": "18efaed0db5b9c4596d823402e30e412fe638d840ed4512fd0528af14113f016",
+      "coverage_owner": "thm-sharp",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.1",
+      "source": "sections/02_optimization.tex",
+      "line": 8,
+      "latex": "\n\\mathcal E(c,A)=c+AB_2^n,\\qquad A\\in\\mathbb S_{++}^n,\n\\qquad \\operatorname{vol}\\mathcal E(c,A)=\\kappa_n\\det A,\n\\quad \\kappa_n=\\operatorname{vol}(B_2^n).\n",
+      "sha256": "6559b5f561518387fb0335d87807819005b22c6df49eb0b815865313747b7805",
+      "coverage_owner": "SUP-01",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.2",
+      "source": "sections/02_optimization.tex",
+      "line": 15,
+      "latex": "\n\\max_{\\|z\\|\\le1}g^T(c+Az)=g^Tc+\\|Ag\\|\\le\\beta.\n",
+      "sha256": "183f1bf5ddd9efb63faeb8cabee678078ae0beedef8e94c488d5d00b6a44f31e",
+      "coverage_owner": "SUP-02",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "Khachiyan.ellipsoid_support_le",
+        "Khachiyan.ellipsoid_support_attained",
+        "SharpCut.Optimization.primalFeasible_iff_containment"
+      ]
+    },
+    {
+      "id": "2.3",
+      "source": "sections/02_optimization.tex",
+      "line": 21,
+      "latex": "\n\\begin{aligned}\n\\text{maximize}_{c,\\ A\\succ0}\\quad&\\log\\det A\\\\\n\\text{subject to}\\quad&g_r^Tc+\\|Ag_r\\|\\le\\beta_r,\n\\qquad r=1,\\ldots,N.\n\\end{aligned}\n",
+      "sha256": "15317919161c62a67fce28a4d05cbf67fc2f59dcd85b301cdb85a6165b0921b7",
+      "coverage_owner": "SUP-02",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.4",
+      "source": "sections/02_optimization.tex",
+      "line": 39,
+      "latex": "\n\\begin{gathered}\n\\sum_r\\alpha_rg_r=0,\\qquad \\sum_r\\alpha_r\\beta_r=n,\\\\\n\\|q_r\\|\\le\\alpha_r\\quad\\text{for every }r,\\\\\nM=\\sum_r\\operatorname{sym}(q_rg_r^T)\\succ0.\n\\end{gathered}\n",
+      "sha256": "c9f276c0b803e2ba950fb0fe84af64d0e29a78a72ba7e839b926b64d8716a5b8",
+      "coverage_owner": "SUP-02",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.5",
+      "source": "sections/02_optimization.tex",
+      "line": 55,
+      "latex": "\n\\operatorname{tr}(AM)\\le n,\\qquad\n\\det A\\le\\frac1{\\det M}.\n",
+      "sha256": "212d04767ad8b9c992f032bb7a21eef7767fc31edbf79e193c593f3374e6c4f2",
+      "coverage_owner": "lem-certificate",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.6",
+      "source": "sections/02_optimization.tex",
+      "line": 66,
+      "latex": "\n\\begin{aligned}\n\\operatorname{tr}(AM)\n&=\\sum_r q_r^TAg_r\n\\le\\sum_r\\alpha_r\\|Ag_r\\|\\\\\n&\\le\\sum_r\\alpha_r(\\beta_r-g_r^Tc)\n=n-c^T\\sum_r\\alpha_rg_r=n.\n\\end{aligned}\n",
+      "sha256": "517af9969be27ac74dda02f95e18c43fdaf44791379dd36a424f073c0126d0e3",
+      "coverage_owner": "lem-certificate",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.7",
+      "source": "sections/02_optimization.tex",
+      "line": 79,
+      "latex": "\n\\det A\\det M=\\det Y=\\prod_{j=1}^n\\rho_j\n\\le\\left(\\frac1n\\sum_{j=1}^n\\rho_j\\right)^n\n=\\left(\\frac{\\operatorname{tr}(AM)}n\\right)^n\\le1.\n",
+      "sha256": "d89962b39739ba16e290bf92170bcc241760124c67116654a987341b7b7803c7",
+      "coverage_owner": "lem-certificate",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.8",
+      "source": "sections/02_optimization.tex",
+      "line": 89,
+      "latex": "\n\\text{maximize }\\log\\det M\n\\quad\\text{over }(\\alpha_r,q_r)\\text{ satisfying \\eqref{eq:2.4}}.\n",
+      "sha256": "b28e650a0baae171eed27405d01e4a119df727599b3891cd6f221659933a5959",
+      "coverage_owner": "prop-exact-duality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.9",
+      "source": "sections/02_optimization.tex",
+      "line": 104,
+      "latex": "\nu_i^Tx\\le1\\ (x\\in K),\\qquad\n\\sum_i\\lambda_i u_i=0,\\qquad\n\\sum_i\\lambda_i u_i u_i^T=I,\n\\qquad \\sum_i\\lambda_i=n.\n",
+      "sha256": "2602625b3225b32ad0866831c72cb22ec3cfd73004a550e48bbe126663ae2757",
+      "coverage_owner": "lem-john",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.10",
+      "source": "sections/02_optimization.tex",
+      "line": 138,
+      "latex": "\n\\|Ag_r\\|\\le\\beta_r-g_r^Tc=(Ag_r)^Tp\n\\le\\|Ag_r\\|\\|p\\|=\\|Ag_r\\|.\n",
+      "sha256": "eebf318797e54837bcca8020fac076d7f7e457c86cabcb327438cf9b28f233f4",
+      "coverage_owner": "prop-exact-duality",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.normalized_contact_facet"
+      ]
+    },
+    {
+      "id": "2.11",
+      "source": "sections/02_optimization.tex",
+      "line": 144,
+      "latex": "\np_r=\\frac{Ag_r}{\\ell_r},\\qquad\n\\sum_r\\mu_rp_r=0,\\qquad\n\\sum_r\\mu_rp_rp_r^T=I,\\qquad \\sum_r\\mu_r=n.\n",
+      "sha256": "c9e4820f31e06ed91b36301d23f0261238cd29898965f8c9624d5bc24e4e9590",
+      "coverage_owner": "prop-exact-duality",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.exists_facet_john_data",
+        "SharpCut.Optimization.kkt_contact_moments"
+      ]
+    },
+    {
+      "id": "2.12",
+      "source": "sections/02_optimization.tex",
+      "line": 154,
+      "latex": "\n\\begin{aligned}\n\\sum_r\\alpha_rg_r&=A^{-1}\\sum_r\\mu_rp_r=0,\\\\\n\\sum_r\\alpha_r\\beta_r\n&=c^T\\sum_r\\alpha_rg_r+\\sum_r\\mu_r=n,\\\\\n\\|q_r\\|&=\\alpha_r,\\\\\n\\alpha_r(\\beta_r-g_r^Tc)-q_r^TAg_r\n&=\\alpha_r(\\beta_r-g_r^Tc-\\ell_r)=0.\n\\end{aligned}\n",
+      "sha256": "83f8516d733f4749223419472e297becf82b69a51207cab67ee70b57617dd8a8",
+      "coverage_owner": "prop-exact-duality",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.FacetJohnData.normal_balance",
+        "SharpCut.Optimization.FacetJohnData.normalization",
+        "SharpCut.Optimization.FacetJohnData.vector_norm",
+        "SharpCut.Optimization.FacetJohnData.pairings_zero"
+      ]
+    },
+    {
+      "id": "2.13",
+      "source": "sections/02_optimization.tex",
+      "line": 167,
+      "latex": "\n\\sum_rq_rg_r^T=\\sum_r\\mu_rp_rp_r^TA^{-1}=A^{-1}.\n",
+      "sha256": "2a610f9d5c77f4fc78243166ccad3c1f7d495f9272989477c34465820336a243",
+      "coverage_owner": "prop-exact-duality",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.FacetJohnData.raw_aggregate"
+      ]
+    },
+    {
+      "id": "2.14",
+      "source": "sections/02_optimization.tex",
+      "line": 179,
+      "latex": "\nM=A^{-1},\\qquad\n\\alpha_r(\\beta_r-g_r^Tc)-q_r^TAg_r=0\\quad\\text{for every }r.\n",
+      "sha256": "e2ffc22e8eb09164bd7f2fc78f75791dc53f3e35ebf56b9e931856ef6334816d",
+      "coverage_owner": "prop-kkt",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.optimality_iff_kkt"
+      ]
+    },
+    {
+      "id": "2.15",
+      "source": "sections/02_optimization.tex",
+      "line": 185,
+      "latex": "\n\\beta_r-g_r^Tc=\\|Ag_r\\|,\\qquad\nq_r=\\alpha_r\\frac{Ag_r}{\\|Ag_r\\|}.\n",
+      "sha256": "ae36182ad1c79cc70fe5ad1a368b61301ea2c7474f37720214869c045e02ca67",
+      "coverage_owner": "prop-kkt",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.kkt_active_contact"
+      ]
+    },
+    {
+      "id": "2.16",
+      "source": "sections/02_optimization.tex",
+      "line": 208,
+      "latex": "\nAH+HA=0,\n\\qquad\n0=\\operatorname{tr}\\bigl(H(AH+HA)\\bigr)\n=2\\operatorname{tr}(AH^2)\n\\ge2\\lambda_{\\min}(A)\\|H\\|_F^2.\n",
+      "sha256": "395f5d1020aac7f7d709490b6b78fd0b080b7204da907893e401fc5b8371ed5e",
+      "coverage_owner": "prop-kkt",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.positive_sylvester_zero",
+        "SharpCut.Optimization.sylvester_trace_coercivity",
+        "SharpCut.Optimization.contactMoment_inverse_square"
+      ]
+    },
+    {
+      "id": "2.17",
+      "source": "sections/02_optimization.tex",
+      "line": 219,
+      "latex": "\n\\sum_r\\mu_rp_r=A\\sum_r\\alpha_rg_r=0,\n\\qquad\n\\sum_r\\mu_rp_rp_r^T=ATA=I,\n\\qquad\n\\sum_r\\mu_r=\\operatorname{tr}I=n.\n",
+      "sha256": "6070a0ce0f933976a76b92c0110cb61ab333328b0e35c9c1f9cfabf21f0f6349",
+      "coverage_owner": "prop-kkt",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.recovered_first_moment",
+        "SharpCut.Optimization.recovered_second_identity",
+        "SharpCut.Optimization.recovered_second_moment",
+        "SharpCut.Optimization.kkt_contact_moments"
+      ]
+    },
+    {
+      "id": "2.18",
+      "source": "sections/02_optimization.tex",
+      "line": 250,
+      "latex": "\nP_{\\mathcal U}=\\{x:u_i^Tx\\le1\\text{ for all }i\\},\\qquad\nK\\subseteq P_{\\mathcal U},\\qquad J(P_{\\mathcal U})=B_2^n.\n",
+      "sha256": "b2d7743a7a7783084e7a6b54e54cad186a0294fdc0f2310f68756c887e5603e2",
+      "coverage_owner": "lem-reduction",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "2.19",
+      "source": "sections/02_optimization.tex",
+      "line": 272,
+      "latex": "\n\\begin{aligned}\n0\\le\\sum_i\\lambda_i(1-s_i)(r+s_i)\n&=r\\sum_i\\lambda_i+(1-r)\\sum_i\\lambda_i s_i-\\sum_i\\lambda_i s_i^2\\\\\n&=nr-r^2.\n\\end{aligned}\n",
+      "sha256": "97a9a7aa8a8fe4f9ebfb92b31d049aee48a6e7b1c36517ba2d31cc0c05f287cf",
+      "coverage_owner": "lem-reduction",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.john_affine_rounding",
+        "SharpCut.JohnFrame.polytope_isJohnNormalized"
+      ]
+    },
+    {
+      "id": "2.20",
+      "source": "sections/02_optimization.tex",
+      "line": 286,
+      "latex": "\n\\frac{w(K\\cap H_v)}{w(K)}\n\\le\\frac{w(P_{\\mathcal U}\\cap H_v)}{w(K)}\n=\\frac{w(P_{\\mathcal U}\\cap H_v)}{w(P_{\\mathcal U})}.\n",
+      "sha256": "d28efcaf7179a508ea32035135f20f2f472899cbcdd6b1255e21666d54f59728",
+      "coverage_owner": "SUP-03",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Geometry.contact_reduction"
+      ]
+    },
+    {
+      "id": "2.21",
+      "source": "sections/02_optimization.tex",
+      "line": 298,
+      "latex": "\nC_n\n=\\sup_{\\substack{\\mathcal U\\ \\text{a John frame}\\\\\\|v\\|=1}}\n\\frac{w(P_{\\mathcal U}\\cap H_v)}{w(P_{\\mathcal U})}\n=\\sup_{\\substack{\\mathcal U\\ \\text{a John frame}\\\\\\|v\\|=1}}\n\\frac{w(P_{\\mathcal U}\\cap H_v)}{\\kappa_n}.\n",
+      "sha256": "4b828cb6e3c27728a9f0b4152070c436e0bee51aa99c54437055665b0c61dfd6",
+      "coverage_owner": "SUP-03",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Geometry.contactOptimalConstant_eq"
+      ]
+    },
+    {
+      "id": "3.1",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 9,
+      "latex": "\nw(K\\cap H)\\le R_nw(K),\n",
+      "sha256": "65b8eb2b0ffdb4371d9dfaacc326d9782073375c10e5e4bd6d0a8ea7feb8f7fe",
+      "coverage_owner": "thm-sharp",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.2",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 28,
+      "latex": "\nc_*=-\\frac12v,\\qquad\nA_*=\\frac12vv^T+\\frac1{\\sqrt{1-b}}P,\n\\qquad \\det A_*=R_n.\n",
+      "sha256": "92b536809114a40a6ef3b8fba1cb552e956b4703dc9baadf5ef686a8cfe052b0",
+      "coverage_owner": "SUP-04",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.3",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 37,
+      "latex": "\nu_i^Tu_j=-\\frac1n\\ (i\\ne j),\\qquad\n\\sum_i u_i=0,\\qquad\n\\sum_i u_i u_i^T=\\frac{n+1}{n}I.\n",
+      "sha256": "b1082f8b1886c6d857fabe1a2440752a801433e67939ef04a823d5e1eebcbeb9",
+      "coverage_owner": "SUP-04",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.4",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 44,
+      "latex": "\n\\begin{aligned}\n(-v)^Tc_*+\\|A_*(-v)\\|&=\\frac12+\\frac12=1,\\\\\nu_i^Tc_*+\\|A_*u_i\\|\n&=-\\frac b2+\\sqrt{\\frac{b^2}{4}+\\frac{1-b^2}{1-b}}=1\n&& (u_i^Tv=b),\\\\\nv^Tc_*+\\|A_*v\\|&=-\\frac12+\\frac12=0.\n\\end{aligned}\n",
+      "sha256": "797c9cf6b9a8a516bab78a2e2aac79b221120434eee8e977a6ded103f377d691",
+      "coverage_owner": "SUP-04",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.5",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 80,
+      "latex": "\nt=\\frac{1+b}{2},\\qquad\n\\alpha_i=\\lambda_i(1-ts_i)\\ge\\lambda_i(1-t)\\ge\\frac{\\lambda_i}{4},\n\\qquad \\alpha_0=t.\n",
+      "sha256": "65dbb69a6f0b2588d277e28a8d0e8da148dfa026c046ae936fe3a235c8a27e64",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.originalWeight_lower"
+      ]
+    },
+    {
+      "id": "3.6",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 87,
+      "latex": "\n\\begin{aligned}\n\\sum_i\\alpha_i\n&=\\sum_i\\lambda_i-t\\sum_i\\lambda_i s_i=n,\\\\\n\\sum_i\\alpha_i u_i+tv\n&=\\sum_i\\lambda_i u_i-t\\left(\\sum_i\\lambda_i u_iu_i^T\\right)v+tv=0.\n\\end{aligned}\n",
+      "sha256": "ee244e32d6e99172621e2085b85ffe6e669eaad7da76d1be76b129bb2a55bbeb",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.originalWeight_sum",
+        "SharpCut.Certificate.balanced_normals"
+      ]
+    },
+    {
+      "id": "3.7",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 109,
+      "latex": "\na=\\frac b{2-b},\\qquad k=\\sqrt{1-a^2},\\qquad\np_i=\\frac{(s_i-a)v+ky_i}{1-as_i}.\n",
+      "sha256": "5382fb75ff516a3428d0e86eb29f366c9500eb3434bbb9cc567534738ae2447b",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.lorentzDirection_unit",
+        "SharpCut.Certificate.boostScale_bounds"
+      ]
+    },
+    {
+      "id": "3.8",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 115,
+      "latex": "\n\\|p_i\\|^2\n=\\frac{(s_i-a)^2+(1-a^2)(1-s_i^2)}{(1-as_i)^2}=1.\n",
+      "sha256": "f8dc6f28af67ceb92be416d6078eba6b6426a0f234e1b00ce2f81d12777675ed",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.lorentzDirection_unit",
+        "SharpCut.Certificate.transverse_norm_sq"
+      ]
+    },
+    {
+      "id": "3.9",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 124,
+      "latex": "\ns_i\\in\\{-1,b\\}\\quad\\Longrightarrow\\quad\np_i=\\frac{A_*u_i}{\\|A_*u_i\\|},\n",
+      "sha256": "01a9d2930a76a4a8a5a05d88c7883b520ac0f6fd2f1acd914a1afe0ef4f163c9",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.lorentz_model_direction",
+        "SharpCut.Certificate.model_matching_parameters"
+      ]
+    },
+    {
+      "id": "3.10",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 136,
+      "latex": "\n\\chi=\\sum_i\\lambda_i\\frac{(1+s_i)(s_i-b)^2}{1-as_i}.\n",
+      "sha256": "acc42236c19cfbedafe035cfbb417475594ccaf77d4bb62e0e3aff4e36d1a518",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.frameDefect_nonneg",
+        "SharpCut.Certificate.frameDefect_zero_iff"
+      ]
+    },
+    {
+      "id": "3.11",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 153,
+      "latex": "\nQ=\\sum_i\\alpha_i u_ip_i^T+t\\,vv^T.\n",
+      "sha256": "be3a0361a623402c3ef00852a2d7aa2d8ebd3a7242cbc5a4f815d3e5b359b457",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.unrotatedQ"
+      ]
+    },
+    {
+      "id": "3.12",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 171,
+      "latex": "\n\\frac{\\chi}{1500}\\le\\log(R_n\\det Q)\\le\\frac{\\chi}{2d}.\n",
+      "sha256": "611d6590e9432389029c54c55bde04dedd34228abf96e0ea3a492a00d07614ff",
+      "coverage_owner": "thm-frame-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.13",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 187,
+      "latex": "\nM=(QQ^T)^{1/2},\\qquad U=M^{-1}Q,\n\\qquad q_i=\\alpha_iUp_i,\\qquad q_0=tUv.\n",
+      "sha256": "6b558260da4c0e01eef5af533ea6f0f8d1e9ab1a2d2ba574bcad19a561978331",
+      "coverage_owner": "SUP-06",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.14",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 193,
+      "latex": "\nUU^T=M^{-1}QQ^TM^{-1}=I,\n",
+      "sha256": "c814292d157c2af2b2a889d828b34fc834a62dcf0ef44f975da37231536f2423",
+      "coverage_owner": "SUP-06",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.15",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 197,
+      "latex": "\n\\sum_iq_iu_i^T+q_0v^T=UQ^T=M^{-1}QQ^T=M.\n",
+      "sha256": "51935671c3d2d59185b92a352989da90ccc7c2257b1594ba24a96ae17d2192b5",
+      "coverage_owner": "SUP-06",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.16",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 202,
+      "latex": "\n\\det M=\\sqrt{\\det(QQ^T)}=|\\det Q|=\\det Q\\ge R_n^{-1}.\n",
+      "sha256": "b8f3cf74d0bfc784019c57c87deed1b618c2bda82ce192455696e0f2609d2abe",
+      "coverage_owner": "SUP-06",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.17",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 210,
+      "latex": "\n\\det A\\le(\\det M)^{-1}\\le R_n.\n",
+      "sha256": "4e45c307c72c5c67be08d24d1b0f02479d2e153de1ee31a8b689269199b49aeb",
+      "coverage_owner": "thm-sharp",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "3.18",
+      "source": "sections/03_sharp_bound.tex",
+      "line": 215,
+      "latex": "\n\\frac{w(K\\cap H_v)}{w(K)}\n=\\max_{\\mathcal E(c,A)\\subseteq K\\cap H_v}\\det A\\le R_n.\n",
+      "sha256": "1fb41b42328333e7e60d9491fe9256047c85b92efac4bc4a34d0667ad8e873c9",
+      "coverage_owner": "thm-sharp",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.1",
+      "source": "sections/04_deficit.tex",
+      "line": 8,
+      "latex": "\n\\tau_r=\\beta_r-g_r^Tc,\\qquad x_r=Ag_r,\\qquad\n\\gamma_r=\\alpha_r\\tau_r-q_r^Tx_r\\ge0,\n\\qquad Y=M^{1/2}AM^{1/2}.\n",
+      "sha256": "a8ea4ae10a81f77e39c7405a1208c29448938994155e0c98cb143a156b41986b",
+      "coverage_owner": "SUP-07",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.2",
+      "source": "sections/04_deficit.tex",
+      "line": 17,
+      "latex": "\n\\begin{aligned}\n\\mathcal C&:=\\sum_r\\gamma_r\n=\\sum_r\\alpha_r\\beta_r-c^T\\sum_r\\alpha_rg_r-\\operatorname{tr}(AM)\\\\\n&=n-\\operatorname{tr}(AM),\\\\\n\\mathcal D&:=\\operatorname{tr}Y-n-\\log\\det Y\\ge0,\\\\\nG&:=-\\log\\det M-\\log\\det A=\\mathcal C+\\mathcal D.\n\\end{aligned}\n",
+      "sha256": "17505f2b22b75be8819f5054886af0addb604d6d2a658c229aec7f41b6e0163c",
+      "coverage_owner": "SUP-07",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.3",
+      "source": "sections/04_deficit.tex",
+      "line": 36,
+      "latex": "\n\\boxed{\\epsilon:=\\log\\frac{R_n}{\\det A}\n=\\Delta_{\\rm geom}+\\mathcal C+\\mathcal D.}\n",
+      "sha256": "7017e20d7d9171cbdb4df26335a8d0275a0095c36c3e3b29b2dd833f11c6af35",
+      "coverage_owner": "prop-gap",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.4",
+      "source": "sections/04_deficit.tex",
+      "line": 48,
+      "latex": "\n\\begin{aligned}\n\\Delta_{\\rm geom}+\\mathcal C+\\mathcal D\n&=\\log(R_n\\det M)-\\log\\det M-\\log\\det A\\\\\n&=\\log\\frac{R_n}{\\det A}=\\epsilon.\n\\end{aligned}\n",
+      "sha256": "cee568d733f993cf68f14d5e4589f9b7b912fb53f6f488acdb191e426e1a8599",
+      "coverage_owner": "prop-gap",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.5",
+      "source": "sections/04_deficit.tex",
+      "line": 60,
+      "latex": "\n\\begin{aligned}\n\\Delta_{\\rm geom}=0&\\iff\\chi=0\\iff s_i\\in\\{-1,b\\}\\quad\\forall i,\\\\\n\\mathcal C=0&\\iff\\gamma_r=0\\quad\\forall r,\\\\\n\\mathcal D=0&\\iff Y=I\\iff A=M^{-1}.\n\\end{aligned}\n",
+      "sha256": "88275e5f12439d1ff510fc3bd1f9c1097a1d7daaec9a154b506f1dc0bae185e4",
+      "coverage_owner": "SUP-07",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.6",
+      "source": "sections/04_deficit.tex",
+      "line": 76,
+      "latex": "\n\\|M^{1/2}AM^{1/2}-I\\|_F\\le2\\sqrt G.\n",
+      "sha256": "9d362326b7278e95f98323cadaeffdd98b807d5a6c7421a68e6c74d3e38a7440",
+      "coverage_owner": "lem-matching",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.7",
+      "source": "sections/04_deficit.tex",
+      "line": 87,
+      "latex": "\nh(t)\\ge\\frac{(t-1)^2}{2\\max\\{1,t\\}}\\quad(t>0),\n\\qquad h(2)=1-\\log2>\\frac14.\n",
+      "sha256": "057f8598ccce26deb66c018347098fbd85f5eef6d9dc5aa1a4d175f00d573f1a",
+      "coverage_owner": "lem-matching",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "4.8",
+      "source": "sections/04_deficit.tex",
+      "line": 95,
+      "latex": "\n\\|Y-I\\|_F^2=\\sum_j(\\rho_j-1)^2\n\\le4\\sum_jh(\\rho_j)=4\\mathcal D\\le4G.\n",
+      "sha256": "ec2ffdcb4845540e4efc54f4a31cee322f070652c0f6456bfcd5891ac74d908c",
+      "coverage_owner": "lem-matching",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.1",
+      "source": "sections/05_equality.tex",
+      "line": 6,
+      "latex": "\n\\mathcal Z_b=\\{-v\\}\\cup\\{u\\in S^{n-1}:u^Tv=b\\}.\n",
+      "sha256": "0374261e5d075d512df3a96da26d800e6c9128fbddc41d9e7478e4c43123c3ca",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.2",
+      "source": "sections/05_equality.tex",
+      "line": 14,
+      "latex": "\n\\operatorname{conv}\\bigl(B_2^n\\cup\\mathcal E(c_*,A_*)\\bigr)\n\\subseteq K\\subseteq P_{\\mathcal U}.\n",
+      "sha256": "6c8865ef66d8a5e1f5eb521afb2d5fbeba44ede9d7ed45654b9e3135b6f02262",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.3",
+      "source": "sections/05_equality.tex",
+      "line": 31,
+      "latex": "\n\\begin{aligned}\n\\epsilon=0&\\ \\Longrightarrow\\ \\Delta_{\\rm geom}=\\mathcal C=\\mathcal D=0\\\\\n&\\ \\Longrightarrow\\ \\chi=0,\\quad Q=M=M_0,\\quad U=I,\\quad A=A_*.\n\\end{aligned}\n",
+      "sha256": "c0b489a3e1535dbb3a587bf79c6ff4d5d7d19580870b94246e4f6bac3edea122",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.4",
+      "source": "sections/05_equality.tex",
+      "line": 41,
+      "latex": "\n0=\\gamma_i\n=\\alpha_i\\bigl(1-u_i^Tc-\\|A_*u_i\\|\\bigr),\n\\qquad\nu_i^T(c-c_*)=0\\quad\\forall i.\n",
+      "sha256": "2267f870461c561ce1db6f943acff9a387b84a37352635b482081897c92ec139",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.5",
+      "source": "sections/05_equality.tex",
+      "line": 49,
+      "latex": "\n\\|c-c_*\\|^2\n=\\sum_i\\lambda_i\\bigl(u_i^T(c-c_*)\\bigr)^2=0.\n",
+      "sha256": "6e10de9adcfc2b7bdcb1a7e96ed9894ca257782eb720a9268dfcbadfdac30e0b",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.6",
+      "source": "sections/05_equality.tex",
+      "line": 59,
+      "latex": "\nw(K)=\\kappa_n,\\qquad\nw(K\\cap H_v)\\ge\\kappa_n\\det A_*=R_n\\kappa_n.\n",
+      "sha256": "35d86764615f9ba2145e10b1239ac7361c24b095e7d709054f40244ee6c19654",
+      "coverage_owner": "thm-equality",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.7",
+      "source": "sections/05_equality.tex",
+      "line": 76,
+      "latex": "\nu_i=bv+\\sqrt{1-b^2}\\,w_i,\\qquad\n\\lambda_i=\\frac{\\mu_i}{1-b^2},\\qquad\nu_{\\rm pole}=-v,\\qquad \\lambda_{\\rm pole}=\\frac1{1+b}\n",
+      "sha256": "8f205dfe5688b61477b82c14b2ba538c8ca53829fbb7dac9cce88ce2089ef661",
+      "coverage_owner": "prop-extremizers",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.8",
+      "source": "sections/05_equality.tex",
+      "line": 91,
+      "latex": "\n\\sum_i\\mu_i=n-1=\\frac{1-b}{b},\\qquad\nS:=\\sum_i\\lambda_i=\\frac1{b(1+b)}.\n",
+      "sha256": "6c0540f587aab056683bbd40ddadd715f260ae785a74a70879aedae00e8d67f5",
+      "coverage_owner": "prop-extremizers",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.9",
+      "source": "sections/05_equality.tex",
+      "line": 97,
+      "latex": "\n\\begin{aligned}\n\\lambda_{\\rm pole}u_{\\rm pole}+\\sum_i\\lambda_i u_i\n&=\\left(-\\frac1{1+b}+bS\\right)v\n+\\frac1{\\sqrt{1-b^2}}\\sum_i\\mu_iw_i=0,\\\\\n\\lambda_{\\rm pole}u_{\\rm pole}u_{\\rm pole}^T+\\sum_i\\lambda_i u_i u_i^T\n&=\\left(\\frac1{1+b}+b^2S\\right)vv^T+\\sum_i\\mu_iw_iw_i^T\\\\\n&=vv^T+P=I.\n\\end{aligned}\n",
+      "sha256": "2937a8dc14b37e540219c800062dd70769b8b307a223dace97cf22fe748d327b",
+      "coverage_owner": "prop-extremizers",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.10",
+      "source": "sections/05_equality.tex",
+      "line": 112,
+      "latex": "\nK=\\{(x,y,z):z\\ge-1,\\quad\n2\\sqrt2|x|+z\\le3,\\quad 2\\sqrt2|y|+z\\le3\\}.\n",
+      "sha256": "8d9c60cd22c2e7ee7107a05800e5f42bec14f3194a0c00b152bd12103d1205b6",
+      "coverage_owner": "SUP-08",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "5.11",
+      "source": "sections/05_equality.tex",
+      "line": 118,
+      "latex": "\n\\begin{gathered}\nJ(K\\cap\\{z\\le0\\})=c_*+A_*B_2^3,\\qquad\nc_*=-\\frac12e_3,\\\\\nA_*=\\operatorname{diag}\\!\\left(\\sqrt{\\frac32},\\sqrt{\\frac32},\\frac12\\right),\n\\qquad \\frac{w(K\\cap\\{z\\le0\\})}{w(K)}=\\det A_*=\\frac34=R_3.\n\\end{gathered}\n",
+      "sha256": "85ce0b3faa8f3b005e1833efbea9157c5eba8a4dcd80a4f96b9f73f372010a6c",
+      "coverage_owner": "SUP-08",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "6.1",
+      "source": "sections/06_stability.tex",
+      "line": 9,
+      "latex": "\n\\|Q-M_0\\|_F^2\\le\\frac{1-b}{2-b}\\chi,\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{32}{3}\\chi.\n",
+      "sha256": "099ce2fe2424ac105a7af03de66c189fcd32d1542770b530ff6931ab11513947",
+      "coverage_owner": "lem-geometric-control",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "6.2",
+      "source": "sections/06_stability.tex",
+      "line": 33,
+      "latex": "\n\\begin{aligned}\n\\chi&\\le32\\epsilon,&\n\\|Q-M_0\\|_F&\\le4\\sqrt\\epsilon,\\\\\n\\|A-A_*\\|_F&\\le30\\sqrt\\epsilon,&\n\\|c-c_*\\|&\\le50\\sqrt\\epsilon,\n\\end{aligned}\n\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{1024}{3}\\epsilon.\n",
+      "sha256": "917ef1156374bda3e738427f8d8d75484cfa935e651335b0e2af8db0bb2c22e6",
+      "coverage_owner": "thm-stability",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "6.3",
+      "source": "sections/06_stability.tex",
+      "line": 62,
+      "latex": "\n\\chi\\le1500\\epsilon\\le\\frac3{2000}\n\\quad\\Longrightarrow\\quad\n\\chi\\le32\\Delta_{\\rm geom}\\le32\\epsilon.\n",
+      "sha256": "13401434b42cee2584c96a6a0849aae6fbf4763bf4d9520e7637465d3116265b",
+      "coverage_owner": "thm-stability",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "6.4",
+      "source": "sections/06_stability.tex",
+      "line": 69,
+      "latex": "\n\\|Q-M_0\\|_F^2\\le\\frac{1-b}{2-b}\\chi\\le\\frac\\chi2\\le16\\epsilon,\n\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{32}{3}\\chi\\le\\frac{1024}{3}\\epsilon.\n",
+      "sha256": "d1e144cf198b78689a7db1e93ff6c7e03a31eebcddcc7492b775136dd3022b45",
+      "coverage_owner": "thm-stability",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "6.5",
+      "source": "sections/06_stability.tex",
+      "line": 82,
+      "latex": "\n\\begin{aligned}\n\\|A-A_*\\|_F\n&\\le\\|M^{-1/2}(Y-I)M^{-1/2}\\|_F\n+\\|M^{-1}(M_0-M)M_0^{-1}\\|_F\\\\\n&\\le\\frac{\\|Y-I\\|_F}{\\lambda_{\\min}(M)}\n+\\frac{\\|M-M_0\\|_F}{\\lambda_{\\min}(M)\\lambda_{\\min}(M_0)}\\\\\n&\\le\\left(\\frac{20}{7}+\\frac{1200}{49}\\right)\\sqrt\\epsilon\n\\le30\\sqrt\\epsilon.\n\\end{aligned}\n",
+      "sha256": "a3286d0910d0e9d2bf0262f31f24005edb75f4b42e5c1a5a459713f0e3966592",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.matching_error_reconstruction",
+        "SharpCut.Stability.inverse_difference_ordered",
+        "SharpCut.Stability.inverse_difference_frobenius",
+        "SharpCut.Stability.near_extremal_shape_coefficient"
+      ]
+    },
+    {
+      "id": "6.6",
+      "source": "sections/06_stability.tex",
+      "line": 101,
+      "latex": "\n\\sum_i\\lambda_i r_i\\le4\\sum_i\\alpha_i r_i\\le4\\mathcal C\\le4\\epsilon.\n",
+      "sha256": "eaef85e6d7f1caeb9a1f0c867416f84e2f319f58f0122803ab8b0c986cc01725",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.weighted_multiplier_slack_chain"
+      ]
+    },
+    {
+      "id": "6.7",
+      "source": "sections/06_stability.tex",
+      "line": 109,
+      "latex": "\n\\begin{aligned}\nc-c_*={}&-\\sum_i\\lambda_i r_i u_i\n-\\sum_i\\lambda_i g_*(s_i)u_i\\\\\n&+\\sum_i\\lambda_i\\bigl(\\|A_*u_i\\|-\\|Au_i\\|\\bigr)u_i.\n\\end{aligned}\n",
+      "sha256": "466744b93c683869a236443ef6a6ccf42da3d0a455ced38cbf2b62e73df91fbc",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.center_vector_identity"
+      ]
+    },
+    {
+      "id": "6.8",
+      "source": "sections/06_stability.tex",
+      "line": 120,
+      "latex": "\n\\sum_i\\lambda_i\\bigl|\\|A_*u_i\\|-\\|Au_i\\|\\bigr|^2\n\\le\\sum_i\\lambda_i\\|(A_*-A)u_i\\|^2=\\|A_*-A\\|_F^2.\n",
+      "sha256": "afb60b91eafe2b4d42df48a491cb0af7d76e14660734dd561ca8e12f751d39a0",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.frame_support_difference_square",
+        "SharpCut.Stability.frame_action_norm_sq"
+      ]
+    },
+    {
+      "id": "6.9",
+      "source": "sections/06_stability.tex",
+      "line": 126,
+      "latex": "\n\\|c-c_*\\|\\le4\\epsilon+\\|A-A_*\\|_F+\\sqrt{8\\chi}\n\\le50\\sqrt\\epsilon.\n",
+      "sha256": "d29a721398c03cf97b50ddf712c82b68f99411c3e9f0f86cd36d3c045ba9e1ba",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.center_recovery_bound",
+        "SharpCut.Stability.near_extremal_center_bound"
+      ]
+    },
+    {
+      "id": "7.1",
+      "source": "sections/07_computation.tex",
+      "line": 10,
+      "latex": "\nw(K_k)\\le R_n^k w(K_0).\n",
+      "sha256": "43241bf0ebfef131b8d42cd30b7b7546b724eff3dc23aad847a4cd7a9939073d",
+      "coverage_owner": "cor-iteration",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.exact_cut_sequence_volume"
+      ]
+    },
+    {
+      "id": "7.2",
+      "source": "sections/07_computation.tex",
+      "line": 15,
+      "latex": "\nk\\le\\frac{n\\log(R/r)}{-\\log R_n}.\n",
+      "sha256": "cad1f3ff76464b1a55b5463518ee5bd180c6b273937625cb0a753b1e788888a5",
+      "coverage_owner": "cor-iteration",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_iteration_bound"
+      ]
+    },
+    {
+      "id": "7.3",
+      "source": "sections/07_computation.tex",
+      "line": 25,
+      "latex": "\n\\kappa_n r^n\\le w(K_k)\\le R_n^k w(K_0)\\le R_n^k\\kappa_n R^n.\n",
+      "sha256": "2a2ad92cd50a58b758ddbca4adcb3885ff79a2eddf17be4ef5ba243cba133305",
+      "coverage_owner": "cor-iteration",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_volume_chain"
+      ]
+    },
+    {
+      "id": "7.4",
+      "source": "sections/07_computation.tex",
+      "line": 30,
+      "latex": "\nn\\log r\\le k\\log R_n+n\\log R\n\\quad\\Longrightarrow\\quad\nk(-\\log R_n)\\le n\\log(R/r),\n",
+      "sha256": "492f79e538d60557fdef5cba1cc403207e51cc1efaa487774e145fe65e63524d",
+      "coverage_owner": "cor-iteration",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_log_chain"
+      ]
+    },
+    {
+      "id": "7.5",
+      "source": "sections/07_computation.tex",
+      "line": 43,
+      "latex": "\n-\\log R_n=\\log2-\\frac12+\n\\sum_{j=1}^{\\infty}\\frac1{2j(j+1)n^j}\n=\\log2-\\frac12+\\frac1{4n}+\\frac1{12n^2}+\\frac1{24n^3}+O(n^{-4}).\n",
+      "sha256": "0e98844d7ce0eba97cfec22f6cafb3c453e717141e1cc144717bdc0d8df028db",
+      "coverage_owner": "SUP-09",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "7.6",
+      "source": "sections/07_computation.tex",
+      "line": 50,
+      "latex": "\n\\begin{aligned}\n-\\log R_n\n&=\\log2+\\frac{n-1}{2}\\log(1-1/n)\\\\\n&=\\log2-\\frac12\n+\\sum_{j\\ge1}\\left(\\frac1{2j}-\\frac1{2(j+1)}\\right)n^{-j}.\n\\end{aligned}\n",
+      "sha256": "f693839351d98aa8de0e1a9bdf0a89c70b80562c626f9fdabcdc6d526d062db4",
+      "coverage_owner": "SUP-09",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "7.7",
+      "source": "sections/07_computation.tex",
+      "line": 66,
+      "latex": "\nB_2^n\\subseteq 8\\bigl((K\\cap H_v)+v/4\\bigr)\n\\subseteq(8n+2)B_2^n.\n",
+      "sha256": "9311c61eada893d6d2fa5019c4575105f2345b1488bda6ccd5bbd31eb2e317e0",
+      "coverage_owner": "SUP-10",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.post_cut_inner_ball",
+        "SharpCut.Applications.post_cut_unitBall_subset",
+        "SharpCut.Applications.post_cut_outer_ball"
+      ]
+    },
+    {
+      "id": "7.8",
+      "source": "sections/07_computation.tex",
+      "line": 72,
+      "latex": "\n\\|x\\|\\le\\frac38<1,\\qquad v^Tx\\le-\\frac14+\\frac18=-\\frac18<0,\n",
+      "sha256": "cd0aee276b4f259be9819f3f6866cdac5487b8008035e9947269ec6564cc98a4",
+      "coverage_owner": "SUP-10",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.post_cut_inner_ball",
+        "SharpCut.Applications.post_cut_outer_ball"
+      ]
+    },
+    {
+      "id": "7.9",
+      "source": "sections/07_computation.tex",
+      "line": 84,
+      "latex": "\n\\operatorname{vol}\\mathcal E(c,A)\\ge e^{-G}w(\\mathcal P).\n",
+      "sha256": "1381e891fd505bb63b9742f8721b00a6f79fc1804686d320e03a0af2c6940dde",
+      "coverage_owner": "SUP-11",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.relative_volume_gap"
+      ]
+    },
+    {
+      "id": "7.10",
+      "source": "sections/07_computation.tex",
+      "line": 89,
+      "latex": "\np_*\\le-\\log\\det M=\\log\\det A+G\n\\quad\\Longrightarrow\\quad\n\\frac{\\operatorname{vol}\\mathcal E(c,A)}{w(\\mathcal P)}\n=e^{\\log\\det A-p_*}\\ge e^{-G}.\n",
+      "sha256": "07df980f7de3b47d2bbae04a2303d471d8299877d712cd23143549a5db715c97",
+      "coverage_owner": "SUP-11",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Applications.relative_volume_gap",
+        "SharpCut.Applications.normalized_gap_optimum_bound",
+        "SharpCut.Applications.candidate_volume_exp_ratio"
+      ]
+    },
+    {
+      "id": "7.11",
+      "source": "sections/07_computation.tex",
+      "line": 99,
+      "latex": "\n\\frac{w(P_{\\mathcal U}\\cap H_v)}{\\kappa_n}\n=\\mathfrak D(\\mathcal U,v)^{-1},\\qquad\nC_n=\\left(\\inf_{\\mathcal U,v}\\mathfrak D(\\mathcal U,v)\\right)^{-1},\n\\qquad \\inf_{\\mathcal U,v}\\mathfrak D(\\mathcal U,v)=R_n^{-1}.\n",
+      "sha256": "422e5f7ad5e76950196297831d8f82d2bf1f88caa78da1045504819bdb4ef661",
+      "coverage_owner": "SUP-12",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.1",
+      "source": "sections/08_determinant.tex",
+      "line": 22,
+      "latex": "\n\\begin{aligned}\nB&=\\sum_i\\lambda_i f(s_i)u_iu_i^T,&\nF&=B+\\frac{t}{1-a}vv^T,\\\\\nD&=kP+k^2vv^T,&Q&=FD.\n\\end{aligned}\n",
+      "sha256": "70ba484b4a74090d1b6535589ebd0b8e521bf2c8d16b85bb04f3ab11e664d262",
+      "coverage_owner": "SUP-13",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.2",
+      "source": "sections/08_determinant.tex",
+      "line": 44,
+      "latex": "\n\\begin{gathered}\nF_0=\\frac{d^2}{2(1-b)}vv^T+\\frac d2P,\n\\qquad\\widehat F=F_0^{-1/2}FF_0^{-1/2},\\\\\nF_0D=M_0,\\qquad\\det\\widehat F=R_n\\det Q.\n\\end{gathered}\n",
+      "sha256": "e9d9548aee348b5f218c1bf7c98b8cca460b0e7cac4ba11062ba73e0bd12cac1",
+      "coverage_owner": "SUP-13",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.3",
+      "source": "sections/08_determinant.tex",
+      "line": 60,
+      "latex": "\n\\chi=\\sum_i\\lambda_i\\frac{(1+s_i)(s_i-b)^2}{1-as_i}\\ge0.\n",
+      "sha256": "a6f6b4b7db86690c6ddb950ed52b4d7584cd577c1fe6a3599f8bb7296727f535",
+      "coverage_owner": "SUP-13",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.4",
+      "source": "sections/08_determinant.tex",
+      "line": 71,
+      "latex": "\n\\frac{\\chi}{1500}\\le\\log\\det\\widehat F\\le\\frac{\\chi}{2d},\n\\qquad\n\\det F\\ge\\det F_0=\\frac{d^{n+1}}{2^n(1-b)}.\n",
+      "sha256": "91f668916ea7cb32ca12492c8f41ccc54d2aaa0fda40d052906e296550add1a7",
+      "coverage_owner": "thm-determinant",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.5",
+      "source": "sections/08_determinant.tex",
+      "line": 98,
+      "latex": "\nN_0-aN_1=n,\\qquad N_1-aN_2=0,\\qquad N_2-aN_3=1.\n",
+      "sha256": "0d4822d5b3c70e8b61908dfb7b9ca97c14d8fe1455a4319971b90577e5234f1a",
+      "coverage_owner": "SUP-14",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.6",
+      "source": "sections/08_determinant.tex",
+      "line": 104,
+      "latex": "\n\\chi=N_3+(1-2b)N_2+(b^2-2b)N_1+b^2N_0.\n",
+      "sha256": "122f2ef50e79541bcfa6177ec90f5b95723fb013381f6d5e18804925c3727206",
+      "coverage_owner": "SUP-14",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.7",
+      "source": "sections/08_determinant.tex",
+      "line": 109,
+      "latex": "\n\\zeta:=v^TBv=N_2-tN_3\n=\\frac{3d}{4}-\\frac{d^2}{4(1-b)(2+b)}\\chi.\n",
+      "sha256": "224b9ee835b86653ce321a403986b10cb39ef0cec38cf8e5a4ff799cba8b66fe",
+      "coverage_owner": "SUP-14",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.8",
+      "source": "sections/08_determinant.tex",
+      "line": 132,
+      "latex": "\n\\mathcal A=\\sum_i\\lambda_i f(s_i)\\widetilde u_i\\widetilde u_i^T,\n\\qquad \\mathcal L=\\sum_i\\lambda_i\\log f(s_i).\n",
+      "sha256": "29afd75d68ab8f4ba60f9456971c074548490da433e30730b0444a58ce807517",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.9",
+      "source": "sections/08_determinant.tex",
+      "line": 138,
+      "latex": "\n\\mathcal L_0:=\\frac{\\ell(-1)}{1+b}+\\frac{\\ell(b)}{b(1+b)}.\n",
+      "sha256": "d1339c055e3ff8794fdf43a61a7bcb8def65930877ff95a29278dbba7a3917fa",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.10",
+      "source": "sections/08_determinant.tex",
+      "line": 144,
+      "latex": "\n\\delta_0(b):=\\frac{(1+b)(b^2+b+2)}\n{2d(1-b)(2+b)(3+b)}.\n",
+      "sha256": "6740145b04fa8fa44c266d3f1aadfafa25dc2c80538c2a5e71eb329062af8a29",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.11",
+      "source": "sections/08_determinant.tex",
+      "line": 152,
+      "latex": "\n\\log\\det\\widehat F\n\\ge (1+b)(\\mathcal L-\\mathcal L_0)+\\delta_0(b)\\chi.\n",
+      "sha256": "44933abe911052fecfe8bdd3003417bc95a6757baad6203b9e97e0e795b9f0db",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.12",
+      "source": "sections/08_determinant.tex",
+      "line": 168,
+      "latex": "\nXX^T=I_r,\\quad \\rho_i>0\n\\quad\\Longrightarrow\\quad\n\\log\\det\\bigl(X\\operatorname{diag}(\\rho_i)X^T\\bigr)\n\\ge\\sum_i\\|X_i\\|^2\\log\\rho_i,\n",
+      "sha256": "110778da466f04ad81e663a2efde97b8e93b91598cd24fd62bcdd31f65ace833",
+      "coverage_owner": "SUP-15",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.13",
+      "source": "sections/08_determinant.tex",
+      "line": 179,
+      "latex": "\n\\sum_S w_S=1,\\qquad\n\\det(X\\operatorname{diag}(\\rho_i)X^T)=\\sum_Sw_S\\prod_{i\\in S}\\rho_i,\n\\qquad \\sum_{S\\ni i}w_S=\\|X_i\\|^2.\n",
+      "sha256": "581c26d91a460606e5d2f2aa10313e4c4feb6680bf1a14d9934983f11ad039f3",
+      "coverage_owner": "SUP-15",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.14",
+      "source": "sections/08_determinant.tex",
+      "line": 188,
+      "latex": "\n\\log\\!\\left(\\sum_Sw_S\\prod_{i\\in S}\\rho_i\\right)\n\\ge\\sum_Sw_S\\sum_{i\\in S}\\log\\rho_i\n=\\sum_i\\|X_i\\|^2\\log\\rho_i,\n",
+      "sha256": "8d947f0a16ad55df61c87f6e6e1ede8107529cbde475363c9e06e2b72c061992",
+      "coverage_owner": "SUP-15",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.15",
+      "source": "sections/08_determinant.tex",
+      "line": 194,
+      "latex": "\n\\log\\det\\mathcal A\\ge(1+b)\\mathcal L.\n",
+      "sha256": "e95ae5e0496a92c77f61ce89df39558e9c2a61047dceb53087626462157d742d",
+      "coverage_owner": "SUP-15",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.16",
+      "source": "sections/08_determinant.tex",
+      "line": 203,
+      "latex": "\n\\mathcal A=\n\\begin{pmatrix}\nB&\\sqrt b(aBv-tv)\\\\\n\\sqrt b(aBv-tv)^T&1-abt+a^2b\\zeta\n\\end{pmatrix},\n\\qquad\n\\det\\mathcal A=\\frac{\\det B}{n}(n+at-t^2\\varrho).\n",
+      "sha256": "f3736b567f36ed404b4550cd6b280070dcf3526377b3cded569d75e9ae76d26b",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.17",
+      "source": "sections/08_determinant.tex",
+      "line": 217,
+      "latex": "\n\\det Q=k^{n+1}\\det B(1+\\kappa\\varrho),\\qquad\n\\varrho\\zeta\\ge1,\\qquad H_0-t^2\\varrho>0.\n",
+      "sha256": "ed6ab316b0acaa7aeba2a1a55d07dffcfd255b71a441f311276d74785d3c2e52",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.18",
+      "source": "sections/08_determinant.tex",
+      "line": 223,
+      "latex": "\n\\frac{\\det Q}{\\det\\mathcal A}\n=nk^{n+1}\\frac{1+\\kappa\\varrho}{H_0-t^2\\varrho}\n\\ge nk^{n+1}\\frac{\\zeta+\\kappa}{H_0\\zeta-t^2}.\n",
+      "sha256": "46c02438a305db1119e82c8f1bf200b0325f0de01b3786db7434807855e83a69",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.19",
+      "source": "sections/08_determinant.tex",
+      "line": 230,
+      "latex": "\n\\log\\det Q\\ge(n+1)\\log k+(1+b)\\mathcal L+g(\\zeta),\n\\quad\ng(\\zeta)=\\log\\frac{n(\\zeta+\\kappa)}{(n+at)\\zeta-t^2}.\n",
+      "sha256": "aeb874ea2ecc717d32f076fa41e42106a017a7eff2ad1fd4b54dea35654adda3",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.20",
+      "source": "sections/08_determinant.tex",
+      "line": 245,
+      "latex": "\n\\Delta_\\zeta=\\zeta_0-\\zeta\n=\\frac{d^2\\chi}{4(1-b)(2+b)},\\qquad\n\\theta_1=\\frac{\\Delta_\\zeta}{\\zeta_0+\\kappa},\\qquad\n\\theta_2=\\frac{H_0\\Delta_\\zeta}{H_0\\zeta_0-t^2}.\n",
+      "sha256": "a9b625471f4275e31d754af298391ddc7aeaf1117653503baaf54cfdeeb21b67",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.21",
+      "source": "sections/08_determinant.tex",
+      "line": 253,
+      "latex": "\n\\begin{aligned}\ng(\\zeta)-g(\\zeta_0)\n&=\\log\\frac{1-\\theta_1}{1-\\theta_2}\n\\ge1-\\frac{1-\\theta_2}{1-\\theta_1}\\\\\n&=\\frac{\\theta_2-\\theta_1}{1-\\theta_1}\n\\ge\\theta_2-\\theta_1=\\delta_0(b)\\chi,\n\\end{aligned}\n",
+      "sha256": "367b640bc3129aa20a03e2623f1fb21613e6d663f7a2f3b27ad6e66e56df9d16",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.22",
+      "source": "sections/08_determinant.tex",
+      "line": 268,
+      "latex": "\n(n+1)\\log k+(1+b)\\mathcal L_0+g(\\zeta_0)=\\log R_n^{-1}.\n",
+      "sha256": "b576ea55f4b3e5c682ba3ffaea630f45430717020f3f96531bfb476b590142a9",
+      "coverage_owner": "lem-lifted-bound",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.23",
+      "source": "sections/08_determinant.tex",
+      "line": 285,
+      "latex": "\nI(b):=\\int_a^t\\frac{z^2}{(1-z^2)(1-bz)^2}\\,dz.\n",
+      "sha256": "aae4e4d36179d4243bc784b85a097533bd54493749d5ed330e061b524522d828",
+      "coverage_owner": "lem-hermite",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.24",
+      "source": "sections/08_determinant.tex",
+      "line": 292,
+      "latex": "\n\\mathcal L-\\mathcal L_0\\ge-(1-a)I(b)\\chi.\n",
+      "sha256": "cd4e1b6d80fc1402a9b84d8727c6705333c2c78e72c749f77f2e016bb74793bd",
+      "coverage_owner": "lem-hermite",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.25",
+      "source": "sections/08_determinant.tex",
+      "line": 308,
+      "latex": "\nH_2(s)=\\ell(b)+\\ell'(b)(s-b)\n+\\frac{\\ell(-1)-\\ell(b)+(1+b)\\ell'(b)}{(1+b)^2}(s-b)^2.\n",
+      "sha256": "745d89fe50c96bfa8c2628fa1e5e85dd2357621836a80170774f785e6d1627a5",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.26",
+      "source": "sections/08_determinant.tex",
+      "line": 314,
+      "latex": "\n\\sum_i\\lambda_iH_2(s_i)=\\mathcal L_0.\n",
+      "sha256": "1f1a5db630f6fc8fa6635e6f1224c79576102322daca7d202275b43dd9b07181",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.27",
+      "source": "sections/08_determinant.tex",
+      "line": 320,
+      "latex": "\n\\ell(s)-H_2(s)=-(1+s)(s-b)^2\n\\int_a^t\\frac{z^2\\,dz}{(1+z)(1-bz)^2(1-zs)}.\n",
+      "sha256": "222c3a63f34a21085ef54264f498ee62c44d76f71a1fb1b5543c574e13ea339c",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.28",
+      "source": "sections/08_determinant.tex",
+      "line": 332,
+      "latex": "\nr_z(s)-H_{2,z}(s)\n=\\frac{z^2(1+s)(s-b)^2}{(1+z)(1-bz)^2(1-zs)}.\n",
+      "sha256": "d971bd6b8c7c09f6737d7a4129147d8a53cb4a93f4e3636e9368ed0008fe4dbd",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.29",
+      "source": "sections/08_determinant.tex",
+      "line": 340,
+      "latex": "\n-\\int_a^t\\frac{dz}{(1-bz)^2}\n=-\\frac{t-a}{(1-ab)(1-tb)}\n=\\frac{a}{1-ab}-\\frac{t}{1-tb}=\\ell'(b).\n",
+      "sha256": "fe73882b3a5b01268fa305d1acd10a53cde81cecbddb46592ff46b28a666f76f",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.30",
+      "source": "sections/08_determinant.tex",
+      "line": 353,
+      "latex": "\n\\frac{1-a}{1-z}-\\frac{1-as}{1-zs}\n=\\frac{(z-a)(1-s)}{(1-z)(1-zs)}\\ge0\n\\qquad(a\\le z\\le t,\\ -1\\le s\\le1).\n",
+      "sha256": "82ec6a027533685eab869a88fb4b4f77dab22b85e8420c631195f82672d560cb",
+      "coverage_owner": "SUP-16",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.31",
+      "source": "sections/08_determinant.tex",
+      "line": 367,
+      "latex": "\n\\log\\det\\widehat F\\ge\\delta_0(b)[1-\\mathcal R(b)]\\chi,\n\\qquad\n\\mathcal R(b)=\\frac{4(1-b)^2(2+b)(3+b)}{b^2+b+2}I(b).\n",
+      "sha256": "4bd85dba2d5e6861c0c62d3c81bcc3db030d01e5f277e60647699d13ad2de9f6",
+      "coverage_owner": "thm-determinant",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.32",
+      "source": "sections/08_determinant.tex",
+      "line": 399,
+      "latex": "\n\\mathcal R(b)=\\frac{4(2+b)(3+b)}{b^2+b+2}\n\\int_0^{(2+b)/(4+b)}\\frac1{1-w^2}\n\\left(\\frac{2w+b(1-w)}{2+b(1-w)}\\right)^2dw.\n",
+      "sha256": "b55adc300baaadced2e21adf84aaf5c14838e0f913e710ad6a8aabfc9742f6e3",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.lossRatio_eq_transformedRatio"
+      ]
+    },
+    {
+      "id": "8.33",
+      "source": "sections/08_determinant.tex",
+      "line": 411,
+      "latex": "\n\\begin{aligned}\n\\pi(b_2)-\\pi(b_1)\n&=\\frac{16(b_2-b_1)(1-b_1-b_2-b_1b_2)}\n{(b_1^2+b_1+2)(b_2^2+b_2+2)}\\ge0,\\\\\n\\psi_{b_2}(w)-\\psi_{b_1}(w)\n&=\\frac{2(b_2-b_1)(1-w)^2}\n{[2+b_1(1-w)][2+b_2(1-w)]}\\ge0,\\\\\n\\ell_{b_2}-\\ell_{b_1}\n&=\\frac{2(b_2-b_1)}{(4+b_1)(4+b_2)}\\ge0.\n\\end{aligned}\n",
+      "sha256": "6e9da69e8c117e831a031196a1165759ca0624ce0d1e1914bfe438b66faa6529",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.prefactor_difference",
+        "SharpCut.Scalar.integrand_factor_difference",
+        "SharpCut.Scalar.interval_endpoint_difference",
+        "SharpCut.Scalar.transformedRatio_mono"
+      ]
+    },
+    {
+      "id": "8.34",
+      "source": "sections/08_determinant.tex",
+      "line": 429,
+      "latex": "\n\\mathcal R(1/4)=\\frac{468}{37}\n\\int_0^{9/17}\\frac{(1+7w)^2}{(1-w^2)(9-w)^2}\\,dw.\n",
+      "sha256": "8f26c6db2ed4b25342cdfad08f0ffacc7c43de2168ffcffa280b2e3b48a38e88",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.quarter_integrand_eq",
+        "SharpCut.Scalar.transformedRatio_quarter"
+      ]
+    },
+    {
+      "id": "8.35",
+      "source": "sections/08_determinant.tex",
+      "line": 435,
+      "latex": "\n\\begin{aligned}\n\\frac{(1+7w)^2}{(1-w^2)(9-w)^2}\n&=\\frac{9}{50(1+w)}+\\frac{1}{2(1-w)}\\\\\n&\\quad-\\frac{8}{25(9-w)}-\\frac{256}{5(9-w)^2}.\n\\end{aligned}\n",
+      "sha256": "f6fb11530b6e1b62c914a3a4cb66f4c457c4708c635e0809640a4b1e6c3bff34",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.endpoint_partial_fractions"
+      ]
+    },
+    {
+      "id": "8.36",
+      "source": "sections/08_determinant.tex",
+      "line": 445,
+      "latex": "\n\\begin{aligned}\n\\mathcal R(1/4)\n&=\\frac{468}{37}\n\\left(\\frac9{50}\\log13-\\frac1{25}\\log2-\\frac{16}{45}\\right)\\\\\n&=\\frac{2106\\log13-468\\log2-4160}{925}<\\frac{124}{125}.\n\\end{aligned}\n",
+      "sha256": "eda03c553b888931586e6c2c56ade73b7f9356bd37a6da5d2e2868de3162142e",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.endpointIntegral_eq",
+        "SharpCut.Scalar.endpoint_full_certificate"
+      ]
+    },
+    {
+      "id": "8.37",
+      "source": "sections/08_determinant.tex",
+      "line": 459,
+      "latex": "\n6(1+b)(b^2+b+2)-d(1-b)(2+b)(3+b)\n=b(26+19b+4b^2-b^3)\\ge0.\n",
+      "sha256": "c15ad6cb052f0a3bc5056d7613b8242010479f84a1d86697446de345b1651ff6",
+      "coverage_owner": "SUP-17",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.gain_polynomial_identity",
+        "SharpCut.Scalar.gain_polynomial_nonneg",
+        "SharpCut.Scalar.gain_coefficient_lower"
+      ]
+    },
+    {
+      "id": "8.38",
+      "source": "sections/08_determinant.tex",
+      "line": 476,
+      "latex": "\n\\frac1{1-z^2}\\ge1+z^2+z^4,\\qquad\n\\frac1{(1-bz)^2}\\ge1+2bz+3b^2z^2.\n",
+      "sha256": "6653d848a1e8a248ff3bf9615182039917f6d74a4147c2c40db7168c2d589321",
+      "coverage_owner": "SUP-18",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.reciprocal_polynomial_lower",
+        "SharpCut.Scalar.low_dimension_integration_domain"
+      ]
+    },
+    {
+      "id": "8.39",
+      "source": "sections/08_determinant.tex",
+      "line": 484,
+      "latex": "\n\\begin{aligned}\n\\mathcal R(b)&\\ge p(b)\\int_a^t\nz^2(1+z^2+z^4)(1+2bz+3b^2z^2)\\,dz,\\\\\n\\mathcal R(1/3)&>\\frac{16}{15}>1,\\\\\n\\mathcal R(1/2)&>\\frac76>1.\n\\end{aligned}\n",
+      "sha256": "90a4e85d6db0217af9abd9dd022f751a5e292ef2d3b1beb59a823dfd2bd11614",
+      "coverage_owner": "SUP-18",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Scalar.polynomial_lower_integral",
+        "SharpCut.Scalar.lossRatio_polynomial_lower",
+        "SharpCut.Scalar.low_dimension_scalar_remainder"
+      ]
+    },
+    {
+      "id": "8.40",
+      "source": "sections/08_determinant.tex",
+      "line": 507,
+      "latex": "\n\\widehat F=\\begin{pmatrix}1-x&j^T\\\\j&I_m+E\\end{pmatrix},\n\\quad x=\\frac{\\chi}{2(2+b)},\\quad\n\\sigma:=\\operatorname{tr}E=\\frac{2\\chi}{d(2+b)},\\quad x=\\frac d4\\sigma,\n",
+      "sha256": "5afeb48a3976b6d0386f912012693edc6b059e0af5e7b20354ddd3ea84fb6002",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.41",
+      "source": "sections/08_determinant.tex",
+      "line": 513,
+      "latex": "\nE=-\\frac1d\\sum_i\\nu_i(s_i-b)y_i y_i^T,\n\\qquad\nj=-\\frac{\\sqrt{1-b}}{b\\sqrt d}\\sum_i\\nu_i(s_i-b)y_i.\n",
+      "sha256": "bf0b7b79cd4a4304206a9af8c95127ba057724c78749b8e5cc901bed262be848",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.42",
+      "source": "sections/08_determinant.tex",
+      "line": 520,
+      "latex": "\n0\\le\\sigma\\le\\frac{2(1-b)}{d+b^2},\\qquad 0\\le\\chi\\le2,\n",
+      "sha256": "64da357da802b38b379e8474e2114d5e6f29e4028c741edcc0ef66fa36db3aa4",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.43",
+      "source": "sections/08_determinant.tex",
+      "line": 523,
+      "latex": "\n\\begin{pmatrix}x&-j^T\\\\-j&tI_m-E\\end{pmatrix}\\succeq0,\n\\qquad -\\frac12I_m\\prec E\\prec tI_m.\n",
+      "sha256": "bc09b7b20b883c5495910aa14b8b236e960fd59c54b3695e1867cbf01d8e3083",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.44",
+      "source": "sections/08_determinant.tex",
+      "line": 540,
+      "latex": "\nC_0=aC_1,\\qquad C_1=aC_2,\\qquad Y_0-aY_1=I_m.\n",
+      "sha256": "cbe965877b41809b174aba8fc34f0a19a30af67e47f59ada23d692ebd24334d7",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.45",
+      "source": "sections/08_determinant.tex",
+      "line": 555,
+      "latex": "\n\\chi+\\frac{(1-b)(2+b)^2}{(d+b^2)^2}\n\\sum_i\\nu_i(1-s_i)(s_i+b)^2\n=\\frac{d(2+b)(1-b)}{d+b^2}.\n",
+      "sha256": "fa9e86c0ba0f1ba3353a2818bf379ee5876a2686e5fd03650d0debfc2323fcc5",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.46",
+      "source": "sections/08_determinant.tex",
+      "line": 567,
+      "latex": "\n\\begin{pmatrix}x&-j^T\\\\-j&tI_m-E\\end{pmatrix}\n=\\sum_i\\nu_i(1+s_i)r_ir_i^T,\\qquad\nr_i=\\binom{(s_i-b)/\\sqrt{2(2+b)}}\n{\\sqrt{(1-b)(2+b)/(2d)}\\,y_i}.\n",
+      "sha256": "6aaf7be4bbd70b59d8ad33ca28946269a3cabc4ddb6d6b2a0b72f428e52e48fe",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.47",
+      "source": "sections/08_determinant.tex",
+      "line": 576,
+      "latex": "\n\\begin{aligned}\n\\sum_i\\nu_i(1-s_i)y_i y_i^T&=\\frac d{2+b}(I_m+2E),\\\\\n\\sum_i\\nu_i(1+s_i)y_i y_i^T&=\\frac{2d}{(1-b)(2+b)}(tI_m-E).\n\\end{aligned}\n",
+      "sha256": "9daaf4e98dc3259294d55a24a39d3ac7e4db9b9880a126377f59156f9476eb60",
+      "coverage_owner": "lem-moments",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.48",
+      "source": "sections/08_determinant.tex",
+      "line": 592,
+      "latex": "\n\\det\\widehat F\\ge(1-x)(1+\\sigma)-x(t-\\sigma)\n=1+\\frac{11}{32}\\sigma=1+\\frac{11}{60}\\chi.\n",
+      "sha256": "ae3d6a1453a36f70bf1f94e4bb08fbc9338a869b538e863da89054d4e855e8b4",
+      "coverage_owner": "SUP-19",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.49",
+      "source": "sections/08_determinant.tex",
+      "line": 615,
+      "latex": "\nA_E\\le\\frac\\sigma2,\\qquad\n\\|K_E^{-1}j\\|^2\\le L\\left(\\frac\\sigma2-A_E\\right).\n",
+      "sha256": "a6a59384d91ffbe1597a4f1ba55f74126f71e96994d439a3ad19705f5a714156",
+      "coverage_owner": "lem-variational",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.50",
+      "source": "sections/08_determinant.tex",
+      "line": 630,
+      "latex": "\n\\ell=\\operatorname{tr}(ZE)+q^Tj,\\qquad\nQ_2=\\operatorname{tr}(Z^2K_E)+4q^TZj+L\\|q\\|^2.\n",
+      "sha256": "80ed16fa529b82d881d10eb435e9982ab154fd3db473013aabf4f89dd4bb9432",
+      "coverage_owner": "SUP-20",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.51",
+      "source": "sections/08_determinant.tex",
+      "line": 638,
+      "latex": "\n\\begin{aligned}\n\\sum_i\\nu_i(1-s_i)y_iy_i^T&=\\frac d{2+b}K_E,\\\\\n\\gamma\\sum_i\\nu_i(1-s_i)(s_i+b)y_i&=\\frac{2d}{2+b}j,\\\\\n\\gamma^2\\sum_i\\nu_i(1-s_i)(s_i+b)^2&=\\frac d{2+b}L.\n\\end{aligned}\n",
+      "sha256": "43e1667c7b092af44e47631f43424d837c6eab56a2102eaba05363d60b85d4e3",
+      "coverage_owner": "SUP-20",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.52",
+      "source": "sections/08_determinant.tex",
+      "line": 648,
+      "latex": "\n\\begin{aligned}\n\\ell&=-\\frac1d\\sum_i\\nu_i(s_i-b)y_i^T\n\\bigl(Zy_i+\\gamma(s_i+b)q\\bigr),\\\\\n\\sum_i\\nu_i(1-s_i)\\|Zy_i+\\gamma(s_i+b)q\\|^2\n&=\\frac d{2+b}Q_2.\n\\end{aligned}\n",
+      "sha256": "9ddba0fffbe1b13d37971c5342b1073fcd5986eb3b1093a0d63d0223b8cde610",
+      "coverage_owner": "SUP-20",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.53",
+      "source": "sections/08_determinant.tex",
+      "line": 662,
+      "latex": "\n2\\ell-Q_2\\le2\\ell-\\frac{2\\ell^2}{\\sigma}\n=\\frac\\sigma2-\\frac2\\sigma\\left(\\ell-\\frac\\sigma2\\right)^2\n\\le\\frac\\sigma2.\n",
+      "sha256": "66f9e11f0d7f199c369f24c2dbb84a63facce49b9307495683a2148e0b6c1558",
+      "coverage_owner": "SUP-20",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.54",
+      "source": "sections/08_determinant.tex",
+      "line": 675,
+      "latex": "\n2\\ell-Q_2=A_E+\\frac1L\\|K_E^{-1}j\\|^2\\le\\frac\\sigma2.\n",
+      "sha256": "17aaf7d9bdc7a5f20d67ba03148b4925aa53d01415085d039d04a15f0d042eb3",
+      "coverage_owner": "SUP-20",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.55",
+      "source": "sections/08_determinant.tex",
+      "line": 699,
+      "latex": "\n\\det\\widehat F\\ge1+\\frac2{11}\\sigma\n=1+\\frac{36}{385}\\chi.\n",
+      "sha256": "329fce5eba80a10fec8ff5a5bdc76fd93f1d8a58b03120bdca9a2a4ecc1e5094",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.56",
+      "source": "sections/08_determinant.tex",
+      "line": 715,
+      "latex": "\np=\\det E,\\qquad z=\\sigma+4p,\\qquad\nL=\\frac58-\\frac56\\sigma,\\qquad\n\\Delta=\\frac{11}{3}(1+\\sigma)-z.\n",
+      "sha256": "b781be83ed6f4c76986f1d4344af773c8457e75d02b2a77150ae4d3bf0b7a4f4",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.57",
+      "source": "sections/08_determinant.tex",
+      "line": 727,
+      "latex": "\n\\det K_E=1+\\sigma+z,\\qquad\n\\sigma-2A_E=\\frac{z}{1+\\sigma+z}.\n",
+      "sha256": "115d4493290fb92bac3c5a442b23ec9aad4d389941ee30494506677fe18718bf",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.58",
+      "source": "sections/08_determinant.tex",
+      "line": 733,
+      "latex": "\n0\\le z\\le\\sigma(1+\\sigma),\\qquad\nj^TK_E^{-2}j\\le\\frac{Lz}{2(1+\\sigma+z)},\\qquad \\Delta>0.\n",
+      "sha256": "ef515ed4913d8776bfbcddc23a765d45dfea8cff1dfedcfeb808e278836519ef",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.59",
+      "source": "sections/08_determinant.tex",
+      "line": 746,
+      "latex": "\n(t-\\sigma)r+\\omega\\le x\\det N,\n",
+      "sha256": "26945f578b8252eb29a9db708100fd292be8b7d8f1d95581ea02bac3b4ab6a2a",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.60",
+      "source": "sections/08_determinant.tex",
+      "line": 749,
+      "latex": "\n\\bigl[(1+\\sigma)(1+4\\sigma)-z\\bigr]r-4(1+\\sigma)\\omega\n\\le\\frac L2z(1+\\sigma+z).\n",
+      "sha256": "0c9691e6e443c6300332657b1a4d4af62d7d17887abd832e13d383980495a00d",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.61",
+      "source": "sections/08_determinant.tex",
+      "line": 760,
+      "latex": "\nj^T\\operatorname{adj}(I_2+E)j\n\\le\\frac{x\\det N[3(1+\\sigma)+z]+\\frac56Lz(1+\\sigma+z)}\\Delta.\n",
+      "sha256": "22aeaff0441a6e1921bff51eefe488c2bc4ac8fee9b7a7ca6e51533d37b7be44",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.62",
+      "source": "sections/08_determinant.tex",
+      "line": 770,
+      "latex": "\n108\\Delta(\\det\\widehat F-1)\\ge\\mathcal P_*(\\sigma,z),\n",
+      "sha256": "963a2f3807d37350f84b0e5637e2a21c90a7c3a96c95f0a09b9f8031fc42bf78",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.63",
+      "source": "sections/08_determinant.tex",
+      "line": 773,
+      "latex": "\n\\mathcal P_*(\\sigma,z)=72\\sigma(1+\\sigma)\n+\\left(\\frac{171}{4}-\\frac{53}{4}\\sigma+75\\sigma^2\\right)z\n+\\left(-\\frac{333}{4}+75\\sigma\\right)z^2.\n",
+      "sha256": "4f0cb25f329522b8c45d04ea2d68c006885d76547ead4e7d5b85e05708ba5372",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.64",
+      "source": "sections/08_determinant.tex",
+      "line": 784,
+      "latex": "\n\\frac{\\sigma(1+\\sigma)}4\n\\bigl(300\\sigma^3+267\\sigma^2-386\\sigma+459\\bigr)\n\\ge72\\sigma(1+\\sigma),\n",
+      "sha256": "216c67a806228ce0ed3c6a484ee1f5ad655b13a32054f5b293c39cc40e053dfb",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.65",
+      "source": "sections/08_determinant.tex",
+      "line": 790,
+      "latex": "\n300\\sigma^3+267\\left(\\sigma-\\frac34\\right)^2\n+\\frac{29}{2}\\sigma+\\frac{333}{16}.\n",
+      "sha256": "bda8de1fb081bd450ff19f630cc7a479631fe8cdab1f6de80b32448afcdb2b80",
+      "coverage_owner": "prop-dim3",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.66",
+      "source": "sections/08_determinant.tex",
+      "line": 812,
+      "latex": "\n\\log\\det\\widehat F\\ge\\frac{c}{1+2c}\\chi\\ge\\frac{\\chi}{1500}.\n",
+      "sha256": "698de55935ddd9710e38e67ce148b6c0886ae076899f1a851f26ac18b3961f95",
+      "coverage_owner": "thm-determinant",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "8.67",
+      "source": "sections/08_determinant.tex",
+      "line": 817,
+      "latex": "\n\\log\\det\\widehat F\\le\\operatorname{tr}\\widehat F-n\n=\\sigma-x=\\frac{\\chi}{2d}.\n",
+      "sha256": "87ac20ea91904b56acafd1391874c7ab7d7954b547c3ab5aed0bc79848a6c943",
+      "coverage_owner": "thm-determinant",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.1",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 29,
+      "latex": "\n2\\alpha\\tau(\\alpha\\tau-q^Tx)\n=\\|\\alpha x-\\tau q\\|^2\n+\\alpha^2(\\tau^2-\\|x\\|^2)+\\tau^2(\\alpha^2-\\|q\\|^2).\n",
+      "sha256": "94bde0c5392d62143552cc20a6805c29388275f2a07fefd9f5c4a8d3d0a988dd",
+      "coverage_owner": "prop-gap-control",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.2",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 36,
+      "latex": "\n\\|Y-I\\|_F\\le2\\sqrt\\epsilon,\\qquad\n\\sum_{\\alpha_r>0}\\alpha_r\\tau_r\n\\left\\|\\frac{x_r}{\\tau_r}-\\frac{q_r}{\\alpha_r}\\right\\|^2\n\\le2\\epsilon.\n",
+      "sha256": "2da9b3909575ad1000bc968e252f390d0864728c79023c26c767fdeda37ac7fe",
+      "coverage_owner": "prop-gap-control",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.3",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 73,
+      "latex": "\n\\|Q-M_0\\|_F^2\\le\\frac{1-b}{d}\\chi,\\qquad\n\\|\\widehat F-I\\|_F^2\\le\\frac\\chi d,\n\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{32}{3}\\chi.\n",
+      "sha256": "df2b2b23bd9531f8d91fb49d4e75a7abe96dca2dcd361b9729e12455f8ebae4f",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.4",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 88,
+      "latex": "\n\\xi(u)=-\\frac{s-b}{d(1-as)}\n\\bigl[(1-b)(s+1)v+\\sqrt{1-b}\\,y\\bigr].\n",
+      "sha256": "72cdc30649169e8556b0b67e77e00703ed9257c8bbd3759aaaa6a69201ea862a",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.5",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 94,
+      "latex": "\nQ-M_0=\\sum_i\\lambda_i u_i\\xi(u_i)^T,\n\\qquad\n\\|\\xi(u)\\|^2=\\frac{1-b}{d}\\frac{(1+s)(s-b)^2}{1-as}.\n",
+      "sha256": "d86c0d80394f62b7320c4b7e31e13d3cf3ad709c961d29aaffd637e4e5578bcb",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.6",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 117,
+      "latex": "\n\\frac{(1+s)(s-b)^2}{1-as}\n\\ge\\frac3{32}\\operatorname{dist}(u,\\mathcal Z_b)^2.\n",
+      "sha256": "d3f7bf925f0b36a09eb65691c95ce0f828c91522ad21935fcf7b3cc3d372c3de",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.7",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 127,
+      "latex": "\n(s-b)^2+\\bigl(\\sqrt{1-s^2}-\\sqrt{1-b^2}\\bigr)^2\\le4(s-b)^2.\n",
+      "sha256": "bb4dc5232b275d069a461c2bb95f644f276002f016d54e01943d0e73d94c8157",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.8",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 144,
+      "latex": "\n\\chi\\le1500\\epsilon,\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\\le16000\\epsilon,\n\\qquad\n\\log\\det\\widehat F\\ge\\frac1{1000}\\|\\widehat F-I\\|_F^2.\n",
+      "sha256": "d46c31e7e55c61706f02d83fe56d9dbe3a887b781c92081cad63ebdb0ff65098",
+      "coverage_owner": "lem-residual",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.9",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 167,
+      "latex": "\n\\log\\det\\widehat F\\ge\\frac\\sigma{16}\\ge\\frac\\chi{32}.\n",
+      "sha256": "5670e9bdd08b74fcc25157bc3290421e560731992a1f23ff86d97e56b3f6c646",
+      "coverage_owner": "lem-local",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.10",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 181,
+      "latex": "\nA_E+\\|K_E^{-1}j\\|^2\\le\\frac\\sigma2.\n",
+      "sha256": "431451d68430aad049e66f33efea4c4dbca12e44a217dc4967f857b9313e9b88",
+      "coverage_owner": "lem-local",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.11",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 192,
+      "latex": "\n\\|E\\|_F^2+\\frac{20}{21}\\|j\\|^2\\le\\frac{21}{40}\\sigma.\n",
+      "sha256": "5c507ab1dc91f3676afc3b5cb27dedd55dd5a68b95fc5e0dc5599e17a97a2978",
+      "coverage_owner": "lem-local",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.12",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 202,
+      "latex": "\n\\|\\widehat F-I\\|_F^2=x^2+2\\|j\\|^2+\\|E\\|_F^2\\le\\frac56\\sigma,\n\\qquad \\|\\widehat F-I\\|_{\\rm op}<\\frac1{30}.\n",
+      "sha256": "59dfe9a983d78f9a6d181232efe2fd0ab819a3d0260bc8a80896b79e846c68ab",
+      "coverage_owner": "lem-local",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.13",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 215,
+      "latex": "\n\\log\\det\\widehat F\\ge\\frac\\sigma2-\\frac{15}{29}\\frac{5\\sigma}{6}\n=\\frac{2\\sigma}{29}\\ge\\frac\\sigma{16}.\n",
+      "sha256": "94d17cdac01a2a5013d403586003977472406a84ed8d8cc7bcbbc3ff8c34e706",
+      "coverage_owner": "lem-local",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "9.14",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 245,
+      "latex": "\n\\left(\\frac1{\\sqrt2}-\\delta\\right)\\|x\\|\n\\le\\|Q^Tx\\|\\le(2+\\delta)\\|x\\|,\n\\qquad\n\\|Q^Tx\\|^2=x^TM^2x.\n",
+      "sha256": "3115b62a00541440d2ba43930084cbf14e7463f1930edf729449ba65d08c664b",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.perturbed_model_action_bounds",
+        "SharpCut.Stability.polar_gram_quadratic",
+        "SharpCut.Stability.sqrt_half_eq_inv_sqrt_two"
+      ]
+    },
+    {
+      "id": "9.15",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 256,
+      "latex": "\n\\lambda_{\\min}(M)>\\frac7{10},\\qquad\n\\lambda_{\\max}(M)<\\frac{201}{100},\\qquad\n\\|Q\\|_{\\rm op}\\le2+\\delta<\\frac{201}{100}.\n",
+      "sha256": "fb8de4dca538d8ec93e003e3b1820d99623b0684686e212de864414bb1c5b556",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.polar_eigenvalue_bounds",
+        "SharpCut.Stability.model_eigenvalue_lower",
+        "SharpCut.Stability.near_extremal_polar_bounds"
+      ]
+    },
+    {
+      "id": "9.16",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 270,
+      "latex": "\n\\begin{aligned}\n(\\lambda_{\\min}(M)+\\lambda_{\\min}(M_0))\\|X\\|_F^2\n&\\le\\operatorname{tr}(X^TMX)+\\operatorname{tr}(X^TXM_0)\\\\\n&=\\langle X,QQ^T-M_0^2\\rangle_F\\\\\n&\\le\\|X\\|_F\\|QQ^T-M_0^2\\|_F.\n\\end{aligned}\n",
+      "sha256": "680b5c1700aafb16b7ad0ca1faec6a1f24dc51a561e348646b6dc0f18dbfe377",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.frobeniusPair_trace",
+        "SharpCut.Stability.frobeniusPair_left_lower",
+        "SharpCut.Stability.frobeniusPair_right_lower",
+        "SharpCut.Stability.polar_sylvester_trace_identity"
+      ]
+    },
+    {
+      "id": "9.17",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 281,
+      "latex": "\n\\begin{aligned}\n\\|M-M_0\\|_F\n&\\le\\frac{\\|QQ^T-M_0^2\\|_F}\n{\\lambda_{\\min}(M)+\\lambda_{\\min}(M_0)}\\\\\n&\\le\\frac{(\\|Q\\|_{\\rm op}+\\|M_0\\|_{\\rm op})\\|Q-M_0\\|_F}{7/5}\n\\le\\frac{401}{35}\\sqrt\\epsilon\n\\le12\\sqrt\\epsilon.\n\\end{aligned}\n",
+      "sha256": "ca65caf51b6db9d82dbc3cf880d13d2a442ce388b44215167d88b519d24a60cc",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.polar_model_frobenius_bound",
+        "SharpCut.Stability.near_extremal_polar_coefficient"
+      ]
+    },
+    {
+      "id": "9.18",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 298,
+      "latex": "\n\\|A-A_*\\|_F\n\\le\\left(\\frac{20}{7}+\\frac{1200}{49}\\right)\\sqrt\\epsilon\n\\le30\\sqrt\\epsilon.\n",
+      "sha256": "bcfe65415affad7088e036cbdf3796d1ba0bdfd02a4d657f14aaaf04e0f292d3",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.near_extremal_shape_coefficient"
+      ]
+    },
+    {
+      "id": "9.19",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 312,
+      "latex": "\n\\|A_*u\\|^2-\\left(1+\\frac s2\\right)^2\n=\\frac{s^2}{4}+\\frac{1-s^2}{1-b}-\\left(1+\\frac s2\\right)^2\n=\\frac{(1+s)(b-s)}{1-b}.\n",
+      "sha256": "5333e46f0c252aff65a7408db0e8aa94bcdd197cd006a72452a288500dcdd5f5",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.model_support_mismatch_identity"
+      ]
+    },
+    {
+      "id": "9.20",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 319,
+      "latex": "\ng_*(s):=\\|A_*u\\|-1-\\frac s2\n=\\frac{(1+s)(b-s)}{(1-b)(\\|A_*u\\|+1+s/2)}.\n",
+      "sha256": "d4dca1a8a9fa47743eb31543d2f6ddc47dc6b394a740ade05c87197d42e3c586",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.model_support_mismatch_identity"
+      ]
+    },
+    {
+      "id": "9.21",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 327,
+      "latex": "\ng_*(s)^2\n\\le8\\,\\frac{(1+s)(s-b)^2}{1-as},\n\\qquad\n\\sum_i\\lambda_i g_*(s_i)^2\\le8\\chi.\n",
+      "sha256": "188a35cc6079164f64aa12b415561c3db79835d81d17c3aacbfc2e82c467888a",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.model_support_mismatch_bound",
+        "SharpCut.Stability.weighted_model_mismatch_bound"
+      ]
+    },
+    {
+      "id": "9.22",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 337,
+      "latex": "\n(c-c_*)^Tu_i=-r_i-g_*(s_i)+\\|A_*u_i\\|-\\|Au_i\\|.\n",
+      "sha256": "6fa6f6b88345e142b639f2fdc40beb593ced44d460c90fede8a74a39af92df59",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.center_projection_identity"
+      ]
+    },
+    {
+      "id": "9.23",
+      "source": "sections/09_stability_estimates.tex",
+      "line": 343,
+      "latex": "\n\\|c-c_*\\|\\le4\\epsilon+\\sqrt{8\\chi}+\\|A-A_*\\|_F\n\\le50\\sqrt\\epsilon.\n",
+      "sha256": "62354258dfda60a5e4770ca113231bf7cf9aa19c0bc0942ca6df9bd9697ba516",
+      "coverage_owner": "SUP-21",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Stability.center_recovery_bound",
+        "SharpCut.Stability.near_extremal_center_bound"
+      ]
+    },
+    {
+      "id": "10.1",
+      "source": "sections/10_discussion.tex",
+      "line": 18,
+      "latex": "\n\\begin{aligned}\n\\text{minimize}_{\\alpha,q}\\quad&\\sum_r\\alpha_r\\beta_r-n-\\log\\det M\\\\\n\\text{subject to}\\quad&\\sum_r\\alpha_rg_r=0,\\quad\n\\|q_r\\|\\le\\alpha_r,\\quad\nM=\\sum_r\\operatorname{sym}(q_rg_r^T)\\succ0.\n\\end{aligned}\n",
+      "sha256": "a69d1d8b09de413a569379b73d68edd292de038593ad89152e1a54fcec144f0a",
+      "coverage_owner": "SUP-22",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.2",
+      "source": "sections/10_discussion.tex",
+      "line": 28,
+      "latex": "\n\\begin{aligned}\n\\mathcal L(A,c)&=\\log\\det A-\\operatorname{tr}(AM)\n-c^T\\sum_r\\alpha_rg_r+s,\\\\\n\\sup_{A\\succ0,c}\\mathcal L&=\n\\begin{cases}\ns-n-\\log\\det M,&\\sum_r\\alpha_rg_r=0,\\ M\\succ0,\\\\\n+\\infty,&\\text{otherwise}.\n\\end{cases}\n\\end{aligned}\n",
+      "sha256": "ac2ba842c9e2ad5df46a6739b405b6fde044d2675dfba26bccae25a02f0e7ae8",
+      "coverage_owner": "SUP-22",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.3",
+      "source": "sections/10_discussion.tex",
+      "line": 48,
+      "latex": "\n\\Psi(\\rho)-\\Psi(n/s)=n(u-1-\\log u)\\ge0.\n",
+      "sha256": "07ea09fe3aecf0678e3a3a5ed8a93010efd2e90f5e4b5cd8720620f4e08a157a",
+      "coverage_owner": "SUP-22",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.4",
+      "source": "sections/10_discussion.tex",
+      "line": 71,
+      "latex": "\n\\det(I+T)^2=\\det\\bigl((I+T)^T(I+T)\\bigr)\n=\\det(I+T^TT)\\ge1\n",
+      "sha256": "d24a13a6cdd9269ce2dd054f63d8fe3f0ace5c4d835de8d16f41f9a1a4e07bd4",
+      "coverage_owner": "prop-polar",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.skew_gram_identity",
+        "SharpCut.Optimization.positive_plus_skew_det"
+      ]
+    },
+    {
+      "id": "10.5",
+      "source": "sections/10_discussion.tex",
+      "line": 76,
+      "latex": "\n\\|R\\|_{\\rm op}\\le1\n\\quad\\Longrightarrow\\quad 0\\preceq R^TR\\preceq I\n\\quad\\Longrightarrow\\quad |\\det R|^2=\\det(R^TR)\\le1.\n",
+      "sha256": "84d474f2163d0c6036be71b977c9fe8c4344af81b1f0fbabcdbb02f826b64128",
+      "coverage_owner": "prop-polar",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.contraction_gram_bounds",
+        "SharpCut.Optimization.common_contraction_det",
+        "SharpCut.Optimization.common_polar_attainment"
+      ]
+    },
+    {
+      "id": "10.6",
+      "source": "sections/10_discussion.tex",
+      "line": 96,
+      "latex": "\n\\begin{aligned}\nS&=\\sum_i\\alpha_i(1-c^Tu_i-\\|Au_i\\|)+t(-c^Tv-\\|Av\\|),\\\\\nT_{\\rm nuc}&=\\sum_i\\alpha_i\\|Au_i\\|+t\\|Av\\|-\\|AQ\\|_*,\\\\\nH_{\\rm nuc}&=\\|AQ\\|_*-n-\\log\\det(AQ),\\\\\n\\mathcal R_{\\rm pol}&=\\|AQ\\|_*-\\operatorname{tr}(AM).\n\\end{aligned}\n",
+      "sha256": "8f4124ebe5d923576fee817798aace791fa6fa491a8fd423f1ada2a44e81118f",
+      "coverage_owner": "SUP-23",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.7",
+      "source": "sections/10_discussion.tex",
+      "line": 106,
+      "latex": "\n\\begin{aligned}\n\\|AQ\\|_*\n&\\le\\sum_i\\alpha_i\\|Au_i p_i^T\\|_*+t\\|Avv^T\\|_*\\\\\n&=\\sum_i\\alpha_i\\|Au_i\\|+t\\|Av\\|,\\\\\nH_{\\rm nuc}&=\\sum_{j=1}^n(\\rho_j-1-\\log\\rho_j)\\ge0,\\\\\n\\operatorname{tr}(AM)&=\\operatorname{tr}(AQU^T)\n\\le\\|AQ\\|_*\\|U\\|_{\\rm op}=\\|AQ\\|_*.\n\\end{aligned}\n",
+      "sha256": "7deccb5bb707585cfd353f63b359897d55fc8a9c795a7b9bff2134eb952243a8",
+      "coverage_owner": "SUP-23",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.8",
+      "source": "sections/10_discussion.tex",
+      "line": 122,
+      "latex": "\n\\begin{aligned}\n\\mathcal C&=S+T_{\\rm nuc}+\\mathcal R_{\\rm pol},\\\\\n\\mathcal D(A,M)&=H_{\\rm nuc}-\\mathcal R_{\\rm pol},\\\\\n\\epsilon&=\\log\\det\\widehat F+S+T_{\\rm nuc}+H_{\\rm nuc}.\n\\end{aligned}\n",
+      "sha256": "0511cb633073735bb34d04c77ee408057319189195df25498f8a52331598203a",
+      "coverage_owner": "SUP-23",
+      "status": "reviewed_correspondence"
+    },
+    {
+      "id": "10.9",
+      "source": "sections/10_discussion.tex",
+      "line": 140,
+      "latex": "\n\\begin{gathered}\nh=d+b^2,\\qquad\\sigma_*:=\\frac{2(1-b)}h,\\qquad\\tau=\\sigma_*-\\sigma,\\\\\ne_*:=\\frac{2b}h=\\frac{\\sigma_*}{m},\\qquad\n\\bar\\chi=\\sum_i\\nu_i(1-s_i)(s_i+b)^2.\n\\end{gathered}\n",
+      "sha256": "a89b2db427ab7192b5dc6d1ec233479019c90fb0dfc6506cea6ef569cd50555f",
+      "coverage_owner": "SUP-24",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.sigmaStar",
+        "SharpCut.Coupled.endpointShift_dimension",
+        "SharpCut.Coupled.couplingL_remainder",
+        "SharpCut.Certificate.reverse_defect_identity"
+      ]
+    },
+    {
+      "id": "10.10",
+      "source": "sections/10_discussion.tex",
+      "line": 156,
+      "latex": "\n(\\operatorname{tr}(ZE)+q^Tj)^2\n\\le\\sigma\\left[\n\\operatorname{tr}\\bigl(Z^2(E+\\tfrac12I_m)\\bigr)\n+2q^TZj+\\frac d4\\tau\\|q\\|^2\\right].\n",
+      "sha256": "8a78cdc252ee740b9d4aeacb829a082ac176d1a97b9bf9d59fdafa6ccd092579",
+      "coverage_owner": "lem-cauchy",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_cauchy_transverse"
+      ]
+    },
+    {
+      "id": "10.11",
+      "source": "sections/10_discussion.tex",
+      "line": 169,
+      "latex": "\n\\operatorname{tr}(ZE)+q^Tj\n=-\\frac1d\\sum_i\\nu_i(s_i-b)y_i^T\\bigl(Zy_i+\\gamma(s_i+b)q\\bigr).\n",
+      "sha256": "bac50ad1d381806c68a22d7bf93821a6bb696131d31218dd44d9d8efd62c0a08",
+      "coverage_owner": "lem-cauchy",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_linear_contact_identity"
+      ]
+    },
+    {
+      "id": "10.12",
+      "source": "sections/10_discussion.tex",
+      "line": 178,
+      "latex": "\n\\frac{\\chi}{d^2}\\sum_i\\nu_i(1-s_i)\n\\|Zy_i+\\gamma(s_i+b)q\\|^2.\n",
+      "sha256": "e52f909137df8985f0830026b8bcf5da0a0521c04055287f19e0020deb2cad59",
+      "coverage_owner": "lem-cauchy",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.weighted_transverse_cauchy"
+      ]
+    },
+    {
+      "id": "10.13",
+      "source": "sections/10_discussion.tex",
+      "line": 187,
+      "latex": "\n\\begin{aligned}\n\\sum_i\\nu_i(1-s_i)y_iy_i^T&=\\frac{2d}{2+b}(E+\\tfrac12I_m),\\\\\n\\gamma\\sum_i\\nu_i(1-s_i)(s_i+b)y_i&=\\frac{2d}{2+b}j,\\\\\n\\gamma^2\\bar\\chi&=\\frac{d^2}{2(2+b)}\\tau.\n\\end{aligned}\n",
+      "sha256": "0a044510ac12d07863a2ea93e05b5795adb21ddb7d8095a637c16aaf05bddc03",
+      "coverage_owner": "lem-cauchy",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.transverseMinusMoment_identity",
+        "SharpCut.Certificate.gamma_mixed_identity",
+        "SharpCut.Coupled.general_reverse_contact_identity"
+      ]
+    },
+    {
+      "id": "10.14",
+      "source": "sections/10_discussion.tex",
+      "line": 198,
+      "latex": "\n\\begin{aligned}\n&\\sum_i\\nu_i(1-s_i)\\|Zy_i+\\gamma(s_i+b)q\\|^2\\\\\n&\\qquad=\\frac{2d}{2+b}\\left[\n\\operatorname{tr}\\bigl(Z^2(E+\\tfrac12I_m)\\bigr)\n+2q^TZj+\\frac d4\\tau\\|q\\|^2\\right].\n\\end{aligned}\n",
+      "sha256": "fad5c6d3dc431dcd8673a9ef1d68bc12d5a01fbc072f4c6ccc53fe1e97b4b1d4",
+      "coverage_owner": "lem-cauchy",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_quadratic_contact_identity"
+      ]
+    },
+    {
+      "id": "10.15",
+      "source": "sections/10_discussion.tex",
+      "line": 215,
+      "latex": "\n\\bigl(\\operatorname{tr}(Z(e_*I_m-E))+q^Tj\\bigr)^2\n\\le\\tau\\left[\\operatorname{tr}\\bigl(Z^2(tI_m-E)\\bigr)\n+2q^TZj+\\frac d4\\sigma\\|q\\|^2\\right].\n",
+      "sha256": "96bc983682a6587a8174fd91e3827aee21c9d563ba0a72d77d87d196adb8039d",
+      "coverage_owner": "lem-cauchy-minus",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_cauchy_transverse"
+      ]
+    },
+    {
+      "id": "10.16",
+      "source": "sections/10_discussion.tex",
+      "line": 229,
+      "latex": "\n\\operatorname{tr}(Z(e_*I_m-E))+q^Tj\n=c_-\\sum_i\\nu_i(s_i+b)y_i^T\\bigl(Zy_i-\\gamma_-(s_i-b)q\\bigr).\n",
+      "sha256": "eb17fb460fd8efb4d0e7aa89bff370bdc29dcabf34a17278f3aba98ce1c1eb3f",
+      "coverage_owner": "lem-cauchy-minus",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_linear_contact_identity"
+      ]
+    },
+    {
+      "id": "10.17",
+      "source": "sections/10_discussion.tex",
+      "line": 235,
+      "latex": "\nc_-^2\\bar\\chi\\sum_i\\nu_i(1+s_i)\n\\|Zy_i-\\gamma_-(s_i-b)q\\|^2.\n",
+      "sha256": "9d2a14a7eee5674bb9ccc37fa20e27646f556645ff8a1cbccb8a57c582303fd7",
+      "coverage_owner": "lem-cauchy-minus",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.weighted_complementary_cauchy"
+      ]
+    },
+    {
+      "id": "10.18",
+      "source": "sections/10_discussion.tex",
+      "line": 243,
+      "latex": "\n\\begin{aligned}\n&c_-^2\\bar\\chi=\\frac{(1-b)(2+b)}{2d}\\tau,\\\\\n&\\sum_i\\nu_i(1+s_i)\\|Zy_i-\\gamma_-(s_i-b)q\\|^2\\\\\n&\\qquad=\\frac{2d}{(1-b)(2+b)}\\left[\n\\operatorname{tr}\\bigl(Z^2(tI_m-E)\\bigr)\n+2q^TZj+\\frac d4\\sigma\\|q\\|^2\\right].\n\\end{aligned}\n",
+      "sha256": "c483ad43c5e8b097a9e6cf328105c7a89fc08ff4b0f9e6c8cdf5178d3523b277",
+      "coverage_owner": "lem-cauchy-minus",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_reverse_coefficient",
+        "SharpCut.Coupled.complementary_quadratic_contact_identity"
+      ]
+    },
+    {
+      "id": "10.19",
+      "source": "sections/10_discussion.tex",
+      "line": 262,
+      "latex": "\nR_+=E+\\frac12I_m-\\frac{jj^T}{\\eta}\\succ0,\n\\qquad \\operatorname{tr}(R_+^{-1})\\le2m.\n",
+      "sha256": "d6637896f8751b37f71e443ae48398ab722282f4a3600e3d768b53048c5d4ced",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.forward_inverse_trace_iff"
+      ]
+    },
+    {
+      "id": "10.20",
+      "source": "sections/10_discussion.tex",
+      "line": 268,
+      "latex": "\nR_-=tI_m-E-\\frac{jj^T}{x}\\succ0,\n\\qquad \\operatorname{tr}(R_-^{-1})\\le\\frac{m}{t-e_*}.\n",
+      "sha256": "56f81df1405062aca3ae03ceec8dfa113beee70153116080ef565fbdbf0a35ef",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.complementary_inverse_trace_iff"
+      ]
+    },
+    {
+      "id": "10.21",
+      "source": "sections/10_discussion.tex",
+      "line": 283,
+      "latex": "\n\\begin{aligned}\n\\operatorname{tr}(ZE)+q^Tj\n&=\\operatorname{tr}\\bigl(Z(R_+-\\tfrac12I_m)\\bigr)+q'^Tj,\\\\\n\\operatorname{tr}\\bigl(Z^2(E+\\tfrac12I_m)\\bigr)+2q^TZj+\\eta\\|q\\|^2\n&=\\operatorname{tr}(Z^2R_+)+\\eta\\|q'\\|^2.\n\\end{aligned}\n",
+      "sha256": "fc4efd270e574975436aa9de49506ca27575568f57358ca34ba4d911322aaa4b",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.linear_completion",
+        "SharpCut.Coupled.InverseTrace.quadratic_completion",
+        "SharpCut.Coupled.InverseTrace.all_tests_completion_iff"
+      ]
+    },
+    {
+      "id": "10.22",
+      "source": "sections/10_discussion.tex",
+      "line": 301,
+      "latex": "\n\\begin{aligned}\nS_+\n&=\\operatorname{tr}\\bigl((R_+-\\tfrac12I_m)^2R_+^{-1}\\bigr)\n+\\frac{\\|j\\|^2}{\\eta}\\\\\n&=\\operatorname{tr}R_+-m+\\frac14\\operatorname{tr}(R_+^{-1})\n+\\frac{\\|j\\|^2}{\\eta}\\\\\n&=\\sigma-\\frac m2+\\frac14\\operatorname{tr}(R_+^{-1}).\n\\end{aligned}\n",
+      "sha256": "4c37929033c2f03d2af73e51ce2ded238292a4e76ba12e35b6e3c01fe311ead9",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.coefficient_trace_identity",
+        "SharpCut.Coupled.InverseTrace.effective_coefficient_trace",
+        "SharpCut.Coupled.InverseTrace.forward_coefficient_formula"
+      ]
+    },
+    {
+      "id": "10.23",
+      "source": "sections/10_discussion.tex",
+      "line": 314,
+      "latex": "\nZ_+=I_m-\\frac12R_+^{-1},\\qquad q'_+=j/\\eta.\n",
+      "sha256": "ee44b1666cfc9e632901ba3e177149a99dfe0515509e5f41a61111fdc2205f3f",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.bestMatrix_hermitian",
+        "SharpCut.Coupled.InverseTrace.best_test_attains",
+        "SharpCut.Coupled.InverseTrace.inverse_trace_optimal_tests"
+      ]
+    },
+    {
+      "id": "10.24",
+      "source": "sections/10_discussion.tex",
+      "line": 328,
+      "latex": "\n\\begin{aligned}\nS_-\n&=\\operatorname{tr}\\bigl((R_--\\beta I_m)^2R_-^{-1}\\bigr)\n+\\frac{\\|j\\|^2}{x}\\\\\n&=(-t+2e_*)m-\\sigma+(t-e_*)^2\\operatorname{tr}(R_-^{-1}).\n\\end{aligned}\n",
+      "sha256": "fe29be96a229dd8771c86aff1896cbe3847a778abe5ee907254c73b74f5a8a90",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.reverse_coefficient_formula",
+        "SharpCut.Coupled.InverseTrace.best_test_attains"
+      ]
+    },
+    {
+      "id": "10.25",
+      "source": "sections/10_discussion.tex",
+      "line": 338,
+      "latex": "\nS_-\\le\\tau\n\\iff (t-e_*)^2\\operatorname{tr}(R_-^{-1})\\le m(t-e_*)\n\\iff \\operatorname{tr}(R_-^{-1})\\le\\frac{m}{t-e_*}.\n",
+      "sha256": "964b062702faa2273b78d5acef96ef8fe940c84564e3dfdc236a963cc7e55c9b",
+      "coverage_owner": "lem-inverse-trace",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.reverse_coefficient_trace_iff",
+        "SharpCut.Coupled.InverseTrace.coefficient_iff_inverse_trace"
+      ]
+    },
+    {
+      "id": "10.26",
+      "source": "sections/10_discussion.tex",
+      "line": 358,
+      "latex": "\n\\sum_i\\alpha_i+\\eta\\alpha_0=n\\quad(v^Tx\\le\\eta),\\qquad\n\\sum_i\\alpha_iu_i+\\sum_\\ell\\alpha_\\ell v_\\ell=0.\n",
+      "sha256": "1b3ea471bd565b404893ff38247c07cf5aff9f03e7ece854b995c599763b8fac",
+      "coverage_owner": "SUP-26",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Optimization.offset_constraints",
+        "SharpCut.Optimization.offset_normalization",
+        "SharpCut.Optimization.offset_cut_duality",
+        "SharpCut.Optimization.multiple_constraints",
+        "SharpCut.Optimization.multiple_normalization",
+        "SharpCut.Optimization.multiple_cut_duality"
+      ]
+    },
+    {
+      "id": "10.27",
+      "source": "sections/10_discussion.tex",
+      "line": 366,
+      "latex": "\n\\begin{pmatrix}1&-av^T\\\\-av&vv^T+kP\\end{pmatrix}\\binom1u\n=\\binom{1-as}{(s-a)v+kPu},\\qquad s=u^Tv.\n",
+      "sha256": "c8ce489e0ee4d16d53b23e8f1a60d66e82eec72722fae4962fa7ef8018d32d7c",
+      "coverage_owner": "SUP-05",
+      "status": "reviewed_correspondence",
+      "lean_declarations": [
+        "SharpCut.Certificate.homogeneous_lorentz_action",
+        "SharpCut.Certificate.homogeneous_lorentz_contact"
+      ]
+    }
+  ],
+  "open_directions": [
+    {
+      "id": "OPEN-01",
+      "description": "Unified determinant proof and sharper stability constants."
+    },
+    {
+      "id": "OPEN-02",
+      "description": "Sharp offset profiles and simultaneous cuts; successive-cut quantitative refinements."
+    },
+    {
+      "id": "OPEN-03",
+      "description": "Certified approximate-center cuts and quantitative correction costs."
+    },
+    {
+      "id": "OPEN-04",
+      "description": "Whole-body stability under suitable hypotheses for the nonunique equality family."
+    }
+  ],
+  "non_theorem_content": [
+    "Historical attribution and novelty claims",
+    "Editorial organization and bibliographic metadata",
+    "Numerical rendering of figures",
+    "Future Lean verification statements"
+  ],
+  "verification_status": "Complete author-agreed paper-results scope. Introduction-only external background assertions EXT-01 through EXT-03 are excluded."
+}
