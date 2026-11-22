@@ -5,7 +5,7 @@ Lean 4 formalization of **Sharp Volume Contraction of a Centrally Cut John Ellip
 For every positive-dimensional convex body, a closed halfspace whose boundary passes through the center of its maximum-volume inscribed ellipsoid satisfies
 
 ```math
-\frac{\operatorname{vol}J(K\cap H)}{\operatorname{vol}J(K)}\le R_n,
+\frac{\mathop{\mathrm{vol}}J(K\cap H)}{\mathop{\mathrm{vol}}J(K)}\le R_n,
 \qquad
 R_n=\begin{cases}
 \frac12,&n=1,\\[2pt]
