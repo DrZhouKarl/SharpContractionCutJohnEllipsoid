@@ -23,7 +23,7 @@ The statements use actual Euclidean convex bodies and Lebesgue ellipsoid volume,
 
 ## Paper and proof map
 
-- [Paper PDF](paper/main.pdf) and [GitHub-readable Markdown](paper/report.md).
+- [Paper PDF](paper/main.pdf).
 - [Mathematical specification](proof.md).
 - [Theorem map](theorem_map.md), with actual Lean declaration names.
 - [Proof architecture](formalization_plan.md).
