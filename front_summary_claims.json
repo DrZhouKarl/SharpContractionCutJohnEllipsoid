@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-18",
+  "scope": "Introductory summaries of existing verified results, not new theorem statements or new proof obligations.",
+  "blocks": {
+    "geometry": {
+      "latex": "% BEGIN VERIFIED OVERVIEW geometry\nFor the following equality and stability statements, take John coordinates\n$J(K)=B_2^n$, assume $n\\ge2$, and write\n$H_v=\\{x:v^Tx\\le0\\}$ with $\\|v\\|=1$. Here $B_2^n$ is the Euclidean unit ball.\nPut $b=1/n$ and $P=I-vv^T$. The extremal ellipsoid and contact set are\n\\[\n\\begin{gathered}\nc_*=-\\frac12v,\\qquad\nA_*=\\frac12vv^T+\\frac1{\\sqrt{1-b}}P,\\qquad\n\\mathcal E_*=c_*+A_*B_2^n,\\\\\n\\mathcal Z_b=\\{-v\\}\\cup\\{u:\\|u\\|=1,\\ u^Tv=b\\}.\n\\end{gathered}\n\\]\nTheorem~\\ref{thm-equality} states that equality holds if and only if\n$\\mathcal E_*\\subseteq K$ and $K$ admits a supporting John frame whose\ncontacts lie in $\\mathcal Z_b$. John frames are\nthe positive-weight contact decompositions defined in Section~\\ref{sec:john-frames}.\nAt equality, $J(K\\cap H_v)=\\mathcal E_*$, and every positive-weight John frame\nsupporting $K$ has this pole-and-latitude geometry. The containment condition\nleaves freedom in the rest of the body, giving extremizers beyond regular simplices.\n\nFor any feasible cut ellipsoid\n$\\mathcal E(c,A)=c+AB_2^n\\subseteq K\\cap H_v$, with $A$ symmetric positive\ndefinite, suppose that its deficit satisfies\n\\[\n0\\le\\epsilon:=\\log\\frac{R_n}{\\det A}\\le10^{-6}.\n\\]\nTheorem~\\ref{thm-stability} gives the explicit, dimension-independent estimates\n\\[\n\\|A-A_*\\|_F\\le30\\sqrt\\epsilon,\\qquad\n\\|c-c_*\\|\\le50\\sqrt\\epsilon,\\qquad\n\\sum_i\\lambda_i\\operatorname{dist}(u_i,\\mathcal Z_b)^2\n\\le\\frac{1024}{3}\\epsilon,\n\\]\nwhere the matrix norm is Frobenius and $(u_i,\\lambda_i)$ is any supporting\nJohn frame of $K$. Thus near equality controls the ellipsoid and the original\nweighted contacts without selecting a unique extremal body. Section~\\ref{sec:eq-stability}\nproves the full classification and all stability estimates.\n% END VERIFIED OVERVIEW geometry",
+      "sha256": "d9f5b83bdb43f355d5cb492c6b4833198a788d1b051c5cfe859d7c4d36d5eac7",
+      "unnumbered_displays": 3,
+      "dependencies": [
+        "lem-john",
+        "thm-equality",
+        "thm-stability"
+      ],
+      "source_equations": [
+        "3.2",
+        "5.1",
+        "5.2",
+        "6.2"
+      ],
+      "domain": "Normalized convex body, n >= 2, unit v; any positive-definite feasible cut ellipsoid with 0 <= epsilon <= 10^-6; every positive-weight supporting John frame.",
+      "correspondence": "The model and contact set are the original definitions. For normalized convex K, E_star subset K implies conv(B union E_star) subset K, while a supporting frame implies K subset P_U; hence the equality summary is the original sandwich iff. The three displayed stability estimates are exactly the geometric components of Theorem 6.2, with unchanged threshold and constants."
+    },
+    "optimization": {
+      "latex": "% BEGIN VERIFIED OVERVIEW optimization\n\\paragraph{Certificates and optimization.}\nOn a bounded full-dimensional polytope $\\mathcal P$ in any positive dimension,\nthe ellipsoid problem maximizes $\\log\\det A$ under second-order-cone support constraints.\nFor a normalized primal--dual feasible pair, with ellipsoid $\\mathcal E(c,A)$\nand positive-definite dual aggregate $M$, the computable gap satisfies\n\\[\nG=-\\log\\det M-\\log\\det A\\ge0,\\qquad\n\\operatorname{vol}\\mathcal E(c,A)\\ge e^{-G}w(\\mathcal P).\n\\]\nThe normalization and feasibility conditions are given in\nSection~\\ref{sec:2.2}; the relative-volume guarantee is established in\nSection~\\ref{sec:7.3}. It supplies a stopping criterion for an ellipsoid\nsubproblem. For central cuts in dimensions at least two, our explicit certificate bounds the new optimum\nfrom the original John contacts, without requiring the unknown recomputed\nellipsoid. The exact deficit identity in Proposition~\\ref{prop-gap} then\nseparates the geometric determinant loss from the optimization gap.\nThis connects the sharp contraction analysis with certifiable ellipsoid\ncomputation. Exact duality and contact recovery are proved in\nSection~\\ref{sec:2.3}.\n% END VERIFIED OVERVIEW optimization",
+      "sha256": "f9e3e47fb36d9bdfe77a6f3075bb7c4b64d9a548baf9292166f0918c9997af04",
+      "unnumbered_displays": 1,
+      "dependencies": [
+        "lem-certificate",
+        "prop-gap"
+      ],
+      "source_equations": [
+        "2.3",
+        "2.4",
+        "4.2",
+        "7.9",
+        "7.10"
+      ],
+      "domain": "Bounded full-dimensional polytope in a positive dimension, normalized primal-dual feasible pair. The explicit central-cut construction is stated for dimensions at least two.",
+      "correspondence": "The gap is the original normalized primal-dual gap and the volume guarantee is the existing relative-volume stopping criterion. The prose distinguishes optimization accuracy from geometric determinant loss; no faster centering or total arithmetic bound is claimed."
+    }
+  },
+  "unnumbered_displays": 4
+}

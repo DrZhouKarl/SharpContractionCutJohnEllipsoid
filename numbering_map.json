@@ -1,0 +1,2843 @@
+{
+  "scope": "Printed numbering changes only; stable labels and mathematical statements are preserved.",
+  "statements": [
+    {
+      "stable_label": "thm-sharp",
+      "original_statement": "Theorem 3.1",
+      "v2_statement": "Theorem 1",
+      "lean_declarations": [
+        "SharpCut.Geometry.sharp_central_cut_contraction"
+      ],
+      "statement_sha256": "49ad288e997a7a2dfde906332db3d838f6bd7b0f48943ad70b65c30a6a1a6616"
+    },
+    {
+      "stable_label": "lem-john",
+      "original_statement": "Lemma 2.2",
+      "v2_statement": "Lemma 2",
+      "lean_declarations": [
+        "SharpCut.Geometry.john_contact_iff"
+      ],
+      "statement_sha256": "cf34fa389ff3b7b93ab9245fc9d21e685aeec5aa4880850341a31c8eba969e39"
+    },
+    {
+      "stable_label": "lem-reduction",
+      "original_statement": "Lemma 2.5",
+      "v2_statement": "Lemma 3",
+      "lean_declarations": [
+        "SharpCut.Geometry.contact_reduction"
+      ],
+      "statement_sha256": "eaf99c8f31eb508995059712365dac91b441aec387959e8851ace0a1aaaee406"
+    },
+    {
+      "stable_label": "lem-certificate",
+      "original_statement": "Lemma 2.1",
+      "v2_statement": "Lemma 4",
+      "lean_declarations": [
+        "SharpCut.Optimization.volume_certificate"
+      ],
+      "statement_sha256": "5df835aa971ca2338aa3a5eaf508daf8f6c1da9072a9da7b5540af1acafd3fdc"
+    },
+    {
+      "stable_label": "thm-frame-bound",
+      "original_statement": "Theorem 3.2",
+      "v2_statement": "Theorem 5",
+      "lean_declarations": [
+        "SharpCut.Certificate.john_frame_certificate_bound"
+      ],
+      "statement_sha256": "048cf9e0c2537c86cb820d14250c43b94ee61313bb4fc9a9b6af6070ddf96615"
+    },
+    {
+      "stable_label": "thm-determinant",
+      "original_statement": "Theorem 8.1",
+      "v2_statement": "Theorem 6",
+      "lean_declarations": [
+        "SharpCut.Determinant.quantitative_frame_determinant"
+      ],
+      "statement_sha256": "8c8fc3bf10004fb39bb9f2979b6c691dec0f4c72b6b55bace5c1f53b38b7141e"
+    },
+    {
+      "stable_label": "lem-lifted-bound",
+      "original_statement": "Lemma 8.2",
+      "v2_statement": "Lemma 7",
+      "lean_declarations": [
+        "SharpCut.Determinant.lifted_determinant_bound"
+      ],
+      "statement_sha256": "ae4ace4e5ba8e0885b35b753838977e36fbdcfab08d9935765cbc4739ff35ace"
+    },
+    {
+      "stable_label": "lem-hermite",
+      "original_statement": "Lemma 8.3",
+      "v2_statement": "Lemma 8",
+      "lean_declarations": [
+        "SharpCut.Determinant.interpolation_loss"
+      ],
+      "statement_sha256": "aa6a61c56b47e5b12d18e771ce6a5cfc18296ab6c33b21d95fca15dc6ad2b2f1"
+    },
+    {
+      "stable_label": "lem-rational",
+      "original_statement": "Lemma 8.4",
+      "v2_statement": "Lemma 9",
+      "lean_declarations": [
+        "SharpCut.Scalar.uniform_certificate"
+      ],
+      "statement_sha256": "516c653438bbf0834d610681348f436cc02b161e38941d0df0a33e5c8ea78063"
+    },
+    {
+      "stable_label": "lem-moments",
+      "original_statement": "Lemma 8.5",
+      "v2_statement": "Lemma 10",
+      "lean_declarations": [
+        "SharpCut.Certificate.block_identities_and_constraints"
+      ],
+      "statement_sha256": "c45ac19dd189cc82478e71d0c456fee0b6500c7b01e61bf8adbd552b52222af9"
+    },
+    {
+      "stable_label": "lem-variational",
+      "original_statement": "Lemma 8.6",
+      "v2_statement": "Lemma 11",
+      "lean_declarations": [
+        "SharpCut.Certificate.direct_coupling_bound"
+      ],
+      "statement_sha256": "3192d575f5cca90bec4acf848c3557213018c8c358b7ca049031fbc8b14825e6"
+    },
+    {
+      "stable_label": "prop-dim3",
+      "original_statement": "Proposition 8.7",
+      "v2_statement": "Proposition 12",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_three_determinant"
+      ],
+      "statement_sha256": "74ac756b6d978a614bbd0af55fa5c15852c53c7f0fa49b4f3465f34beafc3b28"
+    },
+    {
+      "stable_label": "prop-gap",
+      "original_statement": "Proposition 4.1",
+      "v2_statement": "Proposition 13",
+      "lean_declarations": [
+        "SharpCut.Gap.exact_volume_deficit",
+        "SharpCut.Gap.affine_optimal_volume_deficit"
+      ],
+      "statement_sha256": "c5d2aff6f478697fb06e9a277b5d22a8956efd22f34c368653312e5f456ffb08"
+    },
+    {
+      "stable_label": "lem-matching",
+      "original_statement": "Lemma 4.2",
+      "v2_statement": "Lemma 14",
+      "lean_declarations": [
+        "SharpCut.Gap.matrix_matching"
+      ],
+      "statement_sha256": "8710d0bdfb191603a1f28cf06ec609adc124392158e195da8e83c03cc461af13"
+    },
+    {
+      "stable_label": "thm-equality",
+      "original_statement": "Theorem 5.1",
+      "v2_statement": "Theorem 15",
+      "lean_declarations": [
+        "SharpCut.Equality.equality_classification"
+      ],
+      "statement_sha256": "8aad9c6bb6ae064da16d8d6d4d20c9b84564e85d6b83ee452bda6e6ff5f031e5"
+    },
+    {
+      "stable_label": "prop-extremizers",
+      "original_statement": "Proposition 5.2",
+      "v2_statement": "Proposition 16",
+      "lean_declarations": [
+        "SharpCut.Equality.transverse_extremal_construction"
+      ],
+      "statement_sha256": "e4414961c38b3a812f7fb01d7f6e8cc131f326857005c4fd60ed556da6c9fd6f"
+    },
+    {
+      "stable_label": "lem-geometric-control",
+      "original_statement": "Lemma 6.1",
+      "v2_statement": "Lemma 17",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_control"
+      ],
+      "statement_sha256": "cc78da50fb4cde5fd218166c01d3db12cc02845a00312b9efa59f79c15da1a9a"
+    },
+    {
+      "stable_label": "thm-stability",
+      "original_statement": "Theorem 6.2",
+      "v2_statement": "Theorem 18",
+      "lean_declarations": [
+        "SharpCut.Stability.dimension_independent_stability"
+      ],
+      "statement_sha256": "1832dd87ede05486725dabfa911dba33a8aa300976ed69ca3ed63e766fd7e647"
+    },
+    {
+      "stable_label": "prop-gap-control",
+      "original_statement": "Proposition 9.1",
+      "v2_statement": "Proposition 19",
+      "lean_declarations": [
+        "SharpCut.Gap.cone_sum_of_squares",
+        "SharpCut.Gap.quantitative_complementarity"
+      ],
+      "statement_sha256": "ea871bdf5c3bcd2ea43ac25d716baca0fe36f660ed5864366f7a7f8f52fbbee1"
+    },
+    {
+      "stable_label": "lem-residual",
+      "original_statement": "Lemma 9.2",
+      "v2_statement": "Lemma 20",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_residual"
+      ],
+      "statement_sha256": "cde46bce3c90a93007ac1e52b79e496fc0b8df41d71680e94407393fb41a905f"
+    },
+    {
+      "stable_label": "lem-local",
+      "original_statement": "Lemma 9.3",
+      "v2_statement": "Lemma 21",
+      "lean_declarations": [
+        "SharpCut.Stability.local_coercivity"
+      ],
+      "statement_sha256": "e1d3b5779b41683351b3c418ee2b7c34f2394e3ba8ba04beaea64bd09acc5485"
+    },
+    {
+      "stable_label": "prop-exact-duality",
+      "original_statement": "Proposition 2.3",
+      "v2_statement": "Proposition 22",
+      "lean_declarations": [
+        "SharpCut.Optimization.exact_duality"
+      ],
+      "statement_sha256": "e03ec74f39f5819411b4f32860ee2d33df6c49755b1e9b9c311f9b793e262229"
+    },
+    {
+      "stable_label": "prop-kkt",
+      "original_statement": "Proposition 2.4",
+      "v2_statement": "Proposition 23",
+      "lean_declarations": [
+        "SharpCut.Optimization.kkt_optimality_and_contacts"
+      ],
+      "statement_sha256": "317230b20fba0afabb2378d01fc7f5f323a870cd2a06071b78f8b3c2bee1c02d"
+    },
+    {
+      "stable_label": "cor-iteration",
+      "original_statement": "Corollary 7.1",
+      "v2_statement": "Corollary 24",
+      "lean_declarations": [
+        "SharpCut.Applications.successive_exact_central_cuts"
+      ],
+      "statement_sha256": "d4e26ddbddcdfa57b04e4e5201d14f5ba1c03722777f2fcbf96605208050f60c"
+    },
+    {
+      "stable_label": "prop-polar",
+      "original_statement": "Proposition 10.1",
+      "v2_statement": "Proposition 25",
+      "lean_declarations": [
+        "SharpCut.Optimization.common_contraction_optimal"
+      ],
+      "statement_sha256": "2a281abf9bc9b93cb51dc253df0ea39c84a64a7bce20fe5d45164d7d794113ad"
+    },
+    {
+      "stable_label": "lem-cauchy",
+      "original_statement": "Lemma 10.2",
+      "v2_statement": "Lemma 26",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_cauchy_transverse"
+      ],
+      "statement_sha256": "cf2d898cabf02a471f76ac57d631b160a390dcb1d58e13712675996ed99f713b"
+    },
+    {
+      "stable_label": "lem-cauchy-minus",
+      "original_statement": "Lemma 10.3",
+      "v2_statement": "Lemma 27",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_cauchy_transverse"
+      ],
+      "statement_sha256": "b90426e949d6eb5386f5cb2c6e76acde477603fb111851131775be71bb9a134d"
+    },
+    {
+      "stable_label": "lem-inverse-trace",
+      "original_statement": "Lemma 10.4",
+      "v2_statement": "Lemma 28",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.inverse_trace_interpretation"
+      ],
+      "statement_sha256": "7162b96b8a11a2cc79667b03f64d5cb3b693956013519c0de0088bae6c6ec5f8"
+    }
+  ],
+  "equations": [
+    {
+      "stable_label": "eq:1.1",
+      "original_equation": "1.1",
+      "previous_v2_number": 1,
+      "v2_number": "1.1",
+      "formula_sha256": "5c3cffba7654d52d9c57936ba47a55c4aca7865d1b2ce3b9338222c1965420af",
+      "lean_declarations": [
+        "Khachiyan.john_isMaxDet",
+        "Khachiyan.IsMaxDet.maxEllipsoidVolume_eq"
+      ],
+      "formal_correspondence": "Actual John maximality attains the maximal Lebesgue ellipsoid-volume supremum; this identifies w(K) with the volume of J(K)."
+    },
+    {
+      "stable_label": "eq:1.3",
+      "original_equation": "1.3",
+      "previous_v2_number": 2,
+      "v2_number": "1.2",
+      "formula_sha256": "18efaed0db5b9c4596d823402e30e412fe638d840ed4512fd0528af14113f016",
+      "lean_declarations": [
+        "SharpCut.sharpRatio",
+        "SharpCut.sharpRatio_one",
+        "SharpCut.Geometry.optimalConstant_eq"
+      ],
+      "formal_correspondence": "The exact piecewise constant definition, separate n=1 value and actual attained ratio supremum identify C_n=R_n."
+    },
+    {
+      "stable_label": "eq:3.1",
+      "original_equation": "3.1",
+      "previous_v2_number": 3,
+      "v2_number": "1.3",
+      "formula_sha256": "65b8eb2b0ffdb4371d9dfaacc326d9782073375c10e5e4bd6d0a8ea7feb8f7fe",
+      "lean_declarations": [
+        "SharpCut.Geometry.sharp_central_cut_contraction"
+      ],
+      "formal_correspondence": "The actual convex-body central cut through its John center has maximal ellipsoid-volume at most R_n times the old maximum in every positive dimension."
+    },
+    {
+      "stable_label": "eq:1.2",
+      "original_equation": "1.2",
+      "previous_v2_number": 4,
+      "v2_number": "1.4",
+      "formula_sha256": "e9e2ec09acfe8861d7060286f50f0b02ba78bd2cb0424cdbe6f511fbcb8594fd",
+      "lean_declarations": [
+        "SharpCut.Applications.john_affine_rounding",
+        "Khachiyan.IsMaxDet.isJohnNormalized",
+        "SharpCut.Geometry.exists_contact_reduction",
+        "SharpCut.JohnFrame.norm_le_dimension_of_mem_polytope"
+      ],
+      "formal_correspondence": "Affine John rounding gives both original-coordinate inclusions; normalization of the actual optimum and the finite-frame radius bound give the unit-ball/n-ball inclusions."
+    },
+    {
+      "stable_label": "eq:2.1",
+      "original_equation": "2.1",
+      "previous_v2_number": 5,
+      "v2_number": "2.1",
+      "formula_sha256": "6559b5f561518387fb0335d87807819005b22c6df49eb0b815865313747b7805",
+      "lean_declarations": [
+        "Khachiyan.ellipsoid",
+        "Khachiyan.volume_ellipsoid_eq_det"
+      ],
+      "formal_correspondence": "The actual Euclidean affine-ball set definition and positive shape determinant/Lebesgue-volume bridge give the formula with kappa_n."
+    },
+    {
+      "stable_label": "eq:2.2",
+      "original_equation": "2.2",
+      "previous_v2_number": 6,
+      "v2_number": "2.2",
+      "formula_sha256": "183f1bf5ddd9efb63faeb8cabee678078ae0beedef8e94c488d5d00b6a44f31e",
+      "lean_declarations": [
+        "Khachiyan.ellipsoid_support_le",
+        "Khachiyan.ellipsoid_support_attained",
+        "SharpCut.Optimization.primalFeasible_iff_containment"
+      ],
+      "formal_correspondence": "The support upper bound is attained, including zero normals; its equivalence with actual ellipsoid containment gives the stated maximum and facet condition."
+    },
+    {
+      "stable_label": "eq:2.3",
+      "original_equation": "2.3",
+      "previous_v2_number": 7,
+      "v2_number": "2.3",
+      "formula_sha256": "15317919161c62a67fce28a4d05cbf67fc2f59dcd85b301cdb85a6165b0921b7",
+      "lean_declarations": [
+        "SharpCut.Optimization.PrimalFeasible",
+        "SharpCut.Optimization.PrimalOptimal",
+        "SharpCut.Optimization.exact_duality"
+      ],
+      "formal_correspondence": "The finite SOC support feasibility and logdet comparison define this primal optimization; actual convex-body polytopes attain it."
+    },
+    {
+      "stable_label": "eq:2.9",
+      "original_equation": "2.9",
+      "previous_v2_number": 8,
+      "v2_number": "2.4",
+      "formula_sha256": "2602625b3225b32ad0866831c72cb22ec3cfd73004a550e48bbe126663ae2757",
+      "lean_declarations": [
+        "SharpCut.Geometry.john_contact_iff",
+        "SharpCut.JohnFrame.weight_sum"
+      ],
+      "formal_correspondence": "Actual boundary-support John necessity/sufficiency supplies finite positive contacts and both moments; total mass is derived from trace."
+    },
+    {
+      "stable_label": "eq:2.18",
+      "original_equation": "2.18",
+      "previous_v2_number": 9,
+      "v2_number": "2.5",
+      "formula_sha256": "b2d7743a7a7783084e7a6b54e54cad186a0294fdc0f2310f68756c887e5603e2",
+      "lean_declarations": [
+        "SharpCut.JohnFrame.polytope",
+        "SharpCut.Geometry.contact_reduction",
+        "SharpCut.JohnFrame.polytope_isJohnNormalized"
+      ],
+      "formal_correspondence": "The selected supporting frame defines the exact outer contact polytope, contains K and has actual John ball."
+    },
+    {
+      "stable_label": "eq:2.19",
+      "original_equation": "2.19",
+      "previous_v2_number": 10,
+      "v2_number": "2.6",
+      "formula_sha256": "97a9a7aa8a8fe4f9ebfb92b31d049aee48a6e7b1c36517ba2d31cc0c05f287cf",
+      "lean_declarations": [
+        "SharpCut.Paper.frame_radius_polynomial",
+        "SharpCut.Paper.frame_radius_polynomial_nonneg"
+      ],
+      "formal_correspondence": "With r=the actual Euclidean norm and s_i=<u_i,x>, finite John moments prove the literal nr-r^2 identity; support and Cauchy make every summand nonnegative."
+    },
+    {
+      "stable_label": "eq:2.20",
+      "original_equation": "2.20",
+      "previous_v2_number": 11,
+      "v2_number": "2.7",
+      "formula_sha256": "d28efcaf7179a508ea32035135f20f2f472899cbcdd6b1255e21666d54f59728",
+      "lean_declarations": [
+        "SharpCut.Geometry.contact_reduction",
+        "SharpCut.Geometry.normalized_volume"
+      ],
+      "formal_correspondence": "Actual cut maximal volumes are monotone under the supporting-polytope inclusion, while both old optima have the same positive finite unit-ball volume."
+    },
+    {
+      "stable_label": "eq:2.21",
+      "original_equation": "2.21",
+      "previous_v2_number": 12,
+      "v2_number": "2.8",
+      "formula_sha256": "4b828cb6e3c27728a9f0b4152070c436e0bee51aa99c54437055665b0c61dfd6",
+      "lean_declarations": [
+        "SharpCut.Geometry.contactOptimalConstant_eq",
+        "SharpCut.Geometry.contactVolumeRatios_isGreatest",
+        "SharpCut.Geometry.normalized_volume",
+        "SharpCut.Geometry.unitNormal_norm",
+        "SharpCut.Geometry.unitNormal_halfspace"
+      ],
+      "formal_correspondence": "The actual attained contact-polytope ratio supremum equals C_n; positive direction normalization preserves the halfspace and permits the unit-normal supremum, with the old denominator kappa_n."
+    },
+    {
+      "stable_label": "eq:2.4",
+      "original_equation": "2.4",
+      "previous_v2_number": 13,
+      "v2_number": "2.9",
+      "formula_sha256": "c9f276c0b803e2ba950fb0fe84af64d0e29a78a72ba7e839b926b64d8716a5b8",
+      "lean_declarations": [
+        "SharpCut.Optimization.DualFeasible",
+        "SharpCut.Optimization.aggregate",
+        "SharpCut.Optimization.symmetricOuter"
+      ],
+      "formal_correspondence": "These are exactly the cone, balance, normalization and positive symmetrized aggregate definitions, without a determinant bound as an assumed field."
+    },
+    {
+      "stable_label": "eq:2.5",
+      "original_equation": "2.5",
+      "previous_v2_number": 14,
+      "v2_number": "2.10",
+      "formula_sha256": "212d04767ad8b9c992f032bb7a21eef7767fc31edbf79e193c593f3374e6c4f2",
+      "lean_declarations": [
+        "SharpCut.Optimization.volume_certificate"
+      ],
+      "formal_correspondence": "The full normalized primal/dual certificate proves both displayed inequalities."
+    },
+    {
+      "stable_label": "eq:2.6",
+      "original_equation": "2.6",
+      "previous_v2_number": 15,
+      "v2_number": "2.11",
+      "formula_sha256": "517af9969be27ac74dda02f95e18c43fdaf44791379dd36a424f073c0126d0e3",
+      "lean_declarations": [
+        "SharpCut.Paper.normalized_trace_chain"
+      ],
+      "formal_correspondence": "The independently exported complete trace/Cauchy/support/normalization chain retains every original intermediate sum."
+    },
+    {
+      "stable_label": "eq:2.7",
+      "original_equation": "2.7",
+      "previous_v2_number": 16,
+      "v2_number": "2.12",
+      "formula_sha256": "d89962b39739ba16e290bf92170bcc241760124c67116654a987341b7b7803c7",
+      "lean_declarations": [
+        "SharpCut.Paper.normalized_determinant_chain",
+        "SharpCut.Paper.positive_det_le_mean_trace"
+      ],
+      "formal_correspondence": "The actual positive conjugate has determinant det(A)det(M), a positive spectral product and the full trace-mean natural-power AM-GM bound, followed by the normalized bound one."
+    },
+    {
+      "stable_label": "eq:2.8",
+      "original_equation": "2.8",
+      "previous_v2_number": 17,
+      "v2_number": "2.13",
+      "formula_sha256": "b28e650a0baae171eed27405d01e4a119df727599b3891cd6f221659933a5959",
+      "lean_declarations": [
+        "SharpCut.Optimization.DualOptimal",
+        "SharpCut.Optimization.exact_duality"
+      ],
+      "formal_correspondence": "DualOptimal is comparison of logdet of the actual feasible aggregate with every competitor; exact duality proves attainment."
+    },
+    {
+      "stable_label": "eq:3.2",
+      "original_equation": "3.2",
+      "previous_v2_number": 18,
+      "v2_number": "3.1",
+      "formula_sha256": "92b536809114a40a6ef3b8fba1cb552e956b4703dc9baadf5ef686a8cfe052b0",
+      "lean_declarations": [
+        "SharpCut.Sharpness.modelCenter",
+        "SharpCut.Sharpness.modelShape",
+        "SharpCut.Sharpness.modelShape_posDef",
+        "SharpCut.Sharpness.modelShape_det"
+      ],
+      "formal_correspondence": "The exact translated positive model shape, axial/transverse projectors and determinant are proved for every n>=2 and unit axis."
+    },
+    {
+      "stable_label": "eq:3.3",
+      "original_equation": "3.3",
+      "previous_v2_number": 19,
+      "v2_number": "3.2",
+      "formula_sha256": "b1082f8b1886c6d857fabe1a2440752a801433e67939ef04a823d5e1eebcbeb9",
+      "lean_declarations": [
+        "SharpCut.Simplex.exists_regular_simplex",
+        "SharpCut.Simplex.regular_weights",
+        "SharpCut.Simplex.normal_gram",
+        "SharpCut.Simplex.normal_sum",
+        "SharpCut.Simplex.normal_outer_sum"
+      ],
+      "formal_correspondence": "Constructed regular-simplex normals have the original pair Gram and both unweighted moments, and the John weights n/(n+1)."
+    },
+    {
+      "stable_label": "eq:3.4",
+      "original_equation": "3.4",
+      "previous_v2_number": 20,
+      "v2_number": "3.3",
+      "formula_sha256": "797c9cf6b9a8a516bab78a2e2aac79b221120434eee8e977a6ded103f377d691",
+      "lean_declarations": [
+        "SharpCut.Simplex.model_axis_support_values",
+        "SharpCut.Simplex.model_latitude_support_values",
+        "SharpCut.Simplex.model_latitude_square_root",
+        "SharpCut.Sharpness.model_cut_support"
+      ],
+      "formal_correspondence": "The literal pole, latitude radical/norm and new-cut support terms retain the original constants and signs."
+    },
+    {
+      "stable_label": "eq:3.5",
+      "original_equation": "3.5",
+      "previous_v2_number": 21,
+      "v2_number": "3.4",
+      "formula_sha256": "65dbb69a6f0b2588d277e28a8d0e8da148dfa026c046ae936fe3a235c8a27e64",
+      "lean_declarations": [
+        "SharpCut.Certificate.cutWeight",
+        "SharpCut.Certificate.originalWeight",
+        "SharpCut.Certificate.cutAlpha",
+        "SharpCut.Paper.frame_balanced_weight_chain"
+      ],
+      "formal_correspondence": "The definitions fix t=(1+b)/2, alpha_i=lambda_i(1-t s_i) and alpha_0=t; the full original lower-bound chain is explicitly proved."
+    },
+    {
+      "stable_label": "eq:3.6",
+      "original_equation": "3.6",
+      "previous_v2_number": 22,
+      "v2_number": "3.5",
+      "formula_sha256": "ee244e32d6e99172621e2085b85ffe6e669eaad7da76d1be76b129bb2a55bbeb",
+      "lean_declarations": [
+        "SharpCut.Certificate.originalWeight_sum",
+        "SharpCut.Certificate.balanced_normals"
+      ],
+      "formal_correspondence": "The two finite normalization/balance identities follow from actual first and second John moments."
+    },
+    {
+      "stable_label": "eq:3.7",
+      "original_equation": "3.7",
+      "previous_v2_number": 23,
+      "v2_number": "3.6",
+      "formula_sha256": "5382fb75ff516a3428d0e86eb29f366c9500eb3434bbb9cc567534738ae2447b",
+      "lean_declarations": [
+        "SharpCut.Certificate.boostParameter",
+        "SharpCut.Certificate.boostScale",
+        "SharpCut.Certificate.transverse",
+        "SharpCut.Certificate.lorentzDirection"
+      ],
+      "formal_correspondence": "The original a,k,y,p formulas are the exact geometric definitions; positive denominators on the unit-frame domain are proved."
+    },
+    {
+      "stable_label": "eq:3.8",
+      "original_equation": "3.8",
+      "previous_v2_number": 24,
+      "v2_number": "3.7",
+      "formula_sha256": "f8dc6f28af67ceb92be416d6078eba6b6426a0f234e1b00ce2f81d12777675ed",
+      "lean_declarations": [
+        "SharpCut.Certificate.lorentz_norm_numerator",
+        "SharpCut.Certificate.lorentzDirection_unit",
+        "SharpCut.Certificate.transverse_norm_sq"
+      ],
+      "formal_correspondence": "The exact Lorentz scalar numerator and Euclidean orthogonal decomposition prove the full norm-square quotient equals one."
+    },
+    {
+      "stable_label": "eq:3.9",
+      "original_equation": "3.9",
+      "previous_v2_number": 25,
+      "v2_number": "3.8",
+      "formula_sha256": "01a9d2930a76a4a8a5a05d88c7883b520ac0f6fd2f1acd914a1afe0ef4f163c9",
+      "lean_declarations": [
+        "SharpCut.Certificate.lorentz_model_direction",
+        "SharpCut.Certificate.model_matching_parameters"
+      ],
+      "formal_correspondence": "At the pole and latitude the constructed Lorentz direction is explicitly the normalized model shape action; positive norm denominators are retained."
+    },
+    {
+      "stable_label": "eq:3.10",
+      "original_equation": "3.10",
+      "previous_v2_number": 26,
+      "v2_number": "3.9",
+      "formula_sha256": "acc42236c19cfbedafe035cfbb417475594ccaf77d4bb62e0e3aff4e36d1a518",
+      "lean_declarations": [
+        "SharpCut.Certificate.frameDefect",
+        "SharpCut.Certificate.defectTerm"
+      ],
+      "formal_correspondence": "The exact weighted rational defect summand and finite sum define chi; nonnegative and zero-set proofs are in the certified closure."
+    },
+    {
+      "stable_label": "eq:3.11",
+      "original_equation": "3.11",
+      "previous_v2_number": 27,
+      "v2_number": "3.10",
+      "formula_sha256": "be3a0361a623402c3ef00852a2d7aa2d8ebd3a7242cbc5a4f815d3e5b359b457",
+      "lean_declarations": [
+        "SharpCut.Certificate.unrotatedQ",
+        "SharpCut.Certificate.cross"
+      ],
+      "formal_correspondence": "The original unsymmetrized rank-one contact/cut aggregate is exactly Q, in the stated factor order."
+    },
+    {
+      "stable_label": "eq:3.12",
+      "original_equation": "3.12",
+      "previous_v2_number": 28,
+      "v2_number": "3.11",
+      "formula_sha256": "611d6590e9432389029c54c55bde04dedd34228abf96e0ea3a492a00d07614ff",
+      "lean_declarations": [
+        "SharpCut.Certificate.john_frame_certificate_bound"
+      ],
+      "formal_correspondence": "The complete all-dimensional quantitative certificate gives chi/1500 and chi/(2d), with d=2-b, positive determinant and equality conclusions."
+    },
+    {
+      "stable_label": "eq:8.1",
+      "original_equation": "8.1",
+      "previous_v2_number": 29,
+      "v2_number": "3.12",
+      "formula_sha256": "70ba484b4a74090d1b6535589ebd0b8e521bf2c8d16b85bb04f3ab11e664d262",
+      "lean_declarations": [
+        "SharpCut.Certificate.weightedShape",
+        "SharpCut.Certificate.contactScalarFactor",
+        "SharpCut.Certificate.certificateF",
+        "SharpCut.Certificate.certificateD",
+        "SharpCut.Certificate.ordered_factorization"
+      ],
+      "formal_correspondence": "The exact finite contact shape B, axial update F and anisotropic D give Q=FD in the stated order, without assuming symmetry of Q."
+    },
+    {
+      "stable_label": "eq:8.2",
+      "original_equation": "8.2",
+      "previous_v2_number": 30,
+      "v2_number": "3.13",
+      "formula_sha256": "e9d9548aee348b5f218c1bf7c98b8cca460b0e7cac4ba11062ba73e0bd12cac1",
+      "lean_declarations": [
+        "SharpCut.Certificate.modelF0",
+        "SharpCut.Certificate.normalizedCertificate",
+        "SharpCut.Certificate.modelF0_mul_D",
+        "SharpCut.Certificate.normalizedCertificate_det"
+      ],
+      "formal_correspondence": "The positive spectral square-root normalization gives the literal F0 congruence; the ordered model product is M0 and its determinant is R_n det Q."
+    },
+    {
+      "stable_label": "eq:8.3",
+      "original_equation": "8.3",
+      "previous_v2_number": 31,
+      "v2_number": "3.14",
+      "formula_sha256": "a6f6b4b7db86690c6ddb950ed52b4d7584cd577c1fe6a3599f8bb7296727f535",
+      "lean_declarations": [
+        "SharpCut.Certificate.frameDefect",
+        "SharpCut.Certificate.defectTerm",
+        "SharpCut.Certificate.frameDefect_nonneg"
+      ],
+      "formal_correspondence": "The exact positive-weight contact sum is nonnegative on every unit-axis John frame with n>=2 and positive Lorentz denominator."
+    },
+    {
+      "stable_label": "eq:8.4",
+      "original_equation": "8.4",
+      "previous_v2_number": 32,
+      "v2_number": "3.15",
+      "formula_sha256": "91f668916ea7cb32ca12492c8f41ccc54d2aaa0fda40d052906e296550add1a7",
+      "lean_declarations": [
+        "SharpCut.Determinant.quantitative_frame_determinant",
+        "SharpCut.Paper.model_determinant_closed"
+      ],
+      "formal_correspondence": "The complete determinant theorem includes all three dimension branches, both logarithmic constants and det F>=det F0; the literal closed formula d^(n+1)/(2^n(1-b)) is separately exported."
+    },
+    {
+      "stable_label": "eq:8.5",
+      "original_equation": "8.5",
+      "previous_v2_number": 33,
+      "v2_number": "3.16",
+      "formula_sha256": "0d4822d5b3c70e8b61908dfb7b9ca97c14d8fe1455a4319971b90577e5234f1a",
+      "lean_declarations": [
+        "SharpCut.Certificate.reweighted_moments",
+        "SharpCut.Certificate.reweighted_recurrence"
+      ],
+      "formal_correspondence": "The three rationally reweighted scalar recurrences follow from the actual finite first/second John moments, including N0-aN1=n."
+    },
+    {
+      "stable_label": "eq:8.6",
+      "original_equation": "8.6",
+      "previous_v2_number": 34,
+      "v2_number": "3.17",
+      "formula_sha256": "122f2ef50e79541bcfa6177ec90f5b95723fb013381f6d5e18804925c3727206",
+      "lean_declarations": [
+        "SharpCut.Certificate.defect_expansion"
+      ],
+      "formal_correspondence": "The cubic contact-defect polynomial expands into exactly the four reweighted scalar moments, with the original coefficients."
+    },
+    {
+      "stable_label": "eq:8.7",
+      "original_equation": "8.7",
+      "previous_v2_number": 35,
+      "v2_number": "3.18",
+      "formula_sha256": "224b9ee835b86653ce321a403986b10cb39ef0cec38cf8e5a4ff799cba8b66fe",
+      "lean_declarations": [
+        "SharpCut.Certificate.contactShape_axial",
+        "SharpCut.Certificate.axial_defect_identity"
+      ],
+      "formal_correspondence": "The actual axial quadratic form equals N2-tN3, and elimination of the three John moment recurrences gives the exact affine chi dependence."
+    },
+    {
+      "stable_label": "eq:8.8",
+      "original_equation": "8.8",
+      "previous_v2_number": 36,
+      "v2_number": "3.19",
+      "formula_sha256": "29afd75d68ab8f4ba60f9456971c074548490da433e30730b0444a58ce807517",
+      "lean_declarations": [
+        "SharpCut.Determinant.liftedMoment",
+        "SharpCut.Determinant.liftedMatrix",
+        "SharpCut.Determinant.frameLogSum"
+      ],
+      "formal_correspondence": "The lifted moment is the actual weighted outer-product matrix of Euclidean (u,sqrt(b)) vectors; frameLogSum is the finite logarithmic weight sum."
+    },
+    {
+      "stable_label": "eq:8.9",
+      "original_equation": "8.9",
+      "previous_v2_number": 37,
+      "v2_number": "3.20",
+      "formula_sha256": "d1339c055e3ff8794fdf43a61a7bcb8def65930877ff95a29278dbba7a3917fa",
+      "lean_declarations": [
+        "SharpCut.Determinant.modelLogSum",
+        "SharpCut.Determinant.heightFactor_endpoints"
+      ],
+      "formal_correspondence": "The model logarithmic average uses the exact pole and latitude factors and their original weights; endpoint evaluations identify it with the displayed L0."
+    },
+    {
+      "stable_label": "eq:8.10",
+      "original_equation": "8.10",
+      "previous_v2_number": 38,
+      "v2_number": "3.21",
+      "formula_sha256": "6740145b04fa8fa44c266d3f1aadfafa25dc2c80538c2a5e71eb329062af8a29",
+      "lean_declarations": [
+        "SharpCut.Determinant.liftedGainCoefficient"
+      ],
+      "formal_correspondence": "The scalar gain coefficient is exactly the displayed rational function on its positive denominator domain."
+    },
+    {
+      "stable_label": "eq:8.11",
+      "original_equation": "8.11",
+      "previous_v2_number": 39,
+      "v2_number": "3.22",
+      "formula_sha256": "44933abe911052fecfe8bdd3003417bc95a6757baad6203b9e97e0e795b9f0db",
+      "lean_declarations": [
+        "SharpCut.Determinant.lifted_determinant_bound"
+      ],
+      "formal_correspondence": "The actual lifted determinant chain gives (1+b)(L-L0)+delta0 chi for every n>=4, with no determinant estimate among its inputs."
+    },
+    {
+      "stable_label": "eq:8.12",
+      "original_equation": "8.12",
+      "previous_v2_number": 40,
+      "v2_number": "3.23",
+      "formula_sha256": "110778da466f04ad81e663a2efde97b8e93b91598cd24fd62bcdd31f65ace833",
+      "lean_declarations": [
+        "SharpCut.Determinant.finite_frame_logdet",
+        "SharpCut.Determinant.weightedGram_posDef"
+      ],
+      "formal_correspondence": "The general rectangular row-isometry theorem proves the weighted column-norm logarithmic bound and derives positive definiteness from every positive scalar rho_i."
+    },
+    {
+      "stable_label": "eq:8.13",
+      "original_equation": "8.13",
+      "previous_v2_number": 41,
+      "v2_number": "3.24",
+      "formula_sha256": "581c26d91a460606e5d2f2aa10313e4c4feb6680bf1a14d9934983f11ad039f3",
+      "lean_declarations": [
+        "SharpCut.Determinant.minor_weights_sum",
+        "SharpCut.Determinant.weighted_gram_expansion",
+        "SharpCut.Determinant.minor_column_marginal",
+        "SharpCut.Determinant.minorWeight_nonneg"
+      ],
+      "formal_correspondence": "Squared minors give nonnegative weights of total one, the exact determinant expansion and every column marginal, including zero minor weights."
+    },
+    {
+      "stable_label": "eq:8.14",
+      "original_equation": "8.14",
+      "previous_v2_number": 42,
+      "v2_number": "3.25",
+      "formula_sha256": "8d947f0a16ad55df61c87f6e6e1ede8107529cbde475363c9e06e2b72c061992",
+      "lean_declarations": [
+        "SharpCut.Determinant.finite_frame_logdet",
+        "SharpCut.Determinant.weighted_gram_expansion",
+        "SharpCut.Determinant.minor_log_marginal_sum"
+      ],
+      "formal_correspondence": "The weighted log Jensen proof uses the exact minor expansion; the independently exported marginal sum converts the subset log-product sum into column-norm weighted scalar logs."
+    },
+    {
+      "stable_label": "eq:8.15",
+      "original_equation": "8.15",
+      "previous_v2_number": 43,
+      "v2_number": "3.26",
+      "formula_sha256": "e95ae5e0496a92c77f61ce89df39558e9c2a61047dceb53087626462157d742d",
+      "lean_declarations": [
+        "SharpCut.Determinant.lifted_logdet",
+        "SharpCut.Determinant.lifted_column_norm_sq",
+        "SharpCut.Determinant.lifted_row_isometry"
+      ],
+      "formal_correspondence": "The actual lifted frame is a row isometry, each column has norm-square lambda_i(1+b), and the rectangular theorem gives the stated L lower bound."
+    },
+    {
+      "stable_label": "eq:8.16",
+      "original_equation": "8.16",
+      "previous_v2_number": 44,
+      "v2_number": "3.27",
+      "formula_sha256": "f3736b567f36ed404b4550cd6b280070dcf3526377b3cded569d75e9ae76d26b",
+      "lean_declarations": [
+        "SharpCut.Determinant.liftedMoment_block",
+        "SharpCut.Certificate.weighted_direction_balance",
+        "SharpCut.Determinant.contact_scalar_sum",
+        "SharpCut.Determinant.lifted_contact_det"
+      ],
+      "formal_correspondence": "The actual lifted block matrix has the correct sqrt(b)(aBv-tv) direction and scalar corner; its Schur determinant retains the inverse axial moment and factor 1/n."
+    },
+    {
+      "stable_label": "eq:8.17",
+      "original_equation": "8.17",
+      "previous_v2_number": 45,
+      "v2_number": "3.28",
+      "formula_sha256": "ed6ab316b0acaa7aeba2a1a55d07dffcfd255b71a441f311276d74785d3c2e52",
+      "lean_declarations": [
+        "SharpCut.Certificate.ordered_factorization",
+        "SharpCut.Determinant.det_posDef_rank_one",
+        "SharpCut.Determinant.inverse_axis_cauchy",
+        "SharpCut.Determinant.contact_schur_positive"
+      ],
+      "formal_correspondence": "The rank-one determinant of F and the positive anisotropic D give the exact Q determinant; positive B proves inverse-axis Cauchy and the strict Schur denominator."
+    },
+    {
+      "stable_label": "eq:8.18",
+      "original_equation": "8.18",
+      "previous_v2_number": 46,
+      "v2_number": "3.29",
+      "formula_sha256": "46c02438a305db1119e82c8f1bf200b0325f0de01b3786db7434807855e83a69",
+      "lean_declarations": [
+        "SharpCut.Determinant.lifted_contact_det",
+        "SharpCut.Determinant.det_posDef_rank_one",
+        "SharpCut.Certificate.ordered_factorization",
+        "SharpCut.Determinant.inverse_fraction_lower_bound"
+      ],
+      "formal_correspondence": "Positive determinants justify dividing the exact Q and lifted determinant identities; the full positive-domain inverse-fraction lemma substitutes varrho*zeta>=1 with the correct direction."
+    },
+    {
+      "stable_label": "eq:8.19",
+      "original_equation": "8.19",
+      "previous_v2_number": 47,
+      "v2_number": "3.30",
+      "formula_sha256": "aeb874ea2ecc717d32f076fa41e42106a017a7eff2ad1fd4b54dea35654adda3",
+      "lean_declarations": [
+        "SharpCut.Determinant.certificate_log_comparison",
+        "SharpCut.Certificate.ordered_factorization",
+        "SharpCut.Certificate.certificateD",
+        "SharpCut.Determinant.lifted_logdet"
+      ],
+      "formal_correspondence": "The proof first bounds logdet F by the lifted log sum and axial fraction; det D=k^(n+1) transports this to the displayed logdet Q expression, retaining every positive logarithm domain."
+    },
+    {
+      "stable_label": "eq:8.20",
+      "original_equation": "8.20",
+      "previous_v2_number": 48,
+      "v2_number": "3.31",
+      "formula_sha256": "a9b625471f4275e31d754af298391ddc7aeaf1117653503baaf54cfdeeb21b67",
+      "lean_declarations": [
+        "SharpCut.Certificate.axial_defect_identity",
+        "SharpCut.Determinant.axialDrop",
+        "SharpCut.Determinant.modelAxial",
+        "SharpCut.Paper.theta_drop_identities"
+      ],
+      "formal_correspondence": "The exact axial drop is the stated scalar multiple of chi. The two theta ratios are substituted literally in the separately exported rational identities."
+    },
+    {
+      "stable_label": "eq:8.21",
+      "original_equation": "8.21",
+      "previous_v2_number": 49,
+      "v2_number": "3.32",
+      "formula_sha256": "367b640bc3129aa20a03e2623f1fb21613e6d663f7a2f3b27ad6e66e56df9d16",
+      "lean_declarations": [
+        "SharpCut.Paper.theta_parameter_bounds",
+        "SharpCut.Paper.theta_drop_identities",
+        "SharpCut.Paper.theta_log_chain",
+        "SharpCut.Determinant.gain_coefficient_identity",
+        "SharpCut.Determinant.contact_axial_log_gain"
+      ],
+      "formal_correspondence": "The actual positive Schur and axial domains imply 0<=theta1<=theta2<1. The full log/reciprocal/completed fraction chain and exact coefficient identity give delta0 chi, including delta=0."
+    },
+    {
+      "stable_label": "eq:8.22",
+      "original_equation": "8.22",
+      "previous_v2_number": 50,
+      "v2_number": "3.33",
+      "formula_sha256": "b576ea55f4b3e5c682ba3ffaea630f45430717020f3f96531bfb476b590142a9",
+      "lean_declarations": [
+        "SharpCut.Determinant.model_log_determinant",
+        "SharpCut.Certificate.modelF0_mul_D",
+        "SharpCut.Certificate.sharpRatio_inverseModel",
+        "SharpCut.Determinant.model_log_average"
+      ],
+      "formal_correspondence": "The model log-average and exact model axial fraction sum to logdet F0; multiplying by D gives M0 with R_n det M0=1, hence the displayed Q-normalized model value."
+    },
+    {
+      "stable_label": "eq:8.23",
+      "original_equation": "8.23",
+      "previous_v2_number": 51,
+      "v2_number": "3.34",
+      "formula_sha256": "aae4e4d36179d4243bc784b85a097533bd54493749d5ed330e061b524522d828",
+      "lean_declarations": [
+        "SharpCut.Scalar.originalIntegrand",
+        "SharpCut.Scalar.scalarA",
+        "SharpCut.Scalar.scalarT",
+        "SharpCut.Scalar.lossRatio"
+      ],
+      "formal_correspondence": "The original real interval integral retains a=b/(2-b), t=(1+b)/2 and its full rational integrand; continuity and denominator domains are proved in its supporting chain."
+    },
+    {
+      "stable_label": "eq:8.24",
+      "original_equation": "8.24",
+      "previous_v2_number": 52,
+      "v2_number": "3.35",
+      "formula_sha256": "cd4e1b6d80fc1402a9b84d8727c6705333c2c78e72c749f77f2e016bb74793bd",
+      "lean_declarations": [
+        "SharpCut.Determinant.interpolation_loss"
+      ],
+      "formal_correspondence": "The actual finite John logarithmic sum is bounded below by -(1-a) I(b) chi in all n>=4, using the full integrated Hermite remainder."
+    },
+    {
+      "stable_label": "eq:8.25",
+      "original_equation": "8.25",
+      "previous_v2_number": 53,
+      "v2_number": "3.36",
+      "formula_sha256": "745d89fe50c96bfa8c2628fa1e5e85dd2357621836a80170774f785e6d1627a5",
+      "lean_declarations": [
+        "SharpCut.Scalar.hermiteQuadratic",
+        "SharpCut.Scalar.logarithmicHermite",
+        "SharpCut.Scalar.logarithmicSlope",
+        "SharpCut.Scalar.logarithmic_slope_value"
+      ],
+      "formal_correspondence": "The literal quadratic Hermite interpolant uses the exact pole value, latitude value and analytically computed derivative at b; no interpolation surrogate is assumed."
+    },
+    {
+      "stable_label": "eq:8.26",
+      "original_equation": "8.26",
+      "previous_v2_number": 54,
+      "v2_number": "3.37",
+      "formula_sha256": "1f1a5db630f6fc8fa6635e6f1224c79576102322daca7d202275b43dd9b07181",
+      "lean_declarations": [
+        "SharpCut.Determinant.john_hermite_average",
+        "SharpCut.Determinant.logarithmicHermite_average"
+      ],
+      "formal_correspondence": "The first and second finite frame moments integrate the exact quadratic interpolant to the model logarithmic weight average L0."
+    },
+    {
+      "stable_label": "eq:8.27",
+      "original_equation": "8.27",
+      "previous_v2_number": 55,
+      "v2_number": "3.38",
+      "formula_sha256": "222c3a63f34a21085ef54264f498ee62c44d76f71a1fb1b5543c574e13ea339c",
+      "lean_declarations": [
+        "SharpCut.Scalar.logarithmic_hermite_remainder",
+        "SharpCut.Scalar.hermiteRemainderIntegrand"
+      ],
+      "formal_correspondence": "The full real interval integral remainder retains every z denominator and the original negative prefactor; it follows from integrable rational and logarithmic primitives."
+    },
+    {
+      "stable_label": "eq:8.28",
+      "original_equation": "8.28",
+      "previous_v2_number": 56,
+      "v2_number": "3.39",
+      "formula_sha256": "d971bd6b8c7c09f6737d7a4129147d8a53cb4a93f4e3636e9368ed0008fe4dbd",
+      "lean_declarations": [
+        "SharpCut.Scalar.rational_hermite_remainder",
+        "SharpCut.Scalar.rational_hermite_exact"
+      ],
+      "formal_correspondence": "The exact all-field rational identity and its actual positive-domain specialization produce the full factored rational Hermite remainder."
+    },
+    {
+      "stable_label": "eq:8.29",
+      "original_equation": "8.29",
+      "previous_v2_number": 57,
+      "v2_number": "3.40",
+      "formula_sha256": "fe73882b3a5b01268fa305d1acd10a53cde81cecbddb46592ff46b28a666f76f",
+      "lean_declarations": [
+        "SharpCut.Scalar.logarithmic_slope_integral",
+        "SharpCut.Scalar.logarithmic_slope_value",
+        "SharpCut.Scalar.interpolated_slope_identity"
+      ],
+      "formal_correspondence": "The explicit slope primitive yields the negative interval integral, both endpoint fraction forms and the correct derivative of the log height factor."
+    },
+    {
+      "stable_label": "eq:8.30",
+      "original_equation": "8.30",
+      "previous_v2_number": 58,
+      "v2_number": "3.41",
+      "formula_sha256": "82ec6a027533685eab869a88fb4b4f77dab22b85e8420c631195f82672d560cb",
+      "lean_declarations": [
+        "SharpCut.Scalar.loss_factor_difference",
+        "SharpCut.Scalar.hermite_integrand_comparison"
+      ],
+      "formal_correspondence": "The literal rational difference factors as (z-a)(1-s)/((1-z)(1-zs)); proved interval/height domains make every factor nonnegative and give the integrand comparison."
+    },
+    {
+      "stable_label": "eq:8.31",
+      "original_equation": "8.31",
+      "previous_v2_number": 59,
+      "v2_number": "3.42",
+      "formula_sha256": "4bd85dba2d5e6861c0c62d3c81bcc3db030d01e5f277e60647699d13ad2de9f6",
+      "lean_declarations": [
+        "SharpCut.Determinant.higher_loss_identity",
+        "SharpCut.Determinant.higher_dimensional_logdet",
+        "SharpCut.Scalar.lossRatio"
+      ],
+      "formal_correspondence": "The full lifted and Hermite loss terms combine exactly to delta0(1-R)chi, with R retaining the original integral definition."
+    },
+    {
+      "stable_label": "eq:8.32",
+      "original_equation": "8.32",
+      "previous_v2_number": 60,
+      "v2_number": "3.43",
+      "formula_sha256": "b55adc300baaadced2e21adf84aaf5c14838e0f913e710ad6a8aabfc9742f6e3",
+      "lean_declarations": [
+        "SharpCut.Scalar.lossRatio_eq_transformedRatio",
+        "SharpCut.Scalar.transformedRatio",
+        "SharpCut.Scalar.originalIntegrand_substitution"
+      ],
+      "formal_correspondence": "A proved Mobius change of variables transports the actual interval integral to the precise transformed endpoint, prefactor and rational squared factor."
+    },
+    {
+      "stable_label": "eq:8.33",
+      "original_equation": "8.33",
+      "previous_v2_number": 61,
+      "v2_number": "3.44",
+      "formula_sha256": "6e9da69e8c117e831a031196a1165759ca0624ce0d1e1914bfe438b66faa6529",
+      "lean_declarations": [
+        "SharpCut.Scalar.prefactor_difference",
+        "SharpCut.Scalar.integrand_factor_difference",
+        "SharpCut.Scalar.interval_endpoint_difference",
+        "SharpCut.Scalar.ratioPrefactor_mono",
+        "SharpCut.Scalar.ratioFactor_mono",
+        "SharpCut.Scalar.ratioEndpoint_mono"
+      ],
+      "formal_correspondence": "All three literal difference identities are kernel checked; the separate real-domain monotonicity proofs supply the displayed nonnegative signs for 0<=b1<=b2<=1/4."
+    },
+    {
+      "stable_label": "eq:8.34",
+      "original_equation": "8.34",
+      "previous_v2_number": 62,
+      "v2_number": "3.45",
+      "formula_sha256": "8f26c6db2ed4b25342cdfad08f0ffacc7c43de2168ffcffa280b2e3b48a38e88",
+      "lean_declarations": [
+        "SharpCut.Scalar.quarter_integrand_eq",
+        "SharpCut.Scalar.largest_interval_endpoint",
+        "SharpCut.Scalar.transformedRatio"
+      ],
+      "formal_correspondence": "Substitution of b=1/4 gives endpoint 9/17 and factor 468/37 multiplying the exact endpoint integrand, with continuity on the full interval."
+    },
+    {
+      "stable_label": "eq:8.35",
+      "original_equation": "8.35",
+      "previous_v2_number": 63,
+      "v2_number": "3.46",
+      "formula_sha256": "f6fb11530b6e1b62c914a3a4cb66f4c457c4708c635e0809640a4b1e6c3bff34",
+      "lean_declarations": [
+        "SharpCut.Scalar.endpoint_partial_fractions"
+      ],
+      "formal_correspondence": "The all-field partial-fraction identity retains all four original coefficients and signs, on the explicitly nonzero endpoint denominators."
+    },
+    {
+      "stable_label": "eq:8.36",
+      "original_equation": "8.36",
+      "previous_v2_number": 64,
+      "v2_number": "3.47",
+      "formula_sha256": "eda03c553b888931586e6c2c56ade73b7f9356bd37a6da5d2e2868de3162142e",
+      "lean_declarations": [
+        "SharpCut.Scalar.endpointIntegral_eq",
+        "SharpCut.Scalar.transformedRatio_quarter",
+        "SharpCut.Scalar.endpoint_logarithm_certificate",
+        "SharpCut.Scalar.lossRatio_eq_transformedRatio"
+      ],
+      "formal_correspondence": "Exact primitive integration gives both log expressions for R(1/4); independently certified rational/logarithmic bounds prove the strict 124/125 comparison."
+    },
+    {
+      "stable_label": "eq:8.37",
+      "original_equation": "8.37",
+      "previous_v2_number": 65,
+      "v2_number": "3.48",
+      "formula_sha256": "c15ad6cb052f0a3bc5056d7613b8242010479f84a1d86697446de345b1651ff6",
+      "lean_declarations": [
+        "SharpCut.Scalar.gain_polynomial_identity",
+        "SharpCut.Scalar.gain_coefficient_lower"
+      ],
+      "formal_correspondence": "The exact polynomial identity is used on the real interval 0<b<=1/4 to prove its nonnegative sign and the original gain coefficient lower bound 1/12."
+    },
+    {
+      "stable_label": "eq:8.38",
+      "original_equation": "8.38",
+      "previous_v2_number": 66,
+      "v2_number": "3.49",
+      "formula_sha256": "6653d848a1e8a248ff3bf9615182039917f6d74a4147c2c40db7168c2d589321",
+      "lean_declarations": [
+        "SharpCut.Scalar.reciprocal_polynomial_lower",
+        "SharpCut.Scalar.low_dimension_integration_domain"
+      ],
+      "formal_correspondence": "The two reciprocal Taylor-polynomial lower bounds are exact rational inequalities throughout the actual low-dimensional integration domain, with s=bz."
+    },
+    {
+      "stable_label": "eq:8.39",
+      "original_equation": "8.39",
+      "previous_v2_number": 67,
+      "v2_number": "3.50",
+      "formula_sha256": "90a4e85d6db0217af9abd9dd022f751a5e292ef2d3b1beb59a823dfd2bd11614",
+      "lean_declarations": [
+        "SharpCut.Scalar.lossRatio_polynomial_lower",
+        "SharpCut.Scalar.polynomial_lower_integral",
+        "SharpCut.Scalar.low_dimension_scalar_remainder"
+      ],
+      "formal_correspondence": "The proved positive-domain integrand comparison is integrated exactly; explicit rational endpoint evaluations give both strict low-dimensional bounds 16/15 and 7/6."
+    },
+    {
+      "stable_label": "eq:8.40",
+      "original_equation": "8.40",
+      "previous_v2_number": 68,
+      "v2_number": "3.51",
+      "formula_sha256": "5afeb48a3976b6d0386f912012693edc6b059e0af5e7b20354ddd3ea84fb6002",
+      "lean_declarations": [
+        "SharpCut.Certificate.block_identities_and_constraints",
+        "SharpCut.Certificate.axialDeficit",
+        "SharpCut.Certificate.transverseSigma",
+        "SharpCut.Certificate.axialDeficit_sigma"
+      ],
+      "formal_correspondence": "The full actual normalized matrix has the axial, mixed and transverse blocks through all Euclidean bilinear tests; trace and scalar definitions give x, sigma and x=d sigma/4."
+    },
+    {
+      "stable_label": "eq:8.41",
+      "original_equation": "8.41",
+      "previous_v2_number": 69,
+      "v2_number": "3.52",
+      "formula_sha256": "bf0b7b79cd4a4304206a9af8c95127ba057724c78749b8e5cc901bed262be848",
+      "lean_declarations": [
+        "SharpCut.Certificate.transversePerturbation_explicit",
+        "SharpCut.Certificate.transverseCoupling_contact_sum"
+      ],
+      "formal_correspondence": "Both actual contact sums retain nu_i=lambda_i/(1-as_i) and the original signed scalar factors, using the Euclidean projector onto v-perp."
+    },
+    {
+      "stable_label": "eq:8.42",
+      "original_equation": "8.42",
+      "previous_v2_number": 70,
+      "v2_number": "3.53",
+      "formula_sha256": "64da357da802b38b379e8474e2114d5e6f29e4028c741edcc0ef66fa36db3aa4",
+      "lean_declarations": [
+        "SharpCut.Certificate.transverseSigma_range",
+        "SharpCut.Certificate.frameDefect_range"
+      ],
+      "formal_correspondence": "The complete scalar range follows from the reverse-defect identity and positive contact weights; it includes both zero and upper endpoints."
+    },
+    {
+      "stable_label": "eq:8.43",
+      "original_equation": "8.43",
+      "previous_v2_number": 71,
+      "v2_number": "3.54",
+      "formula_sha256": "bc09b7b20b883c5495910aa14b8b236e960fd59c54b3695e1867cbf01d8e3083",
+      "lean_declarations": [
+        "SharpCut.Certificate.contactGram_identity",
+        "SharpCut.Certificate.contactGram_posSemidef",
+        "SharpCut.Certificate.transverse_strict_bounds"
+      ],
+      "formal_correspondence": "The actual contact Gram identity gives the PSD arrow matrix; every nonzero transverse test proves both strict Loewner bounds on E."
+    },
+    {
+      "stable_label": "eq:8.44",
+      "original_equation": "8.44",
+      "previous_v2_number": 72,
+      "v2_number": "3.55",
+      "formula_sha256": "cbe965877b41809b174aba8fc34f0a19a30af67e47f59ada23d692ebd24334d7",
+      "lean_declarations": [
+        "SharpCut.Certificate.transverse_moments",
+        "SharpCut.Certificate.transverse_vector_recurrence",
+        "SharpCut.Certificate.transverse_matrix_recurrence"
+      ],
+      "formal_correspondence": "The first, mixed and isotropic John moments prove both vector recurrences C0=aC1, C1=aC2 and the transverse matrix recurrence Y0-aY1=P."
+    },
+    {
+      "stable_label": "eq:8.45",
+      "original_equation": "8.45",
+      "previous_v2_number": 73,
+      "v2_number": "3.56",
+      "formula_sha256": "fa9e86c0ba0f1ba3353a2818bf379ee5876a2686e5fd03650d0debfc2323fcc5",
+      "lean_declarations": [
+        "SharpCut.Certificate.reverse_defect_identity",
+        "SharpCut.Certificate.reverseDefect"
+      ],
+      "formal_correspondence": "The exact original reverse weighted cubic sum gives the displayed complementary scalar identity and its denominator h=d+b^2."
+    },
+    {
+      "stable_label": "eq:8.46",
+      "original_equation": "8.46",
+      "previous_v2_number": 74,
+      "v2_number": "3.57",
+      "formula_sha256": "6aaf7be4bbd70b59d8ad33ca28946269a3cabc4ddb6d6b2a0b72f428e52e48fe",
+      "lean_declarations": [
+        "SharpCut.Certificate.gramVector",
+        "SharpCut.Certificate.gramWeight",
+        "SharpCut.Certificate.gramScales_squares",
+        "SharpCut.Certificate.contactGram_identity"
+      ],
+      "formal_correspondence": "The literal scaled contact Gram vectors and nu_i(1+s_i) weights have the displayed axial/transverse components; their sum equals the full PSD arrow matrix."
+    },
+    {
+      "stable_label": "eq:8.47",
+      "original_equation": "8.47",
+      "previous_v2_number": 75,
+      "v2_number": "3.58",
+      "formula_sha256": "9daaf4e98dc3259294d55a24a39d3ac7e4db9b9880a126377f59156f9476eb60",
+      "lean_declarations": [
+        "SharpCut.Certificate.transversePlusMoment_identity",
+        "SharpCut.Certificate.transverseMinusMoment_identity"
+      ],
+      "formal_correspondence": "Both tilted contact outer-product sums retain their exact factors and become I+2E and tI-E on the actual transverse Euclidean subspace."
+    },
+    {
+      "stable_label": "eq:8.48",
+      "original_equation": "8.48",
+      "previous_v2_number": 76,
+      "v2_number": "3.59",
+      "formula_sha256": "ae3d6a1453a36f70bf1f94e4bb08fbc9338a869b538e863da89054d4e855e8b4",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_two_determinant",
+        "SharpCut.Certificate.axialDeficit_sigma",
+        "SharpCut.Certificate.transverseSigma",
+        "SharpCut.Certificate.block_identities_and_constraints"
+      ],
+      "formal_correspondence": "For n=2 the one-dimensional transverse Gram constraint yields the displayed lower expression; the exact x and sigma identities simplify it to 1+11sigma/32=1+11chi/60."
+    },
+    {
+      "stable_label": "eq:8.49",
+      "original_equation": "8.49",
+      "previous_v2_number": 77,
+      "v2_number": "3.60",
+      "formula_sha256": "a6a59384d91ffbe1597a4f1ba55f74126f71e96994d439a3ad19705f5a714156",
+      "lean_declarations": [
+        "SharpCut.Certificate.direct_coupling_bound"
+      ],
+      "formal_correspondence": "The full arbitrary-frame direct-coupling theorem gives both A_E<=sigma/2 and the K_E inverse-vector square bound, including sigma=0 and L=0."
+    },
+    {
+      "stable_label": "eq:8.50",
+      "original_equation": "8.50",
+      "previous_v2_number": 78,
+      "v2_number": "3.61",
+      "formula_sha256": "80ed16fa529b82d881d10eb435e9982ab154fd3db473013aabf4f89dd4bb9432",
+      "lean_declarations": [
+        "SharpCut.Certificate.couplingLinearTest",
+        "SharpCut.Certificate.coupling_quadratic_full"
+      ],
+      "formal_correspondence": "The linear test is the exact trace-plus-vector functional; for symmetric Z annihilating v, the quadratic test equals the full transverse expression with K_E, cross term 4 and L."
+    },
+    {
+      "stable_label": "eq:8.51",
+      "original_equation": "8.51",
+      "previous_v2_number": 79,
+      "v2_number": "3.62",
+      "formula_sha256": "43e1667c7b092af44e47631f43424d837c6eab56a2102eaba05363d60b85d4e3",
+      "lean_declarations": [
+        "SharpCut.Certificate.transverseMinusMoment_identity",
+        "SharpCut.Certificate.gamma_mixed_identity",
+        "SharpCut.Certificate.gamma_reverse_identity"
+      ],
+      "formal_correspondence": "The three actual nu-weighted matrix, vector and scalar moment identities retain the original d/(2+b), gamma and L factors."
+    },
+    {
+      "stable_label": "eq:8.52",
+      "original_equation": "8.52",
+      "previous_v2_number": 80,
+      "v2_number": "3.63",
+      "formula_sha256": "9ddba0fffbe1b13d37971c5342b1073fcd5986eb3b1093a0d63d0223b8cde610",
+      "lean_declarations": [
+        "SharpCut.Certificate.coupling_linear_identity",
+        "SharpCut.Certificate.coupling_quadratic_identity"
+      ],
+      "formal_correspondence": "The original finite contact linear and squared-norm sums equal ell and d Q2/(2+b), with no variational conclusion built into the inputs."
+    },
+    {
+      "stable_label": "eq:8.53",
+      "original_equation": "8.53",
+      "previous_v2_number": 81,
+      "v2_number": "3.64",
+      "formula_sha256": "66f9e11f0d7f199c369f24c2dbb84a63facce49b9307495683a2148e0b6c1558",
+      "lean_declarations": [
+        "SharpCut.Certificate.variational_scalar_chain",
+        "SharpCut.Certificate.variational_completed_square",
+        "SharpCut.Certificate.coupling_test_cauchy"
+      ],
+      "formal_correspondence": "Weighted Cauchy supplies ell^2<=sigma Q2/2; the exact positive-sigma completed-square chain proves all three displayed steps. Zero sigma is covered separately by the full direct-coupling theorem."
+    },
+    {
+      "stable_label": "eq:8.54",
+      "original_equation": "8.54",
+      "previous_v2_number": 82,
+      "v2_number": "3.65",
+      "formula_sha256": "17aaf7d9bdc7a5f20d67ba03148b4925aa53d01415085d039d04a15f0d042eb3",
+      "lean_declarations": [
+        "SharpCut.Paper.selected_coupling_value",
+        "SharpCut.Certificate.couplingZ_trace_identities",
+        "SharpCut.Certificate.couplingZ_twice",
+        "SharpCut.Certificate.selected_test_bound",
+        "SharpCut.Certificate.direct_coupling_bound"
+      ],
+      "formal_correspondence": "The actual selected Z=E K_E inverse and q=K_E inverse j/L evaluate the variational expression exactly to A_E+norm(K_E inverse j)^2/L; the all-q selected-test bound proves sigma/2 for L>0, and L=0 is treated without division."
+    },
+    {
+      "stable_label": "eq:8.55",
+      "original_equation": "8.55",
+      "previous_v2_number": 83,
+      "v2_number": "3.66",
+      "formula_sha256": "329fce5eba80a10fec8ff5a5bdc76fd93f1d8a58b03120bdca9a2a4ecc1e5094",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_three_determinant",
+        "SharpCut.Certificate.transverseSigma",
+        "SharpCut.Determinant.threeE_trace"
+      ],
+      "formal_correspondence": "The actual three-dimensional determinant bridge and scalar elimination give 1+2sigma/11, which the exact dimension-three sigma/chi formula identifies with 1+36chi/385."
+    },
+    {
+      "stable_label": "eq:8.56",
+      "original_equation": "8.56",
+      "previous_v2_number": 84,
+      "v2_number": "3.67",
+      "formula_sha256": "b781be83ed6f4c76986f1d4344af773c8457e75d02b2a77150ae4d3bf0b7a4f4",
+      "lean_declarations": [
+        "SharpCut.Determinant.threeZ",
+        "SharpCut.Certificate.couplingL",
+        "SharpCut.Paper.three_delta_positive"
+      ],
+      "formal_correspondence": "The determinant of the actual 2-by-2 E defines z; n=3 specializes L to 5/8-5sigma/6. The exact elimination denominator is positive on the proved scalar range."
+    },
+    {
+      "stable_label": "eq:8.57",
+      "original_equation": "8.57",
+      "previous_v2_number": 85,
+      "v2_number": "3.68",
+      "formula_sha256": "115d4493290fb92bac3c5a442b23ec9aad4d389941ee30494506677fe18718bf",
+      "lean_declarations": [
+        "SharpCut.Determinant.threeK_det",
+        "SharpCut.Determinant.three_deformation_identity"
+      ],
+      "formal_correspondence": "The actual 2-by-2 K determinant and inverse-trace deformation identity give both exact scalar expressions in sigma and z."
+    },
+    {
+      "stable_label": "eq:8.58",
+      "original_equation": "8.58",
+      "previous_v2_number": 86,
+      "v2_number": "3.69",
+      "formula_sha256": "ef515ed4913d8776bfbcddc23a765d45dfea8cff1dfedcfeb808e278836519ef",
+      "lean_declarations": [
+        "SharpCut.Determinant.three_z_range",
+        "SharpCut.Certificate.direct_coupling_bound",
+        "SharpCut.Determinant.three_deformation_identity",
+        "SharpCut.Paper.three_delta_positive"
+      ],
+      "formal_correspondence": "The actual z range and direct inverse-vector bound yield the stated Lz/[2(1+sigma+z)] estimate; the denominator and Delta are strictly positive on the complete range."
+    },
+    {
+      "stable_label": "eq:8.59",
+      "original_equation": "8.59",
+      "previous_v2_number": 87,
+      "v2_number": "3.70",
+      "formula_sha256": "26945f578b8252eb29a9db708100fd292be8b7d8f1d95581ea02bac3b4ab6a2a",
+      "lean_declarations": [
+        "SharpCut.Determinant.three_gram_scalar"
+      ],
+      "formal_correspondence": "The actual PSD contact Gram quadratic is transported to its exact 2-by-2 adjugate scalar form, retaining r, omega, x and det N."
+    },
+    {
+      "stable_label": "eq:8.60",
+      "original_equation": "8.60",
+      "previous_v2_number": 88,
+      "v2_number": "3.71",
+      "formula_sha256": "0c9691e6e443c6300332657b1a4d4af62d7d17887abd832e13d383980495a00d",
+      "lean_declarations": [
+        "SharpCut.Determinant.three_variational_scalar"
+      ],
+      "formal_correspondence": "The ordered positive inverse K and actual coupling bound are converted to the full scalar r/omega inequality with the original L/2 coefficient."
+    },
+    {
+      "stable_label": "eq:8.61",
+      "original_equation": "8.61",
+      "previous_v2_number": 89,
+      "v2_number": "3.72",
+      "formula_sha256": "22aeaff0441a6e1921bff51eefe488c2bc4ac8fee9b7a7ca6e51533d37b7be44",
+      "lean_declarations": [
+        "SharpCut.Paper.three_adjugate_elimination",
+        "SharpCut.Determinant.three_gram_scalar",
+        "SharpCut.Determinant.three_variational_scalar",
+        "SharpCut.Determinant.three_determinant_expression"
+      ],
+      "formal_correspondence": "The separately exported weighted scalar elimination gives the original adjugate numerator and Delta denominator; actual 2-by-2 bridges identify its objective with j^T adj(I+E)j."
+    },
+    {
+      "stable_label": "eq:8.62",
+      "original_equation": "8.62",
+      "previous_v2_number": 90,
+      "v2_number": "3.73",
+      "formula_sha256": "963a2f3807d37350f84b0e5637e2a21c90a7c3a96c95f0a09b9f8031fc42bf78",
+      "lean_declarations": [
+        "SharpCut.Paper.three_polynomial_elimination",
+        "SharpCut.Determinant.three_determinant_expression"
+      ],
+      "formal_correspondence": "The literal intermediate polynomial inequality 108 Delta(det Fhat-1)>=Pstar is exported before using its final lower estimate; the actual dimension-three arrow determinant supplies its scalar value identity."
+    },
+    {
+      "stable_label": "eq:8.63",
+      "original_equation": "8.63",
+      "previous_v2_number": 91,
+      "v2_number": "3.74",
+      "formula_sha256": "4f0cb25f329522b8c45d04ea2d68c006885d76547ead4e7d5b85e05708ba5372",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimensionThreePolynomial"
+      ],
+      "formal_correspondence": "The exact polynomial Pstar definition retains the full original cubic and quadratic coefficients."
+    },
+    {
+      "stable_label": "eq:8.64",
+      "original_equation": "8.64",
+      "previous_v2_number": 92,
+      "v2_number": "3.75",
+      "formula_sha256": "216c67a806228ce0ed3c6a484ee1f5ad655b13a32054f5b293c39cc40e053dfb",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_three_endpoint_identity",
+        "SharpCut.Determinant.dimension_three_endpoint_lower"
+      ],
+      "formal_correspondence": "Exact substitution z=sigma(1+sigma) gives the displayed cubic expression; the independently checked cubic decomposition proves its lower bound 72sigma(1+sigma)."
+    },
+    {
+      "stable_label": "eq:8.65",
+      "original_equation": "8.65",
+      "previous_v2_number": 93,
+      "v2_number": "3.76",
+      "formula_sha256": "bda8de1fb081bd450ff19f630cc7a479631fe8cdab1f6de80b32448afcdb2b80",
+      "lean_declarations": [
+        "SharpCut.Determinant.dimension_three_cubic_decomposition",
+        "SharpCut.Determinant.dimension_three_cubic_nonneg"
+      ],
+      "formal_correspondence": "The displayed nonnegative expression equals the original cubic minus 288, with every coefficient preserved, and is nonnegative for sigma>=0."
+    },
+    {
+      "stable_label": "eq:8.66",
+      "original_equation": "8.66",
+      "previous_v2_number": 94,
+      "v2_number": "3.77",
+      "formula_sha256": "698de55935ddd9710e38e67ce148b6c0886ae076899f1a851f26ac18b3961f95",
+      "lean_declarations": [
+        "SharpCut.Determinant.log_of_affine_lower",
+        "SharpCut.Determinant.dimension_two_logdet",
+        "SharpCut.Determinant.dimension_three_logdet",
+        "SharpCut.Determinant.dimension_two_uniform_logdet",
+        "SharpCut.Determinant.dimension_three_uniform_logdet"
+      ],
+      "formal_correspondence": "The general affine-determinant-to-log bound uses chi in [0,2] and c/(1+2c). Both low-dimensional constants are specialized exactly and compared to 1/1500."
+    },
+    {
+      "stable_label": "eq:8.67",
+      "original_equation": "8.67",
+      "previous_v2_number": 95,
+      "v2_number": "3.78",
+      "formula_sha256": "87ac20ea91904b56acafd1391874c7ab7d7954b547c3ab5aed0bc79848a6c943",
+      "lean_declarations": [
+        "SharpCut.Determinant.posDef_logdet_trace",
+        "SharpCut.Determinant.normalizedCertificate_trace",
+        "SharpCut.Determinant.sigma_minus_deficit",
+        "SharpCut.Determinant.all_dimensions_logdet_upper"
+      ],
+      "formal_correspondence": "The positive spectral logdet bound, exact normalized trace, and sigma-minus-axial-deficit identity retain every step of the upper chain chi/(2d)."
+    },
+    {
+      "stable_label": "eq:3.13",
+      "original_equation": "3.13",
+      "previous_v2_number": 96,
+      "v2_number": "3.79",
+      "formula_sha256": "6b558260da4c0e01eef5af533ea6f0f8d1e9ab1a2d2ba574bcad19a561978331",
+      "lean_declarations": [
+        "SharpCut.Certificate.polarMatrix",
+        "SharpCut.Certificate.polarRotation",
+        "SharpCut.Certificate.rotatedVectors"
+      ],
+      "formal_correspondence": "These are the exact common left positive polar root, M inverse Q rotation and rotated vector multipliers, including the added cut index."
+    },
+    {
+      "stable_label": "eq:3.14",
+      "original_equation": "3.14",
+      "previous_v2_number": 97,
+      "v2_number": "3.80",
+      "formula_sha256": "c814292d157c2af2b2a889d828b34fc834a62dcf0ef44f975da37231536f2423",
+      "lean_declarations": [
+        "SharpCut.Certificate.polarRotation_left_orthogonal"
+      ],
+      "formal_correspondence": "The actual left Gram/polar inverse-square calculation proves U U transpose=I; the right orthogonality identity is also certified."
+    },
+    {
+      "stable_label": "eq:3.15",
+      "original_equation": "3.15",
+      "previous_v2_number": 98,
+      "v2_number": "3.81",
+      "formula_sha256": "51935671c3d2d59185b92a352989da90ccc7c2257b1594ba24a96ae17d2192b5",
+      "lean_declarations": [
+        "SharpCut.Certificate.raw_rotated_aggregate",
+        "SharpCut.Certificate.polarRotation_aggregate",
+        "SharpCut.Certificate.rotated_aggregate_eq_polar"
+      ],
+      "formal_correspondence": "The raw contact/cut sum is U Q transpose=M, and its symmetrization preserves this positive aggregate."
+    },
+    {
+      "stable_label": "eq:3.16",
+      "original_equation": "3.16",
+      "previous_v2_number": 99,
+      "v2_number": "3.82",
+      "formula_sha256": "b8f3cf74d0bfc784019c57c87deed1b618c2bda82ce192455696e0f2609d2abe",
+      "lean_declarations": [
+        "SharpCut.Certificate.polarMatrix_det",
+        "SharpCut.Certificate.unrotatedQ_det_pos",
+        "SharpCut.Certificate.sharp_frame_determinant_bound"
+      ],
+      "formal_correspondence": "The positive polar determinant equals the positive Q determinant; the complete frame determinant theorem gives the reciprocal sharp lower bound."
+    },
+    {
+      "stable_label": "eq:3.17",
+      "original_equation": "3.17",
+      "previous_v2_number": 100,
+      "v2_number": "3.83",
+      "formula_sha256": "4e45c307c72c5c67be08d24d1b0f02479d2e153de1ee31a8b689269199b49aeb",
+      "lean_declarations": [
+        "SharpCut.Certificate.frame_volume_certificate",
+        "SharpCut.Certificate.sharp_frame_determinant_bound",
+        "SharpCut.Geometry.normalized_candidate_det_sharp"
+      ],
+      "formal_correspondence": "Every actual feasible cut ellipse receives the reciprocal certificate bound and the proved sharp R_n consequence, with positive determinants before inversion."
+    },
+    {
+      "stable_label": "eq:3.18",
+      "original_equation": "3.18",
+      "previous_v2_number": 101,
+      "v2_number": "3.84",
+      "formula_sha256": "1fb41b42328333e7e60d9491fe9256047c85b92efac4bc4a34d0667ad8e873c9",
+      "lean_declarations": [
+        "SharpCut.Geometry.normalized_volume",
+        "Khachiyan.john_isMaxDet",
+        "Khachiyan.IsMaxDet.maxEllipsoidVolume_eq_det",
+        "SharpCut.Geometry.sharp_center_cut_ratio_upper"
+      ],
+      "formal_correspondence": "The actual attained maximum on the full-dimensional cut converts physical volume/kappa to the optimal shape determinant; normalized old volume and the sharp upper bound give the displayed ratio."
+    },
+    {
+      "stable_label": "eq:4.1",
+      "original_equation": "4.1",
+      "previous_v2_number": 102,
+      "v2_number": "4.1",
+      "formula_sha256": "a8ea4ae10a81f77e39c7405a1208c29448938994155e0c98cb143a156b41986b",
+      "lean_declarations": [
+        "SharpCut.Optimization.coneHeight",
+        "SharpCut.Optimization.conePairing",
+        "SharpCut.Optimization.conePairing_nonneg",
+        "SharpCut.Optimization.matchingMatrix_posDef"
+      ],
+      "formal_correspondence": "The literal SOC heights and pairings use the actual Euclidean matrix action; feasibility proves each pairing nonnegative, and positive square-root congruence proves the matching matrix positive definite."
+    },
+    {
+      "stable_label": "eq:4.2",
+      "original_equation": "4.2",
+      "previous_v2_number": 103,
+      "v2_number": "4.2",
+      "formula_sha256": "17505f2b22b75be8819f5054886af0addb604d6d2a658c229aec7f41b6e0163c",
+      "lean_declarations": [
+        "SharpCut.Paper.cone_gap_expanded",
+        "SharpCut.Optimization.coneGap_trace",
+        "SharpCut.Optimization.matrixDivergence_nonneg",
+        "SharpCut.Optimization.normalized_pair_gap",
+        "SharpCut.Optimization.matchingMatrix_det",
+        "SharpCut.Optimization.matchingMatrix_trace"
+      ],
+      "formal_correspondence": "The expanded aggregate identity precedes balance and normalization; the trace bridge gives n-tr(AM), the positive spectral divergence is nonnegative, and the exact normalized gap is their sum."
+    },
+    {
+      "stable_label": "eq:4.3",
+      "original_equation": "4.3",
+      "previous_v2_number": 104,
+      "v2_number": "4.3",
+      "formula_sha256": "7017e20d7d9171cbdb4df26335a8d0275a0095c36c3e3b29b2dd833f11c6af35",
+      "lean_declarations": [
+        "SharpCut.Gap.exact_volume_deficit",
+        "SharpCut.Gap.affine_optimal_volume_deficit"
+      ],
+      "formal_correspondence": "The original three nonnegative terms sum to log(R_n/det A), and affine transport identifies the actual optimal-volume deficit in original coordinates."
+    },
+    {
+      "stable_label": "eq:4.4",
+      "original_equation": "4.4",
+      "previous_v2_number": 105,
+      "v2_number": "4.4",
+      "formula_sha256": "cee568d733f993cf68f14d5e4589f9b7b912fb53f6f488acdb191e426e1a8599",
+      "lean_declarations": [
+        "SharpCut.Paper.deficit_cancellation",
+        "SharpCut.Optimization.normalized_pair_gap"
+      ],
+      "formal_correspondence": "The precise positive-domain logarithmic cancellation combines with the normalized cone-plus-matrix identity; no commutation of A and M is used."
+    },
+    {
+      "stable_label": "eq:4.5",
+      "original_equation": "4.5",
+      "previous_v2_number": 106,
+      "v2_number": "4.5",
+      "formula_sha256": "88275e5f12439d1ff510fc3bd1f9c1097a1d7daaec9a154b506f1dc0bae185e4",
+      "lean_declarations": [
+        "SharpCut.Gap.geometricGap_zero_iff",
+        "SharpCut.Gap.geometricGap_contacts_iff",
+        "SharpCut.Optimization.coneGap_zero_iff",
+        "SharpCut.Gap.matrixDivergence_zero_iff",
+        "SharpCut.Gap.matchingMatrix_one_iff"
+      ],
+      "formal_correspondence": "These iff exports give every individual zero set, including all positive-weight contacts and the ordered positive-conjugate shape identity."
+    },
+    {
+      "stable_label": "eq:4.6",
+      "original_equation": "4.6",
+      "previous_v2_number": 107,
+      "v2_number": "4.6",
+      "formula_sha256": "9d362326b7278e95f98323cadaeffdd98b807d5a6c7421a68e6c74d3e38a7440",
+      "lean_declarations": [
+        "SharpCut.Gap.matrix_matching"
+      ],
+      "formal_correspondence": "The actual normalized primal/dual gap controls the Frobenius norm of the positive matching conjugate with the original constant 2 and threshold 1/4."
+    },
+    {
+      "stable_label": "eq:4.7",
+      "original_equation": "4.7",
+      "previous_v2_number": 108,
+      "v2_number": "4.7",
+      "formula_sha256": "057f8598ccce26deb66c018347098fbd85f5eef6d9dc5aa1a4d175f00d573f1a",
+      "lean_declarations": [
+        "SharpCut.Gap.scalarDivergence_coercive",
+        "SharpCut.Gap.scalarDivergence_two",
+        "SharpCut.Gap.divergence_integral"
+      ],
+      "formal_correspondence": "The all-positive scalar integral argument proves the max(1,t) denominator bound on both sides of one and the strict value at two."
+    },
+    {
+      "stable_label": "eq:4.8",
+      "original_equation": "4.8",
+      "previous_v2_number": 109,
+      "v2_number": "4.8",
+      "formula_sha256": "ec2ffdcb4845540e4efc54f4a31cee322f070652c0f6456bfcd5891ac74d908c",
+      "lean_declarations": [
+        "SharpCut.Paper.matching_square_chain",
+        "SharpCut.Gap.small_divergence_eigenvalues"
+      ],
+      "formal_correspondence": "The exported chain retains the exact spectral squared norm, scalar divergence sum, factor four and comparison with G; the eigenvalue threshold is separately derived from the same small-gap domain."
+    },
+    {
+      "stable_label": "eq:5.1",
+      "original_equation": "5.1",
+      "previous_v2_number": 110,
+      "v2_number": "4.9",
+      "formula_sha256": "0374261e5d075d512df3a96da26d800e6c9128fbddc41d9e7478e4c43123c3ca",
+      "lean_declarations": [
+        "SharpCut.Equality.modelContactSet",
+        "SharpCut.Equality.modelContactSet_iff"
+      ],
+      "formal_correspondence": "The actual set is the singleton opposite pole union the unit latitude sphere; unit-norm membership is equivalent to heights -1 or b."
+    },
+    {
+      "stable_label": "eq:5.2",
+      "original_equation": "5.2",
+      "previous_v2_number": 111,
+      "v2_number": "4.10",
+      "formula_sha256": "6c8865ef66d8a5e1f5eb521afb2d5fbeba44ede9d7ed45654b9e3135b6f02262",
+      "lean_declarations": [
+        "SharpCut.Equality.equality_classification",
+        "SharpCut.Equality.equality_sandwich_iff"
+      ],
+      "formal_correspondence": "The full actual-body iff includes the convex hull of the old ball and the candidate new ellipsoid, the supporting contact outer polytope, and the universal supporting-frame necessity."
+    },
+    {
+      "stable_label": "eq:5.3",
+      "original_equation": "5.3",
+      "previous_v2_number": 112,
+      "v2_number": "4.11",
+      "formula_sha256": "c0b489a3e1535dbb3a587bf79c6ff4d5d7d19580870b94246e4f6bac3edea122",
+      "lean_declarations": [
+        "SharpCut.Paper.zero_deficit_certificate"
+      ],
+      "formal_correspondence": "The literal zero-loss chain now exports chi=0, Q=M=M0, U=I and A=Astar for every supporting frame and feasible zero-deficit ellipsoid."
+    },
+    {
+      "stable_label": "eq:5.4",
+      "original_equation": "5.4",
+      "previous_v2_number": 113,
+      "v2_number": "4.12",
+      "formula_sha256": "2267f870461c561ce1db6f943acff9a387b84a37352635b482081897c92ec139",
+      "lean_declarations": [
+        "SharpCut.Paper.zero_deficit_support_center",
+        "SharpCut.Gap.frameConeGap_zero_iff",
+        "SharpCut.Equality.zero_deficit_parameters"
+      ],
+      "formal_correspondence": "Zero cone pairings and the recovered model shape give the zero multiplier-times-support slack; the exported model support calculation gives every vanishing center projection."
+    },
+    {
+      "stable_label": "eq:5.5",
+      "original_equation": "5.5",
+      "previous_v2_number": 114,
+      "v2_number": "4.13",
+      "formula_sha256": "6e10de9adcfc2b7bdcb1a7e96ed9894ca257782eb720a9268dfcbadfdac30e0b",
+      "lean_declarations": [
+        "SharpCut.Paper.zero_deficit_support_center",
+        "SharpCut.JohnFrame.scalar_second_moment"
+      ],
+      "formal_correspondence": "The exact isotropic norm-square identity and the vanishing projection sum are exported together, retaining the actual Euclidean center."
+    },
+    {
+      "stable_label": "eq:5.6",
+      "original_equation": "5.6",
+      "previous_v2_number": 115,
+      "v2_number": "4.14",
+      "formula_sha256": "35d86764615f9ba2145e10b1239ac7361c24b095e7d709054f40244ee6c19654",
+      "lean_declarations": [
+        "SharpCut.Geometry.normalized_volume",
+        "SharpCut.Equality.included_model_attains",
+        "SharpCut.Sharpness.modelShape_det",
+        "Khachiyan.volume_ellipsoid_eq_det"
+      ],
+      "formal_correspondence": "The original John-normalized volume is kappa_n and the included model has determinant R_n; its feasible Lebesgue volume supplies the lower bound, and the sharp theorem supplies equality."
+    },
+    {
+      "stable_label": "eq:5.7",
+      "original_equation": "5.7",
+      "previous_v2_number": 116,
+      "v2_number": "4.15",
+      "formula_sha256": "8f205dfe5688b61477b82c14b2ba538c8ca53829fbb7dac9cce88ce2089ef661",
+      "lean_declarations": [
+        "SharpCut.Equality.familyContact",
+        "SharpCut.Equality.familyWeight",
+        "SharpCut.Equality.transverse_extremal_construction"
+      ],
+      "formal_correspondence": "The arbitrary transverse unit/balanced/isotropic family uses exactly the stated latitude, rescaled weights and separate opposite pole; the constructed data satisfy the full John identities."
+    },
+    {
+      "stable_label": "eq:5.8",
+      "original_equation": "5.8",
+      "previous_v2_number": 117,
+      "v2_number": "4.16",
+      "formula_sha256": "6c0540f587aab056683bbd40ddadd715f260ae785a74a70879aedae00e8d67f5",
+      "lean_declarations": [
+        "SharpCut.Equality.transverse_weight_sum",
+        "SharpCut.Equality.latitude_weight_sum",
+        "SharpCut.Determinant.dimension_inverseDimension"
+      ],
+      "formal_correspondence": "Taking the actual transverse trace gives n-1; b=1/n identifies (1-b)/b and the exact latitude weight sum 1/[b(1+b)]."
+    },
+    {
+      "stable_label": "eq:5.9",
+      "original_equation": "5.9",
+      "previous_v2_number": 118,
+      "v2_number": "4.17",
+      "formula_sha256": "2937a8dc14b37e540219c800062dd70769b8b307a223dace97cf22fe748d327b",
+      "lean_declarations": [
+        "SharpCut.Equality.family_first_moment",
+        "SharpCut.Equality.family_second_moment",
+        "SharpCut.Equality.scaled_vector_balance"
+      ],
+      "formal_correspondence": "The two proved finite moment expansions retain the pole contribution, latitude axial sum and transverse isotropy; the balanced transverse vector makes both mixed outer-product sums vanish."
+    },
+    {
+      "stable_label": "eq:5.10",
+      "original_equation": "5.10",
+      "previous_v2_number": 119,
+      "v2_number": "4.18",
+      "formula_sha256": "8d9c60cd22c2e7ee7107a05800e5f42bec14f3194a0c00b152bd12103d1205b6",
+      "lean_declarations": [
+        "SharpCut.Examples.SquarePyramid.body",
+        "SharpCut.Examples.SquarePyramid.polytope_eq_body",
+        "SharpCut.Examples.SquarePyramid.raw_membership"
+      ],
+      "formal_correspondence": "The literal x,y,z square-pyramid inequalities are proved equivalent to its five-contact John polytope, with the Euclidean coordinates and 2sqrt(2) factors."
+    },
+    {
+      "stable_label": "eq:5.11",
+      "original_equation": "5.11",
+      "previous_v2_number": 120,
+      "v2_number": "4.19",
+      "formula_sha256": "85ce0b3faa8f3b005e1833efbea9157c5eba8a4dcd80a4f96b9f73f372010a6c",
+      "lean_declarations": [
+        "SharpCut.Examples.SquarePyramid.new_john_parameters",
+        "SharpCut.Examples.SquarePyramid.center_explicit",
+        "SharpCut.Examples.SquarePyramid.shape_explicit",
+        "SharpCut.Examples.SquarePyramid.candidate_shape_det",
+        "SharpCut.Examples.SquarePyramid.volume_ratio"
+      ],
+      "formal_correspondence": "The actual canonical new John center and shape equal the stated diagonal model; the physical Lebesgue-volume ratio and determinant are exactly 3/4."
+    },
+    {
+      "stable_label": "eq:6.1",
+      "original_equation": "6.1",
+      "previous_v2_number": 121,
+      "v2_number": "4.20",
+      "formula_sha256": "099ce2fe2424ac105a7af03de66c189fcd32d1542770b530ff6931ab11513947",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_residual"
+      ],
+      "formal_correspondence": "The original dimension-independent squared residual and weighted actual infDist-to-pole/latitude estimate are proved with factors (1-b)/(2-b) and 32/3."
+    },
+    {
+      "stable_label": "eq:6.2",
+      "original_equation": "6.2",
+      "previous_v2_number": 122,
+      "v2_number": "4.21",
+      "formula_sha256": "917ef1156374bda3e738427f8d8d75484cfa935e651335b0e2af8db0bb2c22e6",
+      "lean_declarations": [
+        "SharpCut.Stability.dimension_independent_stability"
+      ],
+      "formal_correspondence": "The full feasible nearly extremal ellipsoid theorem retains every bound, threshold 10^-6 and exact constants 32,4,30,50,1024/3, including zero deficit."
+    },
+    {
+      "stable_label": "eq:6.3",
+      "original_equation": "6.3",
+      "previous_v2_number": 123,
+      "v2_number": "4.22",
+      "formula_sha256": "13401434b42cee2584c96a6a0849aae6fbf4763bf4d9520e7637465d3116265b",
+      "lean_declarations": [
+        "SharpCut.Gap.exact_volume_deficit",
+        "SharpCut.Stability.geometric_control",
+        "SharpCut.Stability.near_extremal_polar_bounds"
+      ],
+      "formal_correspondence": "The global 1500epsilon bound enters the exact small-defect threshold; local control then improves chi to 32 times the geometric gap, which is at most the total deficit."
+    },
+    {
+      "stable_label": "eq:6.4",
+      "original_equation": "6.4",
+      "previous_v2_number": 124,
+      "v2_number": "4.23",
+      "formula_sha256": "d1e144cf198b78689a7db1e93ff6c7e03a31eebcddcc7492b775136dd3022b45",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_residual",
+        "SharpCut.Stability.near_extremal_polar_bounds",
+        "SharpCut.Stability.dimension_independent_stability"
+      ],
+      "formal_correspondence": "The residual factor is at most one half on b=1/n, n>=2; inserting chi<=32epsilon gives the squared residual and weighted distance chains and their original constants."
+    },
+    {
+      "stable_label": "eq:6.5",
+      "original_equation": "6.5",
+      "previous_v2_number": 125,
+      "v2_number": "4.24",
+      "formula_sha256": "a3286d0910d0e9d2bf0262f31f24005edb75f4b42e5c1a5a459713f0e3966592",
+      "lean_declarations": [
+        "SharpCut.Stability.matching_error_reconstruction",
+        "SharpCut.Stability.inverse_difference_ordered",
+        "SharpCut.Stability.matching_shape_error",
+        "SharpCut.Stability.inverse_difference_frobenius",
+        "SharpCut.Stability.near_extremal_shape_coefficient",
+        "SharpCut.Stability.near_extremal_shape_bound"
+      ],
+      "formal_correspondence": "The ordered inverse identities split the actual shape error. Rayleigh lower bounds, equivalent to lower eigenvalues, give both Frobenius fractions; the proved 7/10 spectral bounds yield exactly 20/7+1200/49, then 30."
+    },
+    {
+      "stable_label": "eq:6.6",
+      "original_equation": "6.6",
+      "previous_v2_number": 126,
+      "v2_number": "4.25",
+      "formula_sha256": "eaef85e6d7f1caeb9a1f0c867416f84e2f319f58f0122803ab8b0c986cc01725",
+      "lean_declarations": [
+        "SharpCut.Stability.weighted_multiplier_slack_chain",
+        "SharpCut.Stability.weighted_contact_slack_bound",
+        "SharpCut.Gap.exact_volume_deficit"
+      ],
+      "formal_correspondence": "The exported original-weight chain gives lambda slack<=4alpha slack<=4C; nonnegative exact losses give C<=epsilon."
+    },
+    {
+      "stable_label": "eq:6.7",
+      "original_equation": "6.7",
+      "previous_v2_number": 127,
+      "v2_number": "4.26",
+      "formula_sha256": "466744b93c683869a236443ef6a6ccf42da3d0a455ced38cbf2b62e73df91fbc",
+      "lean_declarations": [
+        "SharpCut.Stability.center_vector_identity",
+        "SharpCut.Stability.contactSlack",
+        "SharpCut.Stability.modelMismatch"
+      ],
+      "formal_correspondence": "The exact center reconstruction retains both negative weighted slack and model-mismatch vectors plus the actual difference of Euclidean support norms."
+    },
+    {
+      "stable_label": "eq:6.8",
+      "original_equation": "6.8",
+      "previous_v2_number": 128,
+      "v2_number": "4.27",
+      "formula_sha256": "afb60b91eafe2b4d42df48a491cb0af7d76e14660734dd561ca8e12f751d39a0",
+      "lean_declarations": [
+        "SharpCut.Stability.frame_support_difference_square",
+        "SharpCut.Stability.frame_action_norm_sq"
+      ],
+      "formal_correspondence": "The reverse triangle inequality gives the weighted squared support difference, and actual frame isotropy identifies the action norm sum with the Frobenius square."
+    },
+    {
+      "stable_label": "eq:6.9",
+      "original_equation": "6.9",
+      "previous_v2_number": 129,
+      "v2_number": "4.28",
+      "formula_sha256": "d29a721398c03cf97b50ddf712c82b68f99411c3e9f0f86cd36d3c045ba9e1ba",
+      "lean_declarations": [
+        "SharpCut.Stability.center_recovery_bound",
+        "SharpCut.Stability.near_extremal_center_bound"
+      ],
+      "formal_correspondence": "The explicit slack/mismatch/shape center estimate and nonnegative gap decomposition give the displayed 4epsilon+shape+sqrt(8chi) bound, then the original constant 50."
+    },
+    {
+      "stable_label": "eq:9.1",
+      "original_equation": "9.1",
+      "previous_v2_number": 130,
+      "v2_number": "4.29",
+      "formula_sha256": "94bde0c5392d62143552cc20a6805c29388275f2a07fefd9f5c4a8d3d0a988dd",
+      "lean_declarations": [
+        "SharpCut.Gap.cone_sum_of_squares"
+      ],
+      "formal_correspondence": "The exact all-real cone-pairing sum of squares is proved by actual Euclidean norm/inner-product algebra, before any positivity assumptions."
+    },
+    {
+      "stable_label": "eq:9.2",
+      "original_equation": "9.2",
+      "previous_v2_number": 131,
+      "v2_number": "4.30",
+      "formula_sha256": "2da9b3909575ad1000bc968e252f390d0864728c79023c26c767fdeda37ac7fe",
+      "lean_declarations": [
+        "SharpCut.Gap.quantitative_complementarity",
+        "SharpCut.Gap.directionResidualSum_bound"
+      ],
+      "formal_correspondence": "The full normalized feasible-pair contract proves both matrix matching and the filtered positive-alpha direction residual estimate with the original 2sqrt(epsilon) and 2epsilon constants and positive normal-derived cone heights."
+    },
+    {
+      "stable_label": "eq:9.3",
+      "original_equation": "9.3",
+      "previous_v2_number": 132,
+      "v2_number": "4.31",
+      "formula_sha256": "df2b2b23bd9531f8d91fb49d4e75a7abe96dca2dcd361b9729e12455f8ebae4f",
+      "lean_declarations": [
+        "SharpCut.Stability.geometric_residual",
+        "SharpCut.Stability.normalized_residual_bound"
+      ],
+      "formal_correspondence": "The actual matrix residual, normalized Frobenius residual and weighted pole/latitude infDist bounds retain all original dimensional factors and the constant 32/3."
+    },
+    {
+      "stable_label": "eq:9.4",
+      "original_equation": "9.4",
+      "previous_v2_number": 133,
+      "v2_number": "4.32",
+      "formula_sha256": "72cdc30649169e8556b0b67e77e00703ed9257c8bbd3759aaaa6a69201ea862a",
+      "lean_declarations": [
+        "SharpCut.Stability.contactResidual",
+        "SharpCut.Stability.contactResidual_expansion"
+      ],
+      "formal_correspondence": "The exact contact residual vector has the literal signed axial/transverse decomposition with denominator d(1-as), on the actual unit vectors and Euclidean projector."
+    },
+    {
+      "stable_label": "eq:9.5",
+      "original_equation": "9.5",
+      "previous_v2_number": 134,
+      "v2_number": "4.33",
+      "formula_sha256": "d86c0d80394f62b7320c4b7e31e13d3cf3ad709c961d29aaffd637e4e5578bcb",
+      "lean_declarations": [
+        "SharpCut.Stability.residual_aggregate",
+        "SharpCut.Stability.contactResidual_norm_sq"
+      ],
+      "formal_correspondence": "The original nonsymmetric outer-product aggregate is Q-M0 with the correct u_i xi_i transpose order; the actual Euclidean residual norm has the exact (1-b)/d defect factor."
+    },
+    {
+      "stable_label": "eq:9.6",
+      "original_equation": "9.6",
+      "previous_v2_number": 135,
+      "v2_number": "4.34",
+      "formula_sha256": "d3f7bf925f0b36a09eb65691c95ce0f828c91522ad21935fcf7b3cc3d372c3de",
+      "lean_declarations": [
+        "SharpCut.Stability.contact_distance_residual"
+      ],
+      "formal_correspondence": "The pointwise weighted-height defect controls actual infDist to the full pole-and-latitude set, with the original constant 3/32 and no choice of a unique simplex."
+    },
+    {
+      "stable_label": "eq:9.7",
+      "original_equation": "9.7",
+      "previous_v2_number": 136,
+      "v2_number": "4.35",
+      "formula_sha256": "bb4dc5232b275d069a461c2bb95f644f276002f016d54e01943d0e73d94c8157",
+      "lean_declarations": [
+        "SharpCut.Stability.root_difference_sq_le",
+        "SharpCut.Stability.latitude_comparison"
+      ],
+      "formal_correspondence": "The square-root difference inequality is proved on the entire s in [-1,1] and b in (0,1/2] domain; a unit transverse candidate gives the actual latitude distance comparison, including axial endpoints."
+    },
+    {
+      "stable_label": "eq:9.8",
+      "original_equation": "9.8",
+      "previous_v2_number": 137,
+      "v2_number": "4.36",
+      "formula_sha256": "d46c31e7e55c61706f02d83fe56d9dbe3a887b781c92081cad63ebdb0ff65098",
+      "lean_declarations": [
+        "SharpCut.Stability.global_geometric_stability"
+      ],
+      "formal_correspondence": "The exact nonnegative deficit gives chi<=1500epsilon, weighted actual distance<=16000epsilon and logdet Fhat>=norm(Fhat-I)^2/1000 with all dimensional branches."
+    },
+    {
+      "stable_label": "eq:9.9",
+      "original_equation": "9.9",
+      "previous_v2_number": 138,
+      "v2_number": "4.37",
+      "formula_sha256": "5670e9bdd08b74fcc25157bc3290421e560731992a1f23ff86d97e56b3f6c646",
+      "lean_declarations": [
+        "SharpCut.Stability.local_coercivity"
+      ],
+      "formal_correspondence": "The exact local sigma<=1/1000 theorem proves logdet Fhat>=sigma/16>=chi/32, with both zero and positive sigma endpoints."
+    },
+    {
+      "stable_label": "eq:9.10",
+      "original_equation": "9.10",
+      "previous_v2_number": 139,
+      "v2_number": "4.38",
+      "formula_sha256": "431451d68430aad049e66f33efea4c4dbca12e44a217dc4967f857b9313e9b88",
+      "lean_declarations": [
+        "SharpCut.Stability.local_deformation_coupling",
+        "SharpCut.Certificate.direct_coupling_bound"
+      ],
+      "formal_correspondence": "The original scalar L is at most one on the local domain; the actual direct-coupling inverse-vector bound gives A_E+norm(K_E inverse j)^2<=sigma/2 without dividing by L."
+    },
+    {
+      "stable_label": "eq:9.11",
+      "original_equation": "9.11",
+      "previous_v2_number": 140,
+      "v2_number": "4.39",
+      "formula_sha256": "5c507ab1dc91f3676afc3b5cb27dedd55dd5a68b95fc5e0dc5599e17a97a2978",
+      "lean_declarations": [
+        "SharpCut.Stability.local_metric_norm_bound"
+      ],
+      "formal_correspondence": "The actual Hermitian spectral basis confines K_E, controls E and the inverse-vector term together, and gives the exact coefficients 20/21 and 21/40 without a dimension factor."
+    },
+    {
+      "stable_label": "eq:9.12",
+      "original_equation": "9.12",
+      "previous_v2_number": 141,
+      "v2_number": "4.40",
+      "formula_sha256": "59dfe9a983d78f9a6d181232efe2fd0ab819a3d0260bc8a80896b79e846c68ab",
+      "lean_declarations": [
+        "SharpCut.Stability.normalized_arrow_identity",
+        "SharpCut.Stability.arrow_frobenius_sq",
+        "SharpCut.Stability.local_full_frobenius_bound",
+        "SharpCut.Stability.local_operator_bound"
+      ],
+      "formal_correspondence": "The full actual arrow matrix Frobenius square is x^2+2norm(j)^2+norm(E)^2. Local spectral/Gram estimates give 5sigma/6 and the strict operator threshold 1/30."
+    },
+    {
+      "stable_label": "eq:9.13",
+      "original_equation": "9.13",
+      "previous_v2_number": 142,
+      "v2_number": "4.41",
+      "formula_sha256": "94d17cdac01a2a5013d403586003977472406a84ed8d8cc7bcbbc3ff8c34e706",
+      "lean_declarations": [
+        "SharpCut.Stability.logdet_quadratic_lower",
+        "SharpCut.Stability.normalized_trace_gain",
+        "SharpCut.Stability.local_full_frobenius_bound",
+        "SharpCut.Stability.local_logdet_gain",
+        "SharpCut.Stability.local_coercivity"
+      ],
+      "formal_correspondence": "The positive spectral scalar logarithm inequality retains coefficient 15/29. Exact trace gain and the 5sigma/6 bound yield sigma/2-(15/29)(5sigma/6)=2sigma/29, then sigma/16."
+    },
+    {
+      "stable_label": "eq:9.14",
+      "original_equation": "9.14",
+      "previous_v2_number": 143,
+      "v2_number": "4.42",
+      "formula_sha256": "3115b62a00541440d2ba43930084cbf14e7463f1930edf729449ba65d08c664b",
+      "lean_declarations": [
+        "SharpCut.Stability.perturbed_model_action_bounds",
+        "SharpCut.Stability.polar_action_norm",
+        "SharpCut.Stability.polar_gram_quadratic"
+      ],
+      "formal_correspondence": "Actual Euclidean actions of Q transpose have both perturbed model bounds; QQ transpose=M squared gives the exact positive quadratic/norm-square identity."
+    },
+    {
+      "stable_label": "eq:9.15",
+      "original_equation": "9.15",
+      "previous_v2_number": 144,
+      "v2_number": "4.43",
+      "formula_sha256": "fb8de4dca538d8ec93e003e3b1820d99623b0684686e212de864414bb1c5b556",
+      "lean_declarations": [
+        "SharpCut.Stability.near_extremal_polar_bounds",
+        "SharpCut.Stability.perturbed_model_operator_upper",
+        "SharpCut.Stability.polar_eigenvalue_bounds"
+      ],
+      "formal_correspondence": "The actual small residual implies delta<=1/250; every positive polar eigenvalue lies strictly between 7/10 and 201/100, and the nonsymmetric Q operator bound is derived separately."
+    },
+    {
+      "stable_label": "eq:9.16",
+      "original_equation": "9.16",
+      "previous_v2_number": 145,
+      "v2_number": "4.44",
+      "formula_sha256": "680b5c1700aafb16b7ad0ca1faec6a1f24dc51a561e348646b6dc0f18dbfe377",
+      "lean_declarations": [
+        "SharpCut.Stability.frobeniusPair_left_lower",
+        "SharpCut.Stability.frobeniusPair_right_lower",
+        "SharpCut.Stability.polar_sylvester_trace_identity",
+        "SharpCut.Stability.frobeniusPair_cauchy"
+      ],
+      "formal_correspondence": "Separate positive Rayleigh lower bounds, equivalent to the minimum eigenvalues, control both ordered trace terms; the actual Sylvester identity gives the Gram difference pairing, and Frobenius Cauchy gives the final product."
+    },
+    {
+      "stable_label": "eq:9.17",
+      "original_equation": "9.17",
+      "previous_v2_number": 146,
+      "v2_number": "4.45",
+      "formula_sha256": "ca65caf51b6db9d82dbc3cf880d13d2a442ce388b44215167d88b519d24a60cc",
+      "lean_declarations": [
+        "SharpCut.Stability.sylvester_frobenius_bound",
+        "SharpCut.Stability.polar_sylvester_identity",
+        "SharpCut.Stability.gram_difference_frobenius",
+        "SharpCut.Stability.near_extremal_polar_coefficient",
+        "SharpCut.Stability.near_extremal_polar_bounds"
+      ],
+      "formal_correspondence": "The noncommuting Sylvester estimate and actual Gram difference factorization retain both lower spectra and the operator-sum numerator; the exact intermediate coefficient is 401/35, followed by 12."
+    },
+    {
+      "stable_label": "eq:9.18",
+      "original_equation": "9.18",
+      "previous_v2_number": 147,
+      "v2_number": "4.46",
+      "formula_sha256": "bcfe65415affad7088e036cbdf3796d1ba0bdfd02a4d657f14aaaf04e0f292d3",
+      "lean_declarations": [
+        "SharpCut.Stability.near_extremal_shape_coefficient",
+        "SharpCut.Stability.near_extremal_shape_bound"
+      ],
+      "formal_correspondence": "The actual ordered inverse and positive square-root matching transfers give the exact coefficient 20/7+1200/49 and its rounded bound 30sqrt(epsilon)."
+    },
+    {
+      "stable_label": "eq:9.19",
+      "original_equation": "9.19",
+      "previous_v2_number": 148,
+      "v2_number": "4.47",
+      "formula_sha256": "5333e46f0c252aff65a7408db0e8aa94bcdd197cd006a72452a288500dcdd5f5",
+      "lean_declarations": [
+        "SharpCut.Sharpness.modelShape_norm_sq",
+        "SharpCut.Stability.model_support_mismatch_identity"
+      ],
+      "formal_correspondence": "The actual positive model shape norm-square has the displayed axial/transverse formula; subtracting the model affine support square gives the exact factored mismatch."
+    },
+    {
+      "stable_label": "eq:9.20",
+      "original_equation": "9.20",
+      "previous_v2_number": 149,
+      "v2_number": "4.48",
+      "formula_sha256": "d4dca1a8a9fa47743eb31543d2f6ddc47dc6b394a740ade05c87197d42e3c586",
+      "lean_declarations": [
+        "SharpCut.Stability.modelMismatch",
+        "SharpCut.Stability.model_support_mismatch_identity",
+        "SharpCut.Stability.modelShape_unit_lower"
+      ],
+      "formal_correspondence": "The exact support mismatch rationalization retains the Euclidean shape action and both denominator factors; positivity of the shape norm and height bounds justify the division everywhere."
+    },
+    {
+      "stable_label": "eq:9.21",
+      "original_equation": "9.21",
+      "previous_v2_number": 150,
+      "v2_number": "4.49",
+      "formula_sha256": "188a35cc6079164f64aa12b415561c3db79835d81d17c3aacbfc2e82c467888a",
+      "lean_declarations": [
+        "SharpCut.Stability.model_support_mismatch_bound",
+        "SharpCut.Stability.weighted_model_mismatch_bound"
+      ],
+      "formal_correspondence": "The literal pointwise squared mismatch is controlled by eight times the height defect, and positive finite John weights give the exact weighted 8chi bound."
+    },
+    {
+      "stable_label": "eq:9.22",
+      "original_equation": "9.22",
+      "previous_v2_number": 151,
+      "v2_number": "4.50",
+      "formula_sha256": "6fa6f6b88345e142b639f2fdc40beb593ced44d460c90fede8a74a39af92df59",
+      "lean_declarations": [
+        "SharpCut.Stability.center_projection_identity"
+      ],
+      "formal_correspondence": "The exact actual Euclidean center projection has both negative slack/mismatch terms and the model-minus-candidate support norm difference."
+    },
+    {
+      "stable_label": "eq:9.23",
+      "original_equation": "9.23",
+      "previous_v2_number": 152,
+      "v2_number": "4.51",
+      "formula_sha256": "62354258dfda60a5e4770ca113231bf7cf9aa19c0bc0942ca6df9bd9697ba516",
+      "lean_declarations": [
+        "SharpCut.Stability.center_recovery_bound",
+        "SharpCut.Stability.near_extremal_center_bound",
+        "SharpCut.Gap.exact_volume_deficit"
+      ],
+      "formal_correspondence": "Weighted John reconstruction, finite Bessel and slack/mismatch controls give the complete center bound; C<=epsilon and the local chi/shape bounds yield the original 50sqrt(epsilon)."
+    },
+    {
+      "stable_label": "eq:2.10",
+      "original_equation": "2.10",
+      "previous_v2_number": 153,
+      "v2_number": "5.1",
+      "formula_sha256": "eebf318797e54837bcca8020fac076d7f7e457c86cabcb327438cf9b28f233f4",
+      "lean_declarations": [
+        "SharpCut.Optimization.normalized_contact_facet",
+        "SharpCut.Paper.active_facet_support_chain"
+      ],
+      "formal_correspondence": "Every genuine normalized contact is assigned an active original facet; the explicit unit-contact primal/Cauchy chain gives both inequalities and equalities."
+    },
+    {
+      "stable_label": "eq:2.11",
+      "original_equation": "2.11",
+      "previous_v2_number": 154,
+      "v2_number": "5.2",
+      "formula_sha256": "c9e4820f31e06ed91b36301d23f0261238cd29898965f8c9624d5bc24e4e9590",
+      "lean_declarations": [
+        "SharpCut.Optimization.facetDirection",
+        "SharpCut.Optimization.exists_facet_john_data",
+        "SharpCut.Optimization.FacetJohnData.first",
+        "SharpCut.Optimization.FacetJohnData.second",
+        "SharpCut.Optimization.FacetJohnData.weight_sum"
+      ],
+      "formal_correspondence": "The actual normalized facet directions and grouped nonnegative John weights have zero first moment, identity second moment and mass n; positive lengths are proved before division."
+    },
+    {
+      "stable_label": "eq:2.12",
+      "original_equation": "2.12",
+      "previous_v2_number": 155,
+      "v2_number": "5.3",
+      "formula_sha256": "83f8516d733f4749223419472e297becf82b69a51207cab67ee70b57617dd8a8",
+      "lean_declarations": [
+        "SharpCut.Optimization.FacetJohnData.normal_balance",
+        "SharpCut.Optimization.FacetJohnData.normalization",
+        "SharpCut.Optimization.FacetJohnData.vector_norm",
+        "SharpCut.Optimization.FacetJohnData.pairings_zero"
+      ],
+      "formal_correspondence": "Constructed alpha=mu/ell and q=alpha p satisfy all original balance, mass, cone norm and zero pairing identities."
+    },
+    {
+      "stable_label": "eq:2.13",
+      "original_equation": "2.13",
+      "previous_v2_number": 156,
+      "v2_number": "5.4",
+      "formula_sha256": "2a610f9d5c77f4fc78243166ccad3c1f7d495f9272989477c34465820336a243",
+      "lean_declarations": [
+        "SharpCut.Optimization.FacetJohnData.raw_aggregate"
+      ],
+      "formal_correspondence": "The unsymmetrized finite sum is derived as A inverse in the displayed multiplication order; no commutation is assumed."
+    },
+    {
+      "stable_label": "eq:2.14",
+      "original_equation": "2.14",
+      "previous_v2_number": 157,
+      "v2_number": "5.5",
+      "formula_sha256": "e2ffc22e8eb09164bd7f2fc78f75791dc53f3e35ebf56b9e931856ef6334816d",
+      "lean_declarations": [
+        "SharpCut.Optimization.optimality_iff_kkt",
+        "SharpCut.Optimization.kkt_optimality_and_contacts"
+      ],
+      "formal_correspondence": "The actual attained primal/dual optimality iff is exactly inverse aggregate plus all zero cone pairings."
+    },
+    {
+      "stable_label": "eq:2.15",
+      "original_equation": "2.15",
+      "previous_v2_number": 158,
+      "v2_number": "5.6",
+      "formula_sha256": "ae36182ad1c79cc70fe5ad1a368b61301ea2c7474f37720214869c045e02ca67",
+      "lean_declarations": [
+        "SharpCut.Optimization.kkt_active_contact",
+        "SharpCut.Optimization.facetDirection"
+      ],
+      "formal_correspondence": "Positive alpha and zero pairing give active support and q=alpha A g/ell, with nonzero normals and positive lengths."
+    },
+    {
+      "stable_label": "eq:2.16",
+      "original_equation": "2.16",
+      "previous_v2_number": 159,
+      "v2_number": "5.7",
+      "formula_sha256": "395f5d1020aac7f7d709490b6b78fd0b080b7204da907893e401fc5b8371ed5e",
+      "lean_declarations": [
+        "SharpCut.Optimization.contactMoment_inverse_square",
+        "SharpCut.Optimization.sylvester_trace_identity",
+        "SharpCut.Optimization.sylvester_trace_coercivity",
+        "SharpCut.Optimization.positive_sylvester_zero"
+      ],
+      "formal_correspondence": "For the moment difference H, the ordered Sylvester equation, exact trace identity and actual minimum-eigenvalue/Frobenius coercivity force H=0."
+    },
+    {
+      "stable_label": "eq:2.17",
+      "original_equation": "2.17",
+      "previous_v2_number": 160,
+      "v2_number": "5.8",
+      "formula_sha256": "6070a0ce0f933976a76b92c0110cb61ab333328b0e35c9c1f9cfabf21f0f6349",
+      "lean_declarations": [
+        "SharpCut.Optimization.recovered_first_moment",
+        "SharpCut.Optimization.recovered_second_identity",
+        "SharpCut.Optimization.recovered_second_moment",
+        "SharpCut.Optimization.kkt_contact_moments"
+      ],
+      "formal_correspondence": "Recovered mu=alpha ell and unit p obey the first moment, ordered A T A identity, isotropy and mass n; the inverse-square moment is derived by Sylvester injectivity."
+    },
+    {
+      "stable_label": "eq:7.1",
+      "original_equation": "7.1",
+      "previous_v2_number": 161,
+      "v2_number": "5.9",
+      "formula_sha256": "43241bf0ebfef131b8d42cd30b7b7546b724eff3dc23aad847a4cd7a9939073d",
+      "lean_declarations": [
+        "SharpCut.Applications.exact_cut_sequence_volume"
+      ],
+      "formal_correspondence": "The actual successive exact central cuts use each current canonical John center; induction proves the physical maximal-volume power bound."
+    },
+    {
+      "stable_label": "eq:7.2",
+      "original_equation": "7.2",
+      "previous_v2_number": 162,
+      "v2_number": "5.10",
+      "formula_sha256": "cad1f3ff76464b1a55b5463518ee5bd180c6b273937625cb0a753b1e788888a5",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_iteration_bound"
+      ],
+      "formal_correspondence": "The retained inner ball and outer radius give the iteration count with the sharp dimensional negative logarithm, after proving all radii and volumes positive and finite."
+    },
+    {
+      "stable_label": "eq:7.3",
+      "original_equation": "7.3",
+      "previous_v2_number": 163,
+      "v2_number": "5.11",
+      "formula_sha256": "2a2ad92cd50a58b758ddbca4adcb3885ff79a2eddf17be4ef5ba243cba133305",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_volume_chain",
+        "SharpCut.Applications.ball_volume_eq"
+      ],
+      "formal_correspondence": "The full physical volume chain includes both ball powers, the repeated sharp factor and the initial outer-ball volume."
+    },
+    {
+      "stable_label": "eq:7.4",
+      "original_equation": "7.4",
+      "previous_v2_number": 164,
+      "v2_number": "5.12",
+      "formula_sha256": "492f79e538d60557fdef5cba1cc403207e51cc1efaa487774e145fe65e63524d",
+      "lean_declarations": [
+        "SharpCut.Applications.retained_ball_log_chain",
+        "SharpCut.Applications.sharpRatio_log_decrease_pos"
+      ],
+      "formal_correspondence": "The exported exact logarithmic ball chain includes the rearranged count inequality; strict negativity of log R_n justifies dividing by its opposite."
+    },
+    {
+      "stable_label": "eq:7.5",
+      "original_equation": "7.5",
+      "previous_v2_number": 165,
+      "v2_number": "5.13",
+      "formula_sha256": "0e98844d7ce0eba97cfec22f6cafb3c453e717141e1cc144717bdc0d8df028db",
+      "lean_declarations": [
+        "SharpCut.Applications.sharpRatio_full_series",
+        "SharpCut.Applications.negativeLogRemainder_bounds",
+        "SharpCut.Applications.negativeLogRemainder_isBigO"
+      ],
+      "formal_correspondence": "The actual infinite logarithmic series and exact first three coefficients have a genuine O(n^-4) remainder, with a uniform positive bound, for all n>=2."
+    },
+    {
+      "stable_label": "eq:7.6",
+      "original_equation": "7.6",
+      "previous_v2_number": 166,
+      "v2_number": "5.14",
+      "formula_sha256": "f693839351d98aa8de0e1a9bdf0a89c70b80562c626f9fdabcdc6d526d062db4",
+      "lean_declarations": [
+        "SharpCut.Applications.negative_log_sharpRatio_formula",
+        "SharpCut.Applications.sharpRatio_alternative_series",
+        "SharpCut.Applications.dimension_coefficient_difference"
+      ],
+      "formal_correspondence": "The positive-dimensional closed log formula and full infinite alternative series retain the exact difference of consecutive reciprocal coefficients."
+    },
+    {
+      "stable_label": "eq:7.7",
+      "original_equation": "7.7",
+      "previous_v2_number": 167,
+      "v2_number": "5.15",
+      "formula_sha256": "9311c61eada893d6d2fa5019c4575105f2345b1488bda6ccd5bbd31eb2e317e0",
+      "lean_declarations": [
+        "SharpCut.Applications.central_cut_initialization"
+      ],
+      "formal_correspondence": "The actual translated/scaled cut contains the unit ball and lies in the precise 8n+2 ball; the physical seed is centered at -v/4 with radius 1/8."
+    },
+    {
+      "stable_label": "eq:7.8",
+      "original_equation": "7.8",
+      "previous_v2_number": 168,
+      "v2_number": "5.16",
+      "formula_sha256": "cd0aee276b4f259be9819f3f6866cdac5487b8008035e9947269ec6564cc98a4",
+      "lean_declarations": [
+        "SharpCut.Paper.initialization_strict_bounds"
+      ],
+      "formal_correspondence": "The actual Euclidean seed-ball hypothesis proves both numeric chains norm<=3/8<1 and v-dot-x<=-1/8<0, without assuming membership in a desired cut."
+    },
+    {
+      "stable_label": "eq:7.9",
+      "original_equation": "7.9",
+      "previous_v2_number": 169,
+      "v2_number": "5.17",
+      "formula_sha256": "1381e891fd505bb63b9742f8721b00a6f79fc1804686d320e03a0af2c6940dde",
+      "lean_declarations": [
+        "SharpCut.Applications.relative_volume_gap"
+      ],
+      "formal_correspondence": "The normalized feasible gap gives the exp(-G) times actual optimum Lebesgue-volume lower guarantee, with the denominator proved positive and finite."
+    },
+    {
+      "stable_label": "eq:7.10",
+      "original_equation": "7.10",
+      "previous_v2_number": 170,
+      "v2_number": "5.18",
+      "formula_sha256": "07df980f7de3b47d2bbae04a2303d471d8299877d712cd23143549a5db715c97",
+      "lean_declarations": [
+        "SharpCut.Applications.normalized_gap_optimum_bound",
+        "SharpCut.Applications.candidate_volume_exp_ratio",
+        "SharpCut.Applications.relative_volume_gap"
+      ],
+      "formal_correspondence": "The physical normalized log optimum, certificate bound, exact exponential ratio and exp(-G) inequality are all exported together."
+    },
+    {
+      "stable_label": "eq:7.11",
+      "original_equation": "7.11",
+      "previous_v2_number": 171,
+      "v2_number": "5.19",
+      "formula_sha256": "422e5f7ad5e76950196297831d8f82d2bf1f88caa78da1045504819bdb4ef661",
+      "lean_declarations": [
+        "SharpCut.Applications.instance_volume_identity",
+        "SharpCut.Applications.frameDualInfimum_eq",
+        "SharpCut.Applications.model_attains_dual_infimum",
+        "SharpCut.Geometry.optimalConstant_eq"
+      ],
+      "formal_correspondence": "Actual attained normalized-dual determinant maxima give each volume identity; the all-frame infimum is attained by the model in every positive dimension and equals R_n inverse, hence the sharp C_n identity."
+    },
+    {
+      "stable_label": "eq:10.1",
+      "original_equation": "10.1",
+      "previous_v2_number": 172,
+      "v2_number": "5.20",
+      "formula_sha256": "a69d1d8b09de413a569379b73d68edd292de038593ad89152e1a54fcec144f0a",
+      "lean_declarations": [
+        "SharpCut.Optimization.unnormalizedDualObjective",
+        "SharpCut.Optimization.unnormalized_weak_duality",
+        "SharpCut.Optimization.unnormalized_dual_attainment"
+      ],
+      "formal_correspondence": "The literal raw SOC multiplier objective is mass-n-logdet M under balance, cone and positive aggregate feasibility; it is an actual attained exact unnormalized dual on the bounded full-dimensional polytope domain."
+    },
+    {
+      "stable_label": "eq:10.2",
+      "original_equation": "10.2",
+      "previous_v2_number": 173,
+      "v2_number": "5.21",
+      "formula_sha256": "ac2ba842c9e2ad5df46a6739b405b6fde044d2675dfba26bccae25a02f0e7ae8",
+      "lean_declarations": [
+        "SharpCut.Optimization.original_lagrangian_identity",
+        "SharpCut.Optimization.original_lagrangian_supremum",
+        "SharpCut.Optimization.lagrangian_conjugate"
+      ],
+      "formal_correspondence": "The full literal multiplier Lagrangian expands to the stated balance/trace/mass expression. Its actual EReal supremum includes both independently proved unbounded branches when balance or positive definiteness fails."
+    },
+    {
+      "stable_label": "eq:10.3",
+      "original_equation": "10.3",
+      "previous_v2_number": 174,
+      "v2_number": "5.22",
+      "formula_sha256": "07ea09fe3aecf0678e3a3a5ed8a93010efd2e90f5e4b5cd8720620f4e08a157a",
+      "lean_declarations": [
+        "SharpCut.Optimization.optimal_scale",
+        "SharpCut.Optimization.scaled_objective_identity",
+        "SharpCut.Gap.scalarDivergence_nonneg"
+      ],
+      "formal_correspondence": "Every positive scale is compared exactly with n/s through n(u-1-log u); actual primal feasibility proves s>0 before normalization."
+    },
+    {
+      "stable_label": "eq:10.4",
+      "original_equation": "10.4",
+      "previous_v2_number": 175,
+      "v2_number": "5.23",
+      "formula_sha256": "d24a13a6cdd9269ce2dd054f63d8fe3f0ace5c4d835de8d16f41f9a1a4e07bd4",
+      "lean_declarations": [
+        "SharpCut.Optimization.skew_gram_identity",
+        "SharpCut.Optimization.one_add_gram_det_ge_one"
+      ],
+      "formal_correspondence": "The actual real skew-matrix Gram identity gives determinant(I+T)^2=det(I+T transpose T)>=1 for all matrices satisfying the skew hypothesis, with no invertibility assumed."
+    },
+    {
+      "stable_label": "eq:10.5",
+      "original_equation": "10.5",
+      "previous_v2_number": 176,
+      "v2_number": "5.24",
+      "formula_sha256": "84d474f2163d0c6036be71b977c9fe8c4344af81b1f0fbabcdbb02f826b64128",
+      "lean_declarations": [
+        "SharpCut.Optimization.contraction_gram_bounds",
+        "SharpCut.Optimization.transpose_gram_quadratic"
+      ],
+      "formal_correspondence": "The actual Euclidean operator contraction implies the full Loewner Gram interval; Gram determinant and absolute determinant bounds follow, including singular matrices."
+    },
+    {
+      "stable_label": "eq:10.6",
+      "original_equation": "10.6",
+      "previous_v2_number": 177,
+      "v2_number": "5.25",
+      "formula_sha256": "8f4124ebe5d923576fee817798aace791fa6fa491a8fd423f1ada2a44e81118f",
+      "lean_declarations": [
+        "SharpCut.Nuclear.frameSupportSlack",
+        "SharpCut.Nuclear.frameTriangleGap",
+        "SharpCut.Nuclear.frameLogGap",
+        "SharpCut.Nuclear.framePolarCorrection"
+      ],
+      "formal_correspondence": "All four literal finite nuclear-deficit definitions retain the original contact/cut terms, actual Gram-root nuclear norm of AQ, positive log determinant and polar trace correction."
+    },
+    {
+      "stable_label": "eq:10.7",
+      "original_equation": "10.7",
+      "previous_v2_number": 178,
+      "v2_number": "5.26",
+      "formula_sha256": "7deccb5bb707585cfd353f63b359897d55fc8a9c795a7b9bff2134eb952243a8",
+      "lean_declarations": [
+        "SharpCut.Nuclear.frameNuclearTotal_bound",
+        "SharpCut.Nuclear.nuclearNorm_sum",
+        "SharpCut.Nuclear.nuclearNorm_cross",
+        "SharpCut.Nuclear.frameLogGap_spectral",
+        "SharpCut.Nuclear.right_polar_identity",
+        "SharpCut.Nuclear.trace_le_nuclear_operator"
+      ],
+      "formal_correspondence": "The finite nuclear triangle bound uses actual rank-one norms and unit Lorentz directions. The positive singular-value log identity gives H_nuc>=0, while the ordered right-polar identity and contraction trace inequality give the final trace bound."
+    },
+    {
+      "stable_label": "eq:10.8",
+      "original_equation": "10.8",
+      "previous_v2_number": 179,
+      "v2_number": "5.27",
+      "formula_sha256": "0511cb633073735bb34d04c77ee408057319189195df25498f8a52331598203a",
+      "lean_declarations": [
+        "SharpCut.Nuclear.frame_cone_nuclear_identity",
+        "SharpCut.Nuclear.frame_matrix_nuclear_identity",
+        "SharpCut.Nuclear.nuclear_frame_deficit",
+        "SharpCut.Determinant.normalizedCertificate_log"
+      ],
+      "formal_correspondence": "Both original cone/matrix equalities have the stated opposite correction signs; their cancellation gives all four nonnegative volume-deficit terms with logdet Fhat."
+    },
+    {
+      "stable_label": "eq:10.9",
+      "original_equation": "10.9",
+      "previous_v2_number": 180,
+      "v2_number": "5.28",
+      "formula_sha256": "a89b2db427ab7192b5dc6d1ec233479019c90fb0dfc6506cea6ef569cd50555f",
+      "lean_declarations": [
+        "SharpCut.Coupled.sigmaStar",
+        "SharpCut.Coupled.traceRemainder",
+        "SharpCut.Coupled.endpointShift",
+        "SharpCut.Coupled.endpointShift_dimension",
+        "SharpCut.Certificate.reverseDefect"
+      ],
+      "formal_correspondence": "The exact dimension-dependent endpoints and complementary scalar defect are literal definitions; the transverse trace identity verifies e_star=sigma_star/m for every m=n-1>=1."
+    },
+    {
+      "stable_label": "eq:10.10",
+      "original_equation": "10.10",
+      "previous_v2_number": 181,
+      "v2_number": "5.29",
+      "formula_sha256": "8a78cdc252ee740b9d4aeacb829a082ac176d1a97b9bf9d59fdafa6ccd092579",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_cauchy",
+        "SharpCut.Coupled.general_cauchy_transverse"
+      ],
+      "formal_correspondence": "The full arbitrary symmetric transverse matrix and Euclidean vector inequality uses the actual contact frame; no commuting or diagonal restriction is imposed."
+    },
+    {
+      "stable_label": "eq:10.11",
+      "original_equation": "10.11",
+      "previous_v2_number": 182,
+      "v2_number": "5.30",
+      "formula_sha256": "bac50ad1d381806c68a22d7bf93821a6bb696131d31218dd44d9d8efd62c0a08",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_linear_contact_identity",
+        "SharpCut.Certificate.couplingLinearSum",
+        "SharpCut.Certificate.couplingTestVector"
+      ],
+      "formal_correspondence": "The original linear functional has the exact nu-weighted contact representation with sign -1/d, retaining the gamma(s+b) test vector."
+    },
+    {
+      "stable_label": "eq:10.12",
+      "original_equation": "10.12",
+      "previous_v2_number": 183,
+      "v2_number": "5.31",
+      "formula_sha256": "e52f909137df8985f0830026b8bcf5da0a0521c04055287f19e0020deb2cad59",
+      "lean_declarations": [
+        "SharpCut.Certificate.weighted_transverse_cauchy",
+        "SharpCut.Certificate.weighted_transverse_pointwise",
+        "SharpCut.Coupled.general_linear_contact_identity"
+      ],
+      "formal_correspondence": "The pointwise actual transverse Euclidean Cauchy estimate and weighted finite sum give the displayed chi/d^2 times squared-test-norm upper expression."
+    },
+    {
+      "stable_label": "eq:10.13",
+      "original_equation": "10.13",
+      "previous_v2_number": 184,
+      "v2_number": "5.32",
+      "formula_sha256": "0a044510ac12d07863a2ea93e05b5795adb21ddb7d8095a637c16aaf05bddc03",
+      "lean_declarations": [
+        "SharpCut.Certificate.transverseMinusMoment_identity",
+        "SharpCut.Certificate.gamma_mixed_identity",
+        "SharpCut.Coupled.general_reverse_contact_identity"
+      ],
+      "formal_correspondence": "All three literal tilted matrix/vector/scalar identities retain their original constants; K=I+2E and L=d tau/2 identify the half-identity and complementary remainder forms."
+    },
+    {
+      "stable_label": "eq:10.14",
+      "original_equation": "10.14",
+      "previous_v2_number": 185,
+      "v2_number": "5.33",
+      "formula_sha256": "fad5c6d3dc431dcd8673a9ef1d68bc12d5a01fbc072f4c6ccc53fe1e97b4b1d4",
+      "lean_declarations": [
+        "SharpCut.Coupled.general_quadratic_contact_identity",
+        "SharpCut.Coupled.forwardQuadratic"
+      ],
+      "formal_correspondence": "The actual finite square expansion retains every mixed trace/vector term and the precise common factor 2d/(2+b), yielding the displayed forward quadratic expression."
+    },
+    {
+      "stable_label": "eq:10.15",
+      "original_equation": "10.15",
+      "previous_v2_number": 186,
+      "v2_number": "5.34",
+      "formula_sha256": "96bc983682a6587a8174fd91e3827aee21c9d563ba0a72d77d87d196adb8039d",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_cauchy",
+        "SharpCut.Coupled.complementary_cauchy_transverse"
+      ],
+      "formal_correspondence": "The full complementary arbitrary symmetric transverse test inequality retains tau, tI-E and d sigma/4, including endpoint norm consequences and proper Euclidean transport."
+    },
+    {
+      "stable_label": "eq:10.16",
+      "original_equation": "10.16",
+      "previous_v2_number": 187,
+      "v2_number": "5.35",
+      "formula_sha256": "eb17fb460fd8efb4d0e7aa89bff370bdc29dcabf34a17278f3aba98ce1c1eb3f",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_linear_contact_identity",
+        "SharpCut.Coupled.complementaryLinearSum",
+        "SharpCut.Coupled.complementaryTestVector"
+      ],
+      "formal_correspondence": "The exact complementary contact representation uses c_minus and the negative gamma_minus(s-b) vector term in the original multiplication order."
+    },
+    {
+      "stable_label": "eq:10.17",
+      "original_equation": "10.17",
+      "previous_v2_number": 188,
+      "v2_number": "5.36",
+      "formula_sha256": "9d2a14a7eee5674bb9ccc37fa20e27646f556645ff8a1cbccb8a57c582303fd7",
+      "lean_declarations": [
+        "SharpCut.Coupled.weighted_complementary_cauchy",
+        "SharpCut.Coupled.weighted_complementary_pointwise",
+        "SharpCut.Coupled.complementary_linear_contact_identity"
+      ],
+      "formal_correspondence": "The actual complementary finite weighted Cauchy argument gives c_minus squared times the reverse-defect scalar and the exact plus-weight squared-test-norm sum."
+    },
+    {
+      "stable_label": "eq:10.18",
+      "original_equation": "10.18",
+      "previous_v2_number": 189,
+      "v2_number": "5.37",
+      "formula_sha256": "c483ad43c5e8b097a9e6cf328105c7a89fc08ff4b0f9e6c8cdf5178d3523b277",
+      "lean_declarations": [
+        "SharpCut.Coupled.complementary_reverse_coefficient",
+        "SharpCut.Coupled.complementary_quadratic_contact_identity",
+        "SharpCut.Coupled.complementaryFactor"
+      ],
+      "formal_correspondence": "Both exact complementary coefficient and finite square expansion are exported with the original constants; the common factor is 2d/((1-b)(2+b))."
+    },
+    {
+      "stable_label": "eq:10.19",
+      "original_equation": "10.19",
+      "previous_v2_number": 190,
+      "v2_number": "5.38",
+      "formula_sha256": "d6637896f8751b37f71e443ae48398ab722282f4a3600e3d768b53048c5d4ced",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.forwardR",
+        "SharpCut.Coupled.InverseTrace.forward_inverse_trace_iff",
+        "SharpCut.Coupled.general_cauchy_transverse"
+      ],
+      "formal_correspondence": "On the original interior scalar range, the full all-test iff proves actual positive definiteness of R_plus and inverse trace<=2m; the constructed frame already satisfies every test by the general coupled inequality."
+    },
+    {
+      "stable_label": "eq:10.20",
+      "original_equation": "10.20",
+      "previous_v2_number": 191,
+      "v2_number": "5.39",
+      "formula_sha256": "56f81df1405062aca3ae03ceec8dfa113beee70153116080ef565fbdbf0a35ef",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.reverseR",
+        "SharpCut.Coupled.InverseTrace.complementary_inverse_trace_iff",
+        "SharpCut.Coupled.complementary_cauchy_transverse",
+        "SharpCut.Coupled.oppositeBeta_pos"
+      ],
+      "formal_correspondence": "The complementary all-test iff yields actual positive R_minus and the inverse trace m/(t-e_star); positivity of t-e_star and all divisions is separately proved."
+    },
+    {
+      "stable_label": "eq:10.21",
+      "original_equation": "10.21",
+      "previous_v2_number": 192,
+      "v2_number": "5.40",
+      "formula_sha256": "fc4efd270e574975436aa9de49506ca27575568f57358ca34ba4d911322aaa4b",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.linear_completion",
+        "SharpCut.Coupled.InverseTrace.quadratic_completion"
+      ],
+      "formal_correspondence": "The exact arbitrary-matrix/vector completion substitutes q_prime=q+Zj/eta and retains the ordered effective matrix R_plus, with eta nonzero from the original scalar interior domain."
+    },
+    {
+      "stable_label": "eq:10.22",
+      "original_equation": "10.22",
+      "previous_v2_number": 193,
+      "v2_number": "5.41",
+      "formula_sha256": "4c37929033c2f03d2af73e51ce2ded238292a4e76ba12e35b6e3c01fe311ead9",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.coefficient",
+        "SharpCut.Coupled.InverseTrace.coefficient_trace_identity",
+        "SharpCut.Coupled.InverseTrace.forward_coefficient_formula"
+      ],
+      "formal_correspondence": "The exact completed coefficient uses the squared positive effective matrix shift and j norm; its full trace expansion cancels the rank-one trace and yields sigma-m/2+tr(R_plus inverse)/4."
+    },
+    {
+      "stable_label": "eq:10.23",
+      "original_equation": "10.23",
+      "previous_v2_number": 194,
+      "v2_number": "5.42",
+      "formula_sha256": "ee44b1666cfc9e632901ba3e177149a99dfe0515509e5f41a61111fdc2205f3f",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.bestMatrix",
+        "SharpCut.Coupled.InverseTrace.bestVector",
+        "SharpCut.Coupled.InverseTrace.inverse_trace_optimal_tests"
+      ],
+      "formal_correspondence": "The literal positive effective-matrix inverse test I-R_plus inverse/2 and Euclidean vector j/eta attain both completed linear and quadratic coefficients, proving necessity as well as sufficiency."
+    },
+    {
+      "stable_label": "eq:10.24",
+      "original_equation": "10.24",
+      "previous_v2_number": 195,
+      "v2_number": "5.43",
+      "formula_sha256": "fe29be96a229dd8771c86aff1896cbe3847a778abe5ee907254c73b74f5a8a90",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.coefficient",
+        "SharpCut.Coupled.InverseTrace.coefficient_trace_identity",
+        "SharpCut.Coupled.InverseTrace.reverse_coefficient_formula"
+      ],
+      "formal_correspondence": "The complementary effective-matrix coefficient retains the original squared beta shift and inverse trace; the exact expansion yields (-t+2e_star)m-sigma+(t-e_star)^2 trace."
+    },
+    {
+      "stable_label": "eq:10.25",
+      "original_equation": "10.25",
+      "previous_v2_number": 196,
+      "v2_number": "5.44",
+      "formula_sha256": "964b062702faa2273b78d5acef96ef8fe940c84564e3dfdc236a963cc7e55c9b",
+      "lean_declarations": [
+        "SharpCut.Coupled.InverseTrace.reverse_coefficient_formula",
+        "SharpCut.Coupled.InverseTrace.reverse_coefficient_trace_iff",
+        "SharpCut.Coupled.endpointShift_dimension",
+        "SharpCut.Coupled.oppositeBeta_pos"
+      ],
+      "formal_correspondence": "The exact complementary coefficient and sigma_star=m e_star identity give the squared-beta intermediate inequality; positive beta=t-e_star makes it equivalent to trace(R_minus inverse)<=m/beta."
+    },
+    {
+      "stable_label": "eq:10.26",
+      "original_equation": "10.26",
+      "previous_v2_number": 197,
+      "v2_number": "5.45",
+      "formula_sha256": "1b3ea471bd565b404893ff38247c07cf5aff9f03e7ece854b995c599763b8fac",
+      "lean_declarations": [
+        "SharpCut.Optimization.offset_normalization",
+        "SharpCut.Optimization.multiple_normalization",
+        "SharpCut.Optimization.offset_cut_duality",
+        "SharpCut.Optimization.multiple_cut_duality"
+      ],
+      "formal_correspondence": "The actual offset and simultaneous finite-cut SOC models have the stated changed scalar normalization and full vector balance; exact duality is proved only under the original full-dimensional bounded-polytope domain."
+    },
+    {
+      "stable_label": "eq:10.27",
+      "original_equation": "10.27",
+      "previous_v2_number": 198,
+      "v2_number": "5.46",
+      "formula_sha256": "c8ce489e0ee4d16d53b23e8f1a60d66e82eec72722fae4962fa7ef8018d32d7c",
+      "lean_declarations": [
+        "SharpCut.Certificate.homogeneous_lorentz_action",
+        "SharpCut.Certificate.homogeneousLorentzBlock",
+        "SharpCut.Certificate.homogeneousPoint"
+      ],
+      "formal_correspondence": "The actual homogeneous (n+1)-dimensional Lorentz block action gives both coordinates for every Euclidean u and unit axis, with the precise signs and transverse projector."
+    }
+  ],
+  "sections": {
+    "sec:1": "1",
+    "sec:1.2": "1.1",
+    "sec:1.3": "1.1",
+    "sec:1.1": "1.2",
+    "sec:2": "2",
+    "sec:2.1": "2.1",
+    "sec:john-frames": "2.2",
+    "sec:2.4": "2.2.1",
+    "sec:2.2": "2.3",
+    "sec:3": "3",
+    "sec:3.1": "3",
+    "sec:3.2": "3.1",
+    "sec:3.3": "3.2",
+    "sec:8": "3.3",
+    "sec:8.1": "3.3.1",
+    "sec:8.2": "3.4",
+    "sec:8.2.1": "3.4.1",
+    "sec:8.2.2": "3.4.2",
+    "sec:8.2.3": "3.4.3",
+    "sec:8.3": "3.5",
+    "sec:8.4": "3.6",
+    "sec:8.5": "3.7",
+    "sec:8.6": "3.8",
+    "sec:3.4": "3.8",
+    "sec:eq-stability": "4",
+    "sec:4": "4.1",
+    "sec:4.1": "4.1.1",
+    "sec:4.2": "4.1.2",
+    "sec:4.3": "4.1.3",
+    "sec:5": "4.2",
+    "sec:5.1": "4.2.1",
+    "sec:5.2": "4.2.2",
+    "sec:6": "4.3",
+    "sec:6.1": "4.3.1",
+    "sec:6.2": "4.3.2",
+    "sec:9": "4.4",
+    "sec:9.1": "4.4.1",
+    "sec:9.2": "4.4.2",
+    "sec:9.3": "4.4.3",
+    "sec:9.4": "4.4.4",
+    "sec:further": "5",
+    "sec:2.3": "5.1",
+    "sec:7": "5.2",
+    "sec:7.1": "5.2.1",
+    "sec:7.2": "5.2.2",
+    "sec:7.3": "5.2.3",
+    "sec:10": "5.3",
+    "sec:10.1": "5.3.1",
+    "sec:10.2": "5.3.2",
+    "sec:10.3": "5.3.3",
+    "sec:10.4": "5.3.4",
+    "sec:10.5": "5.3.5",
+    "sec:10.6": "5.3.6",
+    "sec:11": "6"
+  }
+}

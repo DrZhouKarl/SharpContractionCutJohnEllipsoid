@@ -25,7 +25,7 @@ The statements use actual Euclidean convex bodies and Lebesgue ellipsoid volume,
 
 - [Paper PDF](paper/main.pdf).
 - [Mathematical specification](proof.md).
-- [Theorem map](theorem_map.md), with actual Lean declaration names.
+- [Theorem map](theorem_map.md), with actual Lean declaration names. It reused the [formal proof](formal_proof_reuse.md) and [theorem map](theorem_map_v1.md) for an early [manuscript](paper/main.pdf).
 - [Proof architecture](formalization_plan.md).
 - [Verification scope and audit contract](verification_plan.md).
 - [Recorded release verification](verification/README.md).
